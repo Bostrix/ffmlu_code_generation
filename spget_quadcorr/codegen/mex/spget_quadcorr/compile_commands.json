@@ -1,0 +1,80 @@
+[
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  spget_quadcorr_data.cpp -o build/glnxa64/spget_quadcorr_data.o",
+    "file": "spget_quadcorr_data.cpp",
+    "output": "build/glnxa64/spget_quadcorr_data.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  rt_nonfinite.cpp -o build/glnxa64/rt_nonfinite.o",
+    "file": "rt_nonfinite.cpp",
+    "output": "build/glnxa64/rt_nonfinite.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  spget_quadcorr_initialize.cpp -o build/glnxa64/spget_quadcorr_initialize.o",
+    "file": "spget_quadcorr_initialize.cpp",
+    "output": "build/glnxa64/spget_quadcorr_initialize.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  spget_quadcorr_terminate.cpp -o build/glnxa64/spget_quadcorr_terminate.o",
+    "file": "spget_quadcorr_terminate.cpp",
+    "output": "build/glnxa64/spget_quadcorr_terminate.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  spget_quadcorr.cpp -o build/glnxa64/spget_quadcorr.o",
+    "file": "spget_quadcorr.cpp",
+    "output": "build/glnxa64/spget_quadcorr.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  indexShapeCheck.cpp -o build/glnxa64/indexShapeCheck.o",
+    "file": "indexShapeCheck.cpp",
+    "output": "build/glnxa64/indexShapeCheck.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_spget_quadcorr_api.cpp -o build/glnxa64/_coder_spget_quadcorr_api.o",
+    "file": "interface/_coder_spget_quadcorr_api.cpp",
+    "output": "build/glnxa64/_coder_spget_quadcorr_api.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_spget_quadcorr_mex.cpp -o build/glnxa64/_coder_spget_quadcorr_mex.o",
+    "file": "interface/_coder_spget_quadcorr_mex.cpp",
+    "output": "build/glnxa64/_coder_spget_quadcorr_mex.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  eml_int_forloop_overflow_check.cpp -o build/glnxa64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.cpp",
+    "output": "build/glnxa64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  sort.cpp -o build/glnxa64/sort.o",
+    "file": "sort.cpp",
+    "output": "build/glnxa64/sort.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  sortIdx.cpp -o build/glnxa64/sortIdx.o",
+    "file": "sortIdx.cpp",
+    "output": "build/glnxa64/sortIdx.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_spget_quadcorr_info.cpp -o build/glnxa64/_coder_spget_quadcorr_info.o",
+    "file": "interface/_coder_spget_quadcorr_info.cpp",
+    "output": "build/glnxa64/_coder_spget_quadcorr_info.o"
+  },
+  {
+    "directory": "/home/user/ffmlu-codegen/spget_quadcorr/codegen/mex/spget_quadcorr",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/spget_quadcorr\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=spget_quadcorr_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  /usr/local/MATLAB/R2024a/extern/version/cpp_mexapi_version.cpp -o build/glnxa64/cpp_mexapi_version.o",
+    "file": "/usr/local/MATLAB/R2024a/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/glnxa64/cpp_mexapi_version.o"
+  }
+]
