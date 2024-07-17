@@ -1,0 +1,154 @@
+function T = shypoct(x, occ, lvlmax, ext)
+% SHYPOCT   Build hyperoctree.
+% <rest of the documentation>
+
+  % Set sane default parameters
+  if nargin < 3 || isempty(lvlmax)
+    lvlmax = Inf;
+  end
+  if nargin < 4
+    ext = [];
+  end
+
+  % Check that inputs are sensible
+  assert(occ >= 0, 'RSS:shypoct:negativeOcc', 'Leaf occupancy must be nonnegative.')
+  assert(lvlmax >= 1, 'RSS:shypoct:invalidLvlmax', 'Maximum tree depth must be at least 1.')
+
+  % Initialize top-level box extent, side lengths, center.
+  [d, n] = size(x);
+  if isempty(ext)
+    ext = [min(x, [], 2) max(x, [], 2)];
+  end
+  assert(size(ext, 1) == d && size(ext, 2) == 2, 'Size mismatch in ext parameter.');
+  l = max(ext(:, 2) - ext(:, 1));
+  ctr = 0.5 * (ext(:, 1) + ext(:, 2));
+  s = struct('ctr', ctr', 'xi', 1:n, 'prnt', [], 'chld', [], 'nbor', [], 'ilist', [], 'snbor', []);
+  T = struct('nlvl', 1, 'lvp', [0 1], 'lrt', l, 'nodes', s);
+  nlvl = 1;
+  nbox = 1;
+  mlvl = 1;
+
+  % Estimate maximum number of nodes to avoid dynamic resizing
+  maxBoxes = 10000; % You may adjust this based on your data
+
+  % Preallocate nodes array for code generation
+  T.nodes(maxBoxes).ctr = [];
+  T.nodes(maxBoxes).xi = [];
+  T.nodes(maxBoxes).prnt = [];
+  T.nodes(maxBoxes).chld = [];
+  T.nodes(maxBoxes).nbor = [];
+  T.nodes(maxBoxes).ilist = [];
+  T.nodes(maxBoxes).snbor = [];
+
+  % Loop until all boxes are sufficiently subdivided (natural termination)
+  while true
+    % Terminate if at maximum depth (unnatural termination)
+    if nlvl >= lvlmax
+      break
+    end
+
+    % Initialize the current level, which has side lengths diminished by a factor of two
+    nbox_ = nbox;
+    l = 0.5 * l;
+
+    % Loop over all boxes at current level
+    for prnt = (T.lvp(nlvl) + 1):T.lvp(nlvl + 1)
+      xi = T.nodes(prnt).xi;
+      xn = length(xi);
+
+      % Subdivide this box if it contains too many points
+      if xn > occ
+        % Complicated way of finding the assignments of this box's points to its child boxes
+        ctr = T.nodes(prnt).ctr;
+        idx = bsxfun(@gt, x(:, xi), ctr');
+        idx = 2.^((1:d) - 1) * idx + 1;
+        unique_idx = unique(idx);
+        for i = unique_idx'
+          nbox = nbox + 1;
+          if nbox > maxBoxes
+            error('Too many boxes');
+          end
+          new_ctr = ctr + l * (bitget(i - 1, 1:d) - 0.5);
+          s = struct('ctr', new_ctr, 'xi', xi(idx == i), 'prnt', prnt, 'chld', [], 'nbor', [], 'ilist', [], 'snbor', []);
+          T.nodes(nbox) = s;
+          T.nodes(prnt).chld = [T.nodes(prnt).chld nbox];
+        end
+        T.nodes(prnt).xi = [];
+      end
+    end
+
+    % If no boxes were subdivided into new boxes, terminate, otherwise update for the next iteration
+    if nbox <= nbox_
+      break
+    else
+      nlvl = nlvl + 1;
+      T.nlvl = nlvl;
+      if length(T.lvp) < nlvl + 1
+        T.lvp = [T.lvp zeros(1, length(T.lvp))]; % Double the length of T.lvp
+      end
+      T.lvp(nlvl + 1) = nbox;
+    end
+  end
+
+  % Memory cleanup, if we made arrays too big
+  T.lvp = T.lvp(1:nlvl + 1);
+  T.nodes = T.nodes(1:nbox);
+
+  % Initialize data for neighbor calculation
+  ilvl = zeros(nbox, 1);
+  llvl = zeros(nlvl, 1);
+  l = T.lrt;
+  for lvl = 1:nlvl
+    ilvl(T.lvp(lvl) + 1:T.lvp(lvl + 1)) = lvl;
+    llvl(lvl) = l;
+    l = 0.5 * l;
+  end
+
+  % Find neighbors and interaction list of each box
+  for lvl = 2:nlvl
+    l = llvl(lvl);
+    for i = (T.lvp(lvl) + 1):T.lvp(lvl + 1)
+      ictr = T.nodes(i).ctr;
+      prnt = T.nodes(i).prnt;
+
+      % Add all non-self children of parent
+      j = T.nodes(prnt).chld;
+      T.nodes(i).nbor = j(j ~= i);
+      for k = j(j ~= i)
+        T.nodes(k).snbor = [T.nodes(k).snbor i];
+      end
+
+      % Add coarser parent-neighbors if adjacent (non-uniform discretization only)
+      for j = T.nodes(prnt).nbor
+        if ~isempty(T.nodes(j).xi)
+          jctr = T.nodes(j).ctr;
+          dist = round((abs(ictr - jctr) - 0.5 * (l + llvl(ilvl(j)))) / l);
+          if all(dist <= 0)
+            T.nodes(i).nbor = [T.nodes(i).nbor j];
+            T.nodes(j).snbor = [T.nodes(j).snbor i];
+          else
+            T.nodes(i).ilist = [T.nodes(i).ilist j];
+          end
+        end
+      end
+
+      % Add children of parent-neighbors if adjacent
+      idx = [T.nodes(T.nodes(prnt).nbor).chld];
+      c = reshape([T.nodes(idx).ctr], d, [])';
+      dist = round(abs(bsxfun(@minus, T.nodes(i).ctr, c)) / l);
+      j = idx(max(dist, [], 2) <= 1);
+      if ~isempty(j)
+        T.nodes(i).nbor = [T.nodes(i).nbor j];
+        for k = j
+          T.nodes(k).snbor = [T.nodes(k).snbor i];
+        end
+      end
+
+      % Add non-adjacent parent-neighbors-children to interaction list
+      j = idx(max(dist, [], 2) > 1 & max(dist, [], 2) < 2.5);
+      if ~isempty(j)
+        T.nodes(i).ilist = [T.nodes(i).ilist j];
+      end
+    end
+  end
+end
