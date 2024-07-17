@@ -12,17 +12,21 @@
 #include <algorithm>
 
 // Variable Definitions
-static emlrtRSInfo v_emlrtRSI{
-    550,     // lineNo
-    "merge", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    v_emlrtRSI{
+        550,     // lineNo
+        "merge", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo w_emlrtRSI{
-    519,     // lineNo
-    "merge", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    w_emlrtRSI{
+        519,     // lineNo
+        "merge", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
 // Function Definitions
 namespace coder {

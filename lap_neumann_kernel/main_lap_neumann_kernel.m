@@ -7,4 +7,4 @@ load('lap_neumann_kernel.mat', 'x', 'y', 'nuuse');
 codegen lap_neumann_kernel -args {x, y, nuuse} -lang:c++
 
 % Call the test script to compare MATLAB and MEX versions
-run('test.m');
+test_lap_neumann_kernel

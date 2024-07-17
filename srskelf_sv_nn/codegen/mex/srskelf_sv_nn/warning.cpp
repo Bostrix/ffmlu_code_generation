@@ -13,23 +13,23 @@ static emlrtMCInfo emlrtMCI{
     14,        // lineNo
     25,        // colNo
     "warning", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/lib/+coder/+internal/"
-    "warning.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/lib/+coder/"
+    "+internal/warning.m" // pName
 };
 
 static emlrtMCInfo b_emlrtMCI{
     14,        // lineNo
     9,         // colNo
     "warning", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/lib/+coder/+internal/"
-    "warning.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/lib/+coder/"
+    "+internal/warning.m" // pName
 };
 
 static emlrtRSInfo jb_emlrtRSI{
     14,        // lineNo
     "warning", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/lib/+coder/+internal/"
-    "warning.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/lib/+coder/"
+    "+internal/warning.m" // pathName
 };
 
 // Function Declarations

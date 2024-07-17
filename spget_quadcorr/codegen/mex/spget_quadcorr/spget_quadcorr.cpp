@@ -18,174 +18,170 @@
 #include <cstring>
 
 // Variable Definitions
-static emlrtRSInfo
-    emlrtRSI{
-        11,               // lineNo
-        "spget_quadcorr", // fcnName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pathName
-    };
+static emlrtRSInfo emlrtRSI{
+    11,               // lineNo
+    "spget_quadcorr", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pathName
+};
 
-static emlrtRSInfo
-    b_emlrtRSI{
-        14,               // lineNo
-        "spget_quadcorr", // fcnName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pathName
-    };
+static emlrtRSInfo b_emlrtRSI{
+    14,               // lineNo
+    "spget_quadcorr", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pathName
+};
 
-static emlrtRSInfo
-    c_emlrtRSI{
-        16,               // lineNo
-        "spget_quadcorr", // fcnName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pathName
-    };
+static emlrtRSInfo c_emlrtRSI{
+    16,               // lineNo
+    "spget_quadcorr", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pathName
+};
 
 static emlrtRSInfo d_emlrtRSI{
-    37,                                                              // lineNo
-    "sort",                                                          // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sort.m" // pathName
+    37,     // lineNo
+    "sort", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/datafun/sort.m" // pathName
 };
 
 static emlrtRSInfo x_emlrtRSI{
     250,                     // lineNo
     "sparse/parenReference", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pathName
 };
 
 static emlrtRSInfo y_emlrtRSI{
     20,                        // lineNo
     "sparse/parenReference2D", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo ab_emlrtRSI{
     81,                        // lineNo
     "parenReference2DColumns", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo bb_emlrtRSI{
     93,                        // lineNo
     "parenReference2DColumns", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo cb_emlrtRSI{
     104,                       // lineNo
     "parenReference2DColumns", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo db_emlrtRSI{
     1476,                 // lineNo
     "sparse/spallocLike", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pathName
 };
 
 static emlrtRSInfo fb_emlrtRSI{
     176,             // lineNo
     "sparse/sparse", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pathName
 };
 
 static emlrtRSInfo ib_emlrtRSI{
-    31,                                                            // lineNo
-    "find",                                                        // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    31,     // lineNo
+    "find", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
 static emlrtRSInfo jb_emlrtRSI{
-    138,                                                           // lineNo
-    "eml_find",                                                    // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    138,        // lineNo
+    "eml_find", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
 static emlrtRSInfo kb_emlrtRSI{
-    202,                                                           // lineNo
-    "find_first_nonempty_triples",                                 // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    202,                           // lineNo
+    "find_first_nonempty_triples", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
 static emlrtRSInfo lb_emlrtRSI{
-    205,                                                           // lineNo
-    "find_first_nonempty_triples",                                 // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    205,                           // lineNo
+    "find_first_nonempty_triples", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
 static emlrtRSInfo mb_emlrtRSI{
-    253,                                                           // lineNo
-    "find_first_nonempty_triples",                                 // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    253,                           // lineNo
+    "find_first_nonempty_triples", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
 static emlrtRSInfo nb_emlrtRSI{
-    254,                                                           // lineNo
-    "find_first_nonempty_triples",                                 // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    254,                           // lineNo
+    "find_first_nonempty_triples", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
 static emlrtRSInfo ob_emlrtRSI{
-    255,                                                           // lineNo
-    "find_first_nonempty_triples",                                 // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
+    255,                           // lineNo
+    "find_first_nonempty_triples", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtECInfo
-    emlrtECI{
-        -1,               // nDims
-        24,               // lineNo
-        5,                // colNo
-        "spget_quadcorr", // fName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pName
-    };
+static emlrtECInfo emlrtECI{
+    -1,               // nDims
+    24,               // lineNo
+    5,                // colNo
+    "spget_quadcorr", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pName
+};
 
 static emlrtRTEInfo emlrtRTEI{
     92,                        // lineNo
     1,                         // colNo
     "parenReference2DColumns", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pName
 };
 
 static emlrtRTEInfo b_emlrtRTEI{
     11,                                   // lineNo
     27,                                   // colNo
     "sparse/sparse_validateNumericIndex", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/private/validateNumericIndex.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/private/validateNumericIndex.m" // pName
 };
 
 static emlrtRTEInfo c_emlrtRTEI{
     12,                                   // lineNo
     27,                                   // colNo
     "sparse/sparse_validateNumericIndex", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/private/validateNumericIndex.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/private/validateNumericIndex.m" // pName
 };
 
 static emlrtRTEInfo d_emlrtRTEI{
     1623,              // lineNo
     9,                 // colNo
     "assertValidSize", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pName
 };
 
 static emlrtRTEInfo e_emlrtRTEI{
-    239,                                                           // lineNo
-    1,                                                             // colNo
-    "find_first_nonempty_triples",                                 // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    239,                           // lineNo
+    1,                             // colNo
+    "find_first_nonempty_triples", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtBCInfo emlrtBCI{
@@ -195,26 +191,26 @@ static emlrtBCInfo emlrtBCI{
     5,                // colNo
     "P",              // aName
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    3                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    3                                                        // checkKind
 };
 
 static emlrtDCInfo emlrtDCI{
     12,               // lineNo
     5,                // colNo
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    1                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    1                                                        // checkKind
 };
 
 static emlrtDCInfo b_emlrtDCI{
-    195,                                                            // lineNo
-    30,                                                             // colNo
-    "find_first_nonempty_triples",                                  // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m", // pName
-    4                                                               // checkKind
+    195,                           // lineNo
+    30,                            // colNo
+    "find_first_nonempty_triples", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m", // pName
+    4 // checkKind
 };
 
 static emlrtBCInfo b_emlrtBCI{
@@ -224,9 +220,9 @@ static emlrtBCInfo b_emlrtBCI{
     36,                 // colNo
     "elements_to_find", // aName
     "find_locations_t", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    0                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    0                                                        // checkKind
 };
 
 static emlrtBCInfo c_emlrtBCI{
@@ -236,9 +232,9 @@ static emlrtBCInfo c_emlrtBCI{
     14,                 // colNo
     "locs",             // aName
     "find_locations_t", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    0                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    0                                                        // checkKind
 };
 
 static emlrtBCInfo d_emlrtBCI{
@@ -248,9 +244,9 @@ static emlrtBCInfo d_emlrtBCI{
     11,               // colNo
     "I",              // aName
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    0                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    0                                                        // checkKind
 };
 
 static emlrtBCInfo e_emlrtBCI{
@@ -260,9 +256,9 @@ static emlrtBCInfo e_emlrtBCI{
     11,               // colNo
     "J",              // aName
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    0                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    0                                                        // checkKind
 };
 
 static emlrtBCInfo f_emlrtBCI{
@@ -272,9 +268,9 @@ static emlrtBCInfo f_emlrtBCI{
     13,               // colNo
     "S_",             // aName
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    0                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    0                                                        // checkKind
 };
 
 static emlrtBCInfo g_emlrtBCI{
@@ -284,18 +280,18 @@ static emlrtBCInfo g_emlrtBCI{
     9,                // colNo
     "P",              // aName
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    0                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    0                                                        // checkKind
 };
 
 static emlrtDCInfo c_emlrtDCI{
     24,               // lineNo
     7,                // colNo
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    1                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    1                                                        // checkKind
 };
 
 static emlrtBCInfo h_emlrtBCI{
@@ -305,147 +301,141 @@ static emlrtBCInfo h_emlrtBCI{
     7,                // colNo
     "A",              // aName
     "spget_quadcorr", // fName
-    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-    "spget_quadcorr.m", // pName
-    3                   // checkKind
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m", // pName
+    3                                                        // checkKind
 };
 
-static emlrtRTEInfo
-    h_emlrtRTEI{
-        14,               // lineNo
-        23,               // colNo
-        "spget_quadcorr", // fName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pName
-    };
+static emlrtRTEInfo h_emlrtRTEI{
+    14,               // lineNo
+    23,               // colNo
+    "spget_quadcorr", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pName
+};
 
 static emlrtRTEInfo i_emlrtRTEI{
-    195,                                                           // lineNo
-    24,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    195,    // lineNo
+    24,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo j_emlrtRTEI{
-    197,                                                           // lineNo
-    24,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    197,    // lineNo
+    24,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo k_emlrtRTEI{
-    199,                                                           // lineNo
-    24,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    199,    // lineNo
+    24,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo l_emlrtRTEI{
-    253,                                                           // lineNo
-    5,                                                             // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    253,    // lineNo
+    5,      // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo m_emlrtRTEI{
-    254,                                                           // lineNo
-    5,                                                             // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    254,    // lineNo
+    5,      // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo n_emlrtRTEI{
-    255,                                                           // lineNo
-    5,                                                             // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    255,    // lineNo
+    5,      // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo o_emlrtRTEI{
-    247,                                                           // lineNo
-    17,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    247,    // lineNo
+    17,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo p_emlrtRTEI{
-    248,                                                           // lineNo
-    13,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    248,    // lineNo
+    13,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo q_emlrtRTEI{
-    249,                                                           // lineNo
-    13,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    249,    // lineNo
+    13,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo r_emlrtRTEI{
-    133,                                                           // lineNo
-    17,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    133,    // lineNo
+    17,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo s_emlrtRTEI{
-    134,                                                           // lineNo
-    13,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    134,    // lineNo
+    13,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
 static emlrtRTEInfo t_emlrtRTEI{
-    135,                                                           // lineNo
-    13,                                                            // colNo
-    "find",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
+    135,    // lineNo
+    13,     // colNo
+    "find", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo
-    u_emlrtRTEI{
-        16,               // lineNo
-        5,                // colNo
-        "spget_quadcorr", // fName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pName
-    };
+static emlrtRTEInfo u_emlrtRTEI{
+    16,               // lineNo
+    5,                // colNo
+    "spget_quadcorr", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pName
+};
 
-static emlrtRTEInfo
-    v_emlrtRTEI{
-        1,                // lineNo
-        14,               // colNo
-        "spget_quadcorr", // fName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pName
-    };
+static emlrtRTEInfo v_emlrtRTEI{
+    1,                // lineNo
+    14,               // colNo
+    "spget_quadcorr", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pName
+};
 
-static emlrtRTEInfo
-    w_emlrtRTEI{
-        24,               // lineNo
-        14,               // colNo
-        "spget_quadcorr", // fName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pName
-    };
+static emlrtRTEInfo w_emlrtRTEI{
+    24,               // lineNo
+    14,               // colNo
+    "spget_quadcorr", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pName
+};
 
-static emlrtRTEInfo
-    x_emlrtRTEI{
-        24,               // lineNo
-        7,                // colNo
-        "spget_quadcorr", // fName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pName
-    };
+static emlrtRTEInfo x_emlrtRTEI{
+    24,               // lineNo
+    7,                // colNo
+    "spget_quadcorr", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pName
+};
 
-static emlrtRSInfo
-    qb_emlrtRSI{
-        24,               // lineNo
-        "spget_quadcorr", // fcnName
-        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
-        "spget_quadcorr.m" // pathName
-    };
+static emlrtRSInfo qb_emlrtRSI{
+    24,               // lineNo
+    "spget_quadcorr", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/spget_quadcorr/spget_quadcorr.m" // pathName
+};
 
 // Function Declarations
 static void binary_expand_op(const emlrtStack &sp,

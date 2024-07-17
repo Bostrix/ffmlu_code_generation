@@ -16,82 +16,82 @@
 static emlrtRSInfo db_emlrtRSI{
     250,                     // lineNo
     "sparse/parenReference", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pathName
 };
 
 static emlrtRSInfo eb_emlrtRSI{
     20,                        // lineNo
     "sparse/parenReference2D", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo fb_emlrtRSI{
     81,                        // lineNo
     "parenReference2DColumns", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo gb_emlrtRSI{
     93,                        // lineNo
     "parenReference2DColumns", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo hb_emlrtRSI{
     104,                       // lineNo
     "parenReference2DColumns", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pathName
 };
 
 static emlrtRSInfo ib_emlrtRSI{
     1476,                 // lineNo
     "sparse/spallocLike", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pathName
 };
 
 static emlrtRSInfo kb_emlrtRSI{
     176,             // lineNo
     "sparse/sparse", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pathName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pathName
 };
 
 static emlrtRTEInfo c_emlrtRTEI{
     92,                        // lineNo
     1,                         // colNo
     "parenReference2DColumns", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/parenReference2D.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/parenReference2D.m" // pName
 };
 
 static emlrtRTEInfo d_emlrtRTEI{
     11,                                   // lineNo
     27,                                   // colNo
     "sparse/sparse_validateNumericIndex", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/private/validateNumericIndex.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/private/validateNumericIndex.m" // pName
 };
 
 static emlrtRTEInfo e_emlrtRTEI{
     1623,              // lineNo
     9,                 // colNo
     "assertValidSize", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pName
 };
 
 static emlrtRTEInfo x_emlrtRTEI{
     250,      // lineNo
     17,       // colNo
     "sparse", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/shared/coder/coder/+coder/+internal/"
-    "@sparse/sparse.m" // pName
+    "/Applications/MATLAB_R2024a.app/toolbox/shared/coder/coder/+coder/"
+    "+internal/@sparse/sparse.m" // pName
 };
 
 // Function Definitions

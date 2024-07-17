@@ -6,5 +6,5 @@ load('Afun_lap_te.mat', 'i', 'j', 'x', 'nu', 'area', 'P', 'S', 'contrast', 'wuse
 % Generate C++ code for Afun_lap_te
 codegen Afun_lap_te -args {i, j, x, nu, area, P, S, contrast, wuse} -lang:c++
 
-% Call the test script to compare MATLAB and MEX versions
-run('test_Afun_lap_te.m');
+% Call the test function to compare MATLAB and MEX versions
+test_Afun_lap_te;

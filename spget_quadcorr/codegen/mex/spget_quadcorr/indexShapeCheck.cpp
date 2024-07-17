@@ -12,7 +12,7 @@
 static emlrtRSInfo pb_emlrtRSI{
     42,                // lineNo
     "indexShapeCheck", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
     "indexShapeCheck.m" // pathName
 };
 
@@ -20,7 +20,7 @@ static emlrtRTEInfo f_emlrtRTEI{
     122,           // lineNo
     5,             // colNo
     "errOrWarnIf", // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
     "indexShapeCheck.m" // pName
 };
 

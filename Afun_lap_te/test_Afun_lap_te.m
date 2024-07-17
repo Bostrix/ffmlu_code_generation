@@ -1,20 +1,31 @@
-% test_Afun_lap_te.m
+% Number of iterations for averaging
+num_iterations = 100;
 
-% Test Afun_lap_te (MATLAB version)
-tic;
-matlab_result = Afun_lap_te(i, j, x, nu, area, P, S, contrast, wuse);
-matlab_time = toc;
+% Initialize variables to accumulate total execution times
+total_time_Afun_lap_te = 0;
+total_time_Afun_lap_te_mex = 0;
 
-% Test Afun_lap_te_mex (C++ MEX version)
-tic;
-cpp_result = Afun_lap_te_mex(i, j, x, nu, area, P, S, contrast, wuse);
-cpp_time = toc;
+% Run Afun_lap_te 100 times and measure average execution time
+for iter = 1:num_iterations
+    mTime = tic;
+    matlab_result = Afun_lap_te(i, j, x, nu, area, P, S, contrast, wuse);
+    total_time_Afun_lap_te = total_time_Afun_lap_te + toc(mTime);
+end
+average_time_Afun_lap_te = total_time_Afun_lap_te / num_iterations;
 
-% Print the execution times
-fprintf('MATLAB Afun_lap_te execution time: %.6f seconds\n', matlab_time);
-fprintf('C++ Afun_lap_te execution time: %.6f seconds\n', cpp_time);
+% Run Afun_lap_te_mex 100 times and measure average execution time
+for iter = 1:num_iterations
+    nTime = tic;
+    cpp_result = Afun_lap_te_mex(i, j, x, nu, area, P, S, contrast, wuse);
+    total_time_Afun_lap_te_mex = total_time_Afun_lap_te_mex + toc(nTime);
+end
+average_time_Afun_lap_te_mex = total_time_Afun_lap_te_mex / num_iterations;
 
-% Optionally, you can compare the results numerically to ensure they match
+% Print the average execution times
+fprintf('Average MATLAB Afun_lap_te execution time: %.6f seconds\n', average_time_Afun_lap_te);
+fprintf('Average C++ Afun_lap_te_mex execution time: %.6f seconds\n', average_time_Afun_lap_te_mex);
+
+% Compare the results from the last iteration
 if isequal(matlab_result, cpp_result)
     disp('The MATLAB function and the generated C++ MEX function produce the same output.');
 else

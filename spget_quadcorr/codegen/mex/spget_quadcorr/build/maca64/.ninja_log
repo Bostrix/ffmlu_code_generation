@@ -1,0 +1,15 @@
+# ninja log v5
+0	126	1721198465207801695	build/maca64/rt_nonfinite.o	e65a8ded79724b4a
+1	176	1721198465255873055	build/maca64/indexShapeCheck.o	9aa9ff9494b12129
+2	178	1721198465260870874	build/maca64/eml_int_forloop_overflow_check.o	e5f7139b95a558b2
+2	187	1721198465271434593	build/maca64/_coder_spget_quadcorr_mex.o	a4e17db20066def
+1	222	1721198465295539148	build/maca64/spget_quadcorr_terminate.o	f448579e4b73a92b
+176	222	1721198465307466489	build/maca64/_coder_spget_quadcorr_info.o	de488e6cb6792f66
+178	222	1721198465303142793	build/maca64/cpp_mexapi_version.o	db28daf6a8e39c5e
+0	272	1721198465357194344	build/maca64/spget_quadcorr_data.o	5a292336f45062cf
+1	282	1721198465367333606	build/maca64/spget_quadcorr_initialize.o	e3d5ca126763dca1
+2	306	1721198465391843451	build/maca64/sort.o	1c32d522ca954e1f
+126	417	1721198465502077380	build/maca64/sortIdx.o	59d8cbd1675c6831
+1	528	1721198465613187682	build/maca64/_coder_spget_quadcorr_api.o	8772b185c464446f
+1	576	1721198465660554336	build/maca64/spget_quadcorr.o	458d807c3529158b
+576	694	1721198465777274746	spget_quadcorr_mex.mexmaca64	2667a9d6f06bfd84

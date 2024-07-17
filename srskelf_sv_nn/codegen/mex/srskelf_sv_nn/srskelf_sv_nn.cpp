@@ -18,9 +18,9 @@
 #include <algorithm>
 #include <cstddef>
 #include <cstring>
-#include <emmintrin.h>
 
 // Variable Definitions
+<<<<<<< HEAD
 static emlrtRSInfo
     emlrtRSI{
         16,              // lineNo
@@ -84,15 +84,72 @@ static emlrtRSInfo
         "/home/user/Documents/ffmlu_code_generation/srskelf_sv_nn/"
         "srskelf_sv_nn.m" // pathName
     };
+=======
+static emlrtRSInfo emlrtRSI{
+    16,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
 
-static emlrtRSInfo
-    j_emlrtRSI{
-        69,                  // lineNo
-        "eml_mtimes_helper", // fcnName
-        "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/"
-        "eml_mtimes_helper.m" // pathName
-    };
+static emlrtRSInfo b_emlrtRSI{
+    17,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
 
+static emlrtRSInfo c_emlrtRSI{
+    18,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
+
+static emlrtRSInfo d_emlrtRSI{
+    19,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
+
+static emlrtRSInfo e_emlrtRSI{
+    28,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
+
+static emlrtRSInfo f_emlrtRSI{
+    29,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
+
+static emlrtRSInfo g_emlrtRSI{
+    30,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
+
+static emlrtRSInfo h_emlrtRSI{
+    31,              // lineNo
+    "srskelf_sv_nn", // fcnName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pathName
+};
+>>>>>>> 3aa7dbe4d7b657e3c15127210b24dda22e98f8ef
+
+static emlrtRSInfo j_emlrtRSI{
+    69,                  // lineNo
+    "eml_mtimes_helper", // fcnName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/ops/"
+    "eml_mtimes_helper.m" // pathName
+};
+
+<<<<<<< HEAD
 static emlrtRTEInfo
     emlrtRTEI{
         11,              // lineNo
@@ -286,25 +343,200 @@ static emlrtECInfo
         "/home/user/Documents/ffmlu_code_generation/srskelf_sv_nn/"
         "srskelf_sv_nn.m" // pName
     };
+=======
+static emlrtRTEInfo emlrtRTEI{
+    11,              // lineNo
+    11,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
 
-static emlrtRTEInfo
-    c_emlrtRTEI{
-        138,                   // lineNo
-        23,                    // colNo
-        "dynamic_size_checks", // fName
-        "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/"
-        "eml_mtimes_helper.m" // pName
-    };
+static emlrtBCInfo emlrtBCI{
+    1,               // iFirst
+    149,             // iLast
+    12,              // lineNo
+    21,              // colNo
+    "F.factors",     // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
 
-static emlrtRTEInfo
-    d_emlrtRTEI{
-        133,                   // lineNo
-        23,                    // colNo
-        "dynamic_size_checks", // fName
-        "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/"
-        "eml_mtimes_helper.m" // pName
-    };
+static emlrtECInfo emlrtECI{
+    1,               // nDims
+    16,              // lineNo
+    15,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
 
+static emlrtECInfo b_emlrtECI{
+    -1,              // nDims
+    16,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo c_emlrtECI{
+    -1,              // nDims
+    17,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo d_emlrtECI{
+    1,               // nDims
+    18,              // lineNo
+    15,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo e_emlrtECI{
+    -1,              // nDims
+    18,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo f_emlrtECI{
+    1,               // nDims
+    19,              // lineNo
+    16,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo g_emlrtECI{
+    -1,              // nDims
+    19,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtRTEInfo b_emlrtRTEI{
+    23,              // lineNo
+    11,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtDCInfo emlrtDCI{
+    24,              // lineNo
+    21,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtBCInfo b_emlrtBCI{
+    1,               // iFirst
+    149,             // iLast
+    24,              // lineNo
+    21,              // colNo
+    "F.factors",     // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+
+static emlrtECInfo h_emlrtECI{
+    1,               // nDims
+    28,              // lineNo
+    15,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo i_emlrtECI{
+    -1,              // nDims
+    28,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo j_emlrtECI{
+    1,               // nDims
+    29,              // lineNo
+    15,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo k_emlrtECI{
+    -1,              // nDims
+    29,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo l_emlrtECI{
+    -1,              // nDims
+    30,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo m_emlrtECI{
+    1,               // nDims
+    31,              // lineNo
+    15,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+
+static emlrtECInfo n_emlrtECI{
+    -1,              // nDims
+    31,              // lineNo
+    5,               // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m" // pName
+};
+>>>>>>> 3aa7dbe4d7b657e3c15127210b24dda22e98f8ef
+
+static emlrtRTEInfo c_emlrtRTEI{
+    138,                   // lineNo
+    23,                    // colNo
+    "dynamic_size_checks", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/ops/"
+    "eml_mtimes_helper.m" // pName
+};
+
+static emlrtRTEInfo d_emlrtRTEI{
+    133,                   // lineNo
+    23,                    // colNo
+    "dynamic_size_checks", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/ops/"
+    "eml_mtimes_helper.m" // pName
+};
+
+<<<<<<< HEAD
 static emlrtBCInfo
     c_emlrtBCI{
         1,               // iFirst
@@ -442,6 +674,133 @@ static emlrtBCInfo
         "srskelf_sv_nn.m", // pName
         0                  // checkKind
     };
+=======
+static emlrtBCInfo c_emlrtBCI{
+    1,               // iFirst
+    80000,           // iLast
+    16,              // lineNo
+    17,              // colNo
+    "Y",             // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+
+static emlrtDCInfo b_emlrtDCI{
+    16,              // lineNo
+    17,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtDCInfo c_emlrtDCI{
+    28,              // lineNo
+    17,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtBCInfo d_emlrtBCI{
+    1,               // iFirst
+    80000,           // iLast
+    28,              // lineNo
+    17,              // colNo
+    "Y",             // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+
+static emlrtDCInfo d_emlrtDCI{
+    16,              // lineNo
+    49,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtBCInfo e_emlrtBCI{
+    1,               // iFirst
+    80000,           // iLast
+    16,              // lineNo
+    49,              // colNo
+    "Y",             // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+
+static emlrtDCInfo e_emlrtDCI{
+    28,              // lineNo
+    42,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtBCInfo f_emlrtBCI{
+    1,               // iFirst
+    80000,           // iLast
+    28,              // lineNo
+    42,              // colNo
+    "Y",             // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+
+static emlrtDCInfo f_emlrtDCI{
+    29,              // lineNo
+    42,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtBCInfo g_emlrtBCI{
+    1,               // iFirst
+    80000,           // iLast
+    29,              // lineNo
+    42,              // colNo
+    "Y",             // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+
+static emlrtDCInfo g_emlrtDCI{
+    19,              // lineNo
+    18,              // colNo
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    1                                                      // checkKind
+};
+
+static emlrtBCInfo h_emlrtBCI{
+    1,               // iFirst
+    80000,           // iLast
+    19,              // lineNo
+    18,              // colNo
+    "Y",             // aName
+    "srskelf_sv_nn", // fName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m", // pName
+    0                                                      // checkKind
+};
+>>>>>>> 3aa7dbe4d7b657e3c15127210b24dda22e98f8ef
 
 // Function Declarations
 static int32_T binary_expand_op(real_T in1_data[], const real_T in2[80000],
@@ -653,7 +1012,6 @@ void srskelf_sv_nn(const emlrtStack *sp, const struct0_T *F,
   int32_T loop_ub;
   int32_T loop_ub_tmp;
   int32_T tmp_size;
-  int32_T vectorUB;
   char_T TRANSA1;
   char_T TRANSB1;
   st.prev = sp;
@@ -763,16 +1121,7 @@ void srskelf_sv_nn(const emlrtStack *sp, const struct0_T *F,
       c_tmp_data[i1] = static_cast<int32_T>(F->factors[b_i].rd.data[i1]) - 1;
     }
     if (loop_ub == b_loop_ub) {
-      b_loop_ub = (loop_ub / 2) << 1;
-      vectorUB = b_loop_ub - 2;
-      for (i1 = 0; i1 <= vectorUB; i1 += 2) {
-        __m128d r;
-        __m128d r1;
-        r = _mm_loadu_pd(&tmp_data[i1]);
-        r1 = _mm_loadu_pd(&b_tmp_data[i1]);
-        _mm_storeu_pd(&tmp_data[i1], _mm_sub_pd(r, r1));
-      }
-      for (i1 = b_loop_ub; i1 < loop_ub; i1++) {
+      for (i1 = 0; i1 < loop_ub; i1++) {
         tmp_data[i1] -= b_tmp_data[i1];
       }
     } else {
@@ -989,9 +1338,9 @@ void srskelf_sv_nn(const emlrtStack *sp, const struct0_T *F,
       Y[c_tmp_data[i1]] = b_tmp_data[i1];
     }
     st.site = &f_emlrtRSI;
-    vectorUB = F->factors[static_cast<int32_T>(beta1) - 1].nbr.size[0] *
+    tmp_size = F->factors[static_cast<int32_T>(beta1) - 1].nbr.size[0] *
                F->factors[static_cast<int32_T>(beta1) - 1].nbr.size[1];
-    for (i1 = 0; i1 < vectorUB; i1++) {
+    for (i1 = 0; i1 < tmp_size; i1++) {
       alpha1 = F->factors[static_cast<int32_T>(beta1) - 1].nbr.data[i1];
       if (alpha1 != static_cast<int32_T>(muDoubleScalarFloor(alpha1))) {
         emlrtIntegerCheckR2012b(alpha1, &f_emlrtDCI, &st);
@@ -1004,9 +1353,9 @@ void srskelf_sv_nn(const emlrtStack *sp, const struct0_T *F,
     }
     b_st.site = &j_emlrtRSI;
     i1 = F->factors[loop_ub_tmp].D.size(1);
-    if (i1 != vectorUB) {
+    if (i1 != tmp_size) {
       if (((F->factors[loop_ub_tmp].D.size(0) == 1) && (i1 == 1)) ||
-          (vectorUB == 1)) {
+          (tmp_size == 1)) {
         emlrtErrorWithMessageIdR2018a(
             &b_st, &d_emlrtRTEI,
             "Coder:toolbox:mtimes_noDynamicScalarExpansion",
@@ -1016,14 +1365,14 @@ void srskelf_sv_nn(const emlrtStack *sp, const struct0_T *F,
                                       "MATLAB:innerdim", 0);
       }
     }
-    for (i1 = 0; i1 < vectorUB; i1++) {
+    for (i1 = 0; i1 < tmp_size; i1++) {
       c_Y_data[i1] =
           Y[static_cast<int32_T>(
                 F->factors[static_cast<int32_T>(beta1) - 1].nbr.data[i1]) -
             1];
     }
     b_loop_ub = coder::internal::blas::mtimes(
-        F->factors[static_cast<int32_T>(beta1) - 1].D, c_Y_data, vectorUB,
+        F->factors[static_cast<int32_T>(beta1) - 1].D, c_Y_data, tmp_size,
         y_data);
     if ((loop_ub != b_loop_ub) && ((loop_ub != 1) && (b_loop_ub != 1))) {
       emlrtDimSizeImpxCheckR2021b(loop_ub, b_loop_ub, &j_emlrtECI,
