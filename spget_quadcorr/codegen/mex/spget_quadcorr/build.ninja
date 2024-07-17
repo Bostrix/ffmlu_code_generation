@@ -6,7 +6,7 @@ ninja_required_version = 1.3
 root = .
 builddir = $root/build/glnxa64
 matlabdir = /usr/local/MATLAB/R2024a
-startdir = /home/user/ffmlu-codegen/spget_quadcorr
+startdir = /home/user/Documents/ffmlu_code_generation/spget_quadcorr
 
 # Toolchain information
 cc = gcc

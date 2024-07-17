@@ -1,12 +1,12 @@
 % Measure the execution time of spget_quadcorr
-tic;
+mTime = tic;
 result_spget_quadcorr = spget_quadcorr(I, J, P, S);
-time_spget_quadcorr = toc;
+time_spget_quadcorr = toc(mTime);
 
 % Measure the execution time of spget_quadcorr_mex
-tic;
+nTime = tic;
 result_spget_quadcorr_mex = spget_quadcorr_mex(I, J, P, S);
-time_spget_quadcorr_mex = toc;
+time_spget_quadcorr_mex = toc(nTime);
 
 % Display the execution times
 fprintf('Execution time of spget_quadcorr: %.6f seconds\n', time_spget_quadcorr);

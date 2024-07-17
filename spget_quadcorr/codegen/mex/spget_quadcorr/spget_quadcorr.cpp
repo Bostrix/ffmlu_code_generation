@@ -18,23 +18,29 @@
 #include <cstring>
 
 // Variable Definitions
-static emlrtRSInfo emlrtRSI{
-    11,                                                        // lineNo
-    "spget_quadcorr",                                          // fcnName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pathName
-};
+static emlrtRSInfo
+    emlrtRSI{
+        11,               // lineNo
+        "spget_quadcorr", // fcnName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pathName
+    };
 
-static emlrtRSInfo b_emlrtRSI{
-    14,                                                        // lineNo
-    "spget_quadcorr",                                          // fcnName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pathName
-};
+static emlrtRSInfo
+    b_emlrtRSI{
+        14,               // lineNo
+        "spget_quadcorr", // fcnName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pathName
+    };
 
-static emlrtRSInfo c_emlrtRSI{
-    16,                                                        // lineNo
-    "spget_quadcorr",                                          // fcnName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pathName
-};
+static emlrtRSInfo
+    c_emlrtRSI{
+        16,               // lineNo
+        "spget_quadcorr", // fcnName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pathName
+    };
 
 static emlrtRSInfo d_emlrtRSI{
     37,                                                              // lineNo
@@ -133,13 +139,15 @@ static emlrtRSInfo ob_emlrtRSI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtECInfo emlrtECI{
-    -1,                                                        // nDims
-    24,                                                        // lineNo
-    5,                                                         // colNo
-    "spget_quadcorr",                                          // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pName
-};
+static emlrtECInfo
+    emlrtECI{
+        -1,               // nDims
+        24,               // lineNo
+        5,                // colNo
+        "spget_quadcorr", // fName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pName
+    };
 
 static emlrtRTEInfo emlrtRTEI{
     92,                        // lineNo
@@ -181,22 +189,24 @@ static emlrtRTEInfo e_emlrtRTEI{
 };
 
 static emlrtBCInfo emlrtBCI{
-    1,                                                          // iFirst
-    8000,                                                       // iLast
-    12,                                                         // lineNo
-    5,                                                          // colNo
-    "P",                                                        // aName
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    3                                                           // checkKind
+    1,                // iFirst
+    8000,             // iLast
+    12,               // lineNo
+    5,                // colNo
+    "P",              // aName
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    3                   // checkKind
 };
 
 static emlrtDCInfo emlrtDCI{
-    12,                                                         // lineNo
-    5,                                                          // colNo
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    1                                                           // checkKind
+    12,               // lineNo
+    5,                // colNo
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    1                   // checkKind
 };
 
 static emlrtDCInfo b_emlrtDCI{
@@ -208,96 +218,106 @@ static emlrtDCInfo b_emlrtDCI{
 };
 
 static emlrtBCInfo b_emlrtBCI{
-    -1,                                                         // iFirst
-    -1,                                                         // iLast
-    33,                                                         // lineNo
-    36,                                                         // colNo
-    "elements_to_find",                                         // aName
-    "find_locations_t",                                         // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    0                                                           // checkKind
+    -1,                 // iFirst
+    -1,                 // iLast
+    33,                 // lineNo
+    36,                 // colNo
+    "elements_to_find", // aName
+    "find_locations_t", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    0                   // checkKind
 };
 
 static emlrtBCInfo c_emlrtBCI{
-    -1,                                                         // iFirst
-    -1,                                                         // iLast
-    38,                                                         // lineNo
-    14,                                                         // colNo
-    "locs",                                                     // aName
-    "find_locations_t",                                         // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    0                                                           // checkKind
+    -1,                 // iFirst
+    -1,                 // iLast
+    38,                 // lineNo
+    14,                 // colNo
+    "locs",             // aName
+    "find_locations_t", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    0                   // checkKind
 };
 
 static emlrtBCInfo d_emlrtBCI{
-    -1,                                                         // iFirst
-    -1,                                                         // iLast
-    20,                                                         // lineNo
-    11,                                                         // colNo
-    "I",                                                        // aName
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    0                                                           // checkKind
+    -1,               // iFirst
+    -1,               // iLast
+    20,               // lineNo
+    11,               // colNo
+    "I",              // aName
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    0                   // checkKind
 };
 
 static emlrtBCInfo e_emlrtBCI{
-    -1,                                                         // iFirst
-    -1,                                                         // iLast
-    21,                                                         // lineNo
-    11,                                                         // colNo
-    "J",                                                        // aName
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    0                                                           // checkKind
+    -1,               // iFirst
+    -1,               // iLast
+    21,               // lineNo
+    11,               // colNo
+    "J",              // aName
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    0                   // checkKind
 };
 
 static emlrtBCInfo f_emlrtBCI{
-    -1,                                                         // iFirst
-    -1,                                                         // iLast
-    22,                                                         // lineNo
-    13,                                                         // colNo
-    "S_",                                                       // aName
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    0                                                           // checkKind
+    -1,               // iFirst
+    -1,               // iLast
+    22,               // lineNo
+    13,               // colNo
+    "S_",             // aName
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    0                   // checkKind
 };
 
 static emlrtBCInfo g_emlrtBCI{
-    1,                                                          // iFirst
-    8000,                                                       // iLast
-    24,                                                         // lineNo
-    9,                                                          // colNo
-    "P",                                                        // aName
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    0                                                           // checkKind
+    1,                // iFirst
+    8000,             // iLast
+    24,               // lineNo
+    9,                // colNo
+    "P",              // aName
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    0                   // checkKind
 };
 
 static emlrtDCInfo c_emlrtDCI{
-    24,                                                         // lineNo
-    7,                                                          // colNo
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    1                                                           // checkKind
+    24,               // lineNo
+    7,                // colNo
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    1                   // checkKind
 };
 
 static emlrtBCInfo h_emlrtBCI{
-    1,                                                          // iFirst
-    4095,                                                       // iLast
-    24,                                                         // lineNo
-    7,                                                          // colNo
-    "A",                                                        // aName
-    "spget_quadcorr",                                           // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m", // pName
-    3                                                           // checkKind
+    1,                // iFirst
+    4095,             // iLast
+    24,               // lineNo
+    7,                // colNo
+    "A",              // aName
+    "spget_quadcorr", // fName
+    "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+    "spget_quadcorr.m", // pName
+    3                   // checkKind
 };
 
-static emlrtRTEInfo h_emlrtRTEI{
-    14,                                                        // lineNo
-    23,                                                        // colNo
-    "spget_quadcorr",                                          // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pName
-};
+static emlrtRTEInfo
+    h_emlrtRTEI{
+        14,               // lineNo
+        23,               // colNo
+        "spget_quadcorr", // fName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pName
+    };
 
 static emlrtRTEInfo i_emlrtRTEI{
     195,                                                           // lineNo
@@ -383,39 +403,49 @@ static emlrtRTEInfo t_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo u_emlrtRTEI{
-    16,                                                        // lineNo
-    5,                                                         // colNo
-    "spget_quadcorr",                                          // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pName
-};
+static emlrtRTEInfo
+    u_emlrtRTEI{
+        16,               // lineNo
+        5,                // colNo
+        "spget_quadcorr", // fName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pName
+    };
 
-static emlrtRTEInfo v_emlrtRTEI{
-    1,                                                         // lineNo
-    14,                                                        // colNo
-    "spget_quadcorr",                                          // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pName
-};
+static emlrtRTEInfo
+    v_emlrtRTEI{
+        1,                // lineNo
+        14,               // colNo
+        "spget_quadcorr", // fName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pName
+    };
 
-static emlrtRTEInfo w_emlrtRTEI{
-    24,                                                        // lineNo
-    14,                                                        // colNo
-    "spget_quadcorr",                                          // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pName
-};
+static emlrtRTEInfo
+    w_emlrtRTEI{
+        24,               // lineNo
+        14,               // colNo
+        "spget_quadcorr", // fName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pName
+    };
 
-static emlrtRTEInfo x_emlrtRTEI{
-    24,                                                        // lineNo
-    7,                                                         // colNo
-    "spget_quadcorr",                                          // fName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pName
-};
+static emlrtRTEInfo
+    x_emlrtRTEI{
+        24,               // lineNo
+        7,                // colNo
+        "spget_quadcorr", // fName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pName
+    };
 
-static emlrtRSInfo qb_emlrtRSI{
-    24,                                                        // lineNo
-    "spget_quadcorr",                                          // fcnName
-    "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m" // pathName
-};
+static emlrtRSInfo
+    qb_emlrtRSI{
+        24,               // lineNo
+        "spget_quadcorr", // fcnName
+        "/home/user/Documents/ffmlu_code_generation/spget_quadcorr/"
+        "spget_quadcorr.m" // pathName
+    };
 
 // Function Declarations
 static void binary_expand_op(const emlrtStack &sp,

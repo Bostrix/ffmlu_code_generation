@@ -52,8 +52,8 @@ mxArray *emlrtMexFcnProperties()
   emlrtSetField(xEntryPoints, 0, "ConstantInputs", xInputs);
   emlrtSetField(
       xEntryPoints, 0, "FullPath",
-      emlrtMxCreateString(
-          "/home/user/ffmlu-codegen/spget_quadcorr/spget_quadcorr.m"));
+      emlrtMxCreateString("/home/user/Documents/ffmlu_code_generation/"
+                          "spget_quadcorr/spget_quadcorr.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
                 emlrtMxCreateDoubleScalar(739449.5133217593));
   emlrtSetField(xEntryPoints, 0, "Constructor",
