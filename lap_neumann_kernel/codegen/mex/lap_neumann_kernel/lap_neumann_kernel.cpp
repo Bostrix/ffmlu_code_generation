@@ -9,21 +9,20 @@
 #include "lap_neumann_kernel_types.h"
 #include "rt_nonfinite.h"
 #include "mwmathutil.h"
-#include <emmintrin.h>
 
 // Variable Definitions
 static emlrtRSInfo emlrtRSI{
     10,                   // lineNo
     "lap_neumann_kernel", // fcnName
-    "/home/user/ffmlu_code_generation/ffmlu_code_generation/lap_neumann_kernel/"
-    "lap_neumann_kernel.m" // pathName
+    "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+    "ffmlu_code_generation/lap_neumann_kernel/lap_neumann_kernel.m" // pathName
 };
 
 static emlrtRTEInfo emlrtRTEI{
-    13,                                                            // lineNo
-    9,                                                             // colNo
-    "sqrt",                                                        // fName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/sqrt.m" // pName
+    13,     // lineNo
+    9,      // colNo
+    "sqrt", // fName
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/elfun/sqrt.m" // pName
 };
 
 // Function Definitions
@@ -31,7 +30,6 @@ void lap_neumann_kernel(lap_neumann_kernelStackData *SD, const emlrtStack *sp,
                         const real_T x[6216], const real_T y[330],
                         const real_T nuuse[6216], real_T K[227920])
 {
-  __m128d r;
   emlrtStack st;
   real_T d;
   int32_T dx_tmp;
@@ -55,13 +53,13 @@ void lap_neumann_kernel(lap_neumann_kernelStackData *SD, const emlrtStack *sp,
       SD->f0.dz[dx_tmp] = x[3 * b_k + 2] - d2;
     }
   }
-  for (int32_T k{0}; k <= 227918; k += 2) {
-    r = _mm_loadu_pd(&SD->f0.dx[k]);
-    _mm_storeu_pd(&SD->f0.dr[k], _mm_mul_pd(r, r));
-    r = _mm_loadu_pd(&SD->f0.dy[k]);
-    _mm_storeu_pd(&SD->f0.y[k], _mm_mul_pd(r, r));
-    r = _mm_loadu_pd(&SD->f0.dz[k]);
-    _mm_storeu_pd(&SD->f0.b_y[k], _mm_mul_pd(r, r));
+  for (int32_T k{0}; k < 227920; k++) {
+    d = SD->f0.dx[k];
+    SD->f0.dr[k] = d * d;
+    d = SD->f0.dy[k];
+    SD->f0.y[k] = d * d;
+    d = SD->f0.dz[k];
+    SD->f0.b_y[k] = d * d;
   }
   st.site = &emlrtRSI;
   p = false;
@@ -77,9 +75,8 @@ void lap_neumann_kernel(lap_neumann_kernelStackData *SD, const emlrtStack *sp,
         &st, &emlrtRTEI, "Coder:toolbox:ElFunDomainError",
         "Coder:toolbox:ElFunDomainError", 3, 4, 4, "sqrt");
   }
-  for (int32_T k{0}; k <= 227918; k += 2) {
-    r = _mm_loadu_pd(&SD->f0.dr[k]);
-    _mm_storeu_pd(&SD->f0.dr[k], _mm_sqrt_pd(r));
+  for (int32_T k{0}; k < 227920; k++) {
+    SD->f0.dr[k] = muDoubleScalarSqrt(SD->f0.dr[k]);
   }
   for (int32_T k{0}; k < 110; k++) {
     for (int32_T b_k{0}; b_k < 2072; b_k++) {

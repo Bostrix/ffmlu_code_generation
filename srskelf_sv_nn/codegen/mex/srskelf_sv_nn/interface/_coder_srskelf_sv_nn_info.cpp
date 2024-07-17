@@ -50,11 +50,13 @@ mxArray *emlrtMexFcnProperties()
   emlrtSetField(xEntryPoints, 0, "NumberOfOutputs",
                 emlrtMxCreateDoubleScalar(1.0));
   emlrtSetField(xEntryPoints, 0, "ConstantInputs", xInputs);
-  emlrtSetField(xEntryPoints, 0, "FullPath",
-                emlrtMxCreateString(
-                    "/home/user/ffmlu-codegen/srskelf_sv_nn/srskelf_sv_nn.m"));
+  emlrtSetField(
+      xEntryPoints, 0, "FullPath",
+      emlrtMxCreateString(
+          "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/"
+          "ffmlu_code_generation/srskelf_sv_nn/srskelf_sv_nn.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739438.51225694444));
+                emlrtMxCreateDoubleScalar(739450.50209490745));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));

@@ -28,32 +28,40 @@ emlrtContext emlrtContextGlobal{
 emlrtRSInfo n_emlrtRSI{
     20,                               // lineNo
     "eml_int_forloop_overflow_check", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/eml/"
+    "/Applications/MATLAB_R2024a.app/toolbox/eml/lib/matlab/eml/"
     "eml_int_forloop_overflow_check.m" // pathName
 };
 
-emlrtRSInfo r_emlrtRSI{
-    488,           // lineNo
-    "merge_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+emlrtRSInfo
+    r_emlrtRSI{
+        488,           // lineNo
+        "merge_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-emlrtRSInfo s_emlrtRSI{
-    495,           // lineNo
-    "merge_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+emlrtRSInfo
+    s_emlrtRSI{
+        495,           // lineNo
+        "merge_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-emlrtRSInfo t_emlrtRSI{
-    496,           // lineNo
-    "merge_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+emlrtRSInfo
+    t_emlrtRSI{
+        496,           // lineNo
+        "merge_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-emlrtRSInfo u_emlrtRSI{
-    503,           // lineNo
-    "merge_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+emlrtRSInfo
+    u_emlrtRSI{
+        503,           // lineNo
+        "merge_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
 // End of code generation (spget_quadcorr_data.cpp)

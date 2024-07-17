@@ -1,74 +1,74 @@
 [
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  srskelf_sv_nn_data.cpp -o build/glnxa64/srskelf_sv_nn_data.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  srskelf_sv_nn_data.cpp -o build/maca64/srskelf_sv_nn_data.o",
     "file": "srskelf_sv_nn_data.cpp",
-    "output": "build/glnxa64/srskelf_sv_nn_data.o"
+    "output": "build/maca64/srskelf_sv_nn_data.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  rt_nonfinite.cpp -o build/glnxa64/rt_nonfinite.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  rt_nonfinite.cpp -o build/maca64/rt_nonfinite.o",
     "file": "rt_nonfinite.cpp",
-    "output": "build/glnxa64/rt_nonfinite.o"
+    "output": "build/maca64/rt_nonfinite.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  srskelf_sv_nn_initialize.cpp -o build/glnxa64/srskelf_sv_nn_initialize.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  srskelf_sv_nn_initialize.cpp -o build/maca64/srskelf_sv_nn_initialize.o",
     "file": "srskelf_sv_nn_initialize.cpp",
-    "output": "build/glnxa64/srskelf_sv_nn_initialize.o"
+    "output": "build/maca64/srskelf_sv_nn_initialize.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  srskelf_sv_nn_terminate.cpp -o build/glnxa64/srskelf_sv_nn_terminate.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  srskelf_sv_nn_terminate.cpp -o build/maca64/srskelf_sv_nn_terminate.o",
     "file": "srskelf_sv_nn_terminate.cpp",
-    "output": "build/glnxa64/srskelf_sv_nn_terminate.o"
+    "output": "build/maca64/srskelf_sv_nn_terminate.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  srskelf_sv_nn.cpp -o build/glnxa64/srskelf_sv_nn.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  srskelf_sv_nn.cpp -o build/maca64/srskelf_sv_nn.o",
     "file": "srskelf_sv_nn.cpp",
-    "output": "build/glnxa64/srskelf_sv_nn.o"
+    "output": "build/maca64/srskelf_sv_nn.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  mldivide.cpp -o build/glnxa64/mldivide.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  mldivide.cpp -o build/maca64/mldivide.o",
     "file": "mldivide.cpp",
-    "output": "build/glnxa64/mldivide.o"
+    "output": "build/maca64/mldivide.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  warning.cpp -o build/glnxa64/warning.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  warning.cpp -o build/maca64/warning.o",
     "file": "warning.cpp",
-    "output": "build/glnxa64/warning.o"
+    "output": "build/maca64/warning.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  mtimes.cpp -o build/glnxa64/mtimes.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  mtimes.cpp -o build/maca64/mtimes.o",
     "file": "mtimes.cpp",
-    "output": "build/glnxa64/mtimes.o"
+    "output": "build/maca64/mtimes.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_srskelf_sv_nn_api.cpp -o build/glnxa64/_coder_srskelf_sv_nn_api.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  interface/_coder_srskelf_sv_nn_api.cpp -o build/maca64/_coder_srskelf_sv_nn_api.o",
     "file": "interface/_coder_srskelf_sv_nn_api.cpp",
-    "output": "build/glnxa64/_coder_srskelf_sv_nn_api.o"
+    "output": "build/maca64/_coder_srskelf_sv_nn_api.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_srskelf_sv_nn_mex.cpp -o build/glnxa64/_coder_srskelf_sv_nn_mex.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  interface/_coder_srskelf_sv_nn_mex.cpp -o build/maca64/_coder_srskelf_sv_nn_mex.o",
     "file": "interface/_coder_srskelf_sv_nn_mex.cpp",
-    "output": "build/glnxa64/_coder_srskelf_sv_nn_mex.o"
+    "output": "build/maca64/_coder_srskelf_sv_nn_mex.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_srskelf_sv_nn_info.cpp -o build/glnxa64/_coder_srskelf_sv_nn_info.o",
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  interface/_coder_srskelf_sv_nn_info.cpp -o build/maca64/_coder_srskelf_sv_nn_info.o",
     "file": "interface/_coder_srskelf_sv_nn_info.cpp",
-    "output": "build/glnxa64/_coder_srskelf_sv_nn_info.o"
+    "output": "build/maca64/_coder_srskelf_sv_nn_info.o"
   },
   {
-    "directory": "/home/user/ffmlu-codegen/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/ffmlu-codegen/srskelf_sv_nn\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  /usr/local/MATLAB/R2024a/extern/version/cpp_mexapi_version.cpp -o build/glnxa64/cpp_mexapi_version.o",
-    "file": "/usr/local/MATLAB/R2024a/extern/version/cpp_mexapi_version.cpp",
-    "output": "build/glnxa64/cpp_mexapi_version.o"
+    "directory": "/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn/codegen/mex/srskelf_sv_nn",
+    "command": "/usr/bin/xcrun -sdk macosx14.4 clang++ -fno-common -arch arm64 -mmacosx-version-min=11.0 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fwrapv -ffp-contract=off  -fobjc-arc -std=c++14 -stdlib=libc++ -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c++11 -I \".\" -I \"/Users/abidrk/LocalStorage/Projects/ffmlu_optimize/fn-codegen/ffmlu_code_generation/srskelf_sv_nn\" -I \"./interface\" -I \"/Applications/MATLAB_R2024a.app/extern/include\" -I \".\" -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_sv_nn_mex -DMW_NEEDS_VERSION_H -c  /Applications/MATLAB_R2024a.app/extern/version/cpp_mexapi_version.cpp -o build/maca64/cpp_mexapi_version.o",
+    "file": "/Applications/MATLAB_R2024a.app/extern/version/cpp_mexapi_version.cpp",
+    "output": "build/maca64/cpp_mexapi_version.o"
   }
 ]

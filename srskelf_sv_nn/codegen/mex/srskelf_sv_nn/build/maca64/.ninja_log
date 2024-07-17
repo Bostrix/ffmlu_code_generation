@@ -1,0 +1,14 @@
+# ninja log v5
+0	112	1721198601681841129	build/maca64/rt_nonfinite.o	1ea8ed54da95c995
+1	176	1721198601755597122	build/maca64/warning.o	a911aac68450f855
+0	180	1721198601759592319	build/maca64/srskelf_sv_nn_data.o	e7cc0cfbc8ce7e76
+113	247	1721198601826784498	build/maca64/_coder_srskelf_sv_nn_info.o	861237b42e7b3f2a
+176	252	1721198601831645693	build/maca64/cpp_mexapi_version.o	d6a9224dc443f023
+1	553	1721198602131028237	build/maca64/mtimes.o	d570a7c5bc0a13e3
+0	555	1721198602133641855	build/maca64/srskelf_sv_nn_initialize.o	f46cef074938fcf8
+0	601	1721198602179187764	build/maca64/srskelf_sv_nn_terminate.o	7b7a8dd687fe5c69
+1	638	1721198602216217656	build/maca64/_coder_srskelf_sv_nn_mex.o	caca59c4b4a14dc5
+1	659	1721198602236931929	build/maca64/_coder_srskelf_sv_nn_api.o	f196b064002a874a
+0	733	1721198602311446628	build/maca64/mldivide.o	ab21cfba1b8e9a76
+0	759	1721198602337267970	build/maca64/srskelf_sv_nn.o	8701cf7508694500
+759	877	1721198602455521209	srskelf_sv_nn_mex.mexmaca64	c0fbc1a5e836cc0e

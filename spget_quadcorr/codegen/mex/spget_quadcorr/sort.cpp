@@ -14,77 +14,101 @@
 #include <cstring>
 
 // Variable Definitions
-static emlrtRSInfo e_emlrtRSI{
-    72,     // lineNo
-    "sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
-};
+static emlrtRSInfo
+    e_emlrtRSI{
+        72,     // lineNo
+        "sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sort.m" // pathName
+    };
 
-static emlrtRSInfo f_emlrtRSI{
-    105,       // lineNo
-    "sortIdx", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    f_emlrtRSI{
+        105,       // lineNo
+        "sortIdx", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo g_emlrtRSI{
-    301,                // lineNo
-    "block_merge_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    g_emlrtRSI{
+        301,                // lineNo
+        "block_merge_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo h_emlrtRSI{
-    309,                // lineNo
-    "block_merge_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    h_emlrtRSI{
+        309,                // lineNo
+        "block_merge_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo i_emlrtRSI{
-    310,                // lineNo
-    "block_merge_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    i_emlrtRSI{
+        310,                // lineNo
+        "block_merge_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo j_emlrtRSI{
-    318,                // lineNo
-    "block_merge_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    j_emlrtRSI{
+        318,                // lineNo
+        "block_merge_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo k_emlrtRSI{
-    326,                // lineNo
-    "block_merge_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    k_emlrtRSI{
+        326,                // lineNo
+        "block_merge_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo l_emlrtRSI{
-    409,                      // lineNo
-    "initialize_vector_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    l_emlrtRSI{
+        409,                      // lineNo
+        "initialize_vector_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo m_emlrtRSI{
-    416,                      // lineNo
-    "initialize_vector_sort", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    m_emlrtRSI{
+        416,                      // lineNo
+        "initialize_vector_sort", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo o_emlrtRSI{
-    576,                // lineNo
-    "merge_pow2_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    o_emlrtRSI{
+        576,                // lineNo
+        "merge_pow2_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo p_emlrtRSI{
-    578,                // lineNo
-    "merge_pow2_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    p_emlrtRSI{
+        578,                // lineNo
+        "merge_pow2_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
-static emlrtRSInfo q_emlrtRSI{
-    606,                // lineNo
-    "merge_pow2_block", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
-};
+static emlrtRSInfo
+    q_emlrtRSI{
+        606,                // lineNo
+        "merge_pow2_block", // fcnName
+        "/Applications/MATLAB_R2024a.app/toolbox/eml/eml/+coder/+internal/"
+        "sortIdx.m" // pathName
+    };
 
 // Function Definitions
 namespace coder {
