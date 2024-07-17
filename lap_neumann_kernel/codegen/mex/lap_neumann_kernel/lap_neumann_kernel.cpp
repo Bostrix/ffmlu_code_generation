@@ -12,13 +12,12 @@
 #include <emmintrin.h>
 
 // Variable Definitions
-static emlrtRSInfo
-    emlrtRSI{
-        10,                   // lineNo
-        "lap_neumann_kernel", // fcnName
-        "/home/user/ffmlu_code_generation/lap_neumann_kernel/"
-        "lap_neumann_kernel.m" // pathName
-    };
+static emlrtRSInfo emlrtRSI{
+    10,                   // lineNo
+    "lap_neumann_kernel", // fcnName
+    "/home/user/ffmlu_code_generation/ffmlu_code_generation/lap_neumann_kernel/"
+    "lap_neumann_kernel.m" // pathName
+};
 
 static emlrtRTEInfo emlrtRTEI{
     13,                                                            // lineNo

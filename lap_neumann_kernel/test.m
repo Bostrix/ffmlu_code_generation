@@ -1,14 +1,14 @@
 % test_lap_neumann_kernel.m
 
 % Test lap_neumann_kernel (MATLAB version)
-tic;
+mTime = tic;
 matlab_result = lap_neumann_kernel(x, y, nuuse);
-matlab_time = toc;
+matlab_time = toc(mTime);
 
 % Test lap_neumann_kernel_mex (C++ MEX version)
-tic;
+nTime = tic;
 cpp_result = lap_neumann_kernel_mex(x, y, nuuse);
-cpp_time = toc;
+cpp_time = toc(nTime);
 
 % Print the execution times
 fprintf('MATLAB lap_neumann_kernel execution time: %.6f seconds\n', matlab_time);

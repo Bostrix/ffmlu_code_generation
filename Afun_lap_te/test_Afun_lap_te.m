@@ -1,14 +1,14 @@
 % test_Afun_lap_te.m
 
 % Test Afun_lap_te (MATLAB version)
-tic;
+mTime = tic;
 matlab_result = Afun_lap_te(i, j, x, nu, area, P, S, contrast, wuse);
-matlab_time = toc;
+matlab_time = toc(mTime);
 
 % Test Afun_lap_te_mex (C++ MEX version)
-tic;
+nTime = tic;
 cpp_result = Afun_lap_te_mex(i, j, x, nu, area, P, S, contrast, wuse);
-cpp_time = toc;
+cpp_time = toc(nTime);
 
 % Print the execution times
 fprintf('MATLAB Afun_lap_te execution time: %.6f seconds\n', matlab_time);

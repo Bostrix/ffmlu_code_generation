@@ -45,29 +45,32 @@ emlrtRSInfo y_emlrtRSI{
 };
 
 emlrtDCInfo b_emlrtDCI{
-    24,                                                              // lineNo
-    7,                                                               // colNo
-    "spget_quadcorr",                                                // fName
-    "/home/user/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m", // pName
-    1 // checkKind
+    24,               // lineNo
+    7,                // colNo
+    "spget_quadcorr", // fName
+    "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/"
+    "spget_quadcorr.m", // pName
+    1                   // checkKind
 };
 
 emlrtBCInfo h_emlrtBCI{
-    1,                                                               // iFirst
-    4095,                                                            // iLast
-    24,                                                              // lineNo
-    7,                                                               // colNo
-    "A",                                                             // aName
-    "spget_quadcorr",                                                // fName
-    "/home/user/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m", // pName
-    3 // checkKind
+    1,                // iFirst
+    4095,             // iLast
+    24,               // lineNo
+    7,                // colNo
+    "A",              // aName
+    "spget_quadcorr", // fName
+    "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/"
+    "spget_quadcorr.m", // pName
+    3                   // checkKind
 };
 
 emlrtRTEInfo w_emlrtRTEI{
-    24,                                                             // lineNo
-    7,                                                              // colNo
-    "spget_quadcorr",                                               // fName
-    "/home/user/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m" // pName
+    24,               // lineNo
+    7,                // colNo
+    "spget_quadcorr", // fName
+    "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/"
+    "spget_quadcorr.m" // pName
 };
 
 // End of code generation (Afun_lap_te_data.cpp)

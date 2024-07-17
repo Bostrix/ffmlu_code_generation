@@ -52,8 +52,9 @@ mxArray *emlrtMexFcnProperties()
                 emlrtMxCreateDoubleScalar(1.0));
   emlrtSetField(xEntryPoints, 0, "ConstantInputs", xInputs);
   emlrtSetField(xEntryPoints, 0, "FullPath",
-                emlrtMxCreateString("/home/user/ffmlu_code_generation/"
-                                    "lap_neumann_kernel/lap_neumann_kernel.m"));
+                emlrtMxCreateString(
+                    "/home/user/ffmlu_code_generation/ffmlu_code_generation/"
+                    "lap_neumann_kernel/lap_neumann_kernel.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
                 emlrtMxCreateDoubleScalar(739439.60805555561));
   emlrtSetField(xEntryPoints, 0, "Constructor",
