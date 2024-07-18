@@ -43,6 +43,7 @@ function T = shypoct(x,occ,lvlmax,ext)
 %      H. Samet. The quadtree and related hierarchical data structures. ACM
 %        Comput. Surv. 16 (2): 187-260, 1984.
 
+
   % Set sane default parameters
   if nargin < 3 || isempty(lvlmax)
     lvlmax = Inf;
@@ -51,7 +52,7 @@ function T = shypoct(x,occ,lvlmax,ext)
     ext = [];
   end
 
-  % Check that inputs are sensible
+  % Check that inputs arae sensible
   assert(occ >= 0,'RSS:shypoct:negativeOcc', ...
          'Leaf occupancy must be nonnegative.')
   assert(lvlmax >= 1,'RSS:shypoct:invalidLvlmax', ...
@@ -59,21 +60,40 @@ function T = shypoct(x,occ,lvlmax,ext)
 
   % Initialize top-level box extent, side lengths, center.
   [d,n] = size(x);
-  if isempty(ext)
-    ext = [min(x,[],2) max(x,[],2)];
-  end
-  assert(size(ext, 1) == d && size(ext, 2) == 2, 'Size mismatch in ext parameter.');
-  l = max(ext(:,2) - ext(:,1));
-  ctr = 0.5*(ext(:,1) + ext(:,2));
+  % if isempty(ext)
+  %   ext = [min(x,[],2) max(x,[],2)];
+  % end
+  % l = max(ext(:,2) - ext(:,1));
+  % ctr = 0.5*(ext(:,1) + ext(:,2));
+
+ % Check if x is empty or has incompatible dimensions
+    if isempty(x) || size(x, 1) < 2 || size(x, 2) < 2
+        error('Input array x must have at least 2 rows and 2 columns.');
+    end
+    
+    % Calculate the extents if ext is empty
+    ext = [min(x, [], 2), max(x, [], 2)];
+    
+    % % Check if ext has the correct dimensions
+    % if size(ext, 2) ~= 2
+    %     error('Size mismatch in ext calculation. Expected ext to be Nx2.');
+    % end
+    
+    % Calculate the length and center
+    l = max(ext(:, 2) - ext(:, 1));
+    ctr = 0.5 * (ext(:, 1) + ext(:, 2));
+
+
+
+
   s = struct('ctr',ctr','xi',1:n,'prnt',[],'chld',[],'nbor',[], ...
              'ilist',[],'snbor',[]);
-  max_nodes = 10 * n;  % Preallocate a sufficiently large number of nodes
-  T = struct('nlvl',1,'lvp',[0 1],'lrt',l,'nodes',repmat(s, max_nodes, 1));
+  T = struct('nlvl',1,'lvp',[0 1],'lrt',l,'nodes',s);
   nlvl = 1;
   nbox = 1;
   mlvl = 1;
-
-  % Loop until all boxes are sufficiently subdivided (natural termination)
+  mbox = 1;
+ % Loop until all boxes are sufficiently subdivided (natural termination)
   while 1
     % Terminate if at maximum depth (unnatural termination)
     if nlvl >= lvlmax
@@ -97,23 +117,70 @@ function T = shypoct(x,occ,lvlmax,ext)
         ctr = T.nodes(prnt).ctr;
         idx = bsxfun(@gt,x(:,xi),ctr');
         idx = 2.^((1:d) - 1)*idx + 1;
-        unique_idx = unique(idx);
-        for k = 1:length(unique_idx)
-          i = unique_idx(k);
-          nbox = nbox + 1;
-          if nbox > max_nodes
-            error('Too many boxes');
-          end
-          T.nodes(nbox).ctr = ctr + l*(bitget(i-1,1:d) - 0.5);
-          T.nodes(nbox).xi = xi(idx == i);
-          T.nodes(nbox).prnt = prnt;
-          T.nodes(nbox).chld = [];
-          T.nodes(nbox).nbor = [];
-          T.nodes(nbox).ilist = [];
-          T.nodes(nbox).snbor = [];
-          T.nodes(prnt).chld = [T.nodes(prnt).chld nbox];
-        end
-        T.nodes(prnt).xi = [];
+ 
+        % for i = unique(idx)
+        %   nbox = nbox + 1;
+        %   while mbox < nbox
+        %     e = cell(mbox,1);
+        %     s = struct('ctr',e,'xi',e,'prnt',e,'chld',e,'nbor',e, ...
+        %                'ilist',e,'snbor',e);
+        %     T.nodes = [T.nodes; s];
+        %     mbox = 2*mbox;
+        %   end
+        %   s = struct( 'ctr', ctr + l*(bitget(i-1,1:d) - 0.5), ...
+        %                'xi', xi(idx == i),                    ...
+        %              'prnt', prnt,                            ...
+        %              'chld', [],                              ...
+        %              'nbor', [],                              ...
+        %              'ilist', [],                             ...
+        %              'snbor', []);
+        %   T.nodes(nbox) = s;
+        %   T.nodes(prnt).chld = [T.nodes(prnt).chld nbox];
+  % end
+
+% Ensure T.nodes is initialized properly before the loop
+if ~isfield(T, 'nodes') || isempty(T.nodes)
+    T.nodes = struct('ctr', {}, 'xi', {}, 'prnt', {}, 'chld', {}, 'nbor', {}, 'ilist', {}, 'snbor', {});
+end
+
+% Get the unique indices beforehand
+unique_idx = unique(idx);
+
+% Initialize a cell array to collect the structures
+nodesCell = cell(1, 1);
+nodesCell{1} = T.nodes;
+
+for i = 1:length(unique_idx)
+    idx_val = unique_idx(i);
+    nbox = nbox + 1;
+
+    while mbox < nbox
+        e = cell(1,1);  % Initialize the cell array properly
+        e{1} = [];      % Assign a value to the cell array
+        s = struct('ctr', e, 'xi', e, 'prnt', e, 'chld', e, 'nbor', e, ...
+                   'ilist', e, 'snbor', e);
+        nodesCell{end+1} = s;
+        mbox = 2 * mbox;
+    end
+
+    s = struct('ctr', ctr + l * (bitget(idx_val - 1, 1:d) - 0.5), ...
+               'xi', {xi(idx == idx_val)},                        ...
+               'prnt', prnt,                                      ...
+               'chld', [],                                        ...
+               'nbor', [],                                        ...
+               'ilist', [],                                       ...
+               'snbor', []);
+
+    nodesCell{end+1} = s;
+    nodesCell{prnt}.chld = [nodesCell{prnt}.chld nbox];
+end
+
+% Convert the cell array back to a structure array
+T.nodes = [nodesCell{:}];
+
+
+
+ T.nodes(prnt).xi = [];
       end
     end
 
@@ -124,8 +191,9 @@ function T = shypoct(x,occ,lvlmax,ext)
     else
       nlvl = nlvl + 1;
       T.nlvl = nlvl;
-      if length(T.lvp) < nlvl + 1
-        T.lvp = [T.lvp zeros(1, length(T.lvp))]; % Double the length of T.lvp
+      while mlvl < nlvl
+        T.lvp = [T.lvp zeros(1,mlvl)];
+        mlvl = 2*mlvl;
       end
       T.lvp(nlvl+1) = nbox;
     end
@@ -135,6 +203,10 @@ function T = shypoct(x,occ,lvlmax,ext)
   T.lvp = T.lvp(1:nlvl+1);
   T.nodes = T.nodes(1:nbox);
 
+  
+  % Next, we have to compute adjacency, neighbor, interaction list info for
+  % each box.
+  
   % Initialize data for neighbor calculation
   ilvl = zeros(nbox,1);
   llvl = zeros(nlvl,1);
@@ -171,6 +243,7 @@ function T = shypoct(x,occ,lvlmax,ext)
           else
               T.nodes(i).ilist = [T.nodes(i).ilist, j];
           end
+        
         end
       end
 
@@ -191,6 +264,8 @@ function T = shypoct(x,occ,lvlmax,ext)
       if ~isempty(j)
         T.nodes(i).ilist = [T.nodes(i).ilist j];
       end
+
     end
   end
+
 end
