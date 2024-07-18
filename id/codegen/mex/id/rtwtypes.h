@@ -1,13 +1,12 @@
-/*
- * rtwtypes.h
- *
- * Code generation for function 'id'
- *
- */
+//
+// rtwtypes.h
+//
+// Code generation for function 'id'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "tmwtypes.h"
 
 /*
@@ -20,4 +19,4 @@
 #define FALSE (0U)
 #endif
 
-/* End of code generation (rtwtypes.h) */
+// End of code generation (rtwtypes.h)

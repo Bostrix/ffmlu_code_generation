@@ -1,13 +1,12 @@
-/*
- * rt_nonfinite.h
- *
- * Code generation for function 'id'
- *
- */
+//
+// rt_nonfinite.h
+//
+// Code generation for function 'id'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "tmwtypes.h"
 
@@ -31,4 +30,4 @@ extern real32_T mex_rtNaNF;
 
 extern void mex_InitInfAndNan(void);
 
-/* End of code generation (rt_nonfinite.h) */
+// End of code generation (rt_nonfinite.h)

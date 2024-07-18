@@ -1,22 +1,21 @@
-/*
- * id_data.h
- *
- * Code generation for function 'id_data'
- *
- */
+//
+// id_data.h
+//
+// Code generation for function 'id_data'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Variable Declarations */
+// Variable Declarations
 extern emlrtCTX emlrtRootTLSGlobal;
 extern const volatile char_T *emlrtBreakCheckR2012bFlagVar;
 extern emlrtContext emlrtContextGlobal;
@@ -35,4 +34,4 @@ extern const int32_T iv[4];
 extern const char_T cv[19];
 extern emlrtRSInfo kh_emlrtRSI;
 
-/* End of code generation (id_data.h) */
+// End of code generation (id_data.h)

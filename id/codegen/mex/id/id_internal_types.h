@@ -1,47 +1,37 @@
-/*
- * id_internal_types.h
- *
- * Code generation for function 'id'
- *
- */
+//
+// id_internal_types.h
+//
+// Code generation for function 'id'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "id_types.h"
 #include "rtwtypes.h"
 #include "emlrt.h"
 
-/* Type Definitions */
-#ifndef typedef_rtDesignRangeCheckInfo
-#define typedef_rtDesignRangeCheckInfo
-typedef struct {
+// Type Definitions
+struct rtDesignRangeCheckInfo {
   int32_T lineNo;
   int32_T colNo;
   const char_T *fName;
   const char_T *pName;
-} rtDesignRangeCheckInfo;
-#endif /* typedef_rtDesignRangeCheckInfo */
+};
 
-#ifndef typedef_rtDoubleCheckInfo
-#define typedef_rtDoubleCheckInfo
-typedef struct {
+struct rtDoubleCheckInfo {
   int32_T lineNo;
   int32_T colNo;
   const char_T *fName;
   const char_T *pName;
   int32_T checkKind;
-} rtDoubleCheckInfo;
-#endif /* typedef_rtDoubleCheckInfo */
+};
 
-#ifndef typedef_rtRunTimeErrorInfo
-#define typedef_rtRunTimeErrorInfo
-typedef struct {
+struct rtRunTimeErrorInfo {
   int32_T lineNo;
   int32_T colNo;
   const char_T *fName;
   const char_T *pName;
-} rtRunTimeErrorInfo;
-#endif /* typedef_rtRunTimeErrorInfo */
+};
 
-/* End of code generation (id_internal_types.h) */
+// End of code generation (id_internal_types.h)

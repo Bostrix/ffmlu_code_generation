@@ -1,24 +1,23 @@
-/*
- * id_terminate.h
- *
- * Code generation for function 'id_terminate'
- *
- */
+//
+// id_terminate.h
+//
+// Code generation for function 'id_terminate'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void id_atexit(void);
+// Function Declarations
+void id_atexit();
 
-void id_terminate(void);
+void id_terminate();
 
-/* End of code generation (id_terminate.h) */
+// End of code generation (id_terminate.h)

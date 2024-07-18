@@ -1,23 +1,29 @@
-/*
- * xzlarf.h
- *
- * Code generation for function 'xzlarf'
- *
- */
+//
+// xzlarf.h
+//
+// Code generation for function 'xzlarf'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-int32_T ilazlc(const emlrtStack *sp, int32_T m, int32_T n, const real_T A[25],
+// Function Declarations
+namespace coder {
+namespace internal {
+namespace reflapack {
+int32_T ilazlc(const emlrtStack &sp, int32_T m, int32_T n, const real_T A[25],
                int32_T ia0);
 
-/* End of code generation (xzlarf.h) */
+}
+} // namespace internal
+} // namespace coder
+
+// End of code generation (xzlarf.h)

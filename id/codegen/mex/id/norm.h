@@ -1,24 +1,26 @@
-/*
- * norm.h
- *
- * Code generation for function 'norm'
- *
- */
+//
+// norm.h
+//
+// Code generation for function 'norm'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
+// Function Declarations
+namespace coder {
+real_T b_norm(const real_T x_data[], int32_T x_size);
+
 real_T b_norm(const real_T x_data[], const int32_T x_size[2]);
 
-real_T c_norm(const real_T x_data[], int32_T x_size);
+} // namespace coder
 
-/* End of code generation (norm.h) */
+// End of code generation (norm.h)

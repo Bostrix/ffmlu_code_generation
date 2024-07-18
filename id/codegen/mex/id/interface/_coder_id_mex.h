@@ -1,28 +1,27 @@
-/*
- * _coder_id_mex.h
- *
- * Code generation for function '_coder_id_mex'
- *
- */
+//
+// _coder_id_mex.h
+//
+// Code generation for function '_coder_id_mex'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
+// Function Declarations
 void id_mexFunction(int32_T nlhs, mxArray *plhs[4], int32_T nrhs,
                     const mxArray *prhs[5]);
 
 MEXFUNCTION_LINKAGE void mexFunction(int32_T nlhs, mxArray *plhs[],
                                      int32_T nrhs, const mxArray *prhs[]);
 
-emlrtCTX mexFunctionCreateRootTLS(void);
+emlrtCTX mexFunctionCreateRootTLS();
 
-/* End of code generation (_coder_id_mex.h) */
+// End of code generation (_coder_id_mex.h)

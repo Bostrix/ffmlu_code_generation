@@ -1,22 +1,29 @@
-/*
- * WarningState.h
- *
- * Code generation for function 'WarningState'
- *
- */
+//
+// WarningState.h
+//
+// Code generation for function 'WarningState'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-void WarningState_callWarning(const emlrtStack *sp);
+// Type Definitions
+namespace coder {
+namespace internal {
+class WarningState {
+public:
+  static void callWarning(const emlrtStack &sp);
+};
 
-/* End of code generation (WarningState.h) */
+} // namespace internal
+} // namespace coder
+
+// End of code generation (WarningState.h)

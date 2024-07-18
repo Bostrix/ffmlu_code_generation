@@ -1,22 +1,28 @@
-/*
- * xnrm2.h
- *
- * Code generation for function 'xnrm2'
- *
- */
+//
+// xnrm2.h
+//
+// Code generation for function 'xnrm2'
+//
 
 #pragma once
 
-/* Include files */
+// Include files
 #include "rtwtypes.h"
 #include "emlrt.h"
 #include "mex.h"
-#include <math.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 
-/* Function Declarations */
-real_T xnrm2(const emlrtStack *sp, int32_T n, const real_T x[25], int32_T ix0);
+// Function Declarations
+namespace coder {
+namespace internal {
+namespace blas {
+real_T xnrm2(const emlrtStack &sp, int32_T n, const real_T x[25], int32_T ix0);
 
-/* End of code generation (xnrm2.h) */
+}
+} // namespace internal
+} // namespace coder
+
+// End of code generation (xnrm2.h)
