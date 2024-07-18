@@ -1,4 +1,5 @@
 function T = shypoct(x,occ,lvlmax,ext)
+    coder.noImplicitExpansionInFunction;
 % SHYPOCT   Build hyperoctree.
 %
 %    T = SHYPOCT(X,OCC) builds a hyperoctree T over a set of points X such that
@@ -70,19 +71,18 @@ function T = shypoct(x,occ,lvlmax,ext)
     if isempty(x) || size(x, 1) < 2 || size(x, 2) < 2
         error('Input array x must have at least 2 rows and 2 columns.');
     end
-    
+
     % Calculate the extents if ext is empty
     ext = [min(x, [], 2), max(x, [], 2)];
-    
+
     % % Check if ext has the correct dimensions
     % if size(ext, 2) ~= 2
     %     error('Size mismatch in ext calculation. Expected ext to be Nx2.');
     % end
-    
+
     % Calculate the length and center
     l = max(ext(:, 2) - ext(:, 1));
     ctr = 0.5 * (ext(:, 1) + ext(:, 2));
-
 
 
 
@@ -105,84 +105,115 @@ function T = shypoct(x,occ,lvlmax,ext)
     nbox_ = nbox;
     l = 0.5*l;
 
-    % Loop over all boxes at current level
-    for prnt = T.lvp(nlvl)+1:T.lvp(nlvl+1)
-      xi = T.nodes(prnt).xi;
-      xn = length(xi);
+   % % Loop over all boxes at current level
+   %  for prnt = T.lvp(nlvl)+1:T.lvp(nlvl+1)
+   %    xi = T.nodes(prnt).xi;
+   %    xn = length(xi);
+   % 
+   %    % Subdivide this box if it contains too many points
+   %    if xn > occ
+   %      % Complicated way of finding the assignments of this box's points
+   %      % to its child boxes
+   %      ctr = T.nodes(prnt).ctr;
+   %      idx = bsxfun(@gt,x(:,xi),ctr');
+   %      idx = 2.^((1:d) - 1)*idx + 1;
+   %      for i = unique(idx)
+   %        nbox = nbox + 1;
+   %        while mbox < nbox
+   %          e = cell(mbox,1);
+   %          s = struct('ctr',e,'xi',e,'prnt',e,'chld',e,'nbor',e, ...
+   %                     'ilist',e,'snbor',e);
+   %          T.nodes = [T.nodes; s];
+   %          mbox = 2*mbox;
+   %        end
+   %        s = struct( 'ctr', ctr + l*(bitget(i-1,1:d) - 0.5), ...
+   %                     'xi', xi(idx == i),                    ...
+   %                   'prnt', prnt,                            ...
+   %                   'chld', [],                              ...
+   %                   'nbor', [],                              ...
+   %                   'ilist', [],                             ...
+   %                   'snbor', []);
+   %        T.nodes(nbox) = s;
+   %        T.nodes(prnt).chld = [T.nodes(prnt).chld nbox];
+   %      end
+   %      T.nodes(prnt).xi = [];
+   %    end
+    % end
 
-      % Subdivide this box if it contains too many points
-      if xn > occ
-        % Complicated way of finding the assignments of this box's points
-        % to its child boxes
-        ctr = T.nodes(prnt).ctr;
-        idx = bsxfun(@gt,x(:,xi),ctr');
-        idx = 2.^((1:d) - 1)*idx + 1;
- 
-        % for i = unique(idx)
-        %   nbox = nbox + 1;
-        %   while mbox < nbox
-        %     e = cell(mbox,1);
-        %     s = struct('ctr',e,'xi',e,'prnt',e,'chld',e,'nbor',e, ...
-        %                'ilist',e,'snbor',e);
-        %     T.nodes = [T.nodes; s];
-        %     mbox = 2*mbox;
-        %   end
-        %   s = struct( 'ctr', ctr + l*(bitget(i-1,1:d) - 0.5), ...
-        %                'xi', xi(idx == i),                    ...
-        %              'prnt', prnt,                            ...
-        %              'chld', [],                              ...
-        %              'nbor', [],                              ...
-        %              'ilist', [],                             ...
-        %              'snbor', []);
-        %   T.nodes(nbox) = s;
-        %   T.nodes(prnt).chld = [T.nodes(prnt).chld nbox];
-  % end
+% Loop over all boxes at the current level
+for prnt = T.lvp(nlvl) + 1 : T.lvp(nlvl + 1)
+    xi = T.nodes(prnt).xi;
+    xn = length(xi);
 
-% Ensure T.nodes is initialized properly before the loop
-if ~isfield(T, 'nodes') || isempty(T.nodes)
-    T.nodes = struct('ctr', {}, 'xi', {}, 'prnt', {}, 'chld', {}, 'nbor', {}, 'ilist', {}, 'snbor', {});
+    % Subdivide this box if it contains too many points
+    if xn > occ
+        % Finding the assignments of this box's points to its child boxes
+        ctr = T.nodes(prnt).ctr'; % Ensure ctr is a row vector
+        idx = bsxfun(@gt, x(:, xi), ctr);
+        idx = 2 .^ ((1:d) - 1) * idx + 1;
+
+        unique_idx = unique(idx); % Store unique indices in a variable
+        num_unique_idx = length(unique_idx); % Get the number of unique indices
+
+        for k = 1:num_unique_idx
+            i = unique_idx(k);
+            nbox = nbox + 1;
+            while mbox < nbox
+                % Initialize the fields of the struct directly with correct dimensions
+                newStruct = struct('ctr', zeros(1, d), 'xi', zeros(1, size(T.nodes(1).xi, 2)), ...
+                                   'prnt', zeros(1, 1), 'chld', [], 'nbor', [], ...
+                                   'ilist', [], 'snbor', []);
+                % Expanding the array T.nodes
+                if isempty(T.nodes)
+                    T.nodes = newStruct;
+                else
+                    T.nodes(mbox + 1) = newStruct;
+                end
+                mbox = mbox + 1;
+            end
+
+            % Calculate and assign new center for the child node
+            new_ctr = reshape(ctr + l * (bitget(i - 1, 1:d) - 0.5), 1, d);
+            T.nodes(nbox).ctr = new_ctr;
+
+            % Assign the point indices to the child node
+            xi_subset = xi(idx == i);
+            if isempty(xi_subset)
+                xi_subset = zeros(1, 0); % Handle empty case
+            end
+            T.nodes(nbox).xi(1, 1:length(xi_subset)) = xi_subset; % Ensure 'xi' matches the preallocated size
+
+            % Ensure 'prnt' is properly sized before assignment
+            if isempty(T.nodes(nbox).prnt)
+                T.nodes(nbox).prnt = prnt;
+            else
+                T.nodes(nbox).prnt(1, 1) = prnt;
+            end
+
+            % Ensure 'chld' is properly initialized before assignment
+            if isempty(T.nodes(prnt).chld)
+                T.nodes(prnt).chld = nbox;
+            else
+                T.nodes(prnt).chld = [T.nodes(prnt).chld nbox];
+            end
+
+            % Initialize other properties of the child node
+            T.nodes(nbox).chld = [];
+            T.nodes(nbox).nbor = [];
+            T.nodes(nbox).ilist = [];
+            T.nodes(nbox).snbor = [];
+        end
+        % Clear the point indices of the parent node
+        T.nodes(prnt).xi = zeros(1, 0); % Ensure 'xi' is correctly sized
+    end
 end
 
-% Get the unique indices beforehand
-unique_idx = unique(idx);
-
-% Initialize a cell array to collect the structures
-nodesCell = cell(1, 1);
-nodesCell{1} = T.nodes;
-
-for i = 1:length(unique_idx)
-    idx_val = unique_idx(i);
-    nbox = nbox + 1;
-
-    while mbox < nbox
-        e = cell(1,1);  % Initialize the cell array properly
-        e{1} = [];      % Assign a value to the cell array
-        s = struct('ctr', e, 'xi', e, 'prnt', e, 'chld', e, 'nbor', e, ...
-                   'ilist', e, 'snbor', e);
-        nodesCell{end+1} = s;
-        mbox = 2 * mbox;
-    end
-
-    s = struct('ctr', ctr + l * (bitget(idx_val - 1, 1:d) - 0.5), ...
-               'xi', {xi(idx == idx_val)},                        ...
-               'prnt', prnt,                                      ...
-               'chld', [],                                        ...
-               'nbor', [],                                        ...
-               'ilist', [],                                       ...
-               'snbor', []);
-
-    nodesCell{end+1} = s;
-    nodesCell{prnt}.chld = [nodesCell{prnt}.chld nbox];
-end
-
-% Convert the cell array back to a structure array
-T.nodes = [nodesCell{:}];
+       
 
 
+  
 
- T.nodes(prnt).xi = [];
-      end
-    end
+
 
     % If no boxes were subdivided into new boxes, terminate, otherwise 
     % update for the next iteration
