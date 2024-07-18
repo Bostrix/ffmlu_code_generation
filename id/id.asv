@@ -179,7 +179,7 @@ end
         % zero out R22(2:end,:) by Householder transformation
         v = R(k+1:end,k+1);
         % v(1) = v(1) + sqrt(c2(1))*exp(1i*arg(R(k+1,k+1)));
-        v(1) = v(1) + sqrt(c2(1)) * real(exp(1i * angle(R(k+1, k+1))));
+        v(1) = v(1) + sqrt(c2(1)) * real(exp(1i * angle_id(R(k+1, k+1))));
         v = v/norm(v);
         R(k+1:end,k+2:end) = R(k+1:end,k+2:end) - 2*v*(v'*R(k+1:end,k+2:end));
         R(k+2:end,k+1) = 0; R(k+1,k+1) = sqrt(c2(1));
@@ -192,7 +192,7 @@ end
 
         % zero out R21 after swap by Givens rotation and update column norms
         c2 = c2 - abs(R(k+1,k+1:end)).^2;
-        R(k:k+1,k:end) = givens_id(R(k,k+1),R(k+1,k+1))*R(k:k+1,k:end);
+        R(k:k+1,k:end) = givens(R(k,k+1),R(k+1,k+1))*R(k:k+1,k:end);
         c2 = c2 + abs(R(k+1,k+1:end)).^2;
         c2(1) = abs(R(k+1,k))^2;
 

@@ -1,0 +1,17 @@
+MEX {
+	global:
+		mexFunction;
+		mexfilerequiredapiversion;
+		emlrtMexFcnProperties;
+		id;
+		id_initialize;
+		id_terminate;
+		id_atexit;
+		b_sprintf;
+		emlrt_marshallIn;
+		b_emlrt_marshallIn;
+		i_emlrt_marshallIn;
+		g_emlrt_marshallOut;
+	local:
+		*;
+};
