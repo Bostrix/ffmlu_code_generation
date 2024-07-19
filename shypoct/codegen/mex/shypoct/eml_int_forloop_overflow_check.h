@@ -1,14 +1,13 @@
 //
-// find.h
+// eml_int_forloop_overflow_check.h
 //
-// Code generation for function 'find'
+// Code generation for function 'eml_int_forloop_overflow_check'
 //
 
 #pragma once
 
 // Include files
 #include "rtwtypes.h"
-#include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"
 #include <cmath>
@@ -18,9 +17,8 @@
 
 // Function Declarations
 namespace coder {
-void eml_find(const emlrtStack &sp, const array<boolean_T, 2U> &x,
-              array<int32_T, 2U> &i);
+void check_forloop_overflow_error(const emlrtStack &sp);
 
 }
 
-// End of code generation (find.h)
+// End of code generation (eml_int_forloop_overflow_check.h)

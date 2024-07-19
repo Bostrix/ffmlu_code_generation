@@ -25,4 +25,11 @@ emlrtContext emlrtContextGlobal{
     nullptr                                               // fSigMem
 };
 
+emlrtRSInfo w_emlrtRSI{
+    20,                               // lineNo
+    "eml_int_forloop_overflow_check", // fcnName
+    "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/eml/"
+    "eml_int_forloop_overflow_check.m" // pathName
+};
+
 // End of code generation (shypoct_data.cpp)

@@ -41,18 +41,18 @@ build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
 build $builddir/shypoct_initialize.o : cxx $root/shypoct_initialize.cpp
 build $builddir/shypoct_terminate.o : cxx $root/shypoct_terminate.cpp
 build $builddir/shypoct.o : cxx $root/shypoct.cpp
-build $builddir/bsxfun.o : cxx $root/bsxfun.cpp
 build $builddir/unique.o : cxx $root/unique.cpp
-build $builddir/error.o : cxx $root/error.cpp
 build $builddir/bitget.o : cxx $root/bitget.cpp
+build $builddir/indexShapeCheck.o : cxx $root/indexShapeCheck.cpp
 build $builddir/find.o : cxx $root/find.cpp
 build $builddir/all.o : cxx $root/all.cpp
 build $builddir/horzcatStructList.o : cxx $root/horzcatStructList.cpp
-build $builddir/indexShapeCheck.o : cxx $root/indexShapeCheck.cpp
 build $builddir/_coder_shypoct_api.o : cxx $root/interface/_coder_shypoct_api.cpp
 build $builddir/_coder_shypoct_mex.o : cxx $root/interface/_coder_shypoct_mex.cpp
+build $builddir/eml_int_forloop_overflow_check.o : cxx $root/eml_int_forloop_overflow_check.cpp
+build $builddir/bsxfun.o : cxx $root/bsxfun.cpp
 build $builddir/_coder_shypoct_info.o : cxx $root/interface/_coder_shypoct_info.cpp
 build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
 
 # Link
-build $root/shypoct_mex.mexa64 : linkxx $builddir/shypoct_data.o $builddir/rt_nonfinite.o $builddir/shypoct_initialize.o $builddir/shypoct_terminate.o $builddir/shypoct.o $builddir/bsxfun.o $builddir/unique.o $builddir/error.o $builddir/bitget.o $builddir/find.o $builddir/all.o $builddir/horzcatStructList.o $builddir/indexShapeCheck.o $builddir/_coder_shypoct_api.o $builddir/_coder_shypoct_mex.o $builddir/_coder_shypoct_info.o $builddir/cpp_mexapi_version.o 
+build $root/shypoct_mex.mexa64 : linkxx $builddir/shypoct_data.o $builddir/rt_nonfinite.o $builddir/shypoct_initialize.o $builddir/shypoct_terminate.o $builddir/shypoct.o $builddir/unique.o $builddir/bitget.o $builddir/indexShapeCheck.o $builddir/find.o $builddir/all.o $builddir/horzcatStructList.o $builddir/_coder_shypoct_api.o $builddir/_coder_shypoct_mex.o $builddir/eml_int_forloop_overflow_check.o $builddir/bsxfun.o $builddir/_coder_shypoct_info.o $builddir/cpp_mexapi_version.o 

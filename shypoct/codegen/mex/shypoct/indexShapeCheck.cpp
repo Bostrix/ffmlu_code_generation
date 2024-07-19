@@ -9,21 +9,7 @@
 #include "rt_nonfinite.h"
 
 // Variable Definitions
-static emlrtRSInfo v_emlrtRSI{
-    58,                // lineNo
-    "indexShapeCheck", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
-    "indexShapeCheck.m" // pathName
-};
-
-static emlrtRSInfo w_emlrtRSI{
-    51,                // lineNo
-    "indexShapeCheck", // fcnName
-    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
-    "indexShapeCheck.m" // pathName
-};
-
-static emlrtRSInfo x_emlrtRSI{
+static emlrtRSInfo lb_emlrtRSI{
     42,                // lineNo
     "indexShapeCheck", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
@@ -41,38 +27,19 @@ static emlrtRTEInfo h_emlrtRTEI{
 // Function Definitions
 namespace coder {
 namespace internal {
-void indexShapeCheck(const emlrtStack &sp, const int32_T matrixSize[2],
+void indexShapeCheck(const emlrtStack &sp, int32_T matrixSize,
                      const int32_T indexSize[2])
-{
-  emlrtStack st;
-  st.prev = &sp;
-  st.tls = sp.tls;
-  if (matrixSize[1] != 1) {
-    st.site = &w_emlrtRSI;
-    emlrtErrorWithMessageIdR2018a(
-        &st, &h_emlrtRTEI, "Coder:FE:PotentialMatrixMatrix_MM_Logical1",
-        "Coder:FE:PotentialMatrixMatrix_MM_Logical1", 0);
-  } else if (indexSize[1] != 1) {
-    st.site = &v_emlrtRSI;
-    emlrtErrorWithMessageIdR2018a(
-        &st, &h_emlrtRTEI, "Coder:FE:PotentialMatrixMatrix_MM_Logical2",
-        "Coder:FE:PotentialMatrixMatrix_MM_Logical2", 0);
-  }
-}
-
-void indexShapeCheck(const emlrtStack &sp, const int32_T matrixSize[2],
-                     int32_T indexSize)
 {
   emlrtStack st;
   boolean_T c;
   st.prev = &sp;
   st.tls = sp.tls;
-  if ((matrixSize[1] == 1) && (indexSize != 1)) {
+  if ((matrixSize == 1) && (indexSize[1] != 1)) {
     c = true;
   } else {
     c = false;
   }
-  st.site = &x_emlrtRSI;
+  st.site = &lb_emlrtRSI;
   if (c) {
     emlrtErrorWithMessageIdR2018a(&st, &h_emlrtRTEI,
                                   "Coder:FE:PotentialVectorVector",

@@ -31,27 +31,21 @@
   },
   {
     "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  bsxfun.cpp -o build/glnxa64/bsxfun.o",
-    "file": "bsxfun.cpp",
-    "output": "build/glnxa64/bsxfun.o"
-  },
-  {
-    "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
     "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  unique.cpp -o build/glnxa64/unique.o",
     "file": "unique.cpp",
     "output": "build/glnxa64/unique.o"
   },
   {
     "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  error.cpp -o build/glnxa64/error.o",
-    "file": "error.cpp",
-    "output": "build/glnxa64/error.o"
-  },
-  {
-    "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
     "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  bitget.cpp -o build/glnxa64/bitget.o",
     "file": "bitget.cpp",
     "output": "build/glnxa64/bitget.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  indexShapeCheck.cpp -o build/glnxa64/indexShapeCheck.o",
+    "file": "indexShapeCheck.cpp",
+    "output": "build/glnxa64/indexShapeCheck.o"
   },
   {
     "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
@@ -73,12 +67,6 @@
   },
   {
     "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
-    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  indexShapeCheck.cpp -o build/glnxa64/indexShapeCheck.o",
-    "file": "indexShapeCheck.cpp",
-    "output": "build/glnxa64/indexShapeCheck.o"
-  },
-  {
-    "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
     "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_shypoct_api.cpp -o build/glnxa64/_coder_shypoct_api.o",
     "file": "interface/_coder_shypoct_api.cpp",
     "output": "build/glnxa64/_coder_shypoct_api.o"
@@ -88,6 +76,18 @@
     "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  interface/_coder_shypoct_mex.cpp -o build/glnxa64/_coder_shypoct_mex.o",
     "file": "interface/_coder_shypoct_mex.cpp",
     "output": "build/glnxa64/_coder_shypoct_mex.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  eml_int_forloop_overflow_check.cpp -o build/glnxa64/eml_int_forloop_overflow_check.o",
+    "file": "eml_int_forloop_overflow_check.cpp",
+    "output": "build/glnxa64/eml_int_forloop_overflow_check.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",
+    "command": "/usr/bin/g++ -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/shypoct\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c  bsxfun.cpp -o build/glnxa64/bsxfun.o",
+    "file": "bsxfun.cpp",
+    "output": "build/glnxa64/bsxfun.o"
   },
   {
     "directory": "/home/user/Documents/ffmlu_code_generation/shypoct/codegen/mex/shypoct",

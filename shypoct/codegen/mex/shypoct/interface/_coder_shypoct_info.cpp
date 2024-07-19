@@ -55,7 +55,7 @@ mxArray *emlrtMexFcnProperties()
       emlrtMxCreateString(
           "/home/user/Documents/ffmlu_code_generation/shypoct/shypoct.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739452.553738426));
+                emlrtMxCreateDoubleScalar(739452.82037037041));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));
