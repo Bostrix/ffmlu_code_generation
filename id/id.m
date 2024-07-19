@@ -101,13 +101,13 @@ function [sk,rd,T,niter] = id(A,rank_or_tol,Tmax,rrqr_iter,fixed)
   % reduce row size if too rectangular
   % if m > 8*n, [~,A] = qr(A,0); end
 
-% reduce row size if too rectangular
+% Reduce row size if too rectangular
 if m > 8*n
-    [~, R] = qr(A, 0);                      % Compute the QR decomposition
-    A = R(1:n, 1:n);                        % Update A with the upper left n x n part of R
+    [~, R] = qr(A, 0);  % Compute the QR decomposition
+    A = R(1:n, :);      % Update A with the first n rows of R
 else
-    % Ensure A remains n x n if no reduction is needed
-    A = A(1:n, 1:n);
+    % Ensure A remains in its original state if no reduction is needed
+    A = A;
 end
 
  

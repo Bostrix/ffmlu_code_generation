@@ -2959,11 +2959,11 @@ void id(const emlrtStack *sp, const real_T A[8510], real_T rank_or_tol,
   //  preprocess fixed columns
   //  reduce row size if too rectangular
   //  if m > 8*n, [~,A] = qr(A,0); end
-  //  reduce row size if too rectangular
+  //  Reduce row size if too rectangular
   st.site = &fb_emlrtRSI;
   coder::qr(st, A, a__1, R);
   //  Compute the QR decomposition
-  //  Update A with the upper left n x n part of R
+  //  Update A with the upper n rows of R
   //  compute ID
   st.site = &eb_emlrtRSI;
   c_st.site = &pc_emlrtRSI;
