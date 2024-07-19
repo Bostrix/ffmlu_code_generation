@@ -1,0 +1,58 @@
+# CompilerName=gcc
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/glnxa64
+matlabdir = /usr/local/MATLAB/R2024a
+startdir = /home/user/Documents/ffmlu_code_generation/shypoct
+
+# Toolchain information
+cc = gcc
+cxx = /usr/bin/g++
+linker = gcc
+linkerxx = /usr/bin/g++
+
+cflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c 
+
+cxxflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=shypoct_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c 
+
+ldflags =  -pthread -Wl,--no-undefined  -shared -lstdc++ -Wl,--as-needed -Wl,-rpath-link,$matlabdir/bin/glnxa64 -L"$matlabdir/bin/glnxa64" -Wl,-rpath-link,$matlabdir/extern/bin/glnxa64 -L"$matlabdir/extern/bin/glnxa64" -lMatlabDataArray -lmx -lmex -lm -lmat  -Wl,-Bsymbolic -o shypoct_mex.mexa64 -Wl,--exclude-libs,ALL -lemlrt -lcovrt -lut -lmwmathutil 
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker $in $linkobjs $ldflags
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir/shypoct_data.o : cxx $root/shypoct_data.cpp
+build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
+build $builddir/shypoct_initialize.o : cxx $root/shypoct_initialize.cpp
+build $builddir/shypoct_terminate.o : cxx $root/shypoct_terminate.cpp
+build $builddir/shypoct.o : cxx $root/shypoct.cpp
+build $builddir/bsxfun.o : cxx $root/bsxfun.cpp
+build $builddir/unique.o : cxx $root/unique.cpp
+build $builddir/error.o : cxx $root/error.cpp
+build $builddir/bitget.o : cxx $root/bitget.cpp
+build $builddir/find.o : cxx $root/find.cpp
+build $builddir/all.o : cxx $root/all.cpp
+build $builddir/horzcatStructList.o : cxx $root/horzcatStructList.cpp
+build $builddir/indexShapeCheck.o : cxx $root/indexShapeCheck.cpp
+build $builddir/_coder_shypoct_api.o : cxx $root/interface/_coder_shypoct_api.cpp
+build $builddir/_coder_shypoct_mex.o : cxx $root/interface/_coder_shypoct_mex.cpp
+build $builddir/_coder_shypoct_info.o : cxx $root/interface/_coder_shypoct_info.cpp
+build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
+
+# Link
+build $root/shypoct_mex.mexa64 : linkxx $builddir/shypoct_data.o $builddir/rt_nonfinite.o $builddir/shypoct_initialize.o $builddir/shypoct_terminate.o $builddir/shypoct.o $builddir/bsxfun.o $builddir/unique.o $builddir/error.o $builddir/bitget.o $builddir/find.o $builddir/all.o $builddir/horzcatStructList.o $builddir/indexShapeCheck.o $builddir/_coder_shypoct_api.o $builddir/_coder_shypoct_mex.o $builddir/_coder_shypoct_info.o $builddir/cpp_mexapi_version.o 
