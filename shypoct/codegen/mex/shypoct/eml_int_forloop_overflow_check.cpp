@@ -9,7 +9,7 @@
 #include "rt_nonfinite.h"
 
 // Variable Definitions
-static emlrtRTEInfo j_emlrtRTEI{
+static emlrtRTEInfo l_emlrtRTEI{
     87,                             // lineNo
     33,                             // colNo
     "check_forloop_overflow_error", // fName
@@ -22,7 +22,7 @@ namespace coder {
 void check_forloop_overflow_error(const emlrtStack &sp)
 {
   emlrtErrorWithMessageIdR2018a(
-      &sp, &j_emlrtRTEI, "Coder:toolbox:int_forloop_overflow",
+      &sp, &l_emlrtRTEI, "Coder:toolbox:int_forloop_overflow",
       "Coder:toolbox:int_forloop_overflow", 3, 4, 5, "int32");
 }
 

@@ -20,11 +20,15 @@
 // Function Declarations
 namespace coder {
 namespace internal {
+void b_horzcatStructList(const emlrtStack &sp,
+                         const array<struct1_T, 1U> &structure,
+                         array<real_T, 2U> &result);
+
 void horzcatStructList(const emlrtStack &sp,
                        const array<struct1_T, 1U> &structure,
                        array<real_T, 2U> &result);
 
-}
+} // namespace internal
 } // namespace coder
 
 // End of code generation (horzcatStructList.h)

@@ -13,22 +13,29 @@
 #include "coder_array.h"
 
 // Variable Definitions
-static emlrtRSInfo pb_emlrtRSI{
+static emlrtRSInfo vb_emlrtRSI{
     69,                  // lineNo
     "horzcatStructList", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "horzcatStructList.m" // pathName
 };
 
-static emlrtRSInfo qb_emlrtRSI{
+static emlrtRSInfo wb_emlrtRSI{
     67,                  // lineNo
     "horzcatStructList", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "horzcatStructList.m" // pathName
 };
 
-static emlrtRSInfo rb_emlrtRSI{
+static emlrtRSInfo xb_emlrtRSI{
     40,                  // lineNo
+    "horzcatStructList", // fcnName
+    "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
+    "horzcatStructList.m" // pathName
+};
+
+static emlrtRSInfo yb_emlrtRSI{
+    25,                  // lineNo
     "horzcatStructList", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/"
     "horzcatStructList.m" // pathName
@@ -42,7 +49,7 @@ static emlrtDCInfo d_emlrtDCI{
     4 // checkKind
 };
 
-static emlrtRTEInfo ub_emlrtRTEI{
+static emlrtRTEInfo lc_emlrtRTEI{
     67,                  // lineNo
     10,                  // colNo
     "horzcatStructList", // fName
@@ -53,6 +60,40 @@ static emlrtRTEInfo ub_emlrtRTEI{
 // Function Definitions
 namespace coder {
 namespace internal {
+void b_horzcatStructList(const emlrtStack &sp,
+                         const array<struct1_T, 1U> &structure,
+                         array<real_T, 2U> &result)
+{
+  emlrtStack b_st;
+  emlrtStack st;
+  int32_T n;
+  int32_T resultSize_idx_1;
+  st.prev = &sp;
+  st.tls = sp.tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  n = structure.size(0);
+  if (structure.size(0) == 0) {
+    resultSize_idx_1 = 0;
+  } else {
+    resultSize_idx_1 = structure.size(0) * 3;
+    st.site = &yb_emlrtRSI;
+    if (structure.size(0) > 2147483646) {
+      b_st.site = &db_emlrtRSI;
+      check_forloop_overflow_error(b_st);
+    }
+  }
+  result.set_size(&lc_emlrtRTEI, &sp, 1, resultSize_idx_1);
+  resultSize_idx_1 = 0;
+  st.site = &vb_emlrtRSI;
+  for (int32_T i{0}; i < n; i++) {
+    result[resultSize_idx_1] = structure[i].ctr[0];
+    result[resultSize_idx_1 + 1] = structure[i].ctr[1];
+    result[resultSize_idx_1 + 2] = structure[i].ctr[2];
+    resultSize_idx_1 += 3;
+  }
+}
+
 void horzcatStructList(const emlrtStack &sp,
                        const array<struct1_T, 1U> &structure,
                        array<real_T, 2U> &result)
@@ -80,9 +121,9 @@ void horzcatStructList(const emlrtStack &sp,
       resultRowSize = structure[i].chld.size(1);
       if (resultRowSize != 0) {
         a = i + 2;
-        st.site = &rb_emlrtRSI;
+        st.site = &xb_emlrtRSI;
         if ((i + 2 <= n) && (n > 2147483646)) {
-          b_st.site = &w_emlrtRSI;
+          b_st.site = &db_emlrtRSI;
           check_forloop_overflow_error(b_st);
         }
         for (j = a; j <= n; j++) {
@@ -100,17 +141,17 @@ void horzcatStructList(const emlrtStack &sp,
       }
     } while (exitg1 == 0);
   }
-  st.site = &qb_emlrtRSI;
-  result.set_size(&ub_emlrtRTEI, &st, 1, result.size(1));
+  st.site = &wb_emlrtRSI;
+  result.set_size(&lc_emlrtRTEI, &st, 1, result.size(1));
   if (resultRowSize < 0) {
     emlrtNonNegativeCheckR2012b(static_cast<real_T>(resultRowSize), &d_emlrtDCI,
                                 &st);
   }
-  result.set_size(&ub_emlrtRTEI, &st, result.size(0), resultRowSize);
+  result.set_size(&lc_emlrtRTEI, &st, result.size(0), resultRowSize);
   j = 0;
-  st.site = &pb_emlrtRSI;
+  st.site = &vb_emlrtRSI;
   if (structure.size(0) > 2147483646) {
-    b_st.site = &w_emlrtRSI;
+    b_st.site = &db_emlrtRSI;
     check_forloop_overflow_error(b_st);
   }
   for (i = 0; i < n; i++) {

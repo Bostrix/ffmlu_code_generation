@@ -19,6 +19,6 @@
 extern emlrtCTX emlrtRootTLSGlobal;
 extern const volatile char_T *emlrtBreakCheckR2012bFlagVar;
 extern emlrtContext emlrtContextGlobal;
-extern emlrtRSInfo w_emlrtRSI;
+extern emlrtRSInfo db_emlrtRSI;
 
 // End of code generation (shypoct_data.h)

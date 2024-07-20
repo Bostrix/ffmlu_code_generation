@@ -11,83 +11,83 @@
 #include "mwmathutil.h"
 
 // Variable Definitions
-static emlrtRSInfo n_emlrtRSI{
+static emlrtRSInfo t_emlrtRSI{
     164,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo o_emlrtRSI{
+static emlrtRSInfo u_emlrtRSI{
     166,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo p_emlrtRSI{
+static emlrtRSInfo v_emlrtRSI{
     183,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo q_emlrtRSI{
+static emlrtRSInfo w_emlrtRSI{
     210,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo r_emlrtRSI{
+static emlrtRSInfo x_emlrtRSI{
     223,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo s_emlrtRSI{
+static emlrtRSInfo y_emlrtRSI{
     234,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo t_emlrtRSI{
+static emlrtRSInfo ab_emlrtRSI{
     248,                                                           // lineNo
     "unique_vector",                                               // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pathName
 };
 
-static emlrtRSInfo u_emlrtRSI{
+static emlrtRSInfo bb_emlrtRSI{
     145,       // lineNo
     "sortIdx", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
 };
 
-static emlrtRTEInfo f_emlrtRTEI{
+static emlrtRTEInfo h_emlrtRTEI{
     241,                                                           // lineNo
     1,                                                             // colNo
     "unique_vector",                                               // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pName
 };
 
-static emlrtRTEInfo ob_emlrtRTEI{
+static emlrtRTEInfo fc_emlrtRTEI{
     164,                                                           // lineNo
     1,                                                             // colNo
     "unique",                                                      // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pName
 };
 
-static emlrtRTEInfo pb_emlrtRTEI{
+static emlrtRTEInfo gc_emlrtRTEI{
     52,          // lineNo
     9,           // colNo
     "mergesort", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/mergesort.m" // pName
 };
 
-static emlrtRTEInfo qb_emlrtRTEI{
+static emlrtRTEInfo hc_emlrtRTEI{
     165,                                                           // lineNo
     20,                                                            // colNo
     "unique",                                                      // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/unique.m" // pName
 };
 
-static emlrtRTEInfo rb_emlrtRTEI{
+static emlrtRTEInfo ic_emlrtRTEI{
     242,                                                           // lineNo
     1,                                                             // colNo
     "unique",                                                      // fName
@@ -119,15 +119,15 @@ void unique_vector(const emlrtStack &sp, const array<real_T, 2U> &a,
   b_st.tls = st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   na_tmp = a.size(1);
-  st.site = &n_emlrtRSI;
+  st.site = &t_emlrtRSI;
   n = a.size(1) + 1;
-  idx.set_size(&ob_emlrtRTEI, &st, 1, a.size(1));
+  idx.set_size(&fc_emlrtRTEI, &st, 1, a.size(1));
   for (i = 0; i < na_tmp; i++) {
     idx[i] = 0;
   }
   if (a.size(1) != 0) {
-    b_st.site = &u_emlrtRSI;
-    iwork.set_size(&pb_emlrtRTEI, &b_st, a.size(1));
+    b_st.site = &bb_emlrtRSI;
+    iwork.set_size(&gc_emlrtRTEI, &b_st, a.size(1));
     i = a.size(1) - 1;
     for (k = 1; k <= i; k += 2) {
       x = a[k];
@@ -192,8 +192,8 @@ void unique_vector(const emlrtStack &sp, const array<real_T, 2U> &a,
       b_i = nb;
     }
   }
-  b.set_size(&qb_emlrtRTEI, &sp, 1, a.size(1));
-  st.site = &o_emlrtRSI;
+  b.set_size(&hc_emlrtRTEI, &sp, 1, a.size(1));
+  st.site = &u_emlrtRSI;
   for (k = 0; k < na_tmp; k++) {
     b[k] = a[idx[k] - 1];
   }
@@ -220,7 +220,7 @@ void unique_vector(const emlrtStack &sp, const array<real_T, 2U> &a,
   nb = 0;
   if (n > 0) {
     nb = 1;
-    st.site = &p_emlrtRSI;
+    st.site = &v_emlrtRSI;
   }
   while (n + 1 <= k) {
     x = b[n];
@@ -229,15 +229,15 @@ void unique_vector(const emlrtStack &sp, const array<real_T, 2U> &a,
     } while (!((n + 1 > k) || (b[n] != x)));
     nb++;
     b[nb - 1] = x;
-    st.site = &q_emlrtRSI;
+    st.site = &w_emlrtRSI;
   }
   if (na_tmp > 0) {
     nb++;
     b[nb - 1] = b[k];
-    st.site = &r_emlrtRSI;
+    st.site = &x_emlrtRSI;
   }
   n = k + na_tmp;
-  st.site = &s_emlrtRSI;
+  st.site = &y_emlrtRSI;
   for (j = 0; j < b_i; j++) {
     b[nb + j] = b[n + j];
   }
@@ -245,15 +245,15 @@ void unique_vector(const emlrtStack &sp, const array<real_T, 2U> &a,
     nb += b_i;
   }
   if (nb > a.size(1)) {
-    emlrtErrorWithMessageIdR2018a(&sp, &f_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&sp, &h_emlrtRTEI,
                                   "Coder:builtins:AssertionFailed",
                                   "Coder:builtins:AssertionFailed", 0);
   }
   if (nb < 1) {
     nb = 0;
   }
-  b.set_size(&rb_emlrtRTEI, &sp, b.size(0), nb);
-  st.site = &t_emlrtRSI;
+  b.set_size(&ic_emlrtRTEI, &sp, b.size(0), nb);
+  st.site = &ab_emlrtRSI;
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
 }
 

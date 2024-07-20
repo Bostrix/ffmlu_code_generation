@@ -12,33 +12,33 @@
 #include "coder_array.h"
 
 // Variable Definitions
-static emlrtRSInfo nb_emlrtRSI{
+static emlrtRSInfo tb_emlrtRSI{
     144,                                                           // lineNo
     "eml_find",                                                    // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo ob_emlrtRSI{
+static emlrtRSInfo ub_emlrtRSI{
     382,                                                           // lineNo
     "find_first_indices",                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRTEInfo i_emlrtRTEI{
+static emlrtRTEInfo k_emlrtRTEI{
     392,                                                           // lineNo
     1,                                                             // colNo
     "find_first_indices",                                          // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo sb_emlrtRTEI{
+static emlrtRTEInfo jc_emlrtRTEI{
     364,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo tb_emlrtRTEI{
+static emlrtRTEInfo kc_emlrtRTEI{
     144,                                                           // lineNo
     9,                                                             // colNo
     "find",                                                        // fName
@@ -64,12 +64,12 @@ void eml_find(const emlrtStack &sp, const array<boolean_T, 2U> &x,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx_tmp = x.size(1);
-  st.site = &nb_emlrtRSI;
+  st.site = &tb_emlrtRSI;
   idx = 0;
-  i.set_size(&sb_emlrtRTEI, &st, 1, x.size(1));
-  b_st.site = &ob_emlrtRSI;
+  i.set_size(&jc_emlrtRTEI, &st, 1, x.size(1));
+  b_st.site = &ub_emlrtRSI;
   if (x.size(1) > 2147483646) {
-    c_st.site = &w_emlrtRSI;
+    c_st.site = &db_emlrtRSI;
     check_forloop_overflow_error(c_st);
   }
   ii = 0;
@@ -88,19 +88,19 @@ void eml_find(const emlrtStack &sp, const array<boolean_T, 2U> &x,
     }
   }
   if (idx > x.size(1)) {
-    emlrtErrorWithMessageIdR2018a(&st, &i_emlrtRTEI,
+    emlrtErrorWithMessageIdR2018a(&st, &k_emlrtRTEI,
                                   "Coder:builtins:AssertionFailed",
                                   "Coder:builtins:AssertionFailed", 0);
   }
   if (x.size(1) == 1) {
     if (idx == 0) {
-      i.set_size(&tb_emlrtRTEI, &st, 1, 0);
+      i.set_size(&kc_emlrtRTEI, &st, 1, 0);
     }
   } else {
     if (idx < 1) {
       idx = 0;
     }
-    i.set_size(&tb_emlrtRTEI, &st, i.size(0), idx);
+    i.set_size(&kc_emlrtRTEI, &st, i.size(0), idx);
   }
 }
 

@@ -10,7 +10,7 @@
 #include "mwmathutil.h"
 
 // Variable Definitions
-static emlrtRTEInfo g_emlrtRTEI{
+static emlrtRTEInfo i_emlrtRTEI{
     64,                                                            // lineNo
     9,                                                             // colNo
     "bitget",                                                      // fName
@@ -42,7 +42,7 @@ void bitget(const emlrtStack &sp, real_T a, real_T c[3])
     p = false;
   }
   if (!p) {
-    emlrtErrorWithMessageIdR2018a(&sp, &g_emlrtRTEI, "MATLAB:bitget:outOfRange",
+    emlrtErrorWithMessageIdR2018a(&sp, &i_emlrtRTEI, "MATLAB:bitget:outOfRange",
                                   "MATLAB:bitget:outOfRange", 0);
   }
   c[0] = ((static_cast<uint64_T>(a) & 1UL) != 0UL);
