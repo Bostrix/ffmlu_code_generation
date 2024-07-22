@@ -2963,7 +2963,7 @@ void id(const emlrtStack *sp, const real_T A[8510], real_T rank_or_tol,
   st.site = &fb_emlrtRSI;
   coder::qr(st, A, a__1, R);
   //  Compute the QR decomposition
-  //  Update A with the upper n rows of R
+  //  Update A with the first n rows of R
   //  compute ID
   st.site = &eb_emlrtRSI;
   c_st.site = &pc_emlrtRSI;
