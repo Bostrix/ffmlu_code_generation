@@ -1,9 +1,29 @@
 % Load input data from srskelf_input_80k.mat
-load('srskelf_input_80k.mat', 'x', 'occ', 'rank_or_tol', 'opts');
+load('srskelf_input_80k.mat', 'A', 'x', 'occ', 'rank_or_tol', 'pxyfun', 'opts');
 
-% Define the function handles using placeholders for the additional parameters
-A = @(i, j) Afun_lap_te(i, j, x, nu, area, P, qcorr, contrast, wuse);  % placeholders for nu, area, P, qcorr, contrast, wuse
-pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, area);  % placeholder for area
+% Define function identifiers
+A_func_id = 1; % Identifier for Afun_lap_te
+pxyfun_func_id = 1; % Identifier for pxyfun_lap_neumann
 
-% Generate C++ code for the wrapper function
-codegen srskelf_asym_new_wrapper -args {A, x, occ, rank_or_tol, pxyfun, opts} -lang:c++
+% Ensure opts structure has all necessary fields
+if ~isfield(opts, 'ext')
+    opts.ext = [];
+end
+if ~isfield(opts, 'lvlmax')
+    opts.lvlmax = Inf;
+end
+if ~isfield(opts, 'symm')
+    opts.symm = 'n';
+end
+if ~isfield(opts, 'verb')
+    opts.verb = 0;
+end
+if ~isfield(opts, 'zk')
+    opts.zk = 1.0;
+end
+if ~isfield(opts, 'lap_proxy')
+    opts.lap_proxy = false; % Assuming a default value
+end
+
+% Generate C++ code
+codegen srskelf_asym_new -args {A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts} -lang:c++
