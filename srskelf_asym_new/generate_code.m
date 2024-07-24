@@ -1,5 +1,13 @@
-% Load input data from srskelf_input_80k.mat
-load('srskelf_input_80k.mat', 'A', 'x', 'occ', 'rank_or_tol', 'pxyfun', 'opts');
+% Load input data from srskelf_full_input_80k.mat
+load('srskelf_full_input_8k.mat', 'A', 'x', 'occ', 'rank_or_tol', 'pxyfun', 'opts', 'area', 'nu', 'P', 'contrast', 'wuse', 'qcorr');
+
+% Add all to opts structure
+opts.area = area;
+opts.nu = nu;
+opts.P = P;
+opts.contrast = contrast;
+opts.wuse = wuse;
+opts.qcorr = qcorr;
 
 % Define function identifiers
 A_func_id = 1; % Identifier for Afun_lap_te
@@ -21,8 +29,23 @@ end
 if ~isfield(opts, 'zk')
     opts.zk = 1.0;
 end
-if ~isfield(opts, 'lap_proxy')
-    opts.lap_proxy = false; % Assuming a default value
+if ~isfield(opts, 'area')
+    opts.area = area; % Ensure 'area' is provided in opts
+end
+if ~isfield(opts, 'nu')
+    opts.nu = nu; % Ensure 'nu' is provided in opts
+end
+if ~isfield(opts, 'P')
+    opts.P = P; % Ensure 'P' is provided in opts
+end
+if ~isfield(opts, 'qcorr')
+    opts.qcorr = qcorr; % Ensure 'qcorr' is provided in opts
+end
+if ~isfield(opts, 'contrast')
+    opts.contrast = contrast; % Ensure 'contrast' is provided in opts
+end
+if ~isfield(opts, 'wuse')
+    opts.wuse = wuse; % Ensure 'wuse' is provided in opts
 end
 
 % Generate C++ code
