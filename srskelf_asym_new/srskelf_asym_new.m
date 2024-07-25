@@ -270,7 +270,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
             n_ = nlst;
         end
 
-        A = zeros(m_, n_);
+        A = zeros(m_, n_, 'like', lst); % Ensure A has the same type as lst
         update_list = false(nbox, 1);
         get_update_list_iterative(i);
         update_list_indices = find(update_list);
@@ -320,7 +320,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         end
 
         function get_update_list_iterative(node_idx)
-            stack = zeros(nbox, 1); % Preallocate the stack with maximum possible size
+            stack = zeros(nbox, 1, 'logical'); % Ensure stack is logical
             stack_ptr = 1;
             stack(stack_ptr) = node_idx;
             while stack_ptr > 0
@@ -340,7 +340,7 @@ end
 
 function locs = find_locations_t(big_sorted_list, elements_to_find)
     % Initialize an empty array to store the locations
-    locs = zeros(size(big_sorted_list));
+    locs = zeros(size(big_sorted_list), 'like', big_sorted_list); % Ensure locs has the same type as big_sorted_list
     
     % Iterate over each element to find
     for i = 1:length(elements_to_find)
