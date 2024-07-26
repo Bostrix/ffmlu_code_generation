@@ -104,7 +104,9 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     nbox = t.lvp(end);
 
     % Initialize struct fields as empty arrays
-    e = repmat(struct('sk', [], 'rd', [], 'nbr', [], 'T', [], 'E', [], 'F', [], 'L', [], 'U', [], 'C', [], 'D', []), nbox, 1);
+    e = repmat(struct('sk', zeros(0, 1), 'rd', zeros(0, 1), 'nbr', zeros(0, 1), 'T', zeros(0, 0), ... % Modified
+                      'E', zeros(0, 0), 'F', zeros(0, 0), 'L', zeros(0, 0), 'U', zeros(0, 0), ... % Modified
+                      'C', zeros(0, 0), 'D', zeros(0, 0)), nbox, 1); % Modified
 
     F = struct('N', N, 'nlvl', t.nlvl, 'lvp', zeros(1, t.nlvl + 1), 'factors', e, 'symm', opts.symm);
     nlvl = 0;
@@ -121,8 +123,11 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
         for i = t.lvp(lvl) + 1:t.lvp(lvl + 1)
             if ~isempty(t.nodes(i).chld)
-                xi_child = [t.nodes(t.nodes(i).chld).xi];
-                t.nodes(i).xi = [t.nodes(i).xi, xi_child(:)'];
+                xi_child = [];
+                for k = 1:length(t.nodes(i).chld)
+                    xi_child = [xi_child, t.nodes(t.nodes(i).chld(k)).xi];
+                end
+                t.nodes(i).xi = [t.nodes(i).xi, xi_child];
             end
         end
 
@@ -143,7 +148,16 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
         for i = t.lvp(lvl) + 1:t.lvp(lvl + 1)
             slf = t.nodes(i).xi;
-            nbr = [t.nodes(t.nodes(i).nbor).xi];
+            
+            % Preallocate nbr to handle size mismatch
+            nbr_size = sum(cellfun(@(x) length(t.nodes(x).xi), num2cell(t.nodes(i).nbor))); % Modified
+            nbr = zeros(1, nbr_size); % Modified
+            nbr_idx = 1;
+            for k = 1:length(t.nodes(i).nbor)
+                xi_nbor = t.nodes(t.nodes(i).nbor(k)).xi;
+                nbr(nbr_idx:nbr_idx+length(xi_nbor)-1) = xi_nbor;
+                nbr_idx = nbr_idx + length(xi_nbor);
+            end
 
             nslf = length(slf);
             slf = sort(slf);
@@ -154,11 +168,19 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
                 lst = [];
                 l = t.lrt / 2^(lvl - 1);
             else
-                lst = [t.nodes(t.nodes(i).ilist).xi];
+                % Preallocate lst to handle size mismatch
+                ilist_size = sum(cellfun(@(x) length(t.nodes(x).xi), num2cell(t.nodes(i).ilist))); % Modified
+                lst = zeros(1, ilist_size); % Modified
+                lst_idx = 1;
+                for k = 1:length(t.nodes(i).ilist)
+                    xi_ilist = t.nodes(t.nodes(i).ilist(k)).xi;
+                    lst(lst_idx:lst_idx+length(xi_ilist)-1) = xi_ilist;
+                    lst_idx = lst_idx + length(xi_ilist);
+                end
                 l = t.lrt / 2^(lvl - 1) * 3 / 2;
             end
 
-            Kpxy = zeros(0, nslf);
+            Kpxy = zeros(0, nslf, 'double');
             if lvl > 2
                 [Kpxy, lst2] = pxyfun(x, slf, lst, proxy, l, t.nodes(i).ctr);
             end
@@ -216,19 +238,33 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
             end
 
             n = n + 1;
-            F.factors(n).sk = slf(sk);
-            F.factors(n).rd = slf(rd);
-            F.factors(n).nbr = nbr;
-            F.factors(n).T = T;
-            F.factors(n).E = E;
-            F.factors(n).F = G;
-            F.factors(n).L = L;
-            F.factors(n).U = U;
-            F.factors(n).C = C;
-            F.factors(n).D = D;
+
+            % Ensure slf and sk are not empty and have consistent dimensions
+            if isempty(slf) || isempty(sk)
+                F.factors(n).sk = zeros(0, 1); % Use an empty column vector for consistency (Modified)
+            else
+                F.factors(n).sk = double(slf(sk));
+            end
+
+            if isempty(slf) || isempty(rd)
+                F.factors(n).rd = zeros(0, 1); % Use an empty column vector for consistency (Modified)
+            else
+                F.factors(n).rd = double(slf(rd));
+            end
+
+            F.factors(n).nbr = double(nbr);
+            F.factors(n).T = double(T);
+            F.factors(n).E = double(E);
+            F.factors(n).F = double(G);
+            F.factors(n).L = double(L);
+            F.factors(n).U = double(U);
+            F.factors(n).C = double(C);
+            F.factors(n).D = double(D);
             lookup_list(i) = n;
 
-            t.nodes(i).xi = slf(sk);
+            if ~isempty(slf) && ~isempty(sk)
+                t.nodes(i).xi = slf(sk);
+            end
             rem(slf(rd)) = 0;
         end
         F.lvp(nlvl + 1) = n;
@@ -270,7 +306,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
             n_ = nlst;
         end
 
-        A = zeros(m_, n_, 'like', lst); % Ensure A has the same type as lst
+        A = zeros(m_, n_, 'like', double(lst)); % Ensure A has the same type as lst (Modified)
         update_list = false(nbox, 1);
         get_update_list_iterative(i);
         update_list_indices = find(update_list);
@@ -284,7 +320,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
             if strcmpi(Ityp, Jtyp)
                 idxI = find_locations_t(xj, I_);
-                tmp1 = idxI ~= 0;
+                tmp1 = double(idxI ~= 0);
                 subI = idxI(tmp1);
                 idxI1 = tmp1(1:f);
                 idxI2 = tmp1(f + 1:end);
@@ -299,8 +335,8 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
                 idxI = find_locations_t(xj, I_);
                 idxJ = find_locations_t(xj, J_);
 
-                tmp1 = idxI ~= 0;
-                tmp2 = idxJ ~= 0;
+                tmp1 = double(idxI ~= 0);
+                tmp2 = double(idxJ ~= 0);
 
                 subI = idxI(tmp1);
                 subJ = idxJ(tmp2);
@@ -320,14 +356,17 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         end
 
         function get_update_list_iterative(node_idx)
-            stack = zeros(nbox, 1, 'logical'); % Ensure stack is logical
+            stack = zeros(nbox, 1, 'logical'); % Ensure stack is logical (Modified)
             stack_ptr = 1;
             stack(stack_ptr) = node_idx;
             while stack_ptr > 0
                 current_node = stack(stack_ptr);
                 stack_ptr = stack_ptr - 1;
                 update_list(current_node) = true;
-                update_list(t.nodes(current_node).snbor) = true;
+                snbor = t.nodes(current_node).snbor;
+                for k = 1:length(snbor)
+                    update_list(snbor(k)) = true;
+                end
                 chld = t.nodes(current_node).chld;
                 for k = 1:length(chld)
                     stack_ptr = stack_ptr + 1;
@@ -340,7 +379,7 @@ end
 
 function locs = find_locations_t(big_sorted_list, elements_to_find)
     % Initialize an empty array to store the locations
-    locs = zeros(size(big_sorted_list), 'like', big_sorted_list); % Ensure locs has the same type as big_sorted_list
+    locs = zeros(size(big_sorted_list), 'like', double(big_sorted_list)); % Ensure locs has the same type as big_sorted_list (Modified)
     
     % Iterate over each element to find
     for i = 1:length(elements_to_find)
