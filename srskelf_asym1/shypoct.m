@@ -284,13 +284,13 @@ if ~isempty(parent_nbor_chld)
       T.nodes(k).snbor = reshape([T.nodes(k).snbor, i], 1, []); % Ensure snbor is a row vector
     end
   end
- % 
- % % Add non-adjacent parent-neighbors-children to interaction list
- %      j = idx(max(dist,[],2) > 1 & max(dist,[],2) <2.5);
- %      if ~isempty(j)
- %        T.nodes(i).ilist = [T.nodes(i).ilist j];
- %      end
+ 
 
+    % % Add non-adjacent parent-neighbors-children to interaction list
+     %      j = idx(max(dist,[],2) > 1 & max(dist,[],2) <2.5);
+     %      if ~isempty(j)
+     %        T.nodes(i).ilist = [T.nodes(i).ilist j];
+     %      end
 
   % Add non-adjacent parent-neighbors-children to interaction list
   j = parent_nbor_chld(max(dist, [], 2) > 1 & max(dist, [], 2) < 2.5);
@@ -299,7 +299,6 @@ if ~isempty(parent_nbor_chld)
     ilist = reshape([ilist, j], 1, []); % Ensure ilist is a row vector
     T.nodes(i).ilist = ilist;
   end
+ end
 end
-
-  end
 end
