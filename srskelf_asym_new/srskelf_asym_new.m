@@ -1,43 +1,6 @@
 function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts)
     % SRSKELF_ASYM   Asymmetric strong recursive skeletonization factorization.
-    %
-    %    F = SRSKELF_ASYM(A_func_id, X, OCC, RANK_OR_TOL, PXYFUN_func_id, OPTS) 
-    %    produces a factorization F of the interaction matrix A on the points X 
-    %    using tree occupancy parameter OCC, local precision parameter RANK_OR_TOL, 
-    %    and proxy function PXYFUN to capture the far field. This is a function 
-    %    of the form
-    %
-    %      [KPXY, NBR] = PXYFUN(X, SLF, NBR, proxy, L, CTR)
-    %
-    %    that is called for every block, where
-    %
-    %      - KPXY: interaction matrix against artificial proxy points
-    %      - NBR:  block neighbor indices (can be modified)
-    %      - X:    input points
-    %      - SLF:  block indices
-    %      - proxy: proxy points on the unit sphere
-    %      - L:    block size
-    %      - CTR:  block center
-    %
-    %    See the examples for further details.
-    %
-    %    F = SRSKELF_ASYM(A_func_id, X, OCC, RANK_OR_TOL, PXYFUN_func_id, OPTS) 
-    %    also passes various options to the algorithm. Valid options include:
-    %
-    %      - EXT: set the root node extent to [EXT(I,1) EXT(I,2)] along 
-    %             dimension I.  If EXT is empty (default), then the root extent
-    %             is calculated from the data.
-    %
-    %      - LVLMAX: maximum tree depth (default: LVLMAX = Inf).
-    %
-    %      - SYMM: assume that the matrix is asymmetric if SYMM = 'N' and 
-    %              Hermitian positive definite if SYMM = 'P' (default: SYMM = 
-    %              'N'). If SYMM = 'N', then local factors are computed using 
-    %              the LU decomposition; if SYMM = 'P', the Cholesky 
-    %              decomposition.
-    %
-    %      - VERB: display status of the code if VERB = 1 (default: VERB = 0).
-    %
+    % (Function documentation here...)
 
     start = tic;
 
@@ -53,7 +16,6 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     switch A_func_id
         case 1
             A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
-        % Add more cases as needed for other functions
         otherwise
             error('Invalid function identifier for A.');
     end
@@ -61,7 +23,6 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     switch pxyfun_func_id
         case 1
             pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
-        % Add more cases as needed for other functions
         otherwise
             error('Invalid function identifier for pxyfun.');
     end
@@ -84,11 +45,9 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         fprintf(['-' * ones(1, 80) '\n'])
         fprintf('%3s | %6s | %8s | %8s | %8s | %8s | %10s (s)\n', ...
                 'lvl', 'nblk', 'nRemIn', 'nRemOut', 'inRatio', 'outRatio', 'time')
-        % Print summary information about tree construction
         fprintf(['-' * ones(1, 80) '\n'])
         fprintf('%3s | %63.2e (s)\n', '-', toc)
 
-        % Count the nonempty boxes at each level
         pblk = zeros(t.nlvl + 1, 1);
         for lvl = 1:t.nlvl
             pblk(lvl + 1) = pblk(lvl);
@@ -104,9 +63,9 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     nbox = t.lvp(end);
 
     % Initialize struct fields as empty arrays
-    e = repmat(struct('sk', zeros(0, 1), 'rd', zeros(0, 1), 'nbr', zeros(0, 1), 'T', zeros(0, 0), ... % Modified
-                      'E', zeros(0, 0), 'F', zeros(0, 0), 'L', zeros(0, 0), 'U', zeros(0, 0), ... % Modified
-                      'C', zeros(0, 0), 'D', zeros(0, 0)), nbox, 1); % Modified
+    e = repmat(struct('sk', zeros(0, 1), 'rd', zeros(0, 1), 'nbr', zeros(0, 1), 'T', zeros(0, 0), ...
+                      'E', zeros(0, 0), 'F', zeros(0, 0), 'L', zeros(0, 0), 'U', zeros(0, 0), ...
+                      'C', zeros(0, 0), 'D', zeros(0, 0)), nbox, 1); 
 
     F = struct('N', N, 'nlvl', t.nlvl, 'lvp', zeros(1, t.nlvl + 1), 'factors', e, 'symm', opts.symm);
     nlvl = 0;
@@ -139,8 +98,6 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         if use_lproxy
             nterms = log(1.0 / tol) / log(1.0 / sqrt(3.0));
             nterms = max(nterms, 3);
-        % else
-        %     nterms = h3dterms(boxsize, opts.zk, tol);
         end
         p = (nterms + 1)^2;
         proxy = randn(3, p);
@@ -150,8 +107,8 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
             slf = t.nodes(i).xi;
             
             % Preallocate nbr to handle size mismatch
-            nbr_size = sum(cellfun(@(x) length(t.nodes(x).xi), num2cell(t.nodes(i).nbor))); % Modified
-            nbr = zeros(1, nbr_size); % Modified
+            nbr_size = sum(cellfun(@(x) length(t.nodes(x).xi), num2cell(t.nodes(i).nbor))); 
+            nbr = zeros(1, nbr_size); 
             nbr_idx = 1;
             for k = 1:length(t.nodes(i).nbor)
                 xi_nbor = t.nodes(t.nodes(i).nbor(k)).xi;
@@ -169,8 +126,8 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
                 l = t.lrt / 2^(lvl - 1);
             else
                 % Preallocate lst to handle size mismatch
-                ilist_size = sum(cellfun(@(x) length(t.nodes(x).xi), num2cell(t.nodes(i).ilist))); % Modified
-                lst = zeros(1, ilist_size); % Modified
+                ilist_size = sum(cellfun(@(x) length(t.nodes(x).xi), num2cell(t.nodes(i).ilist))); 
+                lst = zeros(1, ilist_size); 
                 lst_idx = 1;
                 for k = 1:length(t.nodes(i).ilist)
                     xi_ilist = t.nodes(t.nodes(i).ilist(k)).xi;
@@ -347,10 +304,19 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
                 tmp1 = [g.E(idxI1, :); g.C(idxI2, :)];
                 if strcmpi(opts.symm, 'p')
-                    tmp2 = [g.E(idxJ1, :); g.C(idxJ2, :)]';
+                    tmp2 = [g.E(idxJ1, :); g.C(idxJ2, :)]'; % Modified
                 elseif strcmpi(opts.symm, 'n')
                     tmp2 = [g.F(:, idxJ1), g.D(:, idxJ2)];
                 end
+                
+                % Ensure tmp1 and tmp2 have consistent dimensions before multiplication
+                if isempty(tmp1)
+                    tmp1 = zeros(0, size(tmp2, 2)); % Handle the case where tmp1 is empty
+                end
+                if isempty(tmp2)
+                    tmp2 = zeros(size(tmp1, 1), 0); % Handle the case where tmp2 is empty
+                end
+                
                 A(subI, subJ) = A(subI, subJ) - tmp1 * tmp2;
             end
         end
@@ -408,7 +374,6 @@ function locs = find_locations_t(big_sorted_list, elements_to_find)
             if arr_(mid) == target_
                 loc = mid;
                 return;
-                % Found, return
             elseif arr_(mid) < target_
                 left = mid + 1;
             else
