@@ -1,8 +1,9 @@
 function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts)
+    %#codegen
     start = tic;
 
     % Ensure opts has the necessary fields
-    requiredFields = {'nu', 'area', 'P', 'qcorr', 'contrast', 'wuse'};
+    requiredFields = {'nu', 'area', 'P', 'qcorr', 'contrast', 'wuse', 'verb', 'symm', 'lvlmax', 'ext'};
     for k = 1:length(requiredFields)
         if ~isfield(opts, requiredFields{k})
             error(['Missing field in opts: ', requiredFields{k}]);
@@ -37,6 +38,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     N = size(x, 2);
     tic
     t = shypoct(x, occ, opts.lvlmax, opts.ext);
+    assert(numel(t.nodes) <= 10000); % Assuming an upper bound for nodes for codegen
 
     if opts.verb
         fprintf(['-' * ones(1, 80) '\n'])
@@ -60,17 +62,19 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     % Initialize the data structure holding the factorization
     nbox = t.lvp(end);
     e = repmat(struct('sk', zeros(0,1,'double'), 'rd', zeros(0,1,'double'), 'nbr', zeros(0,1,'double'), 'T', zeros(0,0,'double'), 'E', zeros(0,0,'double'), 'F', zeros(0,0,'double'), 'L', zeros(0,0,'double'), 'U', zeros(0,0,'double'), 'C', zeros(0,0,'double'), 'D', zeros(0,0,'double')), nbox, 1);
-    F = struct('N', N, 'nlvl', t.nlvl, 'lvp', zeros(1, t.nlvl + 1), 'factors', e, 'symm', opts.symm);
+    F = struct('N', N, 'nlvl', t.nlvl, 'lvp', zeros(1, t.nlvl + 1, 'double'), 'factors', e, 'symm', opts.symm);
     nlvl = 0;
     n = 0;
-    rem = true(N, 1);
+    rem = true(N, 1); % Initialize rem as logical
     lookup_list = zeros(nbox, 1, 'double'); % Ensure lookup_list is double
     rng(1);
 
-    % Declare variable-size arrays
-    coder.varsize('tmp2', [inf,inf]); % Declare tmp2 with varying dimensions
-    coder.varsize('lst', [inf, 1]);
-    coder.varsize('update_list', [inf,1]); % Declare update_list as variable-size array
+    % Declare variable-size arrays with upper bounds
+    coder.varsize('tmp2', [10000, 10000]); % Set an upper bound for tmp2
+    coder.varsize('tmp1', [10000, 1]); % Set an upper bound for tmp1
+    coder.varsize('lst', [10000, 1]); % Set an upper bound for lst
+    coder.varsize('update_list', [10000, 1]); % Declare update_list as variable-size array with upper bound
+    coder.varsize('F.factors', [10000, 1]); % Declare the entire factors field as variable-size
 
     for lvl = t.nlvl:-1:1
         time = tic;
@@ -95,9 +99,9 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
             proxy = randn(3, p);
             proxy = 1.5 * bsxfun(@rdivide, proxy, sqrt(sum(proxy.^2)));
 
-            for i = t.lvp(lvl) + 1:t.lvp(lvl + 1)
-                slf = t.nodes(i).xi;
-                nbr = [t.nodes(t.nodes(i).nbor).xi];
+            for j = t.lvp(lvl) + 1:t.lvp(lvl + 1)
+                slf = t.nodes(j).xi;
+                nbr = [t.nodes(t.nodes(j).nbor).xi];
 
                 nslf = length(slf);
                 slf = sort(slf);
@@ -108,13 +112,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
                     lst = zeros(0, 1, 'double');
                     l = t.lrt / 2^(lvl - 1);
                 else
-                    lst = reshape([t.nodes(t.nodes(i).ilist).xi], [], 1); % Ensure lst is a column vector
+                    lst = reshape([t.nodes(t.nodes(j).ilist).xi], [], 1); % Ensure lst is a column vector
                     l = t.lrt / 2^(lvl - 1) * 3 / 2;
                 end
 
                 Kpxy = zeros(0, nslf, 'double');
                 if lvl > 2
-                    [Kpxy, lst2] = pxyfun(x, slf, lst, proxy, l, t.nodes(i).ctr);
+                    [Kpxy, lst2] = pxyfun(x, slf, lst, proxy, l, t.nodes(j).ctr);
                 end
 
                 nlst = length(lst);
@@ -170,30 +174,76 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
                 end
 
                 n = n + 1;
-                coder.varsize('F.factors(n).sk', [inf,1]);
-                F.factors(n).sk = double(slf(sk));
-                coder.varsize('F.factors(n).rd', [inf,1]);
-                F.factors(n).rd = double(slf(rd));
-                coder.varsize('F.factors(n).nbr', [inf,1]);
-                F.factors(n).nbr = double(nbr);
-                coder.varsize('F.factors(n).T', [inf,inf]);
-                F.factors(n).T = double(T);
-                coder.varsize('F.factors(n).E', [inf,inf]);
-                F.factors(n).E = double(E);
-                coder.varsize('F.factors(n).F', [inf,inf]);
-                F.factors(n).F = double(G);
-                coder.varsize('F.factors(n).L', [inf,inf]);
-                F.factors(n).L = double(L);
-                coder.varsize('F.factors(n).U', [inf,inf]);
-                F.factors(n).U = double(U);
-                coder.varsize('F.factors(n).C', [inf,inf]);
-                F.factors(n).C = double(C);
-                coder.varsize('F.factors(n).D', [inf,inf]);
-                F.factors(n).D = double(D);
-                lookup_list(i) = double(n); % Ensure lookup_list is double
 
-                t.nodes(i).xi = slf(sk);
-                rem(slf(rd)) = 0;
+                % Ensure each variable-size array field is dynamically sized
+                coder.varsize('sk_var', [10000, 1]); % Set an upper bound for sk_var
+                coder.varsize('rd_var', [10000, 1]); % Set an upper bound for rd_var
+                coder.varsize('nbr_var', [10000, 1]); % Set an upper bound for nbr_var
+                coder.varsize('T_var', [10000, 10000]); % Set an upper bound for T_var
+                coder.varsize('E_var', [10000, 10000]); % Set an upper bound for E_var
+                coder.varsize('F_var', [10000, 10000]); % Set an upper bound for F_var
+                coder.varsize('L_var', [10000, 10000]); % Set an upper bound for L_var
+                coder.varsize('U_var', [10000, 10000]); % Set an upper bound for U_var
+                coder.varsize('C_var', [10000, 10000]); % Set an upper bound for C_var
+                coder.varsize('D_var', [10000, 10000]); % Set an upper bound for D_var
+
+                % Allocate arrays with coder.nullcopy
+                sk_var = coder.nullcopy(zeros(10000, 1, 'double'));
+                rd_var = coder.nullcopy(zeros(10000, 1, 'double'));
+                nbr_var = coder.nullcopy(zeros(10000, 1, 'double'));
+                T_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+                E_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+                F_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+                L_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+                U_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+                C_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+                D_var = coder.nullcopy(zeros(10000, 10000, 'double'));
+
+                if ~isempty(sk)
+                    F.factors(n).sk = sk_var(1:length(slf(sk)));
+                    F.factors(n).sk(1:length(slf(sk))) = double(slf(sk));
+                end
+                if ~isempty(rd)
+                    F.factors(n).rd = rd_var(1:length(slf(rd)));
+                    F.factors(n).rd(1:length(slf(rd))) = double(slf(rd));
+                end
+                if ~isempty(nbr)
+                    F.factors(n).nbr = nbr_var(1:length(nbr));
+                    F.factors(n).nbr(1:length(nbr)) = double(nbr);
+                end
+                if ~isempty(T)
+                    F.factors(n).T = T_var(1:size(T, 1), 1:size(T, 2));
+                    F.factors(n).T(1:size(T, 1), 1:size(T, 2)) = double(T);
+                end
+                if ~isempty(E)
+                    F.factors(n).E = E_var(1:size(E, 1), 1:size(E, 2));
+                    F.factors(n).E(1:size(E, 1), 1:size(E, 2)) = double(E);
+                end
+                if ~isempty(G)
+                    F.factors(n).F = F_var(1:size(G, 1), 1:size(G, 2));
+                    F.factors(n).F(1:size(G, 1), 1:size(G, 2)) = double(G);
+                end
+                if ~isempty(L)
+                    F.factors(n).L = L_var(1:size(L, 1), 1:size(L, 2));
+                    F.factors(n).L(1:size(L, 1), 1:size(L, 2)) = double(L);
+                end
+                if ~isempty(U)
+                    F.factors(n).U = U_var(1:size(U, 1), 1:size(U, 2));
+                    F.factors(n).U(1:size(U, 1), 1:size(U, 2)) = double(U);
+                end
+                if ~isempty(C)
+                    F.factors(n).C = C_var(1:size(C, 1), 1:size(C, 2));
+                    F.factors(n).C(1:size(C, 1), 1:size(C, 2)) = double(C);
+                end
+                if ~isempty(D)
+                    F.factors(n).D = D_var(1:size(D, 1), 1:size(D, 2));
+                    F.factors(n).D(1:size(D, 1), 1:size(D, 2)) = double(D);
+                end
+
+                lookup_list(j) = double(n); % Ensure lookup_list is double
+
+                t.nodes(j).xi = slf(sk);
+                rem(slf(rd)) = false; % Ensure rem is logical
             end
             F.lvp(nlvl + 1) = double(n); % Ensure F.lvp is double
 
@@ -214,7 +264,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
     % Nested function to get update list iteratively
     function get_update_list_iterative(node_idx, update_list)
-        stack = zeros(nbox, 1, 'logical'); % Ensure stack is logical
+        stack = false(nbox, 1); % Ensure stack is logical
         stack_ptr = 1;
         stack(stack_ptr) = node_idx;
         while stack_ptr > 0
@@ -239,6 +289,8 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
     % Nested function to calculate spget
     function A = spget(Ityp, Jtyp, nbox, lst, slf)
+        coder.varsize('tmp2', [10000, 10000]); % Declare tmp2 as variable-size array
+
         if strcmpi(Ityp, 'slf')
             I_ = double(slf);
             m_ = double(length(slf));
@@ -284,9 +336,9 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
                 if strcmpi(opts.symm, 'p')
                     A(subI, subI) = A(subI, subI) - tmp1 * tmp1';
                 elseif strcmpi(opts.symm, 'n')
-                    coder.varsize('tmp2', [inf,inf]);
-                    tmp2 = zeros(size(tmp1, 1), size(tmp1, 2), 'double'); % Initialize tmp2 with consistent size
-                    tmp2 = double([g.F(:, idxI1), g.D(:, idxI2)]);
+                    tmp2 = zeros(f + nnbr, size(g.F, 2), 'double'); % Initialize tmp2 to match dimensions
+                    tmp2(1:f, :) = g.F(:, idxI1);
+                    tmp2(f + 1:end, :) = g.D(:, idxI2);
                     A(subI, subI) = A(subI, subI) - tmp1 * tmp2;
                 end
             else
@@ -308,13 +360,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
                 tmp1 = double([g.E(idxI1, :); g.C(idxI2, :)]);
                 if strcmpi(opts.symm, 'p')
-                    coder.varsize('tmp2', [inf,inf]);
-                    tmp2 = zeros(size(tmp1, 1), size(tmp1, 2), 'double'); % Initialize tmp2 with consistent size
-                    tmp2 = double([g.E(idxJ1, :); g.C(idxJ2, :)]');
+                    tmp2 = zeros(f + nnbr, size(g.E, 2), 'double'); % Initialize tmp2 to match dimensions
+                    tmp2(1:f, :) = g.E(idxJ1, :);
+                    tmp2(f + 1:end, :) = g.C(idxJ2, :);
                 elseif strcmpi(opts.symm, 'n')
-                    coder.varsize('tmp2', [inf,inf]);
-                    tmp2 = zeros(size(tmp1, 1), size(tmp1, 2), 'double'); % Initialize tmp2 with consistent size
-                    tmp2 = double([g.F(:, idxJ1), g.D(:, idxJ2)]);
+                    tmp2 = zeros(f + nnbr, size(g.F, 2), 'double'); % Initialize tmp2 to match dimensions
+                    tmp2(1:f, :) = g.F(:, idxJ1);
+                    tmp2(f + 1:end, :) = g.D(:, idxJ2);
                 end
                 A(subI, subJ) = A(subI, subJ) - tmp1 * tmp2;
             end
@@ -323,7 +375,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
     % Nested function to find locations
     function locs = find_locations_t(big_sorted_list, elements_to_find)
-        coder.varsize('locs', [inf,1]);
+        coder.varsize('locs', [10000, 1]); % Set an upper bound for locs
         locs = zeros(length(big_sorted_list), 1, 'double'); % Ensure locs is double and has proper size
         for i = 1:length(elements_to_find)
             element = elements_to_find(i);
@@ -351,3 +403,4 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         end
     end
 end
+
