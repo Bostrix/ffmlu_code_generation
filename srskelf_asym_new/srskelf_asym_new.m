@@ -99,7 +99,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       for k = 1:numel(t.nodes(i).chld)
         total_size = total_size + numel(t.nodes(t.nodes(i).chld(k)).xi);
       end
-      xi_combined = zeros(1, total_size); % Preallocate
+      xi_combined = zeros(1, total_size); % Preallocate xi_combined
       xi_combined(1:numel(t.nodes(i).xi)) = t.nodes(i).xi;
       
       % Concatenate xi fields
@@ -116,16 +116,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     boxsize = t.lrt/2^(lvl - 1);
     tol = rank_or_tol;
     
-    use_lproxy = true;
-    if(isfield(opts,'lap_proxy'))
-        if(opts.lap_proxy), use_lproxy = true; end
-    end
+    use_lproxy = true; % Directly set use_lproxy to true
     
     if(use_lproxy) 
         nterms = log(1.0/tol)/log(1.0/sqrt(3.0));
         nterms = max(nterms,3);
-    % else
-    %     nterms = h3dterms(boxsize,opts.zk,tol);
+    else
+        nterms = h3dterms(boxsize,opts.zk,tol);
     end
     p = (nterms+1)^2;
     proxy = randn(3,p);
@@ -298,10 +295,12 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     
     A = zeros(m_,n_);
     update_list = false(nbox,1);
-    get_update_list(i);
+    nodes = t.nodes; % Local copy of t.nodes to avoid outer variable usage in recursive function
+    update_list = get_update_list(i, update_list, nodes); % Pass nodes to the recursive function
     update_list = lookup_list(flip(find(update_list)'));
     update_list = update_list(update_list~=0)';
-    for jj = update_list
+    for idx = 1:length(update_list) % Use an explicit index for the loop
+      jj = update_list(idx);
       g = F.factors(jj);
       xj = [g.sk, g.nbr];
       f = length(g.sk);
@@ -347,14 +346,14 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       end
     end
 
-    function get_update_list(node_idx)
+    function update_list = get_update_list(node_idx, update_list, nodes)
       % GET_UPDATE_LIST(NODE_IDX) Recursively get the list of all nodes in
       % the tree that could have generated Schur complement updates to
       % points in node NODE_IDX
       update_list(node_idx) = 1;
-      update_list(t.nodes(node_idx).snbor) = 1;
-      for k = t.nodes(node_idx).chld
-        get_update_list(k);
+      update_list(nodes(node_idx).snbor) = 1;
+      for chld_idx = 1:numel(nodes(node_idx).chld)
+        update_list = get_update_list(nodes(node_idx).chld(chld_idx), update_list, nodes); % Pass nodes to the recursive function
       end
     end
   end
