@@ -1,50 +1,76 @@
-function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts)
-  start = tic;
+function F = srskelf_asym_new_copy(A,x,occ,rank_or_tol,pxyfun,opts)
+% SRSKELF_ASYM   Asymmetric strong recursive skeletonization factorization.
+%
+%    F = SRSKELF_ASYM(A,X,OCC,RANK_OR_TOL,PXYFUN) produces a factorization 
+%    F of the interaction matrix A on the points X using tree occupancy 
+%    parameter OCC, local precision parameter RANK_OR_TOL, and proxy 
+%    function PXYFUN to capture the far field. This is a function of the 
+%    form
+%
+%      [KPXY,NBR] = PXYFUN(X,SLF,NBR,proxy,L,CTR)
+%
+%    that is called for every block, where
+%
+%      - KPXY: interaction matrix against artificial proxy points
+%      - NBR:  block neighbor indices (can be modified)
+%      - X:    input points
+%      - SLF:  block indices
+%      - proxy: proxy points on the unit sphere
+%      - L:    block size
+%      - CTR:  block center
+%
+%    See the examples for further details.
+%
+%    F = SRSKELF_ASYM(A,X,OCC,RANK_OR_TOL,PXYFUN,OPTS) also passes various 
+%    options to the algorithm. Valid options include:
+%
+%      - EXT: set the root node extent to [EXT(I,1) EXT(I,2)] along 
+%             dimension I.  If EXT is empty (default), then the root extent
+%             is calculated from the data.
+%
+%      - LVLMAX: maximum tree depth (default: LVLMAX = Inf).
+%
+%      - SYMM: assume that the matrix is asymmetric if SYMM = 'N' and 
+%              Hermitian positive definite if SYMM = 'P' (default: SYMM = 
+%              'N'). If SYMM = 'N', then local factors are computed using 
+%              the LU decomposition; if SYMM = 'P', the Cholesky 
+%              decomposition.
+%
+%      - VERB: display status of the code if VERB = 1 (default: VERB = 0).
+%
 
+  start = tic;
+  % Set sane default parameters
   if nargin < 5
     pxyfun = [];
-  end
+  end % if
   if nargin < 6
     opts = [];
-  end
+  end % if
   if ~isfield(opts,'ext')
     opts.ext = [];
-  end
+  end % if
   if ~isfield(opts,'lvlmax')
     opts.lvlmax = Inf;
-  end
+  end % if
   if ~isfield(opts,'symm')
     opts.symm = 'n';
-  end
+  end % if
   if ~isfield(opts,'verb')
     opts.verb = 0;
-  end
+  end % if
   if ~isfield(opts,'zk')
     opts.zk = 1.0;
-  end
+  end % if
   
   if opts.verb
     disp('This is standard asymmetric srskelf (RS-S).');
   end
 
-  assert(strcmpi(opts.symm,'p') || strcmpi(opts.symm,'n'), ...
+  % Check inputs are sensible
+    assert(strcmpi(opts.symm,'p') || strcmpi(opts.symm,'n'), ...
          'RSS:srskelf_asym:invalidSymm', ...
          'Symmetry parameter must be ''p'' or ''n''.');
-
-  % Dispatch function handles based on identifiers
-  switch A_func_id
-      case 1
-          A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
-      otherwise
-          error('Invalid function identifier for A.');
-  end
-
-  switch pxyfun_func_id
-      case 1
-          pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
-      otherwise
-          error('Invalid function identifier for pxyfun.');
-  end
 
   % Build tree to hold the discretization points
   N = size(x,2);
@@ -66,26 +92,36 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       for i = t.lvp(lvl)+1:t.lvp(lvl+1)
         if ~isempty(t.nodes(i).xi)
           pblk(lvl+1) = pblk(lvl+1) + 1;
-        end
-      end
-    end
-  end
+        end % if
+      end % for
+    end % for
+  end % if
 
   % Initialize the data structure holding the factorization
   nbox = t.lvp(end);
   
-  emptyStruct = struct('sk',[], 'rd',[], 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
-  e = repmat({emptyStruct}, nbox, 1);
-  
-  F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1),'factors',e,'symm',opts.symm);
-
+  e = cell(nbox,1);
+  % Each element of F.factors will contain the following data for one box:
+  %   - sk: the skeleton DOF indices
+  %   - rd: the redundant DOF indices
+  %   - nbr: the neighbor (near-field) DOF indices
+  %   - T: the interpolation matrix mapping redundant to skeleton
+  %   - E: the left factor of the Schur complement update to sk
+  %   - F: the right factor of the Schur complement update to sk
+  %   - L: the left factor of the diagonal block
+  %   - U: the right factor of the diagonal block
+  %   - C: the left factor of the Schur complement update to nbr
+  %   - D: the right factor of the Schur complement update to nbr
+  F = struct('sk',e,'rd',e,'nbr',e,'T',e,'E',e,'F',e,'L',e,'U',e,'C',e,...
+             'D',e);
+  F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1),'factors',F,...
+             'symm',opts.symm);
   nlvl = 0;
   n = 0;
   % Mark every DOF as "remaining", i.e., not yet eliminated
   rem = true(N,1);
   lookup_list = zeros(nbox,1);
   rng(1);
-
   % Loop over the levels of the tree from bottom to top
   for lvl = t.nlvl:-1:1
     time = tic;
@@ -94,29 +130,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
     % For each box, pull up information about skeletons from child boxes
     for i = t.lvp(lvl)+1:t.lvp(lvl+1)
-      % Preallocate xi_combined
-      total_size = numel(t.nodes(i).xi);
-      for k = 1:numel(t.nodes(i).chld)
-        total_size = total_size + numel(t.nodes(t.nodes(i).chld(k)).xi);
-      end
-      xi_combined = zeros(1, total_size); % Preallocate
-      xi_combined(1:numel(t.nodes(i).xi)) = t.nodes(i).xi;
-      
-      % Concatenate xi fields
-      offset = numel(t.nodes(i).xi);
-      for k = 1:numel(t.nodes(i).chld)
-          child_idx = t.nodes(i).chld(k);
-          child_xi = t.nodes(child_idx).xi;
-          xi_combined(offset + 1 : offset + numel(child_xi)) = child_xi;
-          offset = offset + numel(child_xi);
-      end
-      t.nodes(i).xi = xi_combined;
-    end
+      t.nodes(i).xi = [t.nodes(i).xi [t.nodes(t.nodes(i).chld).xi]];
+    end % for
     
     boxsize = t.lrt/2^(lvl - 1);
     tol = rank_or_tol;
     
-    use_lproxy = true;
+    use_lproxy = false;
     if(isfield(opts,'lap_proxy'))
         if(opts.lap_proxy), use_lproxy = true; end
     end
@@ -124,12 +144,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     if(use_lproxy) 
         nterms = log(1.0/tol)/log(1.0/sqrt(3.0));
         nterms = max(nterms,3);
-    % else
-    %     nterms = h3dterms(boxsize,opts.zk,tol);
+    else
+        nterms = h3dterms(boxsize,opts.zk,tol);
     end
     p = (nterms+1)^2;
     proxy = randn(3,p);
     proxy = 1.5*bsxfun(@rdivide,proxy,sqrt(sum(proxy.^2)));
+
 
     % Loop over each box in this level
     for i = t.lvp(lvl)+1:t.lvp(lvl+1)
@@ -159,13 +180,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       else
         lst = [t.nodes(t.nodes(i).ilist).xi];
         l = t.lrt/2^(lvl - 1) * 3/2;
-      end
+      end % if
 
       % Compute proxy interactions and subselect neighbors
       Kpxy = zeros(0,nslf);
       if lvl > 2
         [Kpxy,lst2] = pxyfun(x,slf,lst,proxy,l,t.nodes(i).ctr);
-      end
+      end % if
 
       nlst = length(lst);
       % Sorting not necessary, but makes debugging easier
@@ -176,12 +197,12 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       K1 = full(A(lst,slf));
       if strcmpi(opts.symm,'n')
         K1 = [K1; conj(full(A(slf,lst)))'];
-      end
+      end % if
 
       K2 = spget('lst','slf');
       if strcmpi(opts.symm,'n')
           K2 = [K2; conj(spget('slf','lst'))'];
-      end
+      end % if
       if lvl>2
         K = [K1+K2; Kpxy];
       else
@@ -195,7 +216,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       % Move on to next box if no compression for this box
       if isempty(rd)
         continue
-      end
+      end % if
 
       % Otherwise, compute the diagonal and off-diagonal blocks for this 
       % box
@@ -203,7 +224,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       K2 = full(A(nbr,slf)) + spget('nbr','slf');
       if strcmpi(opts.symm,'n')
         K3 = full(A(slf,nbr)) + spget('slf','nbr');
-      end
+      end % if
       
       % Skeletonize
       K(rd,:) =  K(rd,:) - conj(T)'*K(sk,:);
@@ -211,7 +232,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       K2(:,rd) = K2(:,rd) - K2(:,sk)*T; 
       if strcmpi(opts.symm,'n')
         K3(rd,:) = K3(rd,:) - conj(T)'*K3(sk,:); 
-      end
+      end % if
       
       if strcmpi(opts.symm,'p')
         % Cholesky for positive definite input
@@ -228,7 +249,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         G = L\K(rd,sk);
         C = K2(:,rd)/U;
         D = L\K3(rd,:);
-      end
+      end % if
  
       % Store matrix factors for this box
       n = n + 1;
@@ -247,7 +268,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
       t.nodes(i).xi = slf(sk);
       rem(slf(rd)) = 0;
-    end
+    end % for
     F.lvp(nlvl+1) = n;
  
     % Print summary for the latest level
@@ -256,15 +277,15 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       nblk = pblk(lvl) + t.lvp(lvl+1) - t.lvp(lvl);
       fprintf('%3d | %6d | %8d | %8d | %8.2f | %8.2f | %10.2e (s)\n', ...
               lvl,nblk,nrem1,nrem2,nrem1/nblk,nrem2/nblk,toc(time))
-    end
-  end
+    end % if
+  end % for
 
    % Truncate extra storage, and we are done
   F.factors = F.factors(1:n);
   if opts.verb
     fprintf(['-'*ones(1,80) '\n'])
     toc(start)
-  end
+  end % if
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   function A = spget(Ityp,Jtyp)
@@ -283,7 +304,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     elseif strcmpi(Ityp,'lst')
       I_ = lst;
       m_ = nlst;
-    end
+    end % if
     
     if strcmpi(Jtyp,'slf')
       J_ = slf;
@@ -294,7 +315,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     elseif strcmpi(Jtyp,'lst')
       J_ = lst;
       n_ = nlst;
-    end
+    end % if
     
     A = zeros(m_,n_);
     update_list = false(nbox,1);
@@ -320,7 +341,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         elseif strcmpi(opts.symm,'n')
           tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
           A(subI, subI) = A(subI,subI) - tmp1*tmp2;
-        end
+        end % if
       else
         % For off-diagonal block
         idxI = ismembc2(xj,I_);
@@ -342,10 +363,10 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
           tmp2 = [g.E(idxJ1,:); g.C(idxJ2,:)]';
         elseif strcmpi(opts.symm,'n')
           tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
-        end
+        end % if
         A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
-      end
-    end
+      end % if
+    end % for
 
     function get_update_list(node_idx)
       % GET_UPDATE_LIST(NODE_IDX) Recursively get the list of all nodes in
@@ -355,7 +376,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       update_list(t.nodes(node_idx).snbor) = 1;
       for k = t.nodes(node_idx).chld
         get_update_list(k);
-      end
-    end
-  end
-end
+      end % for
+    end % get_update_list
+  end % spget
+end % srskelf_asym
