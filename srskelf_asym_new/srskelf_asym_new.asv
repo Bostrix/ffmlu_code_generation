@@ -65,7 +65,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     % Initialize struct fields as empty arrays
     e = repmat(struct('sk', zeros(0, 1), 'rd', zeros(0, 1), 'nbr', zeros(0, 1), 'T', zeros(0, 0), ...
                       'E', zeros(0, 0), 'F', zeros(0, 0), 'L', zeros(0, 0), 'U', zeros(0, 0), ...
-                      'C', zeros(0, 0), 'D', zeros(0, 0)), nbox, 1);
+                      'C', zeros(0, 0), 'D', zeros(0, 0)), nbox, 1); 
 
     F = struct('N', N, 'nlvl', t.nlvl, 'lvp', zeros(1, t.nlvl + 1), 'factors', e, 'symm', opts.symm);
     nlvl = 0;
@@ -304,19 +304,19 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
                 tmp1 = [g.E(idxI1, :); g.C(idxI2, :)];
                 if strcmpi(opts.symm, 'p')
-                    tmp2 = [g.E(idxJ1, :); g.C(idxJ2, :)]';
+                    tmp2 = [g.E(idxJ1, :); g.C(idxJ2, :)]'; % Ensure consistent dimensions
                 elseif strcmpi(opts.symm, 'n')
                     tmp2 = [g.F(:, idxJ1), g.D(:, idxJ2)];
                 end
 
-                % Ensure tmp1 and tmp2 have consistent dimensions before multiplication
+                % Handle empty cases for consistent dimensions
                 if isempty(tmp1)
                     tmp1 = zeros(0, size(tmp2, 2)); % Handle the case where tmp1 is empty
                 end
                 if isempty(tmp2)
                     tmp2 = zeros(size(tmp1, 1), 0); % Handle the case where tmp2 is empty
                 end
-
+                
                 A(subI, subJ) = A(subI, subJ) - tmp1 * tmp2;
             end
         end
