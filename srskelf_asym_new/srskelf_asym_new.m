@@ -229,10 +229,20 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
  
       % Store matrix factors for this box
       n = n + 1;
-      F.factors(n).sk = zeros(length(sk), 1); % Preallocate with the correct size
-      F.factors(n).rd = zeros(length(rd), 1); % Preallocate with the correct size
-      F.factors(n).sk  = slf(sk);
-      F.factors(n).rd  = slf(rd);
+      
+      % Ensure slf and sk are not empty and have consistent dimensions
+      if isempty(slf) || isempty(sk)
+          F.factors(n).sk = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).sk = slf(sk);
+      end
+
+      if isempty(slf) || isempty(rd)
+          F.factors(n).rd = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).rd = slf(rd);
+      end
+
       F.factors(n).nbr = nbr;
       F.factors(n).T = T;
       F.factors(n).E = E;
