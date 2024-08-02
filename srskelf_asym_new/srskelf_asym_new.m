@@ -234,14 +234,14 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       if isempty(slf) || isempty(sk)
           F.factors(n).sk = zeros(0, 1); % Use an empty column vector for consistency
       else
-          F.factors(n).sk = zeros(length(sk), 1); % Preallocate with the correct size
+          F.factors(n).sk = zeros(numel(sk), 1); % Preallocate with the correct size
           F.factors(n).sk = slf(sk);
       end
 
       if isempty(slf) || isempty(rd)
           F.factors(n).rd = zeros(0, 1); % Use an empty column vector for consistency
       else
-          F.factors(n).rd = zeros(length(rd), 1); % Preallocate with the correct size
+          F.factors(n).rd = zeros(numel(rd), 1); % Preallocate with the correct size
           F.factors(n).rd = slf(rd);
       end
 
