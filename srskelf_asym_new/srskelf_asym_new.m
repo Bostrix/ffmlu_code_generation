@@ -79,6 +79,10 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
   
   F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1),'factors',e,'symm',opts.symm);
 
+  % Declare variable-size arrays
+  coder.varsize('F.factors.sk', [Inf, 1]);
+  coder.varsize('F.factors.rd', [Inf, 1]);
+
   nlvl = 0;
   n = 0;
   % Mark every DOF as "remaining", i.e., not yet eliminated
@@ -228,19 +232,9 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       end
  
       % Store matrix factors for this box
-      % Ensure slf and sk are not empty and have consistent dimensions
-      if isempty(slf) || isempty(sk)
-          F.factors(n).sk = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).sk = slf(sk); % Removed double conversion
-      end
-
-      if isempty(slf) || isempty(rd)
-          F.factors(n).rd = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).rd = slf(rd); % Removed double conversion
-      end
-      
+      n = n + 1;
+      F.factors(n).sk  = slf(sk);
+      F.factors(n).rd  = slf(rd);
       F.factors(n).nbr = nbr;
       F.factors(n).T = T;
       F.factors(n).E = E;
@@ -332,11 +326,18 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         idxI1 = tmp1(1:f);
         idxI2 = tmp1(f+1:end);
         tmp1 = [g_E(idxI1,:); g_C(idxI2,:)];
+        
+        % Ensure tmp2 is consistent in size
+        if isempty(idxI1) && isempty(idxI2)
+            tmp2 = zeros(size(tmp1, 2), 0);
+        else
+            tmp2 = [g_F(:,idxI1), g_D(:,idxI2)];
+        end
+
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
           A(subI, subI) = A(subI,subI) - tmp1*tmp1';
         elseif strcmpi(opts.symm,'n')
-          tmp2 = [g_F(:,idxI1), g_D(:,idxI2)];
           A(subI, subI) = A(subI,subI) - tmp1*tmp2;
         end
       else
@@ -355,6 +356,14 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         idxJ2 = tmp2(f+1:end);
 
         tmp1 = [g_E(idxI1,:); g_C(idxI2,:)];
+        
+        % Ensure tmp2 is consistent in size
+        if isempty(idxJ1) && isempty(idxJ2)
+            tmp2 = zeros(size(tmp1, 2), 0);
+        else
+            tmp2 = [g_F(:,idxJ1), g_D(:,idxJ2)];
+        end
+
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
           tmp2 = [g_E(idxJ1,:); g_C(idxJ2,:)]';
