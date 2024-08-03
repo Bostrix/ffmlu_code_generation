@@ -76,8 +76,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
   % Initialize the data structure holding the factorization
   nbox = t.lvp(end);
   
-  max_sk_size = 1000; % Set a sufficiently large maximum size
-  emptyStruct = struct('sk',zeros(max_sk_size, 1), 'rd',zeros(max_sk_size, 1), 'nbr',zeros(max_sk_size, 1), 'T',zeros(max_sk_size, max_sk_size), 'E',zeros(max_sk_size, max_sk_size), 'F',zeros(max_sk_size, max_sk_size), 'L',zeros(max_sk_size, max_sk_size), 'U',zeros(max_sk_size, max_sk_size), 'C',zeros(max_sk_size, max_sk_size), 'D',zeros(max_sk_size, max_sk_size));
+  emptyStruct = struct('sk',zeros(0, 1), 'rd',zeros(0, 1), 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
   e = repmat(emptyStruct, nbox, 1);
   
   F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1,'int32'),'factors',e,'symm',opts.symm);

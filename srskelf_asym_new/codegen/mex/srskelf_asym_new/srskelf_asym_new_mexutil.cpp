@@ -44,13 +44,13 @@ void b_plus(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   } else {
     loop_ub = in2.size(1);
   }
-  b_in1.set_size(&qh_emlrtRTEI, &sp, 1, loop_ub);
+  b_in1.set_size(&ph_emlrtRTEI, &sp, 1, loop_ub);
   stride_0_1 = (in1.size(1) != 1);
   stride_1_1 = (in2.size(1) != 1);
   for (int32_T i{0}; i < loop_ub; i++) {
     b_in1[i] = in1[i * stride_0_1] + in2[i * stride_1_1];
   }
-  in1.set_size(&qh_emlrtRTEI, &sp, 1, loop_ub);
+  in1.set_size(&ph_emlrtRTEI, &sp, 1, loop_ub);
   for (int32_T i{0}; i < loop_ub; i++) {
     in1[i] = b_in1[i];
   }

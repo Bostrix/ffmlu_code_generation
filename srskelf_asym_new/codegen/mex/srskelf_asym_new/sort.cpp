@@ -55,14 +55,14 @@ static emlrtRSInfo vg_emlrtRSI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRTEInfo qo_emlrtRTEI{
+static emlrtRTEInfo po_emlrtRTEI{
     56,                                                                // lineNo
     24,                                                                // colNo
     "sort",                                                            // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pName
 };
 
-static emlrtRTEInfo so_emlrtRTEI{
+static emlrtRTEInfo ro_emlrtRTEI{
     75,                                                                // lineNo
     26,                                                                // colNo
     "sort",                                                            // fName
@@ -75,7 +75,7 @@ namespace internal {
 void b_sort(const emlrtStack &sp, array<real_T, 2U> &x)
 {
   array<real_T, 1U> vwork;
-  array<int32_T, 1U> as_emlrtRSI;
+  array<int32_T, 1U> vr_emlrtRSI;
   emlrtStack b_st;
   emlrtStack st;
   int32_T dim;
@@ -94,7 +94,7 @@ void b_sort(const emlrtStack &sp, array<real_T, 2U> &x)
   }
   i = x.size(dim);
   vlen = i - 1;
-  vwork.set_size(&qo_emlrtRTEI, &sp, i);
+  vwork.set_size(&po_emlrtRTEI, &sp, i);
   st.site = &vg_emlrtRSI;
   vstride = 1;
   for (int32_T k{0}; k < dim; k++) {
@@ -131,7 +131,7 @@ void b_sort(const emlrtStack &sp, array<real_T, 2U> &x)
         vwork[k] = x[idx0 + k * vstride];
       }
       st.site = &rg_emlrtRSI;
-      sortIdx(st, vwork, as_emlrtRSI);
+      sortIdx(st, vwork, vr_emlrtRSI);
       st.site = &qg_emlrtRSI;
       for (int32_T k{0}; k <= vlen; k++) {
         x[idx0 + k * vstride] = vwork[k];
@@ -152,13 +152,13 @@ void b_sort(const emlrtStack &sp, array<real_T, 2U> &x, array<int32_T, 2U> &idx)
 
 void sort(const emlrtStack &sp, array<real_T, 2U> &x)
 {
-  array<int32_T, 2U> as_emlrtRSI;
+  array<int32_T, 2U> vr_emlrtRSI;
   emlrtStack st;
   st.prev = &sp;
   st.tls = sp.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   st.site = &wf_emlrtRSI;
-  sortIdx(st, x, as_emlrtRSI);
+  sortIdx(st, x, vr_emlrtRSI);
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
 }
 
@@ -184,8 +184,8 @@ void sort(const emlrtStack &sp, array<real_T, 2U> &x, array<int32_T, 2U> &idx)
   }
   i = x.size(dim);
   vlen = i - 1;
-  vwork.set_size(&qo_emlrtRTEI, &sp, i);
-  idx.set_size(&so_emlrtRTEI, &sp, x.size(0), x.size(1));
+  vwork.set_size(&po_emlrtRTEI, &sp, i);
+  idx.set_size(&ro_emlrtRTEI, &sp, x.size(0), x.size(1));
   st.site = &vg_emlrtRSI;
   vstride = 1;
   for (int32_T k{0}; k < dim; k++) {

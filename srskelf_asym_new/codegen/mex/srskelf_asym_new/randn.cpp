@@ -39,7 +39,7 @@ static emlrtRTEInfo
         "mustBeInteger.m" // pName
     };
 
-static emlrtRTEInfo sg_emlrtRTEI{
+static emlrtRTEInfo rg_emlrtRTEI{
     139,                                                              // lineNo
     20,                                                               // colNo
     "randn",                                                          // fName
@@ -68,7 +68,7 @@ void randn(const emlrtStack &sp, real_T varargin_2, array<real_T, 2U> &r)
                                   "MATLAB:validators:mustBeInteger",
                                   "MATLAB:validators:mustBeInteger", 0);
   }
-  r.set_size(&sg_emlrtRTEI, &b_st, 3, static_cast<int32_T>(varargin_2));
+  r.set_size(&rg_emlrtRTEI, &b_st, 3, static_cast<int32_T>(varargin_2));
   emlrtRandn(&(r.data())[0], 3 * static_cast<int32_T>(varargin_2));
 }
 

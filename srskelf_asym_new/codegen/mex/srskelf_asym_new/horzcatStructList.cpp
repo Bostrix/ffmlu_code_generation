@@ -49,7 +49,7 @@ static emlrtDCInfo pb_emlrtDCI{
     4 // checkKind
 };
 
-static emlrtRTEInfo pg_emlrtRTEI{
+static emlrtRTEInfo og_emlrtRTEI{
     67,                  // lineNo
     10,                  // colNo
     "horzcatStructList", // fName
@@ -83,7 +83,7 @@ void b_horzcatStructList(const emlrtStack &sp,
       check_forloop_overflow_error(b_st);
     }
   }
-  result.set_size(&pg_emlrtRTEI, &sp, 1, resultSize_idx_1);
+  result.set_size(&og_emlrtRTEI, &sp, 1, resultSize_idx_1);
   resultSize_idx_1 = 0;
   st.site = &xe_emlrtRSI;
   for (int32_T i{0}; i < n; i++) {
@@ -142,12 +142,12 @@ void c_horzcatStructList(const emlrtStack &sp,
     } while (exitg1 == 0);
   }
   st.site = &ye_emlrtRSI;
-  result.set_size(&pg_emlrtRTEI, &st, 1, result.size(1));
+  result.set_size(&og_emlrtRTEI, &st, 1, result.size(1));
   if (resultRowSize < 0) {
     emlrtNonNegativeCheckR2012b(static_cast<real_T>(resultRowSize),
                                 &pb_emlrtDCI, &st);
   }
-  result.set_size(&pg_emlrtRTEI, &st, result.size(0), resultRowSize);
+  result.set_size(&og_emlrtRTEI, &st, result.size(0), resultRowSize);
   j = 0;
   st.site = &xe_emlrtRSI;
   if (structure.size(0) > 2147483646) {
@@ -218,12 +218,12 @@ void horzcatStructList(const emlrtStack &sp,
     } while (exitg1 == 0);
   }
   st.site = &ye_emlrtRSI;
-  result.set_size(&pg_emlrtRTEI, &st, 1, result.size(1));
+  result.set_size(&og_emlrtRTEI, &st, 1, result.size(1));
   if (resultRowSize < 0) {
     emlrtNonNegativeCheckR2012b(static_cast<real_T>(resultRowSize),
                                 &pb_emlrtDCI, &st);
   }
-  result.set_size(&pg_emlrtRTEI, &st, result.size(0), resultRowSize);
+  result.set_size(&og_emlrtRTEI, &st, result.size(0), resultRowSize);
   j = 0;
   st.site = &xe_emlrtRSI;
   if (structure.size(0) > 2147483646) {

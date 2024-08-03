@@ -82,7 +82,7 @@ static emlrtECInfo ac_emlrtECI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtBCInfo lg_emlrtBCI{
+static emlrtBCInfo yf_emlrtBCI{
     -1,                   // iFirst
     -1,                   // iLast
     14,                   // lineNo
@@ -94,7 +94,7 @@ static emlrtBCInfo lg_emlrtBCI{
     0                       // checkKind
 };
 
-static emlrtRTEInfo yi_emlrtRTEI{
+static emlrtRTEInfo xi_emlrtRTEI{
     7,                    // lineNo
     20,                   // colNo
     "lap_neumann_kernel", // fName
@@ -102,7 +102,7 @@ static emlrtRTEInfo yi_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo aj_emlrtRTEI{
+static emlrtRTEInfo yi_emlrtRTEI{
     8,                    // lineNo
     20,                   // colNo
     "lap_neumann_kernel", // fName
@@ -110,7 +110,7 @@ static emlrtRTEInfo aj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo bj_emlrtRTEI{
+static emlrtRTEInfo aj_emlrtRTEI{
     9,                    // lineNo
     20,                   // colNo
     "lap_neumann_kernel", // fName
@@ -118,7 +118,7 @@ static emlrtRTEInfo bj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo cj_emlrtRTEI{
+static emlrtRTEInfo bj_emlrtRTEI{
     10,                   // lineNo
     11,                   // colNo
     "lap_neumann_kernel", // fName
@@ -126,7 +126,7 @@ static emlrtRTEInfo cj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo dj_emlrtRTEI{
+static emlrtRTEInfo cj_emlrtRTEI{
     10,                   // lineNo
     19,                   // colNo
     "lap_neumann_kernel", // fName
@@ -134,7 +134,7 @@ static emlrtRTEInfo dj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo ej_emlrtRTEI{
+static emlrtRTEInfo dj_emlrtRTEI{
     10,                   // lineNo
     27,                   // colNo
     "lap_neumann_kernel", // fName
@@ -142,7 +142,7 @@ static emlrtRTEInfo ej_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo fj_emlrtRTEI{
+static emlrtRTEInfo ej_emlrtRTEI{
     11,                   // lineNo
     23,                   // colNo
     "lap_neumann_kernel", // fName
@@ -150,7 +150,7 @@ static emlrtRTEInfo fj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo gj_emlrtRTEI{
+static emlrtRTEInfo fj_emlrtRTEI{
     11,                   // lineNo
     56,                   // colNo
     "lap_neumann_kernel", // fName
@@ -158,7 +158,7 @@ static emlrtRTEInfo gj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo hj_emlrtRTEI{
+static emlrtRTEInfo gj_emlrtRTEI{
     12,                   // lineNo
     25,                   // colNo
     "lap_neumann_kernel", // fName
@@ -166,7 +166,7 @@ static emlrtRTEInfo hj_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo ij_emlrtRTEI{
+static emlrtRTEInfo hj_emlrtRTEI{
     13,                   // lineNo
     23,                   // colNo
     "lap_neumann_kernel", // fName
@@ -174,7 +174,7 @@ static emlrtRTEInfo ij_emlrtRTEI{
     "lap_neumann_kernel.m" // pName
 };
 
-static emlrtRTEInfo kp_emlrtRTEI{
+static emlrtRTEInfo jp_emlrtRTEI{
     13,                   // lineNo
     5,                    // colNo
     "lap_neumann_kernel", // fName
@@ -212,7 +212,7 @@ static void binary_expand_op_8(const emlrtStack &sp,
   } else {
     b_loop_ub = in2.size(1);
   }
-  r.set_size(&kp_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  r.set_size(&jp_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   stride_0_0 = (in1.size(0) != 1);
   stride_0_1 = (in1.size(1) != 1);
   stride_1_0 = (in2.size(0) != 1);
@@ -228,7 +228,7 @@ static void binary_expand_op_8(const emlrtStack &sp,
     aux_1_1 += stride_1_1;
     aux_0_1 += stride_0_1;
   }
-  in1.set_size(&kp_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  in1.set_size(&jp_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   for (int32_T i{0}; i < b_loop_ub; i++) {
     for (int32_T i1{0}; i1 < loop_ub; i1++) {
       in1[i1 + in1.size(0) * i] = r[i1 + r.size(0) * i];
@@ -273,11 +273,11 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
   //  singularity).  zpars says which layer potential to use
   //  using the surface normal vectors in NU.
   loop_ub = x.size(1);
-  a.set_size(&yi_emlrtRTEI, &sp, x.size(1));
+  a.set_size(&xi_emlrtRTEI, &sp, x.size(1));
   for (i = 0; i < loop_ub; i++) {
     a[i] = x[3 * i];
   }
-  dx.set_size(&mg_emlrtRTEI, &sp, x.size(1), y.size(1));
+  dx.set_size(&lg_emlrtRTEI, &sp, x.size(1), y.size(1));
   b = ((a.size(0) != 0) && (y.size(1) != 0));
   if (b) {
     bcoef = (y.size(1) != 1);
@@ -291,11 +291,11 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
       }
     }
   }
-  a.set_size(&aj_emlrtRTEI, &sp, x.size(1));
+  a.set_size(&yi_emlrtRTEI, &sp, x.size(1));
   for (i = 0; i < loop_ub; i++) {
     a[i] = x[3 * i + 1];
   }
-  dy.set_size(&mg_emlrtRTEI, &sp, x.size(1), y.size(1));
+  dy.set_size(&lg_emlrtRTEI, &sp, x.size(1), y.size(1));
   if (b) {
     bcoef = (y.size(1) != 1);
     i = y.size(1) - 1;
@@ -308,11 +308,11 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
       }
     }
   }
-  a.set_size(&bj_emlrtRTEI, &sp, x.size(1));
+  a.set_size(&aj_emlrtRTEI, &sp, x.size(1));
   for (i = 0; i < loop_ub; i++) {
     a[i] = x[3 * i + 2];
   }
-  dz.set_size(&mg_emlrtRTEI, &sp, x.size(1), y.size(1));
+  dz.set_size(&lg_emlrtRTEI, &sp, x.size(1), y.size(1));
   if (b) {
     bcoef = (y.size(1) != 1);
     i = y.size(1) - 1;
@@ -327,7 +327,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
   }
   st.site = &di_emlrtRSI;
   b_st.site = &oe_emlrtRSI;
-  dr.set_size(&cj_emlrtRTEI, &b_st, x.size(1), y.size(1));
+  dr.set_size(&bj_emlrtRTEI, &b_st, x.size(1), y.size(1));
   bcoef = dx.size(0) * dx.size(1);
   for (i = 0; i < bcoef; i++) {
     varargin_1 = dx[i];
@@ -335,7 +335,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
   }
   st.site = &di_emlrtRSI;
   b_st.site = &oe_emlrtRSI;
-  r.set_size(&dj_emlrtRTEI, &b_st, x.size(1), y.size(1));
+  r.set_size(&cj_emlrtRTEI, &b_st, x.size(1), y.size(1));
   for (i = 0; i < bcoef; i++) {
     varargin_1 = dy[i];
     r[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -357,7 +357,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
   }
   st.site = &di_emlrtRSI;
   b_st.site = &oe_emlrtRSI;
-  r.set_size(&ej_emlrtRTEI, &b_st, x.size(1), y.size(1));
+  r.set_size(&dj_emlrtRTEI, &b_st, x.size(1), y.size(1));
   for (i = 0; i < bcoef; i++) {
     varargin_1 = dz[i];
     r[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -388,13 +388,13 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
   st.site = &di_emlrtRSI;
   coder::c_sqrt(st, dr);
   loop_ub = nuuse.size(1);
-  a.set_size(&fj_emlrtRTEI, &sp, nuuse.size(1));
+  a.set_size(&ej_emlrtRTEI, &sp, nuuse.size(1));
   for (i = 0; i < loop_ub; i++) {
     a[i] = nuuse[3 * i];
   }
   st.site = &ei_emlrtRSI;
   coder::bsxfun(st, a, dx, K);
-  a.set_size(&gj_emlrtRTEI, &sp, nuuse.size(1));
+  a.set_size(&fj_emlrtRTEI, &sp, nuuse.size(1));
   for (i = 0; i < loop_ub; i++) {
     a[i] = nuuse[3 * i + 1];
   }
@@ -424,7 +424,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
     st.site = &ei_emlrtRSI;
     plus(st, K, r);
   }
-  a.set_size(&hj_emlrtRTEI, &sp, nuuse.size(1));
+  a.set_size(&gj_emlrtRTEI, &sp, nuuse.size(1));
   for (i = 0; i < loop_ub; i++) {
     a[i] = nuuse[3 * i + 2];
   }
@@ -458,7 +458,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
   }
   b_st.site = &gi_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  dx.set_size(&ij_emlrtRTEI, &c_st, dr.size(0), dr.size(1));
+  dx.set_size(&hj_emlrtRTEI, &c_st, dr.size(0), dr.size(1));
   bcoef = dr.size(0) * dr.size(1);
   for (i = 0; i < bcoef; i++) {
     varargin_1 = dr[i];
@@ -480,7 +480,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
       K[i] = K[i] / dx[i];
     }
   } else {
-    c_st.site = &ur_emlrtRSI;
+    c_st.site = &qr_emlrtRSI;
     rdivide(c_st, K, dx);
   }
   bcoef--;
@@ -488,7 +488,7 @@ void lap_neumann_kernel(const emlrtStack &sp, const coder::array<real_T, 2U> &x,
     if (dr[acoef] == 0.0) {
       i = K.size(0) * K.size(1) - 1;
       if (acoef > i) {
-        emlrtDynamicBoundsCheckR2012b(acoef, 0, i, &lg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(acoef, 0, i, &yf_emlrtBCI,
                                       (emlrtConstCTX)&sp);
       }
       K[acoef] = 0.0;

@@ -115,28 +115,28 @@ static emlrtRSInfo pg_emlrtRSI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pathName
 };
 
-static emlrtRTEInfo no_emlrtRTEI{
+static emlrtRTEInfo mo_emlrtRTEI{
     56,        // lineNo
     5,         // colNo
     "sortIdx", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pName
 };
 
-static emlrtRTEInfo oo_emlrtRTEI{
+static emlrtRTEInfo no_emlrtRTEI{
     296,       // lineNo
     1,         // colNo
     "sortIdx", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pName
 };
 
-static emlrtRTEInfo po_emlrtRTEI{
+static emlrtRTEInfo oo_emlrtRTEI{
     298,       // lineNo
     24,        // colNo
     "sortIdx", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sortIdx.m" // pName
 };
 
-static emlrtRTEInfo ro_emlrtRTEI{
+static emlrtRTEInfo qo_emlrtRTEI{
     61,        // lineNo
     5,         // colNo
     "sortIdx", // fName
@@ -399,7 +399,7 @@ void sortIdx(const emlrtStack &sp, array<real_T, 1U> &x,
   d_st.tls = c_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   bLen2 = x.size(0);
-  idx.set_size(&ro_emlrtRTEI, &sp, bLen2);
+  idx.set_size(&qo_emlrtRTEI, &sp, bLen2);
   for (i = 0; i < bLen2; i++) {
     idx[i] = 0;
   }
@@ -416,11 +416,11 @@ void sortIdx(const emlrtStack &sp, array<real_T, 1U> &x,
     int32_T nBlocks;
     int32_T wOffset_tmp;
     st.site = &xf_emlrtRSI;
-    iwork.set_size(&oo_emlrtRTEI, &st, bLen2);
+    iwork.set_size(&no_emlrtRTEI, &st, bLen2);
     for (i = 0; i < bLen2; i++) {
       iwork[i] = 0;
     }
-    xwork.set_size(&po_emlrtRTEI, &st, bLen2);
+    xwork.set_size(&oo_emlrtRTEI, &st, bLen2);
     b_st.site = &yf_emlrtRSI;
     x4[0] = 0.0;
     idx4[0] = 0;
@@ -681,7 +681,7 @@ void sortIdx(const emlrtStack &sp, array<real_T, 2U> &x,
   d_st.tls = c_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   bLen2 = x.size(1);
-  idx.set_size(&no_emlrtRTEI, &sp, 1, bLen2);
+  idx.set_size(&mo_emlrtRTEI, &sp, 1, bLen2);
   for (i = 0; i < bLen2; i++) {
     idx[i] = 0;
   }
@@ -698,11 +698,11 @@ void sortIdx(const emlrtStack &sp, array<real_T, 2U> &x,
     int32_T nBlocks;
     int32_T wOffset_tmp;
     st.site = &xf_emlrtRSI;
-    iwork.set_size(&oo_emlrtRTEI, &st, bLen2);
+    iwork.set_size(&no_emlrtRTEI, &st, bLen2);
     for (i = 0; i < bLen2; i++) {
       iwork[i] = 0;
     }
-    xwork.set_size(&po_emlrtRTEI, &st, bLen2);
+    xwork.set_size(&oo_emlrtRTEI, &st, bLen2);
     b_st.site = &yf_emlrtRSI;
     x4[0] = 0.0;
     idx4[0] = 0;

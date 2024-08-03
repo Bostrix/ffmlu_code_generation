@@ -13,19 +13,19 @@
 #include "mwmathutil.h"
 
 // Variable Definitions
-static emlrtRSInfo ar_emlrtRSI{
+static emlrtRSInfo wq_emlrtRSI{
     32,                                                           // lineNo
     "lu",                                                         // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pathName
 };
 
-static emlrtRSInfo br_emlrtRSI{
+static emlrtRSInfo xq_emlrtRSI{
     49,                                                           // lineNo
     "LU",                                                         // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pathName
 };
 
-static emlrtRSInfo cr_emlrtRSI{
+static emlrtRSInfo yq_emlrtRSI{
     50,                                                           // lineNo
     "LU",                                                         // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pathName
@@ -45,21 +45,21 @@ static emlrtRTEInfo ac_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pName
 };
 
-static emlrtRTEInfo ko_emlrtRTEI{
+static emlrtRTEInfo jo_emlrtRTEI{
     49,                                                           // lineNo
     6,                                                            // colNo
     "lu",                                                         // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pName
 };
 
-static emlrtRTEInfo lo_emlrtRTEI{
+static emlrtRTEInfo ko_emlrtRTEI{
     81,                                                           // lineNo
     1,                                                            // colNo
     "lu",                                                         // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pName
 };
 
-static emlrtRTEInfo mo_emlrtRTEI{
+static emlrtRTEInfo lo_emlrtRTEI{
     82,                                                           // lineNo
     1,                                                            // colNo
     "lu",                                                         // fName
@@ -89,26 +89,26 @@ void lu(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &L,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-  st.site = &ar_emlrtRSI;
-  b_A.set_size(&ko_emlrtRTEI, &st, A.size(0), A.size(1));
+  st.site = &wq_emlrtRSI;
+  b_A.set_size(&jo_emlrtRTEI, &st, A.size(0), A.size(1));
   loop_ub = A.size(0) * A.size(1);
   for (i = 0; i < loop_ub; i++) {
     b_A[i] = A[i];
   }
-  b_st.site = &br_emlrtRSI;
+  b_st.site = &xq_emlrtRSI;
   internal::lapack::xgetrf(b_st, A.size(0), A.size(1), b_A, A.size(0), ipiv);
-  b_st.site = &cr_emlrtRSI;
-  c_st.site = &cr_emlrtRSI;
+  b_st.site = &yq_emlrtRSI;
+  c_st.site = &yq_emlrtRSI;
   eml_ipiv2perm(c_st, ipiv, A.size(0), pivot);
   m_tmp = b_A.size(0);
   mn = static_cast<int32_T>(muDoubleScalarMin(
       static_cast<real_T>(b_A.size(0)), static_cast<real_T>(b_A.size(1))));
-  L.set_size(&lo_emlrtRTEI, &b_st, b_A.size(0), mn);
+  L.set_size(&ko_emlrtRTEI, &b_st, b_A.size(0), mn);
   loop_ub = b_A.size(0) * mn;
   for (i = 0; i < loop_ub; i++) {
     L[i] = 0.0;
   }
-  U.set_size(&mo_emlrtRTEI, &b_st, mn, b_A.size(1));
+  U.set_size(&lo_emlrtRTEI, &b_st, mn, b_A.size(1));
   loop_ub = mn * b_A.size(1);
   for (i = 0; i < loop_ub; i++) {
     U[i] = 0.0;

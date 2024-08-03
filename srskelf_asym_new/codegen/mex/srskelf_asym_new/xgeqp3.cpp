@@ -17,7 +17,7 @@
 
 // Variable Definitions
 static emlrtRSInfo
-    gm_emlrtRSI{
+    cm_emlrtRSI{
         63,       // lineNo
         "xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -25,7 +25,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    hm_emlrtRSI{
+    dm_emlrtRSI{
         98,             // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -33,7 +33,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    im_emlrtRSI{
+    em_emlrtRSI{
         138,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -41,7 +41,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    jm_emlrtRSI{
+    fm_emlrtRSI{
         141,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -49,7 +49,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    km_emlrtRSI{
+    gm_emlrtRSI{
         143,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -57,7 +57,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    lm_emlrtRSI{
+    hm_emlrtRSI{
         148,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -65,7 +65,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    mm_emlrtRSI{
+    im_emlrtRSI{
         151,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -73,7 +73,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    nm_emlrtRSI{
+    jm_emlrtRSI{
         154,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -81,7 +81,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    om_emlrtRSI{
+    km_emlrtRSI{
         158,            // lineNo
         "ceval_xgeqp3", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -89,7 +89,7 @@ static emlrtRSInfo
     };
 
 static emlrtRTEInfo
-    uo_emlrtRTEI{
+    to_emlrtRTEI{
         61,       // lineNo
         9,        // colNo
         "xgeqp3", // fName
@@ -98,7 +98,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    vo_emlrtRTEI{
+    uo_emlrtRTEI{
         92,       // lineNo
         22,       // colNo
         "xgeqp3", // fName
@@ -107,7 +107,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    wo_emlrtRTEI{
+    vo_emlrtRTEI{
         105,      // lineNo
         1,        // colNo
         "xgeqp3", // fName
@@ -116,7 +116,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    xo_emlrtRTEI{
+    wo_emlrtRTEI{
         97,       // lineNo
         5,        // colNo
         "xgeqp3", // fName
@@ -153,20 +153,20 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
   minmn = A.size(0);
   na = A.size(1) - 1;
   loop_ub = A.size(1);
-  jpvt.set_size(&uo_emlrtRTEI, &sp, 1, loop_ub);
+  jpvt.set_size(&to_emlrtRTEI, &sp, 1, loop_ub);
   for (int32_T k{0}; k < loop_ub; k++) {
     jpvt[k] = 0;
   }
-  st.site = &gm_emlrtRSI;
+  st.site = &cm_emlrtRSI;
   minmana = muIntScalarMin_sint32(minmn, loop_ub);
-  tau.set_size(&vo_emlrtRTEI, &st, minmana);
+  tau.set_size(&uo_emlrtRTEI, &st, minmana);
   if ((A.size(0) == 0) || (A.size(1) == 0) || (A.size(0) < 1) ||
       (A.size(1) < 1)) {
-    tau.set_size(&xo_emlrtRTEI, &st, minmana);
+    tau.set_size(&wo_emlrtRTEI, &st, minmana);
     for (int32_T k{0}; k < minmana; k++) {
       tau[k] = 0.0;
     }
-    b_st.site = &hm_emlrtRSI;
+    b_st.site = &dm_emlrtRSI;
     if (A.size(1) > 2147483646) {
       c_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(c_st);
@@ -187,14 +187,14 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
   } else {
     ptrdiff_t info_t;
     boolean_T p;
-    jpvt_t.set_size(&wo_emlrtRTEI, &st, loop_ub);
+    jpvt_t.set_size(&vo_emlrtRTEI, &st, loop_ub);
     for (int32_T k{0}; k < loop_ub; k++) {
       jpvt_t[k] = (ptrdiff_t)0;
     }
     info_t = LAPACKE_dgeqp3(102, (ptrdiff_t)A.size(0), (ptrdiff_t)A.size(1),
                             &(A.data())[0], (ptrdiff_t)A.size(0),
                             &(jpvt_t.data())[0], &(tau.data())[0]);
-    b_st.site = &im_emlrtRSI;
+    b_st.site = &em_emlrtRSI;
     if ((int32_T)info_t != 0) {
       p = true;
       if ((int32_T)info_t != -4) {
@@ -212,13 +212,13 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
       p = false;
     }
     if (p) {
-      b_st.site = &jm_emlrtRSI;
+      b_st.site = &fm_emlrtRSI;
       if (A.size(1) > 2147483646) {
         c_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(c_st);
       }
       for (loop_ub = 0; loop_ub <= na; loop_ub++) {
-        b_st.site = &km_emlrtRSI;
+        b_st.site = &gm_emlrtRSI;
         if (minmn > 2147483646) {
           c_st.site = &fe_emlrtRSI;
           check_forloop_overflow_error(c_st);
@@ -229,7 +229,7 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
       }
       loop_ub = na + 1;
       minmn = muIntScalarMin_sint32(minmn, loop_ub);
-      b_st.site = &lm_emlrtRSI;
+      b_st.site = &hm_emlrtRSI;
       if (minmn > 2147483646) {
         c_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(c_st);
@@ -238,7 +238,7 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
         tau[k] = rtNaN;
       }
       loop_ub = minmn + 1;
-      b_st.site = &mm_emlrtRSI;
+      b_st.site = &im_emlrtRSI;
       if ((minmn + 1 <= minmana) && (minmana > 2147483646)) {
         c_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(c_st);
@@ -246,7 +246,7 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
       for (int32_T k{loop_ub}; k <= minmana; k++) {
         tau[k - 1] = 0.0;
       }
-      b_st.site = &nm_emlrtRSI;
+      b_st.site = &jm_emlrtRSI;
       if (A.size(1) > 2147483646) {
         c_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(c_st);
@@ -265,7 +265,7 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
         jpvt[k] = k + 1;
       }
     } else {
-      b_st.site = &om_emlrtRSI;
+      b_st.site = &km_emlrtRSI;
       if (A.size(1) > 2147483646) {
         c_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(c_st);

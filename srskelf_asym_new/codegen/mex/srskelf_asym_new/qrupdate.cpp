@@ -16,67 +16,67 @@
 #include <emmintrin.h>
 
 // Variable Definitions
-static emlrtRSInfo rp_emlrtRSI{
+static emlrtRSInfo np_emlrtRSI{
     99,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo sp_emlrtRSI{
+static emlrtRSInfo op_emlrtRSI{
     98,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo tp_emlrtRSI{
+static emlrtRSInfo pp_emlrtRSI{
     87,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo up_emlrtRSI{
+static emlrtRSInfo qp_emlrtRSI{
     79,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo vp_emlrtRSI{
+static emlrtRSInfo rp_emlrtRSI{
     77,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo wp_emlrtRSI{
+static emlrtRSInfo sp_emlrtRSI{
     62,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo xp_emlrtRSI{
+static emlrtRSInfo tp_emlrtRSI{
     55,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo yp_emlrtRSI{
+static emlrtRSInfo up_emlrtRSI{
     54,         // lineNo
     "qrupdate", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo aq_emlrtRSI{
+static emlrtRSInfo yp_emlrtRSI{
     149,                 // lineNo
     "zeroLowerTriangle", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo bq_emlrtRSI{
+static emlrtRSInfo aq_emlrtRSI{
     150,                 // lineNo
     "zeroLowerTriangle", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
 };
 
-static emlrtRSInfo cq_emlrtRSI{
+static emlrtRSInfo bq_emlrtRSI{
     106,   // lineNo
     "rot", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pathName
@@ -103,14 +103,14 @@ static emlrtRTEInfo hc_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pName
 };
 
-static emlrtRTEInfo cp_emlrtRTEI{
+static emlrtRTEInfo bp_emlrtRTEI{
     54,         // lineNo
     1,          // colNo
     "qrupdate", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pName
 };
 
-static emlrtRTEInfo dp_emlrtRTEI{
+static emlrtRTEInfo cp_emlrtRTEI{
     57,         // lineNo
     5,          // colNo
     "qrupdate", // fName
@@ -137,7 +137,7 @@ static void rot(const emlrtStack &sp, int32_T n, real_T c, real_T s,
   int32_T vectorUB;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &cq_emlrtRSI;
+  st.site = &bq_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   if (n > 2147483646) {
@@ -250,7 +250,7 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
   }
   m = q.size(0);
   n_tmp = r.size(1);
-  st.site = &yp_emlrtRSI;
+  st.site = &up_emlrtRSI;
   b_st.site = &mj_emlrtRSI;
   if (q.size(0) != u.size(0)) {
     if (((q.size(0) == 1) && (q.size(1) == 1)) || (u.size(0) == 1)) {
@@ -262,16 +262,16 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
                                     "MATLAB:innerdim", 0);
     }
   }
-  b_st.site = &xj_emlrtRSI;
+  b_st.site = &vp_emlrtRSI;
   if (u.size(0) == 0) {
     b_m = q.size(1);
-    w.set_size(&cp_emlrtRTEI, &b_st, b_m);
+    w.set_size(&bp_emlrtRTEI, &b_st, b_m);
     for (mj = 0; mj < b_m; mj++) {
       w[mj] = 0.0;
     }
   } else {
-    c_st.site = &yj_emlrtRSI;
-    d_st.site = &ak_emlrtRSI;
+    c_st.site = &wp_emlrtRSI;
+    d_st.site = &xp_emlrtRSI;
     TRANSB1 = 'N';
     TRANSA1 = 'T';
     alpha1 = 1.0;
@@ -282,21 +282,21 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     lda_t = (ptrdiff_t)q.size(0);
     ldb_t = (ptrdiff_t)u.size(0);
     ldc_t = (ptrdiff_t)q.size(1);
-    w.set_size(&io_emlrtRTEI, &d_st, q.size(1));
+    w.set_size(&ho_emlrtRTEI, &d_st, q.size(1));
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1, &(q.data())[0], &lda_t,
           &(((array<real_T, 1U> *)&u)->data())[0], &ldb_t, &beta1,
           &(w.data())[0], &ldc_t);
   }
-  st.site = &xp_emlrtRSI;
+  st.site = &tp_emlrtRSI;
   b_m = r.size(0);
-  b_st.site = &aq_emlrtRSI;
+  b_st.site = &yp_emlrtRSI;
   if (r.size(1) > 2147483646) {
     c_st.site = &fe_emlrtRSI;
     check_forloop_overflow_error(c_st);
   }
   for (int32_T j{0}; j < n_tmp; j++) {
     mj = j + 2;
-    b_st.site = &bq_emlrtRSI;
+    b_st.site = &aq_emlrtRSI;
     if ((j + 2 <= b_m) && (b_m > 2147483646)) {
       c_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(c_st);
@@ -306,12 +306,12 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     }
   }
   b_m = q.size(0) - 1;
-  c.set_size(&dp_emlrtRTEI, &sp, b_m);
-  s.set_size(&dp_emlrtRTEI, &sp, b_m);
+  c.set_size(&cp_emlrtRTEI, &sp, b_m);
+  s.set_size(&cp_emlrtRTEI, &sp, b_m);
   for (int32_T j{b_m}; j >= 1; j--) {
     c[j - 1] = rotg(w[j - 1], w[j], &s[j - 1], &w[j - 1]);
   }
-  st.site = &wp_emlrtRSI;
+  st.site = &sp_emlrtRSI;
   if (r.size(1) > 2147483646) {
     b_st.site = &fe_emlrtRSI;
     check_forloop_overflow_error(b_st);
@@ -334,10 +334,10 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     }
   }
   for (int32_T j{b_m}; j >= 1; j--) {
-    st.site = &vp_emlrtRSI;
+    st.site = &rp_emlrtRSI;
     rot(st, m, c[j - 1], s[j - 1], q, j);
   }
-  st.site = &up_emlrtRSI;
+  st.site = &qp_emlrtRSI;
   if (r.size(1) > 2147483646) {
     b_st.site = &fe_emlrtRSI;
     check_forloop_overflow_error(b_st);
@@ -349,7 +349,7 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     } else {
       mj = j;
     }
-    st.site = &tp_emlrtRSI;
+    st.site = &pp_emlrtRSI;
     for (int32_T i{0}; i < mj; i++) {
       alpha1 = r[i + r.size(0) * j];
       beta1 = r[(i + r.size(0) * j) + 1];
@@ -363,9 +363,9 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     }
   }
   mj = muIntScalarMin_sint32(b_m, n_tmp);
-  st.site = &sp_emlrtRSI;
+  st.site = &op_emlrtRSI;
   for (int32_T j{0}; j < mj; j++) {
-    st.site = &rp_emlrtRSI;
+    st.site = &np_emlrtRSI;
     rot(st, m, c[j], s[j], q, j + 1);
   }
   emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);

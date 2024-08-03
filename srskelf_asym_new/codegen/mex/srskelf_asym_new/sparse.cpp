@@ -115,7 +115,7 @@ static emlrtRTEInfo kb_emlrtRTEI{
     "@sparse/sparse.m" // pName
 };
 
-static emlrtRTEInfo jj_emlrtRTEI{
+static emlrtRTEInfo ij_emlrtRTEI{
     1476,     // lineNo
     13,       // colNo
     "sparse", // fName
@@ -161,16 +161,16 @@ void sparse::spallocLike(const emlrtStack &sp, int32_T n, int32_T nzmax,
         "Coder:toolbox:SparseMaxSize", 2, 12, MAX_int32_T);
   }
   numalloc = muIntScalarMax_sint32(nzmax, 1);
-  s.d.set_size(&jj_emlrtRTEI, &st, numalloc);
+  s.d.set_size(&ij_emlrtRTEI, &st, numalloc);
   for (i = 0; i < numalloc; i++) {
     s.d[i] = 0.0;
   }
-  s.colidx.set_size(&jj_emlrtRTEI, &st, n + 1);
+  s.colidx.set_size(&ij_emlrtRTEI, &st, n + 1);
   for (i = 0; i <= n; i++) {
     s.colidx[i] = 0;
   }
   s.colidx[0] = 1;
-  s.rowidx.set_size(&jj_emlrtRTEI, &st, numalloc);
+  s.rowidx.set_size(&ij_emlrtRTEI, &st, numalloc);
   for (i = 0; i < numalloc; i++) {
     s.rowidx[i] = 0;
   }

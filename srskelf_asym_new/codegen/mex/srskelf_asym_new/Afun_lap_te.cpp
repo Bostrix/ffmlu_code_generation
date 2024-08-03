@@ -28,13 +28,13 @@ void eq(const emlrtStack &sp, coder::array<boolean_T, 2U> &in1,
   } else {
     loop_ub = in3.size(0);
   }
-  in1.set_size(&pi_emlrtRTEI, &sp, loop_ub, in1.size(1));
+  in1.set_size(&oi_emlrtRTEI, &sp, loop_ub, in1.size(1));
   if (in3.size(1) == 1) {
     b_loop_ub = in2.size(1);
   } else {
     b_loop_ub = in3.size(1);
   }
-  in1.set_size(&pi_emlrtRTEI, &sp, in1.size(0), b_loop_ub);
+  in1.set_size(&oi_emlrtRTEI, &sp, in1.size(0), b_loop_ub);
   stride_0_0 = (in2.size(0) != 1);
   stride_0_1 = (in2.size(1) != 1);
   stride_1_0 = (in3.size(0) != 1);

@@ -12,7 +12,7 @@
 #include <emmintrin.h>
 
 // Variable Definitions
-static emlrtRTEInfo mp_emlrtRTEI{
+static emlrtRTEInfo lp_emlrtRTEI{
     207,                                                             // lineNo
     47,                                                              // colNo
     "id",                                                            // fName
@@ -39,7 +39,7 @@ void binary_expand_op_16(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   b_in3 = in3[static_cast<int32_T>(in4) - 1];
   loop_ub = in2.size(0);
-  b_in2.set_size(&mp_emlrtRTEI, &sp, loop_ub);
+  b_in2.set_size(&lp_emlrtRTEI, &sp, loop_ub);
   scalarLB = (loop_ub / 2) << 1;
   vectorUB = scalarLB - 2;
   for (i = 0; i <= vectorUB; i += 2) {
@@ -55,7 +55,7 @@ void binary_expand_op_16(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   } else {
     loop_ub = i;
   }
-  b_in5.set_size(&yl_emlrtRTEI, &sp, 1, loop_ub);
+  b_in5.set_size(&xl_emlrtRTEI, &sp, 1, loop_ub);
   scalarLB = (in5.size(1) != 1);
   vectorUB = (i != 1);
   for (i = 0; i < loop_ub; i++) {
@@ -65,7 +65,7 @@ void binary_expand_op_16(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
             1];
   }
   b_loop_ub = b_in2.size(0);
-  in1.set_size(&pk_emlrtRTEI, &sp, b_in2.size(0), loop_ub);
+  in1.set_size(&ok_emlrtRTEI, &sp, b_in2.size(0), loop_ub);
   for (i = 0; i < loop_ub; i++) {
     scalarLB = (b_in2.size(0) / 2) << 1;
     vectorUB = scalarLB - 2;

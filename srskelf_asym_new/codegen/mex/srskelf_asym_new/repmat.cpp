@@ -37,12 +37,10 @@ static emlrtDCInfo qb_emlrtDCI{
 
 // Function Definitions
 namespace coder {
-void repmat(const emlrtStack &sp, const struct2_T &a, real_T varargin_1,
-            array<struct2_T, 1U> &b)
+void repmat(const emlrtStack &sp, real_T varargin_1, array<empty, 1U> &b)
 {
   emlrtStack st;
   real_T d;
-  int32_T loop_ub_tmp;
   st.prev = &sp;
   st.tls = sp.tls;
   st.site = &kf_emlrtRSI;
@@ -65,11 +63,7 @@ void repmat(const emlrtStack &sp, const struct2_T &a, real_T varargin_1,
   if (!(varargin_1 >= 0.0)) {
     emlrtNonNegativeCheckR2012b(varargin_1, &qb_emlrtDCI, (emlrtConstCTX)&sp);
   }
-  loop_ub_tmp = static_cast<int32_T>(varargin_1);
-  b.set_size(&rg_emlrtRTEI, &sp, loop_ub_tmp);
-  for (int32_T i{0}; i < loop_ub_tmp; i++) {
-    b[i] = a;
-  }
+  b.set_size(&qg_emlrtRTEI, &sp, static_cast<int32_T>(varargin_1));
 }
 
 } // namespace coder

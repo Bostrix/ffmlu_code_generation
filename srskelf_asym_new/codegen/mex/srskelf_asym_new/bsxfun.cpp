@@ -37,7 +37,7 @@ void b_bsxfun(const emlrtStack &sp, const array<real_T, 2U> &a,
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch",
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch", 0);
   }
-  c.set_size(&mg_emlrtRTEI, &sp, a.size(0), csz_idx_1);
+  c.set_size(&lg_emlrtRTEI, &sp, a.size(0), csz_idx_1);
   if ((a.size(0) != 0) && (csz_idx_1 != 0)) {
     int32_T acoef;
     int32_T b_acoef;
@@ -72,7 +72,7 @@ void bsxfun(const emlrtStack &sp, const array<real_T, 2U> &a,
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch",
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch", 0);
   }
-  c.set_size(&mg_emlrtRTEI, &sp, 3, csz_idx_1);
+  c.set_size(&lg_emlrtRTEI, &sp, 3, csz_idx_1);
   csz_idx_1--;
   for (int32_T k{0}; k <= csz_idx_1; k++) {
     _mm_storeu_pd(&c[3 * k],
@@ -96,7 +96,7 @@ void bsxfun(const emlrtStack &sp, const array<real_T, 1U> &a,
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch",
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch", 0);
   }
-  c.set_size(&mg_emlrtRTEI, &sp, csz_idx_0, b.size(1));
+  c.set_size(&lg_emlrtRTEI, &sp, csz_idx_0, b.size(1));
   if ((csz_idx_0 != 0) && (b.size(1) != 0)) {
     int32_T acoef;
     int32_T bcoef;
@@ -121,7 +121,7 @@ void bsxfun(const emlrtStack &sp, const array<real_T, 1U> &a,
 void bsxfun(const emlrtStack &sp, const real_T a[3], const array<real_T, 2U> &b,
             array<real_T, 2U> &c)
 {
-  c.set_size(&mg_emlrtRTEI, &sp, b.size(0), 3);
+  c.set_size(&lg_emlrtRTEI, &sp, b.size(0), 3);
   if (b.size(0) != 0) {
     int32_T bcoef;
     bcoef = (b.size(0) != 1);
@@ -172,7 +172,7 @@ void c_bsxfun(const emlrtStack &sp, const array<real_T, 2U> &a,
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch",
                                   "MATLAB:bsxfun:arrayDimensionsMustMatch", 0);
   }
-  c.set_size(&mg_emlrtRTEI, &sp, csz_idx_0, csz_idx_1);
+  c.set_size(&lg_emlrtRTEI, &sp, csz_idx_0, csz_idx_1);
   if ((csz_idx_0 != 0) && (csz_idx_1 != 0)) {
     int32_T acoef;
     int32_T b_bcoef;

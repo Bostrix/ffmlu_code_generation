@@ -16,14 +16,14 @@
 #include <cstddef>
 
 // Variable Definitions
-static emlrtRSInfo il_emlrtRSI{
+static emlrtRSInfo el_emlrtRSI{
     24,                                                           // lineNo
     "qr",                                                         // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qr.m" // pathName
 };
 
 static emlrtRSInfo
-    jl_emlrtRSI{
+    fl_emlrtRSI{
         35,       // lineNo
         "eml_qr", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/private/"
@@ -31,7 +31,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    kl_emlrtRSI{
+    gl_emlrtRSI{
         166,       // lineNo
         "qr_econ", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/private/"
@@ -39,7 +39,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    tl_emlrtRSI{
+    pl_emlrtRSI{
         27,       // lineNo
         "xgeqrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -47,7 +47,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    ul_emlrtRSI{
+    ql_emlrtRSI{
         91,             // lineNo
         "ceval_xgeqrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -55,7 +55,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    vl_emlrtRSI{
+    rl_emlrtRSI{
         93,             // lineNo
         "ceval_xgeqrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -63,7 +63,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    wl_emlrtRSI{
+    sl_emlrtRSI{
         94,             // lineNo
         "ceval_xgeqrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -71,7 +71,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    xl_emlrtRSI{
+    tl_emlrtRSI{
         99,             // lineNo
         "ceval_xgeqrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -79,7 +79,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    yl_emlrtRSI{
+    ul_emlrtRSI{
         102,            // lineNo
         "ceval_xgeqrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -87,7 +87,7 @@ static emlrtRSInfo
     };
 
 static emlrtRTEInfo
-    kn_emlrtRTEI{
+    jn_emlrtRTEI{
         35,       // lineNo
         25,       // colNo
         "eml_qr", // fName
@@ -96,7 +96,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ln_emlrtRTEI{
+    kn_emlrtRTEI{
         73,       // lineNo
         22,       // colNo
         "xgeqrf", // fName
@@ -105,7 +105,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    mn_emlrtRTEI{
+    ln_emlrtRTEI{
         75,       // lineNo
         5,        // colNo
         "xgeqrf", // fName
@@ -145,21 +145,21 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
   f_st.prev = &e_st;
   f_st.tls = e_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-  st.site = &il_emlrtRSI;
-  b_st.site = &jl_emlrtRSI;
+  st.site = &el_emlrtRSI;
+  b_st.site = &fl_emlrtRSI;
   m = A.size(0);
   minsz = A.size(1);
-  b_A.set_size(&kn_emlrtRTEI, &b_st, A.size(0), A.size(1));
+  b_A.set_size(&jn_emlrtRTEI, &b_st, A.size(0), A.size(1));
   loop_ub = A.size(0) * A.size(1);
   for (a = 0; a < loop_ub; a++) {
     b_A[a] = A[a];
   }
-  c_st.site = &kl_emlrtRSI;
-  d_st.site = &tl_emlrtRSI;
+  c_st.site = &gl_emlrtRSI;
+  d_st.site = &pl_emlrtRSI;
   loop_ub = muIntScalarMin_sint32(m, minsz);
-  tau.set_size(&ln_emlrtRTEI, &d_st, loop_ub);
+  tau.set_size(&kn_emlrtRTEI, &d_st, loop_ub);
   if ((b_A.size(0) == 0) || (b_A.size(1) == 0)) {
-    tau.set_size(&mn_emlrtRTEI, &d_st, loop_ub);
+    tau.set_size(&ln_emlrtRTEI, &d_st, loop_ub);
     for (a = 0; a < loop_ub; a++) {
       tau[a] = 0.0;
     }
@@ -169,7 +169,7 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
     info_t = LAPACKE_dgeqrf(102, (ptrdiff_t)b_A.size(0), (ptrdiff_t)b_A.size(1),
                             &(b_A.data())[0], (ptrdiff_t)b_A.size(0),
                             &(tau.data())[0]);
-    e_st.site = &ul_emlrtRSI;
+    e_st.site = &ql_emlrtRSI;
     if ((int32_T)info_t != 0) {
       p = true;
       if ((int32_T)info_t != -4) {
@@ -187,13 +187,13 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
       p = false;
     }
     if (p) {
-      e_st.site = &vl_emlrtRSI;
+      e_st.site = &rl_emlrtRSI;
       if (b_A.size(1) > 2147483646) {
         f_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(f_st);
       }
       for (int32_T j{0}; j < minsz; j++) {
-        e_st.site = &wl_emlrtRSI;
+        e_st.site = &sl_emlrtRSI;
         if (m > 2147483646) {
           f_st.site = &fe_emlrtRSI;
           check_forloop_overflow_error(f_st);
@@ -202,7 +202,7 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
           b_A[j * m + i] = rtNaN;
         }
       }
-      e_st.site = &xl_emlrtRSI;
+      e_st.site = &tl_emlrtRSI;
       if (loop_ub > 2147483646) {
         f_st.site = &fe_emlrtRSI;
         check_forloop_overflow_error(f_st);
@@ -211,7 +211,7 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
         tau[i] = rtNaN;
       }
       a = loop_ub + 1;
-      e_st.site = &yl_emlrtRSI;
+      e_st.site = &ul_emlrtRSI;
       for (int32_T i{a}; i <= loop_ub; i++) {
         tau[i - 1] = 0.0;
       }
@@ -220,43 +220,43 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
   m = b_A.size(0);
   loop_ub = b_A.size(1);
   minsz = muIntScalarMin_sint32(m, loop_ub);
-  R.set_size(&nn_emlrtRTEI, &b_st, minsz, b_A.size(1));
-  c_st.site = &ll_emlrtRSI;
+  R.set_size(&mn_emlrtRTEI, &b_st, minsz, b_A.size(1));
+  c_st.site = &hl_emlrtRSI;
   if (minsz > 2147483646) {
     d_st.site = &fe_emlrtRSI;
     check_forloop_overflow_error(d_st);
   }
   for (int32_T j{0}; j < minsz; j++) {
-    c_st.site = &ml_emlrtRSI;
+    c_st.site = &il_emlrtRSI;
     for (int32_T i{0}; i <= j; i++) {
       R[i + R.size(0) * j] = b_A[i + b_A.size(0) * j];
     }
     a = j + 2;
-    c_st.site = &nl_emlrtRSI;
+    c_st.site = &jl_emlrtRSI;
     for (int32_T i{a}; i <= minsz; i++) {
       R[(i + R.size(0) * j) - 1] = 0.0;
     }
   }
   a = b_A.size(0) + 1;
-  c_st.site = &ol_emlrtRSI;
+  c_st.site = &kl_emlrtRSI;
   if ((b_A.size(0) + 1 <= b_A.size(1)) && (b_A.size(1) > 2147483646)) {
     d_st.site = &fe_emlrtRSI;
     check_forloop_overflow_error(d_st);
   }
   for (int32_T j{a}; j <= loop_ub; j++) {
-    c_st.site = &pl_emlrtRSI;
+    c_st.site = &ll_emlrtRSI;
     for (int32_T i{0}; i < minsz; i++) {
       R[i + R.size(0) * (j - 1)] = b_A[i + b_A.size(0) * (j - 1)];
     }
   }
-  c_st.site = &ql_emlrtRSI;
-  d_st.site = &bm_emlrtRSI;
+  c_st.site = &ml_emlrtRSI;
+  d_st.site = &wl_emlrtRSI;
   internal::lapack::xorgqr(d_st, b_A.size(0), minsz, minsz, b_A, b_A.size(0),
                            tau);
-  Q.set_size(&on_emlrtRTEI, &b_st, m, minsz);
-  c_st.site = &rl_emlrtRSI;
+  Q.set_size(&nn_emlrtRTEI, &b_st, m, minsz);
+  c_st.site = &nl_emlrtRSI;
   for (int32_T j{0}; j < minsz; j++) {
-    c_st.site = &sl_emlrtRSI;
+    c_st.site = &ol_emlrtRSI;
     if (m > 2147483646) {
       d_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(d_st);

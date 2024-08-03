@@ -17,7 +17,7 @@ static emlrtRTEInfo xb_emlrtRTEI{
 };
 
 static emlrtRTEInfo
-    op_emlrtRTEI{
+    np_emlrtRTEI{
         19,            // lineNo
         9,             // colNo
         "indexDivide", // fName
@@ -39,7 +39,7 @@ int32_T ind2sub(const emlrtStack &sp, const real_T siz[2], real_T ndx,
                                   "Coder:MATLAB:ind2sub_IndexOutOfRange", 0);
   }
   if (static_cast<uint32_T>(static_cast<int32_T>(siz[0])) == 0U) {
-    emlrtDivisionByZeroErrorR2012b(&op_emlrtRTEI, (emlrtConstCTX)&sp);
+    emlrtDivisionByZeroErrorR2012b(&np_emlrtRTEI, (emlrtConstCTX)&sp);
   } else {
     i = static_cast<int32_T>(
         static_cast<uint32_T>(static_cast<int32_T>(ndx) - 1) /

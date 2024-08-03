@@ -202,7 +202,7 @@ static emlrtMCInfo
     };
 
 static emlrtBCInfo
-    td_emlrtBCI{
+    hd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         283,       // lineNo
@@ -215,7 +215,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ud_emlrtBCI{
+    id_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         272,       // lineNo
@@ -228,7 +228,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    vd_emlrtBCI{
+    jd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         196,       // lineNo
@@ -241,7 +241,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    wd_emlrtBCI{
+    kd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         196,       // lineNo
@@ -254,7 +254,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    xd_emlrtBCI{
+    ld_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         196,       // lineNo
@@ -267,7 +267,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    yd_emlrtBCI{
+    md_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         196,       // lineNo
@@ -280,7 +280,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ae_emlrtBCI{
+    nd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         240,       // lineNo
@@ -293,7 +293,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    be_emlrtBCI{
+    od_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         239,       // lineNo
@@ -306,7 +306,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ce_emlrtBCI{
+    pd_emlrtBCI{
         -1,                 // iFirst
         -1,                 // iLast
         237,                // lineNo
@@ -319,7 +319,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    de_emlrtBCI{
+    qd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         221,       // lineNo
@@ -332,7 +332,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ee_emlrtBCI{
+    rd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         209,       // lineNo
@@ -345,7 +345,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    fe_emlrtBCI{
+    sd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         205,       // lineNo
@@ -367,7 +367,7 @@ static emlrtRTEInfo
     };
 
 static emlrtBCInfo
-    ge_emlrtBCI{
+    td_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         204,       // lineNo
@@ -398,7 +398,7 @@ static emlrtRTEInfo
     };
 
 static emlrtBCInfo
-    he_emlrtBCI{
+    ud_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         189,       // lineNo
@@ -411,7 +411,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ie_emlrtBCI{
+    vd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         188,       // lineNo
@@ -434,7 +434,7 @@ static emlrtDCInfo
     };
 
 static emlrtBCInfo
-    je_emlrtBCI{
+    wd_emlrtBCI{
         -1,           // iFirst
         -1,           // iLast
         132,          // lineNo
@@ -456,7 +456,7 @@ static emlrtRTEInfo
     };
 
 static emlrtBCInfo
-    ke_emlrtBCI{
+    xd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         119,       // lineNo
@@ -493,7 +493,7 @@ static emlrtRTEInfo v_emlrtRTEI{
 };
 
 static emlrtBCInfo
-    le_emlrtBCI{
+    yd_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         222,       // lineNo
@@ -506,7 +506,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    me_emlrtBCI{
+    ae_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         120,       // lineNo
@@ -519,7 +519,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ne_emlrtBCI{
+    be_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         169,       // lineNo
@@ -532,7 +532,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    oe_emlrtBCI{
+    ce_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         222,       // lineNo
@@ -545,7 +545,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    pe_emlrtBCI{
+    de_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         232,       // lineNo
@@ -558,7 +558,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    qe_emlrtBCI{
+    ee_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         163,       // lineNo
@@ -571,7 +571,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    re_emlrtBCI{
+    fe_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         235,       // lineNo
@@ -584,7 +584,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    se_emlrtBCI{
+    ge_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         165,       // lineNo
@@ -597,7 +597,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    te_emlrtBCI{
+    he_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         167,       // lineNo
@@ -610,7 +610,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ue_emlrtBCI{
+    ie_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         252,       // lineNo
@@ -623,7 +623,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ve_emlrtBCI{
+    je_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         246,       // lineNo
@@ -636,7 +636,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    we_emlrtBCI{
+    ke_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         247,       // lineNo
@@ -649,7 +649,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    xe_emlrtBCI{
+    le_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         281,       // lineNo
@@ -662,7 +662,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ye_emlrtBCI{
+    me_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         300,       // lineNo
@@ -675,7 +675,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    af_emlrtBCI{
+    ne_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         284,       // lineNo
@@ -698,7 +698,7 @@ static emlrtDCInfo
     };
 
 static emlrtBCInfo
-    bf_emlrtBCI{
+    oe_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         119,       // lineNo
@@ -721,7 +721,7 @@ static emlrtDCInfo
     };
 
 static emlrtBCInfo
-    cf_emlrtBCI{
+    pe_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         183,       // lineNo
@@ -734,7 +734,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    df_emlrtBCI{
+    qe_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         203,       // lineNo
@@ -747,7 +747,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ef_emlrtBCI{
+    re_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         204,       // lineNo
@@ -760,7 +760,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    ff_emlrtBCI{
+    se_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         197,       // lineNo
@@ -773,7 +773,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    gf_emlrtBCI{
+    te_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         216,       // lineNo
@@ -786,7 +786,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    hf_emlrtBCI{
+    ue_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         160,       // lineNo
@@ -799,7 +799,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    if_emlrtBCI{
+    ve_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         161,       // lineNo
@@ -812,7 +812,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    jf_emlrtBCI{
+    we_emlrtBCI{
         -1,             // iFirst
         -1,             // iLast
         221,            // lineNo
@@ -825,7 +825,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    kf_emlrtBCI{
+    xe_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         272,       // lineNo
@@ -838,7 +838,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    lf_emlrtBCI{
+    ye_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         241,       // lineNo
@@ -851,7 +851,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    mf_emlrtBCI{
+    af_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         276,       // lineNo
@@ -864,7 +864,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    nf_emlrtBCI{
+    bf_emlrtBCI{
         -1,                 // iFirst
         -1,                 // iLast
         278,                // lineNo
@@ -877,7 +877,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    of_emlrtBCI{
+    cf_emlrtBCI{
         -1,                 // iFirst
         -1,                 // iLast
         296,                // lineNo
@@ -890,7 +890,7 @@ static emlrtBCInfo
     };
 
 static emlrtBCInfo
-    pf_emlrtBCI{
+    df_emlrtBCI{
         -1,        // iFirst
         -1,        // iLast
         284,       // lineNo
@@ -903,7 +903,7 @@ static emlrtBCInfo
     };
 
 static emlrtRTEInfo
-    xe_emlrtRTEI{
+    we_emlrtRTEI{
         92,        // lineNo
         3,         // colNo
         "shypoct", // fName
@@ -912,7 +912,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ye_emlrtRTEI{
+    xe_emlrtRTEI{
         93,        // lineNo
         3,         // colNo
         "shypoct", // fName
@@ -921,7 +921,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    af_emlrtRTEI{
+    ye_emlrtRTEI{
         126,       // lineNo
         27,        // colNo
         "shypoct", // fName
@@ -930,7 +930,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    bf_emlrtRTEI{
+    af_emlrtRTEI{
         1,         // lineNo
         14,        // colNo
         "shypoct", // fName
@@ -939,7 +939,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    cf_emlrtRTEI{
+    bf_emlrtRTEI{
         157,       // lineNo
         33,        // colNo
         "shypoct", // fName
@@ -948,7 +948,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    df_emlrtRTEI{
+    cf_emlrtRTEI{
         165,       // lineNo
         11,        // colNo
         "shypoct", // fName
@@ -957,7 +957,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ef_emlrtRTEI{
+    df_emlrtRTEI{
         167,       // lineNo
         33,        // colNo
         "shypoct", // fName
@@ -966,7 +966,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ff_emlrtRTEI{
+    ef_emlrtRTEI{
         188,       // lineNo
         3,         // colNo
         "shypoct", // fName
@@ -975,7 +975,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    gf_emlrtRTEI{
+    ff_emlrtRTEI{
         189,       // lineNo
         3,         // colNo
         "shypoct", // fName
@@ -984,7 +984,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    hf_emlrtRTEI{
+    gf_emlrtRTEI{
         192,       // lineNo
         3,         // colNo
         "shypoct", // fName
@@ -993,7 +993,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    if_emlrtRTEI{
+    hf_emlrtRTEI{
         193,       // lineNo
         10,        // colNo
         "shypoct", // fName
@@ -1002,7 +1002,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    jf_emlrtRTEI{
+    if_emlrtRTEI{
         216,       // lineNo
         16,        // colNo
         "shypoct", // fName
@@ -1011,7 +1011,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    kf_emlrtRTEI{
+    jf_emlrtRTEI{
         216,       // lineNo
         7,         // colNo
         "shypoct", // fName
@@ -1020,7 +1020,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    lf_emlrtRTEI{
+    kf_emlrtRTEI{
         217,       // lineNo
         7,         // colNo
         "shypoct", // fName
@@ -1029,7 +1029,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    mf_emlrtRTEI{
+    lf_emlrtRTEI{
         219,       // lineNo
         7,         // colNo
         "shypoct", // fName
@@ -1038,7 +1038,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    nf_emlrtRTEI{
+    mf_emlrtRTEI{
         222,       // lineNo
         29,        // colNo
         "shypoct", // fName
@@ -1047,7 +1047,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    of_emlrtRTEI{
+    nf_emlrtRTEI{
         232,       // lineNo
         5,         // colNo
         "shypoct", // fName
@@ -1056,7 +1056,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    pf_emlrtRTEI{
+    of_emlrtRTEI{
         235,       // lineNo
         5,         // colNo
         "shypoct", // fName
@@ -1065,7 +1065,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    qf_emlrtRTEI{
+    pf_emlrtRTEI{
         251,       // lineNo
         25,        // colNo
         "shypoct", // fName
@@ -1074,7 +1074,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    rf_emlrtRTEI{
+    qf_emlrtRTEI{
         252,       // lineNo
         9,         // colNo
         "shypoct", // fName
@@ -1083,7 +1083,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    sf_emlrtRTEI{
+    rf_emlrtRTEI{
         245,       // lineNo
         23,        // colNo
         "shypoct", // fName
@@ -1092,7 +1092,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    tf_emlrtRTEI{
+    sf_emlrtRTEI{
         245,       // lineNo
         8,         // colNo
         "shypoct", // fName
@@ -1101,7 +1101,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    uf_emlrtRTEI{
+    tf_emlrtRTEI{
         246,       // lineNo
         9,         // colNo
         "shypoct", // fName
@@ -1110,7 +1110,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    vf_emlrtRTEI{
+    uf_emlrtRTEI{
         247,       // lineNo
         36,        // colNo
         "shypoct", // fName
@@ -1119,7 +1119,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    wf_emlrtRTEI{
+    vf_emlrtRTEI{
         247,       // lineNo
         9,         // colNo
         "shypoct", // fName
@@ -1128,7 +1128,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    xf_emlrtRTEI{
+    wf_emlrtRTEI{
         272,       // lineNo
         21,        // colNo
         "shypoct", // fName
@@ -1137,7 +1137,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ag_emlrtRTEI{
+    yf_emlrtRTEI{
         276,       // lineNo
         16,        // colNo
         "shypoct", // fName
@@ -1146,7 +1146,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    bg_emlrtRTEI{
+    ag_emlrtRTEI{
         276,       // lineNo
         7,         // colNo
         "shypoct", // fName
@@ -1155,7 +1155,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    cg_emlrtRTEI{
+    bg_emlrtRTEI{
         277,       // lineNo
         3,         // colNo
         "shypoct", // fName
@@ -1164,7 +1164,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    dg_emlrtRTEI{
+    cg_emlrtRTEI{
         485,             // lineNo
         21,              // colNo
         "unaryMinOrMax", // fName
@@ -1173,7 +1173,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    eg_emlrtRTEI{
+    dg_emlrtRTEI{
         280,       // lineNo
         20,        // colNo
         "shypoct", // fName
@@ -1182,7 +1182,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    fg_emlrtRTEI{
+    eg_emlrtRTEI{
         281,       // lineNo
         5,         // colNo
         "shypoct", // fName
@@ -1191,7 +1191,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    gg_emlrtRTEI{
+    fg_emlrtRTEI{
         284,       // lineNo
         34,        // colNo
         "shypoct", // fName
@@ -1200,7 +1200,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    hg_emlrtRTEI{
+    gg_emlrtRTEI{
         284,       // lineNo
         7,         // colNo
         "shypoct", // fName
@@ -1209,7 +1209,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ig_emlrtRTEI{
+    hg_emlrtRTEI{
         296,       // lineNo
         24,        // colNo
         "shypoct", // fName
@@ -1218,7 +1218,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    jg_emlrtRTEI{
+    ig_emlrtRTEI{
         296,       // lineNo
         47,        // colNo
         "shypoct", // fName
@@ -1227,7 +1227,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    kg_emlrtRTEI{
+    jg_emlrtRTEI{
         299,       // lineNo
         21,        // colNo
         "shypoct", // fName
@@ -1236,7 +1236,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    lg_emlrtRTEI{
+    kg_emlrtRTEI{
         300,       // lineNo
         5,         // colNo
         "shypoct", // fName
@@ -1245,7 +1245,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRSInfo
-    ir_emlrtRSI{
+    er_emlrtRSI{
         56,        // lineNo
         "shypoct", // fcnName
         "/home/user/ffmlu_code_generation/ffmlu_code_generation/shypoct/"
@@ -1253,7 +1253,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    kr_emlrtRSI{
+    gr_emlrtRSI{
         55,        // lineNo
         "shypoct", // fcnName
         "/home/user/ffmlu_code_generation/ffmlu_code_generation/shypoct/"
@@ -1261,7 +1261,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    tr_emlrtRSI{
+    pr_emlrtRSI{
         296,       // lineNo
         "shypoct", // fcnName
         "/home/user/ffmlu_code_generation/ffmlu_code_generation/shypoct/"
@@ -1295,7 +1295,7 @@ static void b_and(const emlrtStack &sp, coder::array<boolean_T, 1U> &in1,
   } else {
     loop_ub = in3.size(0);
   }
-  in1.set_size(&ig_emlrtRTEI, &sp, loop_ub);
+  in1.set_size(&hg_emlrtRTEI, &sp, loop_ub);
   stride_0_0 = (in2.size(0) != 1);
   stride_1_0 = (in3.size(0) != 1);
   for (int32_T i{0}; i < loop_ub; i++) {
@@ -1469,12 +1469,12 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
   //  Set default parameters
   //  Check inputs
   if (!(occ >= 0.0)) {
-    st.site = &kr_emlrtRSI;
+    st.site = &gr_emlrtRSI;
     b_error(st, d_emlrt_marshallOut(st, b_cv), e_emlrt_marshallOut(st, b_cv1),
             d_emlrtMCI);
   }
   if (!(lvlmax >= 1.0)) {
-    st.site = &ir_emlrtRSI;
+    st.site = &er_emlrtRSI;
     b_error(st, f_emlrt_marshallOut(st, b_cv2), c_emlrt_marshallOut(st, cv3),
             e_emlrtMCI);
   }
@@ -1560,25 +1560,25 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
   //  Initialize the structure fields
   //  Estimate a large enough number of nodes
   for (int32_T i{0}; i < 16000; i++) {
-    SD->f3.rv[i].ctr[0] = 0.0;
-    SD->f3.rv[i].ctr[1] = 0.0;
-    SD->f3.rv[i].ctr[2] = 0.0;
-    SD->f3.rv[i].xi.size[0] = 1;
-    SD->f3.rv[i].xi.size[1] = 0;
-    SD->f3.rv[i].prnt = 0.0;
-    SD->f3.rv[i].chld.set_size(&xe_emlrtRTEI, &sp, 1, 0);
-    SD->f3.rv[i].nbor.set_size(&xe_emlrtRTEI, &sp, 1, 0);
-    SD->f3.rv[i].ilist.set_size(&xe_emlrtRTEI, &sp, 1, 0);
-    SD->f3.rv[i].snbor.set_size(&xe_emlrtRTEI, &sp, 1, 0);
+    SD->f0.rv[i].ctr[0] = 0.0;
+    SD->f0.rv[i].ctr[1] = 0.0;
+    SD->f0.rv[i].ctr[2] = 0.0;
+    SD->f0.rv[i].xi.size[0] = 1;
+    SD->f0.rv[i].xi.size[1] = 0;
+    SD->f0.rv[i].prnt = 0.0;
+    SD->f0.rv[i].chld.set_size(&we_emlrtRTEI, &sp, 1, 0);
+    SD->f0.rv[i].nbor.set_size(&we_emlrtRTEI, &sp, 1, 0);
+    SD->f0.rv[i].ilist.set_size(&we_emlrtRTEI, &sp, 1, 0);
+    SD->f0.rv[i].snbor.set_size(&we_emlrtRTEI, &sp, 1, 0);
     if (*emlrtBreakCheckR2012bFlagVar != 0) {
       emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
     }
   }
-  T_nodes.set_size(&xe_emlrtRTEI, &sp, 16000);
+  T_nodes.set_size(&we_emlrtRTEI, &sp, 16000);
   for (b_i = 0; b_i < 16000; b_i++) {
-    T_nodes[b_i] = SD->f3.rv[b_i];
+    T_nodes[b_i] = SD->f0.rv[b_i];
   }
-  T_lvp.set_size(&ye_emlrtRTEI, &sp, 1, 2);
+  T_lvp.set_size(&xe_emlrtRTEI, &sp, 1, 2);
   //  Initialize lvp with size [1, 2]
   b_T_nlvl = 1U;
   T_lrt = l;
@@ -1612,7 +1612,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
     if ((static_cast<int32_T>(nlvl) < 1) ||
         (static_cast<int32_T>(nlvl) > T_lvp.size(1))) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nlvl), 1,
-                                    T_lvp.size(1), &bf_emlrtBCI,
+                                    T_lvp.size(1), &oe_emlrtBCI,
                                     (emlrtConstCTX)&sp);
     }
     d = T_lvp[static_cast<int32_T>(nlvl) - 1] + 1.0;
@@ -1621,7 +1621,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
          T_lvp.size(1))) {
       emlrtDynamicBoundsCheckR2012b(
           static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), 1,
-          T_lvp.size(1), &ke_emlrtBCI, (emlrtConstCTX)&sp);
+          T_lvp.size(1), &xd_emlrtBCI, (emlrtConstCTX)&sp);
     }
     d1 = T_lvp[static_cast<int32_T>(nlvl)];
     b_i = static_cast<int32_T>(d1 + (1.0 - d));
@@ -1634,14 +1634,14 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
            (static_cast<int32_T>(b_prnt) > T_nodes.size(0)));
       if (p) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_prnt), 1,
-                                      T_nodes.size(0), &me_emlrtBCI,
+                                      T_nodes.size(0), &ae_emlrtBCI,
                                       (emlrtConstCTX)&sp);
       }
       loop_ub = T_nodes[static_cast<int32_T>(b_prnt) - 1].xi.size[1];
       if ((static_cast<int32_T>(b_prnt) < 1) ||
           (static_cast<int32_T>(b_prnt) > T_nodes.size(0))) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_prnt), 1,
-                                      T_nodes.size(0), &me_emlrtBCI,
+                                      T_nodes.size(0), &ae_emlrtBCI,
                                       (emlrtConstCTX)&sp);
       }
       for (i1 = 0; i1 < loop_ub; i1++) {
@@ -1653,7 +1653,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         ctr_data[0] = T_nodes[static_cast<int32_T>(b_prnt) - 1].ctr[0];
         ctr_data[1] = T_nodes[static_cast<int32_T>(b_prnt) - 1].ctr[1];
         ctr_data[2] = T_nodes[static_cast<int32_T>(b_prnt) - 1].ctr[2];
-        b_x.set_size(&af_emlrtRTEI, &sp, 3, loop_ub);
+        b_x.set_size(&ye_emlrtRTEI, &sp, 3, loop_ub);
         for (i1 = 0; i1 < loop_ub; i1++) {
           idx =
               3 * (static_cast<int32_T>(
@@ -1672,7 +1672,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         b_loop_ub = idx_size[1];
         b_idx_size[1] = idx_size[1];
         for (i1 = 0; i1 < b_loop_ub; i1++) {
-          SD->f3.idx_data[i1] = static_cast<real_T>((idx_data[3 * i1] +
+          SD->f0.idx_data[i1] = static_cast<real_T>((idx_data[3 * i1] +
                                                      2 * idx_data[3 * i1 + 1]) +
                                                     4 * idx_data[3 * i1 + 2]) +
                                 1.0;
@@ -1680,13 +1680,13 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         //  for i = unique(idx)
         st.site = &sd_emlrtRSI;
         b_st.site = &ud_emlrtRSI;
-        coder::unique_vector(b_st, SD->f3.idx_data, b_idx_size, unique_idx_data,
+        coder::unique_vector(b_st, SD->f0.idx_data, b_idx_size, unique_idx_data,
                              idx_size);
         i1 = idx_size[1];
         for (k = 0; k < i1; k++) {
           uint32_T u;
           if (k + 1 > i1) {
-            emlrtDynamicBoundsCheckR2012b(k + 1, 1, i1, &je_emlrtBCI,
+            emlrtDynamicBoundsCheckR2012b(k + 1, 1, i1, &wd_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           //  % while mbox < nbox
@@ -1705,24 +1705,24 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           if (u > static_cast<uint32_T>(T_nodes.size(0))) {
             //  Double the preallocated space if necessary
             for (int32_T i{0}; i < 16000; i++) {
-              SD->f3.rv[i].ctr[0] = 0.0;
-              SD->f3.rv[i].ctr[1] = 0.0;
-              SD->f3.rv[i].ctr[2] = 0.0;
-              SD->f3.rv[i].xi.size[0] = 1;
-              SD->f3.rv[i].xi.size[1] = 0;
-              SD->f3.rv[i].prnt = 0.0;
-              SD->f3.rv[i].chld.set_size(&cf_emlrtRTEI, &sp, 1, 0);
-              SD->f3.rv[i].nbor.set_size(&cf_emlrtRTEI, &sp, 1, 0);
-              SD->f3.rv[i].ilist.set_size(&cf_emlrtRTEI, &sp, 1, 0);
-              SD->f3.rv[i].snbor.set_size(&cf_emlrtRTEI, &sp, 1, 0);
+              SD->f0.rv[i].ctr[0] = 0.0;
+              SD->f0.rv[i].ctr[1] = 0.0;
+              SD->f0.rv[i].ctr[2] = 0.0;
+              SD->f0.rv[i].xi.size[0] = 1;
+              SD->f0.rv[i].xi.size[1] = 0;
+              SD->f0.rv[i].prnt = 0.0;
+              SD->f0.rv[i].chld.set_size(&bf_emlrtRTEI, &sp, 1, 0);
+              SD->f0.rv[i].nbor.set_size(&bf_emlrtRTEI, &sp, 1, 0);
+              SD->f0.rv[i].ilist.set_size(&bf_emlrtRTEI, &sp, 1, 0);
+              SD->f0.rv[i].snbor.set_size(&bf_emlrtRTEI, &sp, 1, 0);
               if (*emlrtBreakCheckR2012bFlagVar != 0) {
                 emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
               }
             }
             i2 = T_nodes.size(0);
-            T_nodes.set_size(&bf_emlrtRTEI, &sp, T_nodes.size(0) + 16000);
+            T_nodes.set_size(&af_emlrtRTEI, &sp, T_nodes.size(0) + 16000);
             for (i3 = 0; i3 < 16000; i3++) {
-              T_nodes[i2 + i3] = SD->f3.rv[i3];
+              T_nodes[i2 + i3] = SD->f0.rv[i3];
             }
           }
           //  Properly initialize non-empty values
@@ -1736,7 +1736,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           if ((static_cast<int32_T>(u) < 1) ||
               (static_cast<int32_T>(u) > T_nodes.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-                                          T_nodes.size(0), &hf_emlrtBCI,
+                                          T_nodes.size(0), &ue_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           _mm_storeu_pd(&T_nodes[static_cast<int32_T>(u) - 1].ctr[0],
@@ -1744,7 +1744,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           if ((static_cast<int32_T>(u) < 1) ||
               (static_cast<int32_T>(u) > T_nodes.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-                                          T_nodes.size(0), &hf_emlrtBCI,
+                                          T_nodes.size(0), &ue_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           T_nodes[static_cast<int32_T>(u) - 1].ctr[2] =
@@ -1754,7 +1754,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           trueCount = 0;
           partialTrueCount = 0;
           for (int32_T i{0}; i <= idx; i++) {
-            if (SD->f3.idx_data[i] == unique_idx_data[k]) {
+            if (SD->f0.idx_data[i] == unique_idx_data[k]) {
               trueCount++;
               tmp_data[partialTrueCount] = static_cast<int16_T>(i);
               partialTrueCount++;
@@ -1765,7 +1765,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
             i4 = tmp_data[i2];
             if ((i4 < 0) || (i4 > loop_ub - 1)) {
               emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(i4), 0,
-                                            loop_ub - 1, &if_emlrtBCI,
+                                            loop_ub - 1, &ve_emlrtBCI,
                                             (emlrtConstCTX)&sp);
             }
           }
@@ -1784,7 +1784,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                (static_cast<int32_T>(u) > T_nodes.size(0)));
           if (p) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-                                          T_nodes.size(0), &qe_emlrtBCI,
+                                          T_nodes.size(0), &ee_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           T_nodes[static_cast<int32_T>(u) - 1].xi.size[0] = 1;
@@ -1792,7 +1792,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           if ((static_cast<int32_T>(u) < 1) ||
               (static_cast<int32_T>(u) > T_nodes.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-                                          T_nodes.size(0), &qe_emlrtBCI,
+                                          T_nodes.size(0), &ee_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           for (i2 = 0; i2 < trueCount; i2++) {
@@ -1801,15 +1801,15 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           }
           T_nodes[static_cast<int32_T>(u) - 1].prnt = b_prnt;
           T_nodes[static_cast<int32_T>(u) - 1].chld.set_size(
-              &df_emlrtRTEI, &sp, 1,
+              &cf_emlrtRTEI, &sp, 1,
               T_nodes[static_cast<int32_T>(u) - 1].chld.size(1));
           T_nodes[static_cast<int32_T>(u) - 1].chld.set_size(
-              &df_emlrtRTEI, &sp,
+              &cf_emlrtRTEI, &sp,
               T_nodes[static_cast<int32_T>(u) - 1].chld.size(0), 0);
           if ((static_cast<int32_T>(u) < 1) ||
               (static_cast<int32_T>(u) > T_nodes.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-                                          T_nodes.size(0), &se_emlrtBCI,
+                                          T_nodes.size(0), &ge_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           //  Initialize chld as an empty array
@@ -1818,22 +1818,22 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                (static_cast<int32_T>(b_prnt) > T_nodes.size(0)));
           if (p) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_prnt), 1,
-                                          T_nodes.size(0), &te_emlrtBCI,
+                                          T_nodes.size(0), &he_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           idx = T_nodes[static_cast<int32_T>(b_prnt) - 1].chld.size(1);
-          r4.set_size(&ef_emlrtRTEI, &sp, 1, idx);
+          r4.set_size(&df_emlrtRTEI, &sp, 1, idx);
           if ((static_cast<int32_T>(b_prnt) < 1) ||
               (static_cast<int32_T>(b_prnt) > T_nodes.size(0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_prnt), 1,
-                                          T_nodes.size(0), &te_emlrtBCI,
+                                          T_nodes.size(0), &he_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           for (i2 = 0; i2 < idx; i2++) {
             r4[i2] = T_nodes[static_cast<int32_T>(b_prnt) - 1].chld[i2];
           }
           T_nodes[static_cast<int32_T>(b_prnt) - 1].chld.set_size(
-              &bf_emlrtRTEI, &sp,
+              &af_emlrtRTEI, &sp,
               T_nodes[static_cast<int32_T>(b_prnt) - 1].chld.size(0),
               r4.size(1) + 1);
           T_nodes[static_cast<int32_T>(b_prnt) - 1].chld[r4.size(1)] = u;
@@ -1848,7 +1848,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
              (static_cast<int32_T>(b_prnt) > T_nodes.size(0)));
         if (p) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_prnt), 1,
-                                        T_nodes.size(0), &ne_emlrtBCI,
+                                        T_nodes.size(0), &be_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         T_nodes[static_cast<int32_T>(b_prnt) - 1].xi.size[0] = 1;
@@ -1856,7 +1856,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         if ((static_cast<int32_T>(b_prnt) < 1) ||
             (static_cast<int32_T>(b_prnt) > T_nodes.size(0))) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_prnt), 1,
-                                        T_nodes.size(0), &ne_emlrtBCI,
+                                        T_nodes.size(0), &be_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         //  Reset xi to the initial state
@@ -1879,7 +1879,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           emlrtIntegerCheckR2012b(b_prnt, &nb_emlrtDCI, (emlrtConstCTX)&sp);
         }
         loop_ub = static_cast<int32_T>(b_prnt);
-        T_lvp.set_size(&bf_emlrtRTEI, &sp, T_lvp.size(0),
+        T_lvp.set_size(&af_emlrtRTEI, &sp, T_lvp.size(0),
                        T_lvp.size(1) + static_cast<int32_T>(b_prnt));
         if (b_prnt != static_cast<int32_T>(b_prnt)) {
           emlrtIntegerCheckR2012b(b_prnt, &mb_emlrtDCI, (emlrtConstCTX)&sp);
@@ -1898,7 +1898,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
            T_lvp.size(1))) {
         emlrtDynamicBoundsCheckR2012b(
             static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), 1,
-            T_lvp.size(1), &cf_emlrtBCI, (emlrtConstCTX)&sp);
+            T_lvp.size(1), &pe_emlrtBCI, (emlrtConstCTX)&sp);
       }
       T_lvp[static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0) - 1] = nbox;
       if (*emlrtBreakCheckR2012bFlagVar != 0) {
@@ -1911,24 +1911,24 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       (static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0) > T_lvp.size(1))) {
     emlrtDynamicBoundsCheckR2012b(
         static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), 1, T_lvp.size(1),
-        &ie_emlrtBCI, (emlrtConstCTX)&sp);
+        &vd_emlrtBCI, (emlrtConstCTX)&sp);
   }
-  T_lvp.set_size(&ff_emlrtRTEI, &sp, T_lvp.size(0),
+  T_lvp.set_size(&ef_emlrtRTEI, &sp, T_lvp.size(0),
                  static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0));
   loop_ub = static_cast<int32_T>(nbox);
   if ((static_cast<int32_T>(nbox) < 1) ||
       (static_cast<int32_T>(nbox) > T_nodes.size(0))) {
     emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(nbox), 1,
-                                  T_nodes.size(0), &he_emlrtBCI,
+                                  T_nodes.size(0), &ud_emlrtBCI,
                                   (emlrtConstCTX)&sp);
   }
   idx_size[0] = 1;
   idx_size[1] = static_cast<int32_T>(nbox);
   st.site = &od_emlrtRSI;
   coder::internal::indexShapeCheck(st, T_nodes.size(0), idx_size);
-  T_nodes.set_size(&gf_emlrtRTEI, &sp, static_cast<int32_T>(nbox));
+  T_nodes.set_size(&ff_emlrtRTEI, &sp, static_cast<int32_T>(nbox));
   //  Initialize data for neighbor calculation
-  ilvl.set_size(&hf_emlrtRTEI, &sp, static_cast<int32_T>(nbox));
+  ilvl.set_size(&gf_emlrtRTEI, &sp, static_cast<int32_T>(nbox));
   for (b_i = 0; b_i < loop_ub; b_i++) {
     ilvl[b_i] = 0U;
   }
@@ -1936,7 +1936,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
     emlrtIntegerCheckR2012b(static_cast<real_T>(nlvl), &ob_emlrtDCI,
                             (emlrtConstCTX)&sp);
   }
-  llvl.set_size(&if_emlrtRTEI, &sp, static_cast<int32_T>(nlvl));
+  llvl.set_size(&hf_emlrtRTEI, &sp, static_cast<int32_T>(nlvl));
   l = T_lrt;
   b_i = static_cast<int32_T>(nlvl);
   emlrtForLoopVectorCheckR2021a(1.0, 1.0, static_cast<real_T>(nlvl),
@@ -1947,14 +1947,14 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         (prnt + 1 > static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0))) {
       emlrtDynamicBoundsCheckR2012b(
           prnt + 1, 1, static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0),
-          &yd_emlrtBCI, (emlrtConstCTX)&sp);
+          &md_emlrtBCI, (emlrtConstCTX)&sp);
     }
     if ((static_cast<int32_T>((static_cast<real_T>(prnt) + 1.0) + 1.0) < 1) ||
         (static_cast<int32_T>((static_cast<real_T>(prnt) + 1.0) + 1.0) >
          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0))) {
       emlrtDynamicBoundsCheckR2012b(
           static_cast<int32_T>((static_cast<real_T>(prnt) + 1.0) + 1.0), 1,
-          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), &xd_emlrtBCI,
+          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), &ld_emlrtBCI,
           (emlrtConstCTX)&sp);
     }
     d = T_lvp[prnt + 1];
@@ -1965,13 +1965,13 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       i1 = static_cast<int32_T>(T_lvp[prnt] + 1.0);
       if ((i1 < 1) || (i1 > static_cast<int32_T>(nbox))) {
         emlrtDynamicBoundsCheckR2012b(i1, 1, static_cast<int32_T>(nbox),
-                                      &wd_emlrtBCI, (emlrtConstCTX)&sp);
+                                      &kd_emlrtBCI, (emlrtConstCTX)&sp);
       }
       i1--;
       if ((static_cast<int32_T>(d) < 1) ||
           (static_cast<int32_T>(d) > static_cast<int32_T>(nbox))) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1,
-                                      static_cast<int32_T>(nbox), &vd_emlrtBCI,
+                                      static_cast<int32_T>(nbox), &jd_emlrtBCI,
                                       (emlrtConstCTX)&sp);
       }
       i2 = static_cast<int32_T>(d);
@@ -1985,7 +1985,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
          llvl.size(0))) {
       emlrtDynamicBoundsCheckR2012b(
           static_cast<int32_T>(static_cast<uint32_T>(prnt) + 1U), 1,
-          llvl.size(0), &ff_emlrtBCI, (emlrtConstCTX)&sp);
+          llvl.size(0), &se_emlrtBCI, (emlrtConstCTX)&sp);
     }
     llvl[prnt] = l;
     l *= 0.5;
@@ -2006,7 +2006,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
          llvl.size(0))) {
       emlrtDynamicBoundsCheckR2012b(
           static_cast<int32_T>(static_cast<uint32_T>(prnt) + 2U), 1,
-          llvl.size(0), &df_emlrtBCI, (emlrtConstCTX)&sp);
+          llvl.size(0), &qe_emlrtBCI, (emlrtConstCTX)&sp);
     }
     l = llvl[prnt + 1];
     if ((static_cast<int32_T>(static_cast<uint32_T>(prnt) + 2U) < 1) ||
@@ -2014,7 +2014,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0))) {
       emlrtDynamicBoundsCheckR2012b(
           static_cast<int32_T>(static_cast<uint32_T>(prnt) + 2U), 1,
-          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), &ef_emlrtBCI,
+          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), &re_emlrtBCI,
           (emlrtConstCTX)&sp);
     }
     d = T_lvp[prnt + 1] + 1.0;
@@ -2023,7 +2023,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0))) {
       emlrtDynamicBoundsCheckR2012b(
           static_cast<int32_T>((static_cast<real_T>(prnt) + 2.0) + 1.0), 1,
-          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), &ge_emlrtBCI,
+          static_cast<int32_T>(static_cast<real_T>(nlvl) + 1.0), &td_emlrtBCI,
           (emlrtConstCTX)&sp);
     }
     d1 = T_lvp[prnt + 1] + 1.0;
@@ -2036,14 +2036,14 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       if ((static_cast<int32_T>(mlvl) < 1) ||
           (static_cast<int32_T>(mlvl) > static_cast<int32_T>(nbox))) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(mlvl), 1,
-                                      static_cast<int32_T>(nbox), &fe_emlrtBCI,
+                                      static_cast<int32_T>(nbox), &sd_emlrtBCI,
                                       (emlrtConstCTX)&sp);
       }
       //  Add all non-self children of parent
       i3 = static_cast<int32_T>(T_nodes[static_cast<int32_T>(mlvl) - 1].prnt);
       if ((i3 < 1) || (i3 > static_cast<int32_T>(nbox))) {
         emlrtDynamicBoundsCheckR2012b(i3, 1, static_cast<int32_T>(nbox),
-                                      &ee_emlrtBCI, (emlrtConstCTX)&sp);
+                                      &rd_emlrtBCI, (emlrtConstCTX)&sp);
       }
       //  T.nodes(i).nbor = j(j ~= i);
       //       for k = j(j~=i)
@@ -2053,7 +2053,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                             T_nodes[static_cast<int32_T>(mlvl) - 1].prnt) -
                         1]
                     .chld.size(1);
-      c_x.set_size(&jf_emlrtRTEI, &sp, 1, loop_ub);
+      c_x.set_size(&if_emlrtRTEI, &sp, 1, loop_ub);
       for (k = 0; k < loop_ub; k++) {
         c_x[k] = (T_nodes[i3 - 1].chld[k] != mlvl);
       }
@@ -2064,7 +2064,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           trueCount++;
         }
       }
-      r3.set_size(&bf_emlrtRTEI, &sp, 1, trueCount);
+      r3.set_size(&af_emlrtRTEI, &sp, 1, trueCount);
       partialTrueCount = 0;
       for (b_loop_ub = 0; b_loop_ub <= idx; b_loop_ub++) {
         if (c_x[b_loop_ub]) {
@@ -2073,10 +2073,10 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         }
       }
       nbox_ = r3.size(1);
-      nbor.set_size(&kf_emlrtRTEI, &sp, 1, r3.size(1));
+      nbor.set_size(&jf_emlrtRTEI, &sp, 1, r3.size(1));
       for (k = 0; k < nbox_; k++) {
         if ((r3[k] < 0) || (r3[k] > idx)) {
-          emlrtDynamicBoundsCheckR2012b(r3[k], 0, idx, &gf_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(r3[k], 0, idx, &te_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         nbor[k] = T_nodes[static_cast<int32_T>(
@@ -2095,10 +2095,10 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
             "Coder:toolbox:reshape_emptyReshapeLimit", 0);
       }
       T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.set_size(
-          &lf_emlrtRTEI, &sp, 1,
+          &kf_emlrtRTEI, &sp, 1,
           T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(1));
       T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.set_size(
-          &lf_emlrtRTEI, &sp,
+          &kf_emlrtRTEI, &sp,
           T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(0), r3.size(1));
       for (k = 0; k < nbox_; k++) {
         T_nodes[static_cast<int32_T>(mlvl) - 1].nbor[k] =
@@ -2113,7 +2113,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       b_st.site = &ue_emlrtRSI;
       coder::eml_find(b_st, c_x, ii);
       loop_ub = ii.size(1);
-      nbor_indices.set_size(&mf_emlrtRTEI, &st, 1, ii.size(1));
+      nbor_indices.set_size(&lf_emlrtRTEI, &st, 1, ii.size(1));
       for (k = 0; k < loop_ub; k++) {
         nbor_indices[k] = ii[k];
       }
@@ -2123,12 +2123,12 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                     1]
                 .chld.size(1);
         if (idx + 1 > loop_ub) {
-          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, loop_ub, &jf_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(idx + 1, 1, loop_ub, &we_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         partialTrueCount = static_cast<int32_T>(nbor_indices[idx]);
         if ((partialTrueCount < 1) || (partialTrueCount > k)) {
-          emlrtDynamicBoundsCheckR2012b(partialTrueCount, 1, k, &de_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(partialTrueCount, 1, k, &qd_emlrtBCI,
                                         (emlrtConstCTX)&sp);
         }
         k = static_cast<int32_T>(
@@ -2138,7 +2138,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                 .chld[static_cast<int32_T>(nbor_indices[idx]) - 1]);
         if ((k < 1) || (k > static_cast<int32_T>(nbox))) {
           emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                        &oe_emlrtBCI, (emlrtConstCTX)&sp);
+                                        &ce_emlrtBCI, (emlrtConstCTX)&sp);
         }
         b_loop_ub =
             T_nodes
@@ -2149,20 +2149,20 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                          .chld[static_cast<int32_T>(nbor_indices[idx]) - 1]) -
                  1]
                     .snbor.size(1);
-        r4.set_size(&nf_emlrtRTEI, &sp, 1, b_loop_ub);
+        r4.set_size(&mf_emlrtRTEI, &sp, 1, b_loop_ub);
         if ((k < 1) || (k > static_cast<int32_T>(nbox))) {
           emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                        &oe_emlrtBCI, (emlrtConstCTX)&sp);
+                                        &ce_emlrtBCI, (emlrtConstCTX)&sp);
         }
         for (partialTrueCount = 0; partialTrueCount < b_loop_ub;
              partialTrueCount++) {
           r4[partialTrueCount] = T_nodes[k - 1].snbor[partialTrueCount];
         }
         T_nodes[k - 1].snbor.set_size(
-            &bf_emlrtRTEI, &sp, T_nodes[k - 1].snbor.size(0), r4.size(1) + 1);
+            &af_emlrtRTEI, &sp, T_nodes[k - 1].snbor.size(0), r4.size(1) + 1);
         if (k > static_cast<int32_T>(nbox)) {
           emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                        &le_emlrtBCI, (emlrtConstCTX)&sp);
+                                        &yd_emlrtBCI, (emlrtConstCTX)&sp);
         }
         T_nodes[k - 1].snbor[r4.size(1)] = mlvl;
         if (*emlrtBreakCheckR2012bFlagVar != 0) {
@@ -2176,16 +2176,16 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       //  Get the neighbors array
       if (i3 > static_cast<int32_T>(nbox)) {
         emlrtDynamicBoundsCheckR2012b(i3, 1, static_cast<int32_T>(nbox),
-                                      &pe_emlrtBCI, (emlrtConstCTX)&sp);
+                                      &de_emlrtBCI, (emlrtConstCTX)&sp);
       }
       loop_ub = T_nodes[static_cast<int32_T>(
                             T_nodes[static_cast<int32_T>(mlvl) - 1].prnt) -
                         1]
                     .nbor.size(1);
-      nbor_indices.set_size(&of_emlrtRTEI, &sp, 1, loop_ub);
+      nbor_indices.set_size(&nf_emlrtRTEI, &sp, 1, loop_ub);
       if (i3 > static_cast<int32_T>(nbox)) {
         emlrtDynamicBoundsCheckR2012b(i3, 1, static_cast<int32_T>(nbox),
-                                      &pe_emlrtBCI, (emlrtConstCTX)&sp);
+                                      &de_emlrtBCI, (emlrtConstCTX)&sp);
       }
       for (k = 0; k < loop_ub; k++) {
         nbor_indices[k] = T_nodes[i3 - 1].nbor[k];
@@ -2193,12 +2193,12 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       if (loop_ub != 0) {
         //  Declare nbor as variable-size
         b_loop_ub = T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(1);
-        nbor.set_size(&pf_emlrtRTEI, &sp, 1, b_loop_ub);
+        nbor.set_size(&of_emlrtRTEI, &sp, 1, b_loop_ub);
         if ((static_cast<int32_T>(mlvl) < 1) ||
             (static_cast<int32_T>(mlvl) > static_cast<int32_T>(nbox))) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(mlvl), 1,
                                         static_cast<int32_T>(nbox),
-                                        &re_emlrtBCI, (emlrtConstCTX)&sp);
+                                        &fe_emlrtBCI, (emlrtConstCTX)&sp);
         }
         for (k = 0; k < b_loop_ub; k++) {
           nbor[k] = T_nodes[static_cast<int32_T>(mlvl) - 1].nbor[k];
@@ -2206,20 +2206,20 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         for (trueCount = 0; trueCount < loop_ub; trueCount++) {
           if (trueCount + 1 > nbor_indices.size(1)) {
             emlrtDynamicBoundsCheckR2012b(trueCount + 1, 1,
-                                          nbor_indices.size(1), &ce_emlrtBCI,
+                                          nbor_indices.size(1), &pd_emlrtBCI,
                                           (emlrtConstCTX)&sp);
           }
           k = static_cast<int32_T>(nbor_indices[trueCount]);
           if ((k < 1) || (k > static_cast<int32_T>(nbox))) {
             emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                          &be_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &od_emlrtBCI, (emlrtConstCTX)&sp);
           }
           if (T_nodes[static_cast<int32_T>(nbor_indices[trueCount]) - 1]
                   .xi.size[1] != 0) {
             boolean_T b_dist[3];
             if (k > static_cast<int32_T>(nbox)) {
               emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                            &ae_emlrtBCI, (emlrtConstCTX)&sp);
+                                            &nd_emlrtBCI, (emlrtConstCTX)&sp);
             }
             r = _mm_loadu_pd(&T_nodes[static_cast<int32_T>(mlvl) - 1].ctr[0]);
             r1 = _mm_loadu_pd(&T_nodes[k - 1].ctr[0]);
@@ -2231,7 +2231,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
             partialTrueCount = static_cast<int32_T>(ilvl[k - 1]);
             if ((partialTrueCount < 1) || (partialTrueCount > i1)) {
               emlrtDynamicBoundsCheckR2012b(partialTrueCount, 1, i1,
-                                            &lf_emlrtBCI, (emlrtConstCTX)&sp);
+                                            &ye_emlrtBCI, (emlrtConstCTX)&sp);
             }
             d1 = 0.5 * (l + llvl[partialTrueCount - 1]);
             b_dist[0] = (muDoubleScalarRound((dist[0] - d1) / l) <= 0.0);
@@ -2248,7 +2248,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
               //  T.nodes(j).snbor = [T.nodes(j).snbor i];
               nbox_ = nbor.size(1);
               b_loop_ub = nbor.size(1) + 1;
-              r4.set_size(&sf_emlrtRTEI, &sp, 1, nbor.size(1) + 1);
+              r4.set_size(&rf_emlrtRTEI, &sp, 1, nbor.size(1) + 1);
               for (partialTrueCount = 0; partialTrueCount < nbox_;
                    partialTrueCount++) {
                 r4[partialTrueCount] = nbor[partialTrueCount];
@@ -2266,35 +2266,35 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                     "Coder:toolbox:reshape_emptyReshapeLimit",
                     "Coder:toolbox:reshape_emptyReshapeLimit", 0);
               }
-              nbor.set_size(&tf_emlrtRTEI, &sp, 1, b_loop_ub);
+              nbor.set_size(&sf_emlrtRTEI, &sp, 1, b_loop_ub);
               for (partialTrueCount = 0; partialTrueCount < b_loop_ub;
                    partialTrueCount++) {
                 nbor[partialTrueCount] = r4[partialTrueCount];
               }
               //  Ensure nbor is a row vector
               T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.set_size(
-                  &uf_emlrtRTEI, &sp, 1,
+                  &tf_emlrtRTEI, &sp, 1,
                   T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(1));
               T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.set_size(
-                  &uf_emlrtRTEI, &sp,
+                  &tf_emlrtRTEI, &sp,
                   T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(0),
                   b_loop_ub);
               if ((static_cast<int32_T>(mlvl) < 1) ||
                   (static_cast<int32_T>(mlvl) > static_cast<int32_T>(nbox))) {
                 emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(mlvl), 1,
                                               static_cast<int32_T>(nbox),
-                                              &ve_emlrtBCI, (emlrtConstCTX)&sp);
+                                              &je_emlrtBCI, (emlrtConstCTX)&sp);
               }
               for (partialTrueCount = 0; partialTrueCount < b_loop_ub;
                    partialTrueCount++) {
                 T_nodes[static_cast<int32_T>(mlvl) - 1].nbor[partialTrueCount] =
                     r4[partialTrueCount];
               }
-              r4.set_size(&vf_emlrtRTEI, &sp, 1, r4.size(1));
+              r4.set_size(&uf_emlrtRTEI, &sp, 1, r4.size(1));
               b_loop_ub =
                   T_nodes[static_cast<int32_T>(nbor_indices[trueCount]) - 1]
                       .snbor.size(1);
-              r4.set_size(&vf_emlrtRTEI, &sp, r4.size(0), b_loop_ub + 1);
+              r4.set_size(&uf_emlrtRTEI, &sp, r4.size(0), b_loop_ub + 1);
               for (partialTrueCount = 0; partialTrueCount < b_loop_ub;
                    partialTrueCount++) {
                 r4[partialTrueCount] = T_nodes[k - 1].snbor[partialTrueCount];
@@ -2312,13 +2312,13 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                     "Coder:toolbox:reshape_emptyReshapeLimit",
                     "Coder:toolbox:reshape_emptyReshapeLimit", 0);
               }
-              T_nodes[k - 1].snbor.set_size(&wf_emlrtRTEI, &sp, 1,
+              T_nodes[k - 1].snbor.set_size(&vf_emlrtRTEI, &sp, 1,
                                             T_nodes[k - 1].snbor.size(1));
               T_nodes[k - 1].snbor.set_size(
-                  &wf_emlrtRTEI, &sp, T_nodes[k - 1].snbor.size(0), r4.size(1));
+                  &vf_emlrtRTEI, &sp, T_nodes[k - 1].snbor.size(0), r4.size(1));
               if (k > static_cast<int32_T>(nbox)) {
                 emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                              &we_emlrtBCI, (emlrtConstCTX)&sp);
+                                              &ke_emlrtBCI, (emlrtConstCTX)&sp);
               }
               for (partialTrueCount = 0; partialTrueCount < idx;
                    partialTrueCount++) {
@@ -2328,7 +2328,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
               //  T.nodes(i).ilist = [T.nodes(i).ilist, j];
               b_loop_ub = T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.size(1);
               idx = b_loop_ub + 1;
-              r4.set_size(&qf_emlrtRTEI, &sp, 1, b_loop_ub + 1);
+              r4.set_size(&pf_emlrtRTEI, &sp, 1, b_loop_ub + 1);
               for (k = 0; k < b_loop_ub; k++) {
                 r4[k] = T_nodes[static_cast<int32_T>(mlvl) - 1].ilist[k];
               }
@@ -2345,17 +2345,17 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                     "Coder:toolbox:reshape_emptyReshapeLimit", 0);
               }
               T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.set_size(
-                  &rf_emlrtRTEI, &sp, 1,
+                  &qf_emlrtRTEI, &sp, 1,
                   T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.size(1));
               T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.set_size(
-                  &rf_emlrtRTEI, &sp,
+                  &qf_emlrtRTEI, &sp,
                   T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.size(0),
                   b_loop_ub + 1);
               if ((static_cast<int32_T>(mlvl) < 1) ||
                   (static_cast<int32_T>(mlvl) > static_cast<int32_T>(nbox))) {
                 emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(mlvl), 1,
                                               static_cast<int32_T>(nbox),
-                                              &ue_emlrtBCI, (emlrtConstCTX)&sp);
+                                              &ie_emlrtBCI, (emlrtConstCTX)&sp);
               }
               for (k = 0; k < idx; k++) {
                 T_nodes[static_cast<int32_T>(mlvl) - 1].ilist[k] = r4[k];
@@ -2382,7 +2382,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
       //  Add children of parent-neighbors if adjacent
       if (i3 > static_cast<int32_T>(nbox)) {
         emlrtDynamicBoundsCheckR2012b(i3, 1, static_cast<int32_T>(nbox),
-                                      &ud_emlrtBCI, (emlrtConstCTX)&sp);
+                                      &id_emlrtBCI, (emlrtConstCTX)&sp);
       }
       idx_size[0] =
           (*(int32_T(*)[2])
@@ -2402,7 +2402,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                             T_nodes[static_cast<int32_T>(mlvl) - 1].prnt) -
                         1]
                     .nbor.size(1);
-      T.set_size(&xf_emlrtRTEI, &sp, loop_ub);
+      T.set_size(&wf_emlrtRTEI, &sp, loop_ub);
       for (i3 = 0; i3 < loop_ub; i3++) {
         k = static_cast<int32_T>(
             T_nodes[static_cast<int32_T>(
@@ -2411,38 +2411,38 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                 .nbor[i3]);
         if ((k < 1) || (k > static_cast<int32_T>(nbox))) {
           emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                        &kf_emlrtBCI, (emlrtConstCTX)&sp);
+                                        &xe_emlrtBCI, (emlrtConstCTX)&sp);
         }
         T[i3] = T_nodes[k - 1];
       }
-      r5.set_size(&yf_emlrtRTEI, &sp, loop_ub);
+      r5.set_size(&xf_emlrtRTEI, &sp, loop_ub);
       for (i3 = 0; i3 < loop_ub; i3++) {
         r5[i3].ctr[0] = T[i3].ctr[0];
         r5[i3].ctr[1] = T[i3].ctr[1];
         r5[i3].ctr[2] = T[i3].ctr[2];
         nbox_ = T[i3].xi.size[1];
-        r5[i3].xi.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+        r5[i3].xi.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
         for (k = 0; k < nbox_; k++) {
           r5[i3].xi[k] = T[i3].xi.data[k];
         }
         r5[i3].prnt = T[i3].prnt;
         nbox_ = T[i3].chld.size(1);
-        r5[i3].chld.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+        r5[i3].chld.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
         for (k = 0; k < nbox_; k++) {
           r5[i3].chld[k] = T[i3].chld[k];
         }
         nbox_ = T[i3].nbor.size(1);
-        r5[i3].nbor.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+        r5[i3].nbor.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
         for (k = 0; k < nbox_; k++) {
           r5[i3].nbor[k] = T[i3].nbor[k];
         }
         nbox_ = T[i3].ilist.size(1);
-        r5[i3].ilist.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+        r5[i3].ilist.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
         for (k = 0; k < nbox_; k++) {
           r5[i3].ilist[k] = T[i3].ilist[k];
         }
         nbox_ = T[i3].snbor.size(1);
-        r5[i3].snbor.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+        r5[i3].snbor.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
         for (k = 0; k < nbox_; k++) {
           r5[i3].snbor[k] = T[i3].snbor[k];
         }
@@ -2470,43 +2470,43 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         idx_size[1] = (*(int32_T(*)[2])nbor_indices.size())[1];
         st.site = &gd_emlrtRSI;
         coder::internal::indexShapeCheck(st, T_nodes.size(0), idx_size);
-        T.set_size(&ag_emlrtRTEI, &sp, nbor_indices.size(1));
+        T.set_size(&yf_emlrtRTEI, &sp, nbor_indices.size(1));
         for (i3 = 0; i3 < idx; i3++) {
           k = static_cast<int32_T>(nbor_indices[i3]);
           if ((k < 1) || (k > static_cast<int32_T>(nbox))) {
             emlrtDynamicBoundsCheckR2012b(k, 1, static_cast<int32_T>(nbox),
-                                          &mf_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &af_emlrtBCI, (emlrtConstCTX)&sp);
           }
           T[i3] = T_nodes[k - 1];
         }
-        r5.set_size(&yf_emlrtRTEI, &sp, nbor_indices.size(1));
+        r5.set_size(&xf_emlrtRTEI, &sp, nbor_indices.size(1));
         for (i3 = 0; i3 < idx; i3++) {
           r5[i3].ctr[0] = T[i3].ctr[0];
           r5[i3].ctr[1] = T[i3].ctr[1];
           r5[i3].ctr[2] = T[i3].ctr[2];
           nbox_ = T[i3].xi.size[1];
-          r5[i3].xi.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+          r5[i3].xi.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
           for (k = 0; k < nbox_; k++) {
             r5[i3].xi[k] = T[i3].xi.data[k];
           }
           r5[i3].prnt = T[i3].prnt;
           nbox_ = T[i3].chld.size(1);
-          r5[i3].chld.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+          r5[i3].chld.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
           for (k = 0; k < nbox_; k++) {
             r5[i3].chld[k] = T[i3].chld[k];
           }
           nbox_ = T[i3].nbor.size(1);
-          r5[i3].nbor.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+          r5[i3].nbor.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
           for (k = 0; k < nbox_; k++) {
             r5[i3].nbor[k] = T[i3].nbor[k];
           }
           nbox_ = T[i3].ilist.size(1);
-          r5[i3].ilist.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+          r5[i3].ilist.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
           for (k = 0; k < nbox_; k++) {
             r5[i3].ilist[k] = T[i3].ilist[k];
           }
           nbox_ = T[i3].snbor.size(1);
-          r5[i3].snbor.set_size(&yf_emlrtRTEI, &sp, 1, nbox_);
+          r5[i3].snbor.set_size(&xf_emlrtRTEI, &sp, 1, nbox_);
           for (k = 0; k < nbox_; k++) {
             r5[i3].snbor[k] = T[i3].snbor[k];
           }
@@ -2545,7 +2545,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
               &st, &u_emlrtRTEI, "Coder:MATLAB:getReshapeDims_notSameNumel",
               "Coder:MATLAB:getReshapeDims_notSameNumel", 0);
         }
-        c_dist.set_size(&bg_emlrtRTEI, &sp, nbox_, 3);
+        c_dist.set_size(&ag_emlrtRTEI, &sp, nbox_, 3);
         for (i3 = 0; i3 < 3; i3++) {
           for (k = 0; k < nbox_; k++) {
             c_dist[k + c_dist.size(0) * i3] = r4[i3 + 3 * k];
@@ -2559,7 +2559,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         st.site = &fd_emlrtRSI;
         coder::b_abs(st, r6, c_dist);
         loop_ub = c_dist.size(0) * 3;
-        c_dist.set_size(&cg_emlrtRTEI, &sp, c_dist.size(0), 3);
+        c_dist.set_size(&bg_emlrtRTEI, &sp, c_dist.size(0), 3);
         idx = (loop_ub / 2) << 1;
         nbox_ = idx - 2;
         for (i3 = 0; i3 <= nbox_; i3 += 2) {
@@ -2573,7 +2573,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         coder::b_round(st, c_dist);
         idx = c_dist.size(0) - 1;
         loop_ub = c_dist.size(0);
-        r7.set_size(&dg_emlrtRTEI, &sp, c_dist.size(0));
+        r7.set_size(&cg_emlrtRTEI, &sp, c_dist.size(0));
         if (c_dist.size(0) >= 1) {
           for (b_loop_ub = 0; b_loop_ub <= idx; b_loop_ub++) {
             r7[b_loop_ub] = c_dist[b_loop_ub];
@@ -2600,7 +2600,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
             trueCount++;
           }
         }
-        r8.set_size(&bf_emlrtRTEI, &sp, trueCount);
+        r8.set_size(&af_emlrtRTEI, &sp, trueCount);
         partialTrueCount = 0;
         for (b_loop_ub = 0; b_loop_ub <= idx; b_loop_ub++) {
           if (r7[b_loop_ub] <= 1.0) {
@@ -2612,12 +2612,12 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         for (i3 = 0; i3 < nbox_; i3++) {
           if (r8[i3] > nbor_indices.size(1) - 1) {
             emlrtDynamicBoundsCheckR2012b(r8[i3], 0, nbor_indices.size(1) - 1,
-                                          &nf_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &bf_emlrtBCI, (emlrtConstCTX)&sp);
           }
         }
         if (r8.size(0) != 0) {
           b_loop_ub = r8.size(0) + nbor.size(1);
-          r4.set_size(&eg_emlrtRTEI, &sp, 1, b_loop_ub);
+          r4.set_size(&dg_emlrtRTEI, &sp, 1, b_loop_ub);
           idx = nbor.size(1);
           for (i3 = 0; i3 < idx; i3++) {
             r4[i3] = nbor[i3];
@@ -2636,16 +2636,16 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                 "Coder:toolbox:reshape_emptyReshapeLimit", 0);
           }
           T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.set_size(
-              &fg_emlrtRTEI, &sp, 1,
+              &eg_emlrtRTEI, &sp, 1,
               T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(1));
           T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.set_size(
-              &fg_emlrtRTEI, &sp,
+              &eg_emlrtRTEI, &sp,
               T_nodes[static_cast<int32_T>(mlvl) - 1].nbor.size(0), b_loop_ub);
           if ((static_cast<int32_T>(mlvl) < 1) ||
               (static_cast<int32_T>(mlvl) > static_cast<int32_T>(nbox))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(mlvl), 1,
                                           static_cast<int32_T>(nbox),
-                                          &xe_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &le_emlrtBCI, (emlrtConstCTX)&sp);
           }
           for (i3 = 0; i3 < b_loop_ub; i3++) {
             T_nodes[static_cast<int32_T>(mlvl) - 1].nbor[i3] = r4[i3];
@@ -2654,18 +2654,18 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
           for (trueCount = 0; trueCount < nbox_; trueCount++) {
             if (trueCount + 1 > nbox_) {
               emlrtDynamicBoundsCheckR2012b(trueCount + 1, 1, nbox_,
-                                            &td_emlrtBCI, (emlrtConstCTX)&sp);
+                                            &hd_emlrtBCI, (emlrtConstCTX)&sp);
             }
-            r4.set_size(&gg_emlrtRTEI, &sp, 1, r4.size(1));
+            r4.set_size(&fg_emlrtRTEI, &sp, 1, r4.size(1));
             i3 = static_cast<int32_T>(nbor_indices[r8[trueCount]]);
             if ((i3 < 1) || (i3 > static_cast<int32_T>(nbox))) {
               emlrtDynamicBoundsCheckR2012b(i3, 1, static_cast<int32_T>(nbox),
-                                            &pf_emlrtBCI, (emlrtConstCTX)&sp);
+                                            &df_emlrtBCI, (emlrtConstCTX)&sp);
             }
             b_loop_ub =
                 T_nodes[static_cast<int32_T>(nbor_indices[r8[trueCount]]) - 1]
                     .snbor.size(1);
-            r4.set_size(&gg_emlrtRTEI, &sp, r4.size(0), b_loop_ub + 1);
+            r4.set_size(&fg_emlrtRTEI, &sp, r4.size(0), b_loop_ub + 1);
             for (k = 0; k < b_loop_ub; k++) {
               r4[k] = T_nodes[i3 - 1].snbor[k];
             }
@@ -2681,13 +2681,13 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                   &st, &t_emlrtRTEI, "Coder:toolbox:reshape_emptyReshapeLimit",
                   "Coder:toolbox:reshape_emptyReshapeLimit", 0);
             }
-            T_nodes[i3 - 1].snbor.set_size(&hg_emlrtRTEI, &sp, 1,
+            T_nodes[i3 - 1].snbor.set_size(&gg_emlrtRTEI, &sp, 1,
                                            T_nodes[i3 - 1].snbor.size(1));
             T_nodes[i3 - 1].snbor.set_size(
-                &hg_emlrtRTEI, &sp, T_nodes[i3 - 1].snbor.size(0), r4.size(1));
+                &gg_emlrtRTEI, &sp, T_nodes[i3 - 1].snbor.size(0), r4.size(1));
             if ((i3 < 1) || (i3 > static_cast<int32_T>(nbox))) {
               emlrtDynamicBoundsCheckR2012b(i3, 1, static_cast<int32_T>(nbox),
-                                            &af_emlrtBCI, (emlrtConstCTX)&sp);
+                                            &ne_emlrtBCI, (emlrtConstCTX)&sp);
             }
             for (k = 0; k < idx; k++) {
               T_nodes[i3 - 1].snbor[k] = r4[k];
@@ -2704,19 +2704,19 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         //         T.nodes(i).ilist = [T.nodes(i).ilist j];
         //       end
         //  Add non-adjacent parent-neighbors-children to interaction list
-        r9.set_size(&ig_emlrtRTEI, &sp, c_dist.size(0));
-        r10.set_size(&jg_emlrtRTEI, &sp, c_dist.size(0));
+        r9.set_size(&hg_emlrtRTEI, &sp, c_dist.size(0));
+        r10.set_size(&ig_emlrtRTEI, &sp, c_dist.size(0));
         for (i3 = 0; i3 < loop_ub; i3++) {
           r9[i3] = (r7[i3] > 1.0);
           r10[i3] = (r7[i3] < 2.5);
         }
         if (r9.size(0) == r10.size(0)) {
-          r11.set_size(&ig_emlrtRTEI, &sp, c_dist.size(0));
+          r11.set_size(&hg_emlrtRTEI, &sp, c_dist.size(0));
           for (i3 = 0; i3 < loop_ub; i3++) {
             r11[i3] = (r9[i3] && r10[i3]);
           }
         } else {
-          st.site = &tr_emlrtRSI;
+          st.site = &pr_emlrtRSI;
           b_and(st, r11, r9, r10);
         }
         idx = r11.size(0) - 1;
@@ -2726,7 +2726,7 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
             trueCount++;
           }
         }
-        r12.set_size(&bf_emlrtRTEI, &sp, trueCount);
+        r12.set_size(&af_emlrtRTEI, &sp, trueCount);
         partialTrueCount = 0;
         for (b_loop_ub = 0; b_loop_ub <= idx; b_loop_ub++) {
           if (r11[b_loop_ub]) {
@@ -2738,13 +2738,13 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
         for (i3 = 0; i3 < nbox_; i3++) {
           if (r12[i3] > nbor_indices.size(1) - 1) {
             emlrtDynamicBoundsCheckR2012b(r12[i3], 0, nbor_indices.size(1) - 1,
-                                          &of_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &cf_emlrtBCI, (emlrtConstCTX)&sp);
           }
         }
         if (r12.size(0) != 0) {
           loop_ub = T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.size(1);
           b_loop_ub = r12.size(0) + loop_ub;
-          r4.set_size(&kg_emlrtRTEI, &sp, 1, b_loop_ub);
+          r4.set_size(&jg_emlrtRTEI, &sp, 1, b_loop_ub);
           for (i3 = 0; i3 < loop_ub; i3++) {
             r4[i3] = T_nodes[static_cast<int32_T>(mlvl) - 1].ilist[i3];
           }
@@ -2762,16 +2762,16 @@ real_T b_shypoct(srskelf_asym_newStackData *SD, const emlrtStack &sp,
                 "Coder:toolbox:reshape_emptyReshapeLimit", 0);
           }
           T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.set_size(
-              &lg_emlrtRTEI, &sp, 1,
+              &kg_emlrtRTEI, &sp, 1,
               T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.size(1));
           T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.set_size(
-              &lg_emlrtRTEI, &sp,
+              &kg_emlrtRTEI, &sp,
               T_nodes[static_cast<int32_T>(mlvl) - 1].ilist.size(0), b_loop_ub);
           if ((static_cast<int32_T>(mlvl) < 1) ||
               (static_cast<int32_T>(mlvl) > static_cast<int32_T>(nbox))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(mlvl), 1,
                                           static_cast<int32_T>(nbox),
-                                          &ye_emlrtBCI, (emlrtConstCTX)&sp);
+                                          &me_emlrtBCI, (emlrtConstCTX)&sp);
           }
           for (i3 = 0; i3 < b_loop_ub; i3++) {
             T_nodes[static_cast<int32_T>(mlvl) - 1].ilist[i3] = r4[i3];

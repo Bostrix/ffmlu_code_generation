@@ -12,28 +12,28 @@
 #include "coder_array.h"
 
 // Variable Definitions
-static emlrtRSInfo go_emlrtRSI{
+static emlrtRSInfo co_emlrtRSI{
     178,          // lineNo
     "sumColumnB", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
     "sumMatrixIncludeNaN.m" // pathName
 };
 
-static emlrtRSInfo ho_emlrtRSI{
+static emlrtRSInfo do_emlrtRSI{
     183,          // lineNo
     "sumColumnB", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
     "sumMatrixIncludeNaN.m" // pathName
 };
 
-static emlrtRSInfo io_emlrtRSI{
+static emlrtRSInfo eo_emlrtRSI{
     189,          // lineNo
     "sumColumnB", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
     "sumMatrixIncludeNaN.m" // pathName
 };
 
-static emlrtRSInfo jo_emlrtRSI{
+static emlrtRSInfo fo_emlrtRSI{
     210,         // lineNo
     "sumColumn", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/private/"
@@ -64,10 +64,10 @@ real_T sumColumnB(const emlrtStack &sp, const array<real_T, 2U> &x, int32_T col,
   c_st.tls = b_st.tls;
   if (vlen <= 1024) {
     int32_T i0;
-    st.site = &go_emlrtRSI;
+    st.site = &co_emlrtRSI;
     i0 = vstart + (col - 1) * x.size(0);
     y = x[i0 - 1];
-    b_st.site = &jo_emlrtRSI;
+    b_st.site = &fo_emlrtRSI;
     if (vlen - 1 > 2147483646) {
       c_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(c_st);
@@ -89,7 +89,7 @@ real_T sumColumnB(const emlrtStack &sp, const array<real_T, 2U> &x, int32_T col,
     for (int32_T k{0}; k < 1023; k++) {
       y += x[i0 + k];
     }
-    st.site = &ho_emlrtRSI;
+    st.site = &do_emlrtRSI;
     for (int32_T k{2}; k <= nfb; k++) {
       i0 = (vstart + ((k - 1) << 10)) + i0_tmp;
       b_y = x[i0 - 1];
@@ -99,11 +99,11 @@ real_T sumColumnB(const emlrtStack &sp, const array<real_T, 2U> &x, int32_T col,
       y += b_y;
     }
     if (vlen > inb) {
-      st.site = &io_emlrtRSI;
+      st.site = &eo_emlrtRSI;
       i0 = (vstart + inb) + i0_tmp;
       b_y = x[i0 - 1];
       nfb = vlen - inb;
-      b_st.site = &jo_emlrtRSI;
+      b_st.site = &fo_emlrtRSI;
       for (int32_T k{0}; k <= nfb - 2; k++) {
         b_y += x[i0 + k];
       }
@@ -129,10 +129,10 @@ real_T sumColumnB(const emlrtStack &sp, const array<real_T, 2U> &x, int32_T col,
   if (vlen <= 1024) {
     int32_T i0;
     int32_T nfb;
-    st.site = &go_emlrtRSI;
+    st.site = &co_emlrtRSI;
     i0 = (col - 1) * x.size(0);
     y = x[i0];
-    b_st.site = &jo_emlrtRSI;
+    b_st.site = &fo_emlrtRSI;
     if (vlen - 1 > 2147483646) {
       c_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(c_st);
@@ -154,7 +154,7 @@ real_T sumColumnB(const emlrtStack &sp, const array<real_T, 2U> &x, int32_T col,
     for (int32_T k{0}; k < 1023; k++) {
       y += x[(i0_tmp + k) + 1];
     }
-    st.site = &ho_emlrtRSI;
+    st.site = &do_emlrtRSI;
     for (int32_T k{2}; k <= nfb; k++) {
       i0 = ((k - 1) << 10) + i0_tmp;
       b_y = x[i0];
@@ -164,11 +164,11 @@ real_T sumColumnB(const emlrtStack &sp, const array<real_T, 2U> &x, int32_T col,
       y += b_y;
     }
     if (vlen > inb) {
-      st.site = &io_emlrtRSI;
+      st.site = &eo_emlrtRSI;
       i0 = (inb + i0_tmp) + 1;
       b_y = x[i0 - 1];
       nfb = vlen - inb;
-      b_st.site = &jo_emlrtRSI;
+      b_st.site = &fo_emlrtRSI;
       for (int32_T k{0}; k <= nfb - 2; k++) {
         b_y += x[i0 + k];
       }

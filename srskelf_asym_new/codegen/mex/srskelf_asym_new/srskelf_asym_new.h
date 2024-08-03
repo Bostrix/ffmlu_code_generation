@@ -10,6 +10,7 @@
 #include "rtwtypes.h"
 #include "srskelf_asym_new_types.h"
 #include "srskelf_asym_new_types1.h"
+#include "srskelf_asym_new_types11.h"
 #include "coder_array.h"
 #include "emlrt.h"
 #include "mex.h"

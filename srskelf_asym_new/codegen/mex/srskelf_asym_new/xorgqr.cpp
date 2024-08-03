@@ -14,7 +14,7 @@
 
 // Variable Definitions
 static emlrtRSInfo
-    am_emlrtRSI{
+    vl_emlrtRSI{
         60,             // lineNo
         "ceval_xorgqr", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -22,7 +22,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    cm_emlrtRSI{
+    xl_emlrtRSI{
         14,       // lineNo
         "xorgqr", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -42,7 +42,7 @@ void xorgqr(const emlrtStack &sp, int32_T m, int32_T n, int32_T k,
   emlrtStack st;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &cm_emlrtRSI;
+  st.site = &xl_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   if ((A.size(0) != 0) && (A.size(1) != 0)) {
@@ -51,7 +51,7 @@ void xorgqr(const emlrtStack &sp, int32_T m, int32_T n, int32_T k,
     info_t = LAPACKE_dorgqr(102, (ptrdiff_t)m, (ptrdiff_t)n, (ptrdiff_t)k,
                             &(A.data())[0], (ptrdiff_t)lda,
                             &(((array<real_T, 1U> *)&tau)->data())[0]);
-    b_st.site = &am_emlrtRSI;
+    b_st.site = &vl_emlrtRSI;
     if ((int32_T)info_t != 0) {
       boolean_T b_p;
       p = true;

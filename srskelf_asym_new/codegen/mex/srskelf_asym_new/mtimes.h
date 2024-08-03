@@ -23,9 +23,6 @@ namespace blas {
 void b_mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
               const array<real_T, 2U> &B, array<real_T, 2U> &C);
 
-void b_mtimes(const real_T A[2000000], const real_T B[2000000],
-              real_T C[4000000]);
-
 void mtimes(const emlrtStack &sp, const real_T A[4], const array<real_T, 2U> &B,
             array<real_T, 2U> &C);
 
@@ -37,9 +34,6 @@ void mtimes(const emlrtStack &sp, const array<real_T, 1U> &A,
 
 void mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
             const array<real_T, 2U> &B, array<real_T, 2U> &C);
-
-void mtimes(const real_T A[2000000], const real_T B[2000000],
-            real_T C[4000000]);
 
 } // namespace blas
 } // namespace internal

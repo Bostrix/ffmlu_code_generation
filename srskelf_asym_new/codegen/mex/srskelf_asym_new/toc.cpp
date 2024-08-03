@@ -26,7 +26,7 @@ static emlrtRSInfo jf_emlrtRSI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/timefun/toc.m" // pathName
 };
 
-static emlrtRSInfo dr_emlrtRSI{
+static emlrtRSInfo ar_emlrtRSI{
     43,                                                             // lineNo
     "toc",                                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/timefun/toc.m" // pathName
@@ -71,7 +71,7 @@ void b_toc(const emlrtStack &sp, real_T tstart_tv_sec, real_T tstart_tv_nsec)
         &d_st, &o_emlrtRTEI, "Coder:toolbox:CoderTimeCallFailed",
         "Coder:toolbox:CoderTimeCallFailed", 5, 4, 26, &cv[0], 12, status);
   }
-  st.site = &dr_emlrtRSI;
+  st.site = &ar_emlrtRSI;
   b_st.site = &hf_emlrtRSI;
   y = nullptr;
   m = emlrtCreateCharArray(2, &iv[0]);
@@ -88,7 +88,7 @@ void b_toc(const emlrtStack &sp, real_T tstart_tv_sec, real_T tstart_tv_nsec)
   m = emlrtCreateDoubleScalar((tnow.tv_sec - tstart_tv_sec) +
                               (tnow.tv_nsec - tstart_tv_nsec) / 1.0E+9);
   emlrtAssign(&d_y, m);
-  c_st.site = &lr_emlrtRSI;
+  c_st.site = &hr_emlrtRSI;
   emlrt_marshallIn(c_st, feval(c_st, y, b_y, c_y, d_y, f_emlrtMCI),
                    "<output of feval>");
 }

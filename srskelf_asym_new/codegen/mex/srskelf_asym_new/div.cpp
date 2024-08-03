@@ -34,7 +34,7 @@ void b_rdivide(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   } else {
     b_loop_ub = in1.size(1);
   }
-  b_in2.set_size(&wi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  b_in2.set_size(&vi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   stride_0_0 = (in2.size(0) != 1);
   stride_0_1 = (in2.size(1) != 1);
   stride_1_0 = (in1.size(0) != 1);
@@ -50,7 +50,7 @@ void b_rdivide(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
     aux_1_1 += stride_1_1;
     aux_0_1 += stride_0_1;
   }
-  in1.set_size(&wi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  in1.set_size(&vi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   for (int32_T i{0}; i < b_loop_ub; i++) {
     for (int32_T i1{0}; i1 < loop_ub; i1++) {
       in1[i1 + in1.size(0) * i] = b_in2[i1 + b_in2.size(0) * i];
@@ -82,7 +82,7 @@ void rdivide(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   } else {
     b_loop_ub = in2.size(1);
   }
-  b_in1.set_size(&wi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  b_in1.set_size(&vi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   stride_0_0 = (in1.size(0) != 1);
   stride_0_1 = (in1.size(1) != 1);
   stride_1_0 = (in2.size(0) != 1);
@@ -98,7 +98,7 @@ void rdivide(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
     aux_1_1 += stride_1_1;
     aux_0_1 += stride_0_1;
   }
-  in1.set_size(&wi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  in1.set_size(&vi_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   for (int32_T i{0}; i < b_loop_ub; i++) {
     for (int32_T i1{0}; i1 < loop_ub; i1++) {
       in1[i1 + in1.size(0) * i] = b_in1[i1 + b_in1.size(0) * i];

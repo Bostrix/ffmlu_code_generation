@@ -36,7 +36,7 @@ void binary_expand_op_4(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   } else {
     b_loop_ub = in4.size(1);
   }
-  b_in3.set_size(&oh_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  b_in3.set_size(&nh_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   stride_0_0 = (in3.size(0) != 1);
   stride_0_1 = (in3.size(1) != 1);
   stride_1_1 = (in4.size(1) != 1);
@@ -79,7 +79,7 @@ void binary_expand_op_6(const emlrtStack &sp, coder::array<real_T, 2U> &in1,
   } else {
     b_loop_ub = in3.size(1);
   }
-  b_in1.set_size(&eh_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  b_in1.set_size(&dh_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   stride_0_0 = (in1.size(0) != 1);
   stride_0_1 = (in1.size(1) != 1);
   stride_1_1 = (in3.size(1) != 1);

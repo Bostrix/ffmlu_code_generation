@@ -15,26 +15,26 @@
 #include <cstddef>
 
 // Variable Definitions
-static emlrtRSInfo mq_emlrtRSI{
+static emlrtRSInfo jq_emlrtRSI{
     84,     // lineNo
     "chol", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/chol.m" // pathName
 };
 
-static emlrtRSInfo nq_emlrtRSI{
+static emlrtRSInfo kq_emlrtRSI{
     93,     // lineNo
     "chol", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/chol.m" // pathName
 };
 
-static emlrtRSInfo oq_emlrtRSI{
+static emlrtRSInfo lq_emlrtRSI{
     94,     // lineNo
     "chol", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/chol.m" // pathName
 };
 
 static emlrtRSInfo
-    pq_emlrtRSI{
+    mq_emlrtRSI{
         79,             // lineNo
         "ceval_xpotrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -42,7 +42,7 @@ static emlrtRSInfo
     };
 
 static emlrtRSInfo
-    qq_emlrtRSI{
+    nq_emlrtRSI{
         13,       // lineNo
         "xpotrf", // fcnName
         "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
@@ -91,11 +91,11 @@ void chol(const emlrtStack &sp, array<real_T, 2U> &A)
   mrows = muIntScalarMin_sint32(mrows, ncols);
   if (mrows != 0) {
     ptrdiff_t info_t;
-    st.site = &mq_emlrtRSI;
-    b_st.site = &qq_emlrtRSI;
+    st.site = &jq_emlrtRSI;
+    b_st.site = &nq_emlrtRSI;
     info_t = LAPACKE_dpotrf_work(102, 'L', (ptrdiff_t)mrows, &(A.data())[0],
                                  (ptrdiff_t)A.size(0));
-    c_st.site = &pq_emlrtRSI;
+    c_st.site = &mq_emlrtRSI;
     if ((int32_T)info_t < 0) {
       if ((int32_T)info_t == -1010) {
         emlrtErrorWithMessageIdR2018a(&c_st, &qb_emlrtRTEI, "MATLAB:nomem",
@@ -110,13 +110,13 @@ void chol(const emlrtStack &sp, array<real_T, 2U> &A)
     if ((int32_T)info_t != 0) {
       mrows = (int32_T)info_t - 1;
     }
-    st.site = &nq_emlrtRSI;
+    st.site = &kq_emlrtRSI;
     if (mrows > 2147483646) {
       b_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(b_st);
     }
     for (ncols = 2; ncols <= mrows; ncols++) {
-      st.site = &oq_emlrtRSI;
+      st.site = &lq_emlrtRSI;
       for (int32_T i{0}; i <= ncols - 2; i++) {
         A[i + A.size(0) * (ncols - 1)] = 0.0;
       }

@@ -20,67 +20,67 @@
 #include <emmintrin.h>
 
 // Variable Definitions
-static emlrtRSInfo nn_emlrtRSI{
+static emlrtRSInfo jn_emlrtRSI{
     173,          // lineNo
     "rankFromQR", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/qrsolve.m" // pathName
 };
 
-static emlrtRSInfo on_emlrtRSI{
+static emlrtRSInfo kn_emlrtRSI{
     172,          // lineNo
     "rankFromQR", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/qrsolve.m" // pathName
 };
 
-static emlrtRSInfo qn_emlrtRSI{
+static emlrtRSInfo mn_emlrtRSI{
     126,         // lineNo
     "LSQFromQR", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/qrsolve.m" // pathName
 };
 
-static emlrtRSInfo vn_emlrtRSI{
+static emlrtRSInfo rn_emlrtRSI{
     112,              // lineNo
     "ceval_xunormqr", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+lapack/"
     "xunormqr.m" // pathName
 };
 
-static emlrtRSInfo wn_emlrtRSI{
+static emlrtRSInfo sn_emlrtRSI{
     21,          // lineNo
     "xzunormqr", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+reflapack/"
     "xzunormqr.m" // pathName
 };
 
-static emlrtRSInfo xn_emlrtRSI{
+static emlrtRSInfo tn_emlrtRSI{
     23,          // lineNo
     "xzunormqr", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+reflapack/"
     "xzunormqr.m" // pathName
 };
 
-static emlrtRSInfo yn_emlrtRSI{
+static emlrtRSInfo un_emlrtRSI{
     38,                    // lineNo
     "applyJthHouseHolder", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+reflapack/"
     "xzunormqr.m" // pathName
 };
 
-static emlrtRSInfo ao_emlrtRSI{
+static emlrtRSInfo vn_emlrtRSI{
     40,                    // lineNo
     "applyJthHouseHolder", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+reflapack/"
     "xzunormqr.m" // pathName
 };
 
-static emlrtRSInfo bo_emlrtRSI{
+static emlrtRSInfo wn_emlrtRSI{
     46,                    // lineNo
     "applyJthHouseHolder", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/+reflapack/"
     "xzunormqr.m" // pathName
 };
 
-static emlrtRTEInfo yn_emlrtRTEI{
+static emlrtRTEInfo xn_emlrtRTEI{
     85,        // lineNo
     1,         // colNo
     "qrsolve", // fName
@@ -123,29 +123,29 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-  b_A.set_size(&wn_emlrtRTEI, &sp, A.size(0), A.size(1));
+  b_A.set_size(&vn_emlrtRTEI, &sp, A.size(0), A.size(1));
   mn = A.size(0) * A.size(1);
   for (i = 0; i < mn; i++) {
     b_A[i] = A[i];
   }
-  st.site = &kn_emlrtRSI;
+  st.site = &gn_emlrtRSI;
   lapack::xgeqp3(st, b_A, tau, jpvt);
-  st.site = &ln_emlrtRSI;
+  st.site = &hn_emlrtRSI;
   rankA = rankFromQR(st, b_A);
-  st.site = &mn_emlrtRSI;
+  st.site = &in_emlrtRSI;
   i = B.size(1);
-  b_B.set_size(&xn_emlrtRTEI, &st, B.size(0), B.size(1));
+  b_B.set_size(&wn_emlrtRTEI, &st, B.size(0), B.size(1));
   mn = B.size(0) * B.size(1);
   for (i1 = 0; i1 < mn; i1++) {
     b_B[i1] = B[i1];
   }
-  Y.set_size(&yn_emlrtRTEI, &st, b_A.size(1), B.size(1));
+  Y.set_size(&xn_emlrtRTEI, &st, b_A.size(1), B.size(1));
   mn = b_A.size(1) * b_B.size(1);
   for (i1 = 0; i1 < mn; i1++) {
     Y[i1] = 0.0;
   }
-  b_st.site = &pn_emlrtRSI;
-  c_st.site = &tn_emlrtRSI;
+  b_st.site = &ln_emlrtRSI;
+  c_st.site = &pn_emlrtRSI;
   if ((b_A.size(0) != 0) && (b_A.size(1) != 0) &&
       ((b_B.size(0) != 0) && (b_B.size(1) != 0))) {
     ptrdiff_t nrc_t;
@@ -156,27 +156,27 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
                            (ptrdiff_t)muIntScalarMin_sint32(i1, mn),
                            &(b_A.data())[0], (ptrdiff_t)b_A.size(0),
                            &(tau.data())[0], &(b_B.data())[0], nrc_t);
-    d_st.site = &un_emlrtRSI;
+    d_st.site = &qn_emlrtRSI;
     if (lapack::infocheck(d_st, (int32_T)nrc_t)) {
       if (((int32_T)nrc_t == -10) && (b_B.size(1) > 1)) {
         int32_T m;
-        d_st.site = &vn_emlrtRSI;
+        d_st.site = &rn_emlrtRSI;
         i1 = b_A.size(0);
         mn = b_A.size(1);
         mn = muIntScalarMin_sint32(i1, mn);
-        e_st.site = &wn_emlrtRSI;
+        e_st.site = &sn_emlrtRSI;
         if (mn > 2147483646) {
           f_st.site = &fe_emlrtRSI;
           check_forloop_overflow_error(f_st);
         }
         m = b_A.size(0);
         for (int32_T j{0}; j < mn; j++) {
-          e_st.site = &xn_emlrtRSI;
+          e_st.site = &tn_emlrtRSI;
           i1 = b_B.size(1);
           if (tau[j] != 0.0) {
             int32_T a_tmp;
             boolean_T overflow_tmp;
-            f_st.site = &yn_emlrtRSI;
+            f_st.site = &un_emlrtRSI;
             if (b_B.size(1) > 2147483646) {
               g_st.site = &fe_emlrtRSI;
               check_forloop_overflow_error(g_st);
@@ -186,7 +186,7 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
             for (int32_T k{0}; k < i1; k++) {
               real_T wj;
               wj = b_B[j + b_B.size(0) * k];
-              f_st.site = &ao_emlrtRSI;
+              f_st.site = &vn_emlrtRSI;
               if (overflow_tmp) {
                 g_st.site = &fe_emlrtRSI;
                 check_forloop_overflow_error(g_st);
@@ -200,7 +200,7 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
                 int32_T scalarLB;
                 int32_T vectorUB;
                 b_B[j + b_B.size(0) * k] = b_B[j + b_B.size(0) * k] - wj;
-                f_st.site = &bo_emlrtRSI;
+                f_st.site = &wn_emlrtRSI;
                 scalarLB = (((((m - j) - 1) / 2) << 1) + j) + 2;
                 vectorUB = scalarLB - 2;
                 for (int32_T b_i{a_tmp}; b_i <= vectorUB; b_i += 2) {
@@ -224,7 +224,7 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
         int32_T m;
         mn = b_B.size(0);
         m = b_B.size(1);
-        b_B.set_size(&ao_emlrtRTEI, &c_st, mn, m);
+        b_B.set_size(&yn_emlrtRTEI, &c_st, mn, m);
         mn *= m;
         for (i1 = 0; i1 < mn; i1++) {
           b_B[i1] = rtNaN;
@@ -232,13 +232,13 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
       }
     }
   }
-  b_st.site = &qn_emlrtRSI;
+  b_st.site = &mn_emlrtRSI;
   if (B.size(1) > 2147483646) {
     c_st.site = &fe_emlrtRSI;
     check_forloop_overflow_error(c_st);
   }
   for (int32_T k{0}; k < i; k++) {
-    b_st.site = &rn_emlrtRSI;
+    b_st.site = &nn_emlrtRSI;
     if (rankA > 2147483646) {
       c_st.site = &fe_emlrtRSI;
       check_forloop_overflow_error(c_st);
@@ -250,7 +250,7 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
       i1 = jpvt[j - 1];
       Y[(i1 + Y.size(0) * k) - 1] =
           Y[(i1 + Y.size(0) * k) - 1] / b_A[(j + b_A.size(0) * (j - 1)) - 1];
-      b_st.site = &sn_emlrtRSI;
+      b_st.site = &on_emlrtRSI;
       for (int32_T b_i{0}; b_i <= j - 2; b_i++) {
         Y[(jpvt[b_i] + Y.size(0) * k) - 1] =
             Y[(jpvt[b_i] + Y.size(0) * k) - 1] -
@@ -298,7 +298,7 @@ int32_T rankFromQR(const emlrtStack &sp, const array<real_T, 2U> &A)
   }
   if (r < minmn) {
     char_T str[14];
-    st.site = &nn_emlrtRSI;
+    st.site = &jn_emlrtRSI;
     y = nullptr;
     m = emlrtCreateCharArray(2, &iv[0]);
     emlrtInitCharArrayR2013a(&st, 6, m, &rfmt[0]);
@@ -306,10 +306,10 @@ int32_T rankFromQR(const emlrtStack &sp, const array<real_T, 2U> &A)
     b_y = nullptr;
     m = emlrtCreateDoubleScalar(tol);
     emlrtAssign(&b_y, m);
-    b_st.site = &sr_emlrtRSI;
+    b_st.site = &or_emlrtRSI;
     emlrt_marshallIn(b_st, b_sprintf(b_st, y, b_y, k_emlrtMCI),
                      "<output of sprintf>", str);
-    st.site = &on_emlrtRSI;
+    st.site = &kn_emlrtRSI;
     warning(st, r, str);
   }
   return r;

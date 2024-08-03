@@ -12,7 +12,7 @@
 #include "mwmathutil.h"
 
 // Variable Definitions
-static emlrtRTEInfo ak_emlrtRTEI{
+static emlrtRTEInfo yj_emlrtRTEI{
     29,               // lineNo
     5,                // colNo
     "spget_quadcorr", // fName
@@ -39,7 +39,7 @@ void binary_expand_op_21(const emlrtStack &sp, coder::array<int32_T, 1U> &in1,
   } else {
     loop_ub = in5.size(0);
   }
-  in1.set_size(&mi_emlrtRTEI, &sp, loop_ub);
+  in1.set_size(&li_emlrtRTEI, &sp, loop_ub);
   stride_0_0 = (in4.size(0) != 1);
   stride_1_0 = (in5.size(0) != 1);
   for (int32_T i{0}; i < loop_ub; i++) {
@@ -51,7 +51,7 @@ void binary_expand_op_21(const emlrtStack &sp, coder::array<int32_T, 1U> &in1,
     }
     if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) > b_in6)) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, b_in6,
-                                    &eg_emlrtBCI, (emlrtConstCTX)&sp);
+                                    &rf_emlrtBCI, (emlrtConstCTX)&sp);
     }
     in1[i] = static_cast<int32_T>(d);
   }
@@ -75,7 +75,7 @@ void binary_expand_op_7(const emlrtStack &sp, coder::array<int32_T, 1U> &in1,
   } else {
     loop_ub = in4.size(0);
   }
-  b_in2.set_size(&mi_emlrtRTEI, &sp, loop_ub);
+  b_in2.set_size(&li_emlrtRTEI, &sp, loop_ub);
   stride_0_0 = (in3.size(0) != 1);
   stride_1_0 = (in4.size(0) != 1);
   for (int32_T i{0}; i < loop_ub; i++) {
@@ -86,12 +86,12 @@ void binary_expand_op_7(const emlrtStack &sp, coder::array<int32_T, 1U> &in1,
     }
     if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) > b_in5)) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, b_in5,
-                                    &eg_emlrtBCI, (emlrtConstCTX)&sp);
+                                    &rf_emlrtBCI, (emlrtConstCTX)&sp);
     }
     b_in2[i] = static_cast<int32_T>(d);
   }
   loop_ub = b_in2.size(0);
-  in1.set_size(&mi_emlrtRTEI, &sp, b_in2.size(0));
+  in1.set_size(&li_emlrtRTEI, &sp, b_in2.size(0));
   for (int32_T i{0}; i < loop_ub; i++) {
     in1[i] = b_in2[i];
   }
@@ -115,7 +115,7 @@ void binary_expand_op_9(const emlrtStack &sp, coder::array<int32_T, 1U> &in1,
   } else {
     loop_ub = in5.size(0);
   }
-  in1.set_size(&mi_emlrtRTEI, &sp, loop_ub);
+  in1.set_size(&li_emlrtRTEI, &sp, loop_ub);
   stride_0_0 = (in4.size(0) != 1);
   stride_1_0 = (in5.size(0) != 1);
   for (int32_T i{0}; i < loop_ub; i++) {
@@ -127,7 +127,7 @@ void binary_expand_op_9(const emlrtStack &sp, coder::array<int32_T, 1U> &in1,
     }
     if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) > b_in6)) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, b_in6,
-                                    &eg_emlrtBCI, (emlrtConstCTX)&sp);
+                                    &rf_emlrtBCI, (emlrtConstCTX)&sp);
     }
     in1[i] = static_cast<int32_T>(d);
   }
@@ -146,7 +146,7 @@ void find_locations_t(const emlrtStack &sp,
   // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   //  Initialize an empty array to store the locations
   loop_ub = elements_to_find.size(0);
-  locs.set_size(&ak_emlrtRTEI, &sp, elements_to_find.size(0));
+  locs.set_size(&yj_emlrtRTEI, &sp, elements_to_find.size(0));
   for (right = 0; right < loop_ub; right++) {
     locs[right] = 0.0;
   }
@@ -155,7 +155,7 @@ void find_locations_t(const emlrtStack &sp,
     real_T target_;
     uint32_T left;
     if (i + 1 > loop_ub) {
-      emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &vf_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(i + 1, 1, loop_ub, &jf_emlrtBCI,
                                     (emlrtConstCTX)&sp);
     }
     target_ = elements_to_find[i];
@@ -178,12 +178,12 @@ void find_locations_t(const emlrtStack &sp,
         //  Check if the target is found
         if ((mid < 1) || (mid > big_sorted_list.size(1))) {
           emlrtDynamicBoundsCheckR2012b(mid, 1, big_sorted_list.size(1),
-                                        &xf_emlrtBCI, &st);
+                                        &lf_emlrtBCI, &st);
         }
         d = big_sorted_list[mid - 1];
         if (d == target_) {
           if (i + 1 > locs.size(0)) {
-            emlrtDynamicBoundsCheckR2012b(i + 1, 1, locs.size(0), &wf_emlrtBCI,
+            emlrtDynamicBoundsCheckR2012b(i + 1, 1, locs.size(0), &kf_emlrtBCI,
                                           &st);
           }
           locs[i] = mid;
@@ -191,7 +191,7 @@ void find_locations_t(const emlrtStack &sp,
         } else {
           if (mid > big_sorted_list.size(1)) {
             emlrtDynamicBoundsCheckR2012b(mid, 1, big_sorted_list.size(1),
-                                          &yf_emlrtBCI, &st);
+                                          &mf_emlrtBCI, &st);
           }
           if (d < target_) {
             left = static_cast<uint32_T>(mid) + 1U;
@@ -205,7 +205,7 @@ void find_locations_t(const emlrtStack &sp,
       } else {
         //  If the element is not found, return -1
         if (i + 1 > locs.size(0)) {
-          emlrtDynamicBoundsCheckR2012b(i + 1, 1, locs.size(0), &wf_emlrtBCI,
+          emlrtDynamicBoundsCheckR2012b(i + 1, 1, locs.size(0), &kf_emlrtBCI,
                                         &st);
         }
         locs[i] = -1.0;

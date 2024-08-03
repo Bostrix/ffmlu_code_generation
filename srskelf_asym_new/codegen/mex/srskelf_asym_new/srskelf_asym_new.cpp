@@ -41,6 +41,7 @@
 #include "srskelf_asym_new_mexutil.h"
 #include "srskelf_asym_new_types.h"
 #include "srskelf_asym_new_types1.h"
+#include "srskelf_asym_new_types11.h"
 #include "srskelf_asym_new_types2.h"
 #include "strcmp.h"
 #include "sum.h"
@@ -52,7 +53,6 @@
 #include "mwmathutil.h"
 #include <algorithm>
 #include <cstdio>
-#include <cstring>
 #include <emmintrin.h>
 
 // Variable Definitions
@@ -80,13 +80,13 @@ static emlrtRTEInfo d_emlrtRTEI{ 60,   // lineNo
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo e_emlrtRTEI{ 321,  // lineNo
+static emlrtRTEInfo e_emlrtRTEI{ 320,  // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo f_emlrtRTEI{ 329,  // lineNo
+static emlrtRTEInfo f_emlrtRTEI{ 328,  // lineNo
   5,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
@@ -157,257 +157,257 @@ static emlrtRSInfo m_emlrtRSI{ 60,     // lineNo
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo n_emlrtRSI{ 81,     // lineNo
+static emlrtRSInfo n_emlrtRSI{ 80,     // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo o_emlrtRSI{ 90,     // lineNo
+static emlrtRSInfo o_emlrtRSI{ 89,     // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo p_emlrtRSI{ 94,     // lineNo
+static emlrtRSInfo p_emlrtRSI{ 93,     // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo q_emlrtRSI{ 119,    // lineNo
+static emlrtRSInfo q_emlrtRSI{ 118,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo r_emlrtRSI{ 125,    // lineNo
+static emlrtRSInfo r_emlrtRSI{ 124,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo s_emlrtRSI{ 130,    // lineNo
+static emlrtRSInfo s_emlrtRSI{ 129,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo t_emlrtRSI{ 131,    // lineNo
+static emlrtRSInfo t_emlrtRSI{ 130,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo u_emlrtRSI{ 132,    // lineNo
+static emlrtRSInfo u_emlrtRSI{ 131,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo v_emlrtRSI{ 137,    // lineNo
+static emlrtRSInfo v_emlrtRSI{ 136,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo w_emlrtRSI{ 141,    // lineNo
+static emlrtRSInfo w_emlrtRSI{ 140,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo x_emlrtRSI{ 145,    // lineNo
+static emlrtRSInfo x_emlrtRSI{ 144,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo y_emlrtRSI{ 158,    // lineNo
+static emlrtRSInfo y_emlrtRSI{ 157,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ab_emlrtRSI{ 160,   // lineNo
+static emlrtRSInfo ab_emlrtRSI{ 159,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo bb_emlrtRSI{ 161,   // lineNo
+static emlrtRSInfo bb_emlrtRSI{ 160,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo cb_emlrtRSI{ 167,   // lineNo
+static emlrtRSInfo cb_emlrtRSI{ 166,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo db_emlrtRSI{ 172,   // lineNo
+static emlrtRSInfo db_emlrtRSI{ 171,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo eb_emlrtRSI{ 176,   // lineNo
+static emlrtRSInfo eb_emlrtRSI{ 175,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo fb_emlrtRSI{ 177,   // lineNo
+static emlrtRSInfo fb_emlrtRSI{ 176,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo gb_emlrtRSI{ 178,   // lineNo
+static emlrtRSInfo gb_emlrtRSI{ 177,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo hb_emlrtRSI{ 181,   // lineNo
+static emlrtRSInfo hb_emlrtRSI{ 180,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ib_emlrtRSI{ 182,   // lineNo
+static emlrtRSInfo ib_emlrtRSI{ 181,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo jb_emlrtRSI{ 183,   // lineNo
+static emlrtRSInfo jb_emlrtRSI{ 182,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo kb_emlrtRSI{ 186,   // lineNo
+static emlrtRSInfo kb_emlrtRSI{ 185,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo lb_emlrtRSI{ 188,   // lineNo
+static emlrtRSInfo lb_emlrtRSI{ 187,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo mb_emlrtRSI{ 192,   // lineNo
+static emlrtRSInfo mb_emlrtRSI{ 191,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo nb_emlrtRSI{ 202,   // lineNo
+static emlrtRSInfo nb_emlrtRSI{ 201,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ob_emlrtRSI{ 203,   // lineNo
+static emlrtRSInfo ob_emlrtRSI{ 202,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo pb_emlrtRSI{ 205,   // lineNo
+static emlrtRSInfo pb_emlrtRSI{ 204,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo qb_emlrtRSI{ 206,   // lineNo
+static emlrtRSInfo qb_emlrtRSI{ 205,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo rb_emlrtRSI{ 210,   // lineNo
+static emlrtRSInfo rb_emlrtRSI{ 209,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo sb_emlrtRSI{ 211,   // lineNo
+static emlrtRSInfo sb_emlrtRSI{ 210,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo tb_emlrtRSI{ 212,   // lineNo
+static emlrtRSInfo tb_emlrtRSI{ 211,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ub_emlrtRSI{ 213,   // lineNo
+static emlrtRSInfo ub_emlrtRSI{ 212,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo vb_emlrtRSI{ 214,   // lineNo
+static emlrtRSInfo vb_emlrtRSI{ 213,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo wb_emlrtRSI{ 225,   // lineNo
+static emlrtRSInfo wb_emlrtRSI{ 224,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo xb_emlrtRSI{ 227,   // lineNo
+static emlrtRSInfo xb_emlrtRSI{ 226,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo yb_emlrtRSI{ 229,   // lineNo
+static emlrtRSInfo yb_emlrtRSI{ 228,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ac_emlrtRSI{ 231,   // lineNo
+static emlrtRSInfo ac_emlrtRSI{ 230,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo bc_emlrtRSI{ 233,   // lineNo
+static emlrtRSInfo bc_emlrtRSI{ 232,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo cc_emlrtRSI{ 235,   // lineNo
+static emlrtRSInfo cc_emlrtRSI{ 234,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo dc_emlrtRSI{ 236,   // lineNo
+static emlrtRSInfo dc_emlrtRSI{ 235,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ec_emlrtRSI{ 237,   // lineNo
+static emlrtRSInfo ec_emlrtRSI{ 236,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo fc_emlrtRSI{ 238,   // lineNo
+static emlrtRSInfo fc_emlrtRSI{ 237,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo gc_emlrtRSI{ 239,   // lineNo
+static emlrtRSInfo gc_emlrtRSI{ 238,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo hc_emlrtRSI{ 318,   // lineNo
+static emlrtRSInfo hc_emlrtRSI{ 317,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo ic_emlrtRSI{ 322,   // lineNo
+static emlrtRSInfo ic_emlrtRSI{ 321,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo jc_emlrtRSI{ 321,   // lineNo
+static emlrtRSInfo jc_emlrtRSI{ 320,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo kc_emlrtRSI{ 327,   // lineNo
+static emlrtRSInfo kc_emlrtRSI{ 326,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo lc_emlrtRSI{ 328,   // lineNo
+static emlrtRSInfo lc_emlrtRSI{ 327,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo mc_emlrtRSI{ 329,   // lineNo
+static emlrtRSInfo mc_emlrtRSI{ 328,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo nc_emlrtRSI{ 330,   // lineNo
+static emlrtRSInfo nc_emlrtRSI{ 329,   // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
@@ -587,77 +587,62 @@ static emlrtRSInfo lj_emlrtRSI{ 16,    // lineNo
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pathName
 };
 
-static emlrtRSInfo nj_emlrtRSI{ 366,   // lineNo
+static emlrtRSInfo nj_emlrtRSI{ 365,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo oj_emlrtRSI{ 367,   // lineNo
+static emlrtRSInfo oj_emlrtRSI{ 366,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo pj_emlrtRSI{ 407,   // lineNo
+static emlrtRSInfo pj_emlrtRSI{ 406,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo qj_emlrtRSI{ 408,   // lineNo
+static emlrtRSInfo qj_emlrtRSI{ 407,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo rj_emlrtRSI{ 430,   // lineNo
+static emlrtRSInfo rj_emlrtRSI{ 429,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo sj_emlrtRSI{ 432,   // lineNo
+static emlrtRSInfo sj_emlrtRSI{ 431,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo tj_emlrtRSI{ 435,   // lineNo
-  "srskelf_asym_new/spget",            // fcnName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
-};
-
-static emlrtRSInfo uj_emlrtRSI{ 446,   // lineNo
+static emlrtRSInfo tj_emlrtRSI{ 445,   // lineNo
   "srskelf_asym_new/spget/get_update_list",// fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo gq_emlrtRSI{ 385,   // lineNo
+static emlrtRSInfo fq_emlrtRSI{ 384,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo hq_emlrtRSI{ 400,   // lineNo
+static emlrtRSInfo gq_emlrtRSI{ 399,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo iq_emlrtRSI{ 401,   // lineNo
+static emlrtRSInfo hq_emlrtRSI{ 401,   // lineNo
   "srskelf_asym_new/spget",            // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo jq_emlrtRSI{ 402,   // lineNo
-  "srskelf_asym_new/spget",            // fcnName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
-};
-
-static emlrtRSInfo kq_emlrtRSI{ 403,   // lineNo
-  "srskelf_asym_new/spget",            // fcnName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
-};
-
-static emlrtRSInfo lq_emlrtRSI{ 12,    // lineNo
+static emlrtRSInfo iq_emlrtRSI{ 12,    // lineNo
   "chol",                              // fcnName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/chol.m"// pathName
 };
 
-static emlrtRSInfo rq_emlrtRSI{ 20,    // lineNo
+static emlrtRSInfo oq_emlrtRSI{ 20,    // lineNo
   "mrdivide_helper",                   // fcnName
   "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/mrdivide_helper.m"// pathName
 };
@@ -706,7 +691,7 @@ static emlrtRTEInfo h_emlrtRTEI{ 66,   // lineNo
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo i_emlrtRTEI{ 93,   // lineNo
+static emlrtRTEInfo i_emlrtRTEI{ 92,   // lineNo
   13,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
@@ -714,7 +699,7 @@ static emlrtRTEInfo i_emlrtRTEI{ 93,   // lineNo
 
 static emlrtBCInfo c_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  99,                                  // lineNo
+  98,                                  // lineNo
   32,                                  // colNo
   "t.lvp",                             // aName
   "srskelf_asym_new",                  // fName
@@ -722,13 +707,13 @@ static emlrtBCInfo c_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtRTEInfo j_emlrtRTEI{ 99,   // lineNo
+static emlrtRTEInfo j_emlrtRTEI{ 98,   // lineNo
   13,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtDCInfo emlrtDCI{ 101,      // lineNo
+static emlrtDCInfo emlrtDCI{ 100,      // lineNo
   34,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -737,7 +722,7 @@ static emlrtDCInfo emlrtDCI{ 101,      // lineNo
 
 static emlrtBCInfo d_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  101,                                 // lineNo
+  100,                                 // lineNo
   34,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -745,7 +730,7 @@ static emlrtBCInfo d_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo b_emlrtDCI{ 102,    // lineNo
+static emlrtDCInfo b_emlrtDCI{ 101,    // lineNo
   31,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -754,7 +739,7 @@ static emlrtDCInfo b_emlrtDCI{ 102,    // lineNo
 
 static emlrtBCInfo e_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  102,                                 // lineNo
+  101,                                 // lineNo
   31,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -762,7 +747,7 @@ static emlrtBCInfo e_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo c_emlrtDCI{ 103,    // lineNo
+static emlrtDCInfo c_emlrtDCI{ 102,    // lineNo
   57,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -771,7 +756,7 @@ static emlrtDCInfo c_emlrtDCI{ 103,    // lineNo
 
 static emlrtBCInfo f_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  103,                                 // lineNo
+  102,                                 // lineNo
   57,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -779,7 +764,7 @@ static emlrtBCInfo f_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo d_emlrtDCI{ 103,    // lineNo
+static emlrtDCInfo d_emlrtDCI{ 102,    // lineNo
   49,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -788,7 +773,7 @@ static emlrtDCInfo d_emlrtDCI{ 103,    // lineNo
 
 static emlrtBCInfo g_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  103,                                 // lineNo
+  102,                                 // lineNo
   49,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -796,7 +781,7 @@ static emlrtBCInfo g_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo e_emlrtDCI{ 106,    // lineNo
+static emlrtDCInfo e_emlrtDCI{ 105,    // lineNo
   53,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -805,7 +790,7 @@ static emlrtDCInfo e_emlrtDCI{ 106,    // lineNo
 
 static emlrtBCInfo h_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  106,                                 // lineNo
+  105,                                 // lineNo
   53,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -813,7 +798,7 @@ static emlrtBCInfo h_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo f_emlrtDCI{ 109,    // lineNo
+static emlrtDCInfo f_emlrtDCI{ 108,    // lineNo
   30,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -822,7 +807,7 @@ static emlrtDCInfo f_emlrtDCI{ 109,    // lineNo
 
 static emlrtBCInfo i_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  109,                                 // lineNo
+  108,                                 // lineNo
   30,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -830,7 +815,7 @@ static emlrtBCInfo i_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo g_emlrtDCI{ 110,    // lineNo
+static emlrtDCInfo g_emlrtDCI{ 109,    // lineNo
   31,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -838,6 +823,23 @@ static emlrtDCInfo g_emlrtDCI{ 110,    // lineNo
 };
 
 static emlrtBCInfo j_emlrtBCI{ -1,     // iFirst
+  -1,                                  // iLast
+  109,                                 // lineNo
+  31,                                  // colNo
+  "t.nodes",                           // aName
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  0                                    // checkKind
+};
+
+static emlrtDCInfo h_emlrtDCI{ 110,    // lineNo
+  31,                                  // colNo
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  1                                    // checkKind
+};
+
+static emlrtBCInfo k_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
   110,                                 // lineNo
   31,                                  // colNo
@@ -847,26 +849,9 @@ static emlrtBCInfo j_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo h_emlrtDCI{ 111,    // lineNo
-  31,                                  // colNo
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  1                                    // checkKind
-};
-
-static emlrtBCInfo k_emlrtBCI{ -1,     // iFirst
-  -1,                                  // iLast
-  111,                                 // lineNo
-  31,                                  // colNo
-  "t.nodes",                           // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
 static emlrtBCInfo l_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  111,                                 // lineNo
+  110,                                 // lineNo
   39,                                  // colNo
   "t.nodes(i).chld",                   // aName
   "srskelf_asym_new",                  // fName
@@ -874,7 +859,7 @@ static emlrtBCInfo l_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo i_emlrtDCI{ 112,    // lineNo
+static emlrtDCInfo i_emlrtDCI{ 111,    // lineNo
   30,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -883,7 +868,7 @@ static emlrtDCInfo i_emlrtDCI{ 112,    // lineNo
 
 static emlrtBCInfo m_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  112,                                 // lineNo
+  111,                                 // lineNo
   30,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -891,7 +876,7 @@ static emlrtBCInfo m_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo j_emlrtDCI{ 106,    // lineNo
+static emlrtDCInfo j_emlrtDCI{ 105,    // lineNo
   35,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -900,7 +885,7 @@ static emlrtDCInfo j_emlrtDCI{ 106,    // lineNo
 
 static emlrtBCInfo n_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  106,                                 // lineNo
+  105,                                 // lineNo
   35,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -910,7 +895,7 @@ static emlrtBCInfo n_emlrtBCI{ -1,     // iFirst
 
 static emlrtBCInfo o_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  106,                                 // lineNo
+  105,                                 // lineNo
   19,                                  // colNo
   "xi_combined",                       // aName
   "srskelf_asym_new",                  // fName
@@ -920,7 +905,7 @@ static emlrtBCInfo o_emlrtBCI{ -1,     // iFirst
 
 static emlrtBCInfo p_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  106,                                 // lineNo
+  105,                                 // lineNo
   21,                                  // colNo
   "xi_combined",                       // aName
   "srskelf_asym_new",                  // fName
@@ -929,7 +914,7 @@ static emlrtBCInfo p_emlrtBCI{ -1,     // iFirst
 };
 
 static emlrtECInfo emlrtECI{ -1,       // nDims
-  106,                                 // lineNo
+  105,                                 // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
@@ -937,7 +922,7 @@ static emlrtECInfo emlrtECI{ -1,       // nDims
 
 static emlrtBCInfo q_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  113,                                 // lineNo
+  112,                                 // lineNo
   23,                                  // colNo
   "xi_combined",                       // aName
   "srskelf_asym_new",                  // fName
@@ -947,7 +932,7 @@ static emlrtBCInfo q_emlrtBCI{ -1,     // iFirst
 
 static emlrtBCInfo r_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  113,                                 // lineNo
+  112,                                 // lineNo
   36,                                  // colNo
   "xi_combined",                       // aName
   "srskelf_asym_new",                  // fName
@@ -956,19 +941,19 @@ static emlrtBCInfo r_emlrtBCI{ -1,     // iFirst
 };
 
 static emlrtECInfo b_emlrtECI{ -1,     // nDims
-  113,                                 // lineNo
+  112,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo k_emlrtRTEI{ 135,  // lineNo
+static emlrtRTEInfo k_emlrtRTEI{ 134,  // lineNo
   13,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtDCInfo k_emlrtDCI{ 136,    // lineNo
+static emlrtDCInfo k_emlrtDCI{ 135,    // lineNo
   21,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -977,7 +962,7 @@ static emlrtDCInfo k_emlrtDCI{ 136,    // lineNo
 
 static emlrtBCInfo s_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  136,                                 // lineNo
+  135,                                 // lineNo
   21,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -985,7 +970,7 @@ static emlrtBCInfo s_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo l_emlrtDCI{ 137,    // lineNo
+static emlrtDCInfo l_emlrtDCI{ 136,    // lineNo
   30,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -994,7 +979,7 @@ static emlrtDCInfo l_emlrtDCI{ 137,    // lineNo
 
 static emlrtBCInfo t_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  137,                                 // lineNo
+  136,                                 // lineNo
   30,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1002,7 +987,7 @@ static emlrtBCInfo t_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo m_emlrtDCI{ 160,    // lineNo
+static emlrtDCInfo m_emlrtDCI{ 159,    // lineNo
   32,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1011,7 +996,7 @@ static emlrtDCInfo m_emlrtDCI{ 160,    // lineNo
 
 static emlrtBCInfo u_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  160,                                 // lineNo
+  159,                                 // lineNo
   32,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1019,7 +1004,7 @@ static emlrtBCInfo u_emlrtBCI{ -1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo n_emlrtDCI{ 167,    // lineNo
+static emlrtDCInfo n_emlrtDCI{ 166,    // lineNo
   56,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1028,7 +1013,7 @@ static emlrtDCInfo n_emlrtDCI{ 167,    // lineNo
 
 static emlrtBCInfo v_emlrtBCI{ -1,     // iFirst
   -1,                                  // iLast
-  167,                                 // lineNo
+  166,                                 // lineNo
   56,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1037,163 +1022,163 @@ static emlrtBCInfo v_emlrtBCI{ -1,     // iFirst
 };
 
 static emlrtECInfo c_emlrtECI{ 1,      // nDims
-  186,                                 // lineNo
+  185,                                 // lineNo
   14,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo d_emlrtECI{ 2,      // nDims
-  186,                                 // lineNo
+  185,                                 // lineNo
   14,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo e_emlrtECI{ 1,      // nDims
-  188,                                 // lineNo
+  187,                                 // lineNo
   15,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo f_emlrtECI{ 2,      // nDims
-  188,                                 // lineNo
+  187,                                 // lineNo
   15,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo g_emlrtECI{ 1,      // nDims
-  202,                                 // lineNo
+  201,                                 // lineNo
   12,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo h_emlrtECI{ 2,      // nDims
-  202,                                 // lineNo
+  201,                                 // lineNo
   12,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo i_emlrtECI{ 1,      // nDims
-  203,                                 // lineNo
+  202,                                 // lineNo
   12,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo j_emlrtECI{ 2,      // nDims
-  203,                                 // lineNo
+  202,                                 // lineNo
   12,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo k_emlrtECI{ 1,      // nDims
-  206,                                 // lineNo
+  205,                                 // lineNo
   14,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo l_emlrtECI{ 2,      // nDims
-  206,                                 // lineNo
+  205,                                 // lineNo
   14,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo m_emlrtECI{ 1,      // nDims
-  210,                                 // lineNo
+  209,                                 // lineNo
   18,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo n_emlrtECI{ 2,      // nDims
-  210,                                 // lineNo
+  209,                                 // lineNo
   18,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo o_emlrtECI{ -1,     // nDims
-  210,                                 // lineNo
+  209,                                 // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo p_emlrtECI{ 1,      // nDims
-  211,                                 // lineNo
+  210,                                 // lineNo
   17,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo q_emlrtECI{ 2,      // nDims
-  211,                                 // lineNo
+  210,                                 // lineNo
   17,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo r_emlrtECI{ -1,     // nDims
-  211,                                 // lineNo
+  210,                                 // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo s_emlrtECI{ 1,      // nDims
-  212,                                 // lineNo
+  211,                                 // lineNo
   18,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo t_emlrtECI{ 2,      // nDims
-  212,                                 // lineNo
+  211,                                 // lineNo
   18,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo u_emlrtECI{ -1,     // nDims
-  212,                                 // lineNo
+  211,                                 // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo v_emlrtECI{ 1,      // nDims
-  214,                                 // lineNo
+  213,                                 // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo w_emlrtECI{ 2,      // nDims
-  214,                                 // lineNo
+  213,                                 // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtECInfo x_emlrtECI{ -1,     // nDims
-  214,                                 // lineNo
+  213,                                 // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo w_emlrtBCI{ 1,      // iFirst
-  1000,                                // iLast
-  249,                                 // lineNo
-  29,                                  // colNo
+  0,                                   // iLast
+  248,                                 // lineNo
+  27,                                  // colNo
   "F.factors(n).sk",                   // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1201,9 +1186,9 @@ static emlrtBCInfo w_emlrtBCI{ 1,      // iFirst
 };
 
 static emlrtBCInfo x_emlrtBCI{ 1,      // iFirst
-  1000,                                // iLast
-  255,                                 // lineNo
-  29,                                  // colNo
+  0,                                   // iLast
+  254,                                 // lineNo
+  27,                                  // colNo
   "F.factors(n).rd",                   // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1211,9 +1196,9 @@ static emlrtBCInfo x_emlrtBCI{ 1,      // iFirst
 };
 
 static emlrtBCInfo y_emlrtBCI{ 1,      // iFirst
-  1000,                                // iLast
-  261,                                 // lineNo
-  30,                                  // colNo
+  0,                                   // iLast
+  260,                                 // lineNo
+  28,                                  // colNo
   "F.factors(n).nbr",                  // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1221,16 +1206,16 @@ static emlrtBCInfo y_emlrtBCI{ 1,      // iFirst
 };
 
 static emlrtECInfo y_emlrtECI{ -1,     // nDims
-  261,                                 // lineNo
+  260,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo ab_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  267,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  266,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).T",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1238,16 +1223,16 @@ static emlrtBCInfo ab_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo ab_emlrtECI{ -1,    // nDims
-  267,                                 // lineNo
+  266,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo bb_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  273,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  272,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).E",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1255,16 +1240,16 @@ static emlrtBCInfo bb_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo bb_emlrtECI{ -1,    // nDims
-  273,                                 // lineNo
+  272,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo cb_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  279,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  278,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).F",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1272,16 +1257,16 @@ static emlrtBCInfo cb_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo cb_emlrtECI{ -1,    // nDims
-  279,                                 // lineNo
+  278,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo db_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  285,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  284,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).L",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1289,16 +1274,16 @@ static emlrtBCInfo db_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo db_emlrtECI{ -1,    // nDims
-  285,                                 // lineNo
+  284,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo eb_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  291,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  290,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).U",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1306,16 +1291,16 @@ static emlrtBCInfo eb_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo eb_emlrtECI{ -1,    // nDims
-  291,                                 // lineNo
+  290,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo fb_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  297,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  296,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).C",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1323,16 +1308,16 @@ static emlrtBCInfo fb_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo fb_emlrtECI{ -1,    // nDims
-  297,                                 // lineNo
+  296,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtBCInfo gb_emlrtBCI{ 1,     // iFirst
-  1000000,                             // iLast
-  303,                                 // lineNo
-  28,                                  // colNo
+  0,                                   // iLast
+  302,                                 // lineNo
+  26,                                  // colNo
   "F.factors(n).D",                    // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1340,13 +1325,13 @@ static emlrtBCInfo gb_emlrtBCI{ 1,     // iFirst
 };
 
 static emlrtECInfo gb_emlrtECI{ -1,    // nDims
-  303,                                 // lineNo
+  302,                                 // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtDCInfo o_emlrtDCI{ 308,    // lineNo
+static emlrtDCInfo o_emlrtDCI{ 307,    // lineNo
   19,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1355,7 +1340,7 @@ static emlrtDCInfo o_emlrtDCI{ 308,    // lineNo
 
 static emlrtBCInfo hb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  308,                                 // lineNo
+  307,                                 // lineNo
   19,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1363,7 +1348,7 @@ static emlrtBCInfo hb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo p_emlrtDCI{ 310,    // lineNo
+static emlrtDCInfo p_emlrtDCI{ 309,    // lineNo
   19,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1372,7 +1357,7 @@ static emlrtDCInfo p_emlrtDCI{ 310,    // lineNo
 
 static emlrtBCInfo ib_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  310,                                 // lineNo
+  309,                                 // lineNo
   19,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1382,7 +1367,7 @@ static emlrtBCInfo ib_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo jb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  310,                                 // lineNo
+  309,                                 // lineNo
   25,                                  // colNo
   "t.nodes(i).xi",                     // aName
   "srskelf_asym_new",                  // fName
@@ -1392,7 +1377,7 @@ static emlrtBCInfo jb_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo kb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  310,                                 // lineNo
+  309,                                 // lineNo
   27,                                  // colNo
   "t.nodes(i).xi",                     // aName
   "srskelf_asym_new",                  // fName
@@ -1402,7 +1387,7 @@ static emlrtBCInfo kb_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo lb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  327,                                 // lineNo
+  326,                                 // lineNo
   25,                                  // colNo
   "F.factors",                         // aName
   "srskelf_asym_new",                  // fName
@@ -1412,7 +1397,7 @@ static emlrtBCInfo lb_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo mb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  327,                                 // lineNo
+  326,                                 // lineNo
   27,                                  // colNo
   "F.factors",                         // aName
   "srskelf_asym_new",                  // fName
@@ -1446,21 +1431,21 @@ static emlrtRTEInfo n_emlrtRTEI{ 13,   // lineNo
   "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/toLogicalCheck.m"// pName
 };
 
-static emlrtDCInfo s_emlrtDCI{ 83,     // lineNo
+static emlrtDCInfo s_emlrtDCI{ 82,     // lineNo
   48,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtDCInfo t_emlrtDCI{ 83,     // lineNo
+static emlrtDCInfo t_emlrtDCI{ 82,     // lineNo
   48,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   4                                    // checkKind
 };
 
-static emlrtDCInfo u_emlrtDCI{ 105,    // lineNo
+static emlrtDCInfo u_emlrtDCI{ 104,    // lineNo
   30,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1469,7 +1454,7 @@ static emlrtDCInfo u_emlrtDCI{ 105,    // lineNo
 
 static emlrtBCInfo nb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  116,                                 // lineNo
+  115,                                 // lineNo
   15,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1477,7 +1462,7 @@ static emlrtBCInfo nb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo v_emlrtDCI{ 116,    // lineNo
+static emlrtDCInfo v_emlrtDCI{ 115,    // lineNo
   15,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1508,14 +1493,35 @@ static emlrtBCInfo ob_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo y_emlrtDCI{ 63,     // lineNo
+static emlrtDCInfo y_emlrtDCI{ 82,     // lineNo
+  40,                                  // colNo
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  1                                    // checkKind
+};
+
+static emlrtDCInfo ab_emlrtDCI{ 88,    // lineNo
+  3,                                   // colNo
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  1                                    // checkKind
+};
+
+static emlrtDCInfo bb_emlrtDCI{ 88,    // lineNo
+  3,                                   // colNo
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  4                                    // checkKind
+};
+
+static emlrtDCInfo cb_emlrtDCI{ 63,    // lineNo
   5,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtDCInfo ab_emlrtDCI{ 63,    // lineNo
+static emlrtDCInfo db_emlrtDCI{ 63,    // lineNo
   5,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1542,14 +1548,24 @@ static emlrtBCInfo qb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo bb_emlrtDCI{ 83,    // lineNo
-  40,                                  // colNo
+static emlrtBCInfo rb_emlrtBCI{ -1,    // iFirst
+  -1,                                  // iLast
+  98,                                  // lineNo
+  19,                                  // colNo
+  "t.lvp",                             // aName
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  0                                    // checkKind
+};
+
+static emlrtDCInfo eb_emlrtDCI{ 98,    // lineNo
+  19,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtBCInfo rb_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo sb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   68,                                  // lineNo
   30,                                  // colNo
@@ -1559,40 +1575,9 @@ static emlrtBCInfo rb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo cb_emlrtDCI{ 89,    // lineNo
-  3,                                   // colNo
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  1                                    // checkKind
-};
-
-static emlrtDCInfo db_emlrtDCI{ 89,    // lineNo
-  3,                                   // colNo
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  4                                    // checkKind
-};
-
-static emlrtBCInfo sb_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  99,                                  // lineNo
-  19,                                  // colNo
-  "t.lvp",                             // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtDCInfo eb_emlrtDCI{ 99,    // lineNo
-  19,                                  // colNo
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  1                                    // checkKind
-};
-
 static emlrtBCInfo tb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  103,                                 // lineNo
+  102,                                 // lineNo
   65,                                  // colNo
   "t.nodes(i).chld",                   // aName
   "srskelf_asym_new",                  // fName
@@ -1600,7 +1585,7 @@ static emlrtBCInfo tb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo fb_emlrtDCI{ 105,   // lineNo
+static emlrtDCInfo fb_emlrtDCI{ 104,   // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1609,7 +1594,7 @@ static emlrtDCInfo fb_emlrtDCI{ 105,   // lineNo
 
 static emlrtBCInfo ub_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  135,                                 // lineNo
+  134,                                 // lineNo
   19,                                  // colNo
   "t.lvp",                             // aName
   "srskelf_asym_new",                  // fName
@@ -1619,7 +1604,7 @@ static emlrtBCInfo ub_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo vb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  116,                                 // lineNo
+  115,                                 // lineNo
   7,                                   // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1627,7 +1612,7 @@ static emlrtBCInfo vb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo gb_emlrtDCI{ 116,   // lineNo
+static emlrtDCInfo gb_emlrtDCI{ 115,   // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1636,7 +1621,7 @@ static emlrtDCInfo gb_emlrtDCI{ 116,   // lineNo
 
 static emlrtBCInfo wb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  315,                                 // lineNo
+  314,                                 // lineNo
   11,                                  // colNo
   "F.lvp",                             // aName
   "srskelf_asym_new",                  // fName
@@ -1646,7 +1631,7 @@ static emlrtBCInfo wb_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo xb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  137,                                 // lineNo
+  136,                                 // lineNo
   22,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1654,7 +1639,7 @@ static emlrtBCInfo xb_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo hb_emlrtDCI{ 137,   // lineNo
+static emlrtDCInfo hb_emlrtDCI{ 136,   // lineNo
   22,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1663,7 +1648,7 @@ static emlrtDCInfo hb_emlrtDCI{ 137,   // lineNo
 
 static emlrtBCInfo yb_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  320,                                 // lineNo
+  319,                                 // lineNo
   19,                                  // colNo
   "pblk",                              // aName
   "srskelf_asym_new",                  // fName
@@ -1673,7 +1658,7 @@ static emlrtBCInfo yb_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo ac_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  320,                                 // lineNo
+  319,                                 // lineNo
   32,                                  // colNo
   "t.lvp",                             // aName
   "srskelf_asym_new",                  // fName
@@ -1683,7 +1668,7 @@ static emlrtBCInfo ac_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo bc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  320,                                 // lineNo
+  319,                                 // lineNo
   47,                                  // colNo
   "t.lvp",                             // aName
   "srskelf_asym_new",                  // fName
@@ -1693,7 +1678,7 @@ static emlrtBCInfo bc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo cc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  160,                                 // lineNo
+  159,                                 // lineNo
   24,                                  // colNo
   "t.nodes",                           // aName
   "srskelf_asym_new",                  // fName
@@ -1701,14 +1686,14 @@ static emlrtBCInfo cc_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo ib_emlrtDCI{ 160,   // lineNo
+static emlrtDCInfo ib_emlrtDCI{ 159,   // lineNo
   24,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtDCInfo jb_emlrtDCI{ 210,   // lineNo
+static emlrtDCInfo jb_emlrtDCI{ 209,   // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1717,7 +1702,7 @@ static emlrtDCInfo jb_emlrtDCI{ 210,   // lineNo
 
 static emlrtBCInfo dc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  210,                                 // lineNo
+  209,                                 // lineNo
   20,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1727,7 +1712,7 @@ static emlrtBCInfo dc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo ec_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  210,                                 // lineNo
+  209,                                 // lineNo
   39,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1737,7 +1722,7 @@ static emlrtBCInfo ec_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo fc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  210,                                 // lineNo
+  209,                                 // lineNo
   9,                                   // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1747,7 +1732,7 @@ static emlrtBCInfo fc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo gc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  211,                                 // lineNo
+  210,                                 // lineNo
   21,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1757,7 +1742,7 @@ static emlrtBCInfo gc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo hc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  211,                                 // lineNo
+  210,                                 // lineNo
   31,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1767,7 +1752,7 @@ static emlrtBCInfo hc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo ic_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  211,                                 // lineNo
+  210,                                 // lineNo
   11,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1777,7 +1762,7 @@ static emlrtBCInfo ic_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo jc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  212,                                 // lineNo
+  211,                                 // lineNo
   23,                                  // colNo
   "K2",                                // aName
   "srskelf_asym_new",                  // fName
@@ -1787,7 +1772,7 @@ static emlrtBCInfo jc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo kc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  212,                                 // lineNo
+  211,                                 // lineNo
   34,                                  // colNo
   "K2",                                // aName
   "srskelf_asym_new",                  // fName
@@ -1797,7 +1782,7 @@ static emlrtBCInfo kc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo lc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  212,                                 // lineNo
+  211,                                 // lineNo
   12,                                  // colNo
   "K2",                                // aName
   "srskelf_asym_new",                  // fName
@@ -1807,7 +1792,7 @@ static emlrtBCInfo lc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo mc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  214,                                 // lineNo
+  213,                                 // lineNo
   23,                                  // colNo
   "K3",                                // aName
   "srskelf_asym_new",                  // fName
@@ -1817,7 +1802,7 @@ static emlrtBCInfo mc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo nc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  214,                                 // lineNo
+  213,                                 // lineNo
   43,                                  // colNo
   "K3",                                // aName
   "srskelf_asym_new",                  // fName
@@ -1827,7 +1812,7 @@ static emlrtBCInfo nc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo oc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  214,                                 // lineNo
+  213,                                 // lineNo
   12,                                  // colNo
   "K3",                                // aName
   "srskelf_asym_new",                  // fName
@@ -1837,7 +1822,7 @@ static emlrtBCInfo oc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo pc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  227,                                 // lineNo
+  226,                                 // lineNo
   20,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1847,7 +1832,7 @@ static emlrtBCInfo pc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo qc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  235,                                 // lineNo
+  234,                                 // lineNo
   22,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1857,7 +1842,7 @@ static emlrtBCInfo qc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo rc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  235,                                 // lineNo
+  234,                                 // lineNo
   25,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1867,7 +1852,7 @@ static emlrtBCInfo rc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo sc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  227,                                 // lineNo
+  226,                                 // lineNo
   23,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1877,7 +1862,7 @@ static emlrtBCInfo sc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo tc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  236,                                 // lineNo
+  235,                                 // lineNo
   15,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1887,7 +1872,7 @@ static emlrtBCInfo tc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo uc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  236,                                 // lineNo
+  235,                                 // lineNo
   18,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
@@ -1897,9 +1882,9 @@ static emlrtBCInfo uc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo vc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  249,                                 // lineNo
-  46,                                  // colNo
-  "slf",                               // aName
+  228,                                 // lineNo
+  15,                                  // colNo
+  "K",                                 // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
@@ -1907,9 +1892,9 @@ static emlrtBCInfo vc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo wc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  255,                                 // lineNo
-  46,                                  // colNo
-  "slf",                               // aName
+  228,                                 // lineNo
+  18,                                  // colNo
+  "K",                                 // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
@@ -1917,9 +1902,9 @@ static emlrtBCInfo wc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo xc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  255,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
+  236,                                 // lineNo
+  20,                                  // colNo
+  "K",                                 // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
@@ -1927,8 +1912,8 @@ static emlrtBCInfo xc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo yc_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  229,                                 // lineNo
-  15,                                  // colNo
+  236,                                 // lineNo
+  17,                                  // colNo
   "K",                                 // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
@@ -1937,9 +1922,9 @@ static emlrtBCInfo yc_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo ad_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  229,                                 // lineNo
+  237,                                 // lineNo
   18,                                  // colNo
-  "K",                                 // aName
+  "K2",                                // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
@@ -1947,9 +1932,9 @@ static emlrtBCInfo ad_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo bd_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  261,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
+  230,                                 // lineNo
+  18,                                  // colNo
+  "K2",                                // aName
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
@@ -1957,107 +1942,7 @@ static emlrtBCInfo bd_emlrtBCI{ -1,    // iFirst
 
 static emlrtBCInfo cd_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  249,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo dd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  267,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo ed_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  237,                                 // lineNo
-  20,                                  // colNo
-  "K",                                 // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo fd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  273,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo gd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  237,                                 // lineNo
-  17,                                  // colNo
-  "K",                                 // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo hd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  279,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo id_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
   238,                                 // lineNo
-  18,                                  // colNo
-  "K2",                                // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo jd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  285,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo kd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  291,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo ld_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  231,                                 // lineNo
-  18,                                  // colNo
-  "K2",                                // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo md_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  239,                                 // lineNo
   18,                                  // colNo
   "K3",                                // aName
   "srskelf_asym_new",                  // fName
@@ -2065,29 +1950,9 @@ static emlrtBCInfo md_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo nd_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo dd_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  297,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo od_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  303,                                 // lineNo
-  11,                                  // colNo
-  "F.factors",                         // aName
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo pd_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  310,                                 // lineNo
+  309,                                 // lineNo
   44,                                  // colNo
   "slf",                               // aName
   "srskelf_asym_new",                  // fName
@@ -2095,9 +1960,9 @@ static emlrtBCInfo pd_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo qd_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo ed_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  313,                                 // lineNo
+  312,                                 // lineNo
   15,                                  // colNo
   "slf",                               // aName
   "srskelf_asym_new",                  // fName
@@ -2105,16 +1970,16 @@ static emlrtBCInfo qd_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo kb_emlrtDCI{ 313,   // lineNo
+static emlrtDCInfo kb_emlrtDCI{ 312,   // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtBCInfo rd_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo fd_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
-  313,                                 // lineNo
+  312,                                 // lineNo
   11,                                  // colNo
   "rem",                               // aName
   "srskelf_asym_new",                  // fName
@@ -2122,7 +1987,7 @@ static emlrtBCInfo rd_emlrtBCI{ 1,     // iFirst
   3                                    // checkKind
 };
 
-static emlrtBCInfo sd_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo gd_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   67,                                  // lineNo
   29,                                  // colNo
@@ -2209,7 +2074,7 @@ static emlrtDCInfo rb_emlrtDCI{ 10,    // lineNo
   1                                    // checkKind
 };
 
-static emlrtBCInfo qf_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo ef_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
   10,                                  // lineNo
   34,                                  // colNo
@@ -2226,7 +2091,7 @@ static emlrtDCInfo sb_emlrtDCI{ 24,    // lineNo
   1                                    // checkKind
 };
 
-static emlrtBCInfo rf_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo ff_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
   24,                                  // lineNo
   10,                                  // colNo
@@ -2236,7 +2101,7 @@ static emlrtBCInfo rf_emlrtBCI{ 1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo sf_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo gf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   28,                                  // lineNo
   11,                                  // colNo
@@ -2295,7 +2160,7 @@ static emlrtDCInfo tb_emlrtDCI{ 10,    // lineNo
   1                                    // checkKind
 };
 
-static emlrtBCInfo tf_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo hf_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
   10,                                  // lineNo
   44,                                  // colNo
@@ -2312,7 +2177,7 @@ static emlrtDCInfo ub_emlrtDCI{ 12,    // lineNo
   1                                    // checkKind
 };
 
-static emlrtBCInfo uf_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo if_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
   12,                                  // lineNo
   7,                                   // colNo
@@ -2322,7 +2187,7 @@ static emlrtBCInfo uf_emlrtBCI{ 1,     // iFirst
   3                                    // checkKind
 };
 
-static emlrtBCInfo ag_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo nf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   20,                                  // lineNo
   11,                                  // colNo
@@ -2332,7 +2197,7 @@ static emlrtBCInfo ag_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo bg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo of_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   21,                                  // lineNo
   11,                                  // colNo
@@ -2342,7 +2207,7 @@ static emlrtBCInfo bg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo cg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo pf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   22,                                  // lineNo
   13,                                  // colNo
@@ -2352,7 +2217,7 @@ static emlrtBCInfo cg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo dg_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo qf_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
   24,                                  // lineNo
   9,                                   // colNo
@@ -2362,7 +2227,7 @@ static emlrtBCInfo dg_emlrtBCI{ 1,     // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo fg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo sf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   14,                                  // lineNo
   12,                                  // colNo
@@ -2372,7 +2237,7 @@ static emlrtBCInfo fg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo gg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo tf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   14,                                  // lineNo
   21,                                  // colNo
@@ -2382,7 +2247,7 @@ static emlrtBCInfo gg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo hg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo uf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   14,                                  // lineNo
   1,                                   // colNo
@@ -2392,7 +2257,7 @@ static emlrtBCInfo hg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo ig_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo vf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   15,                                  // lineNo
   15,                                  // colNo
@@ -2402,7 +2267,7 @@ static emlrtBCInfo ig_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo jg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo wf_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   15,                                  // lineNo
   1,                                   // colNo
@@ -2412,7 +2277,7 @@ static emlrtBCInfo jg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo kg_emlrtBCI{ 1,     // iFirst
+static emlrtBCInfo xf_emlrtBCI{ 1,     // iFirst
   8000,                                // iLast
   10,                                  // lineNo
   51,                                  // colNo
@@ -2429,23 +2294,23 @@ static emlrtDCInfo wb_emlrtDCI{ 10,    // lineNo
   1                                    // checkKind
 };
 
-static emlrtDCInfo yb_emlrtDCI{ 364,   // lineNo
+static emlrtDCInfo yb_emlrtDCI{ 363,   // lineNo
   25,                                  // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   4                                    // checkKind
 };
 
-static emlrtDCInfo ac_emlrtDCI{ 364,   // lineNo
+static emlrtDCInfo ac_emlrtDCI{ 363,   // lineNo
   25,                                  // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtBCInfo mg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo ag_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  370,                                 // lineNo
+  369,                                 // lineNo
   24,                                  // colNo
   "update_list",                       // aName
   "srskelf_asym_new/spget",            // fName
@@ -2453,19 +2318,19 @@ static emlrtBCInfo mg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo ng_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo bg_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   373,                                 // lineNo
-  24,                                  // colNo
+  25,                                  // colNo
   "F.factors",                         // aName
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
 };
 
-static emlrtBCInfo og_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo cg_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  459,                                 // lineNo
+  458,                                 // lineNo
   36,                                  // colNo
   "elements_to_find",                  // aName
   "find_locations_t",                  // fName
@@ -2473,44 +2338,44 @@ static emlrtBCInfo og_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo bc_emlrtDCI{ 363,   // lineNo
+static emlrtDCInfo bc_emlrtDCI{ 362,   // lineNo
   15,                                  // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtDCInfo cc_emlrtDCI{ 363,   // lineNo
+static emlrtDCInfo cc_emlrtDCI{ 362,   // lineNo
   15,                                  // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   4                                    // checkKind
 };
 
-static emlrtDCInfo dc_emlrtDCI{ 363,   // lineNo
+static emlrtDCInfo dc_emlrtDCI{ 362,   // lineNo
   18,                                  // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtDCInfo ec_emlrtDCI{ 363,   // lineNo
+static emlrtDCInfo ec_emlrtDCI{ 362,   // lineNo
   18,                                  // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   4                                    // checkKind
 };
 
-static emlrtDCInfo fc_emlrtDCI{ 363,   // lineNo
+static emlrtDCInfo fc_emlrtDCI{ 362,   // lineNo
   5,                                   // colNo
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   1                                    // checkKind
 };
 
-static emlrtBCInfo pg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo dg_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  367,                                 // lineNo
+  366,                                 // lineNo
   31,                                  // colNo
   "lookup_list",                       // aName
   "srskelf_asym_new/spget",            // fName
@@ -2518,171 +2383,11 @@ static emlrtBCInfo pg_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo qg_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo eg_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  368,                                 // lineNo
+  367,                                 // lineNo
   31,                                  // colNo
   "update_list",                       // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo rg_emlrtBCI{ 1,     // iFirst
-  2000,                                // iLast
-  465,                                 // lineNo
-  18,                                  // colNo
-  "locs",                              // aName
-  "find_locations_t",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  3                                    // checkKind
-};
-
-static emlrtBCInfo sg_emlrtBCI{ 1,     // iFirst
-  2000,                                // iLast
-  413,                                 // lineNo
-  21,                                  // colNo
-  "idxI",                              // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo tg_emlrtBCI{ 1,     // iFirst
-  2000,                                // iLast
-  414,                                 // lineNo
-  21,                                  // colNo
-  "idxJ",                              // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo ug_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  435,                                 // lineNo
-  27,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo vg_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  435,                                 // lineNo
-  32,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo wg_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  435,                                 // lineNo
-  11,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo xg_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  435,                                 // lineNo
-  17,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo hr_emlrtBCI{ 1,     // iFirst
-  2000,                                // iLast
-  387,                                 // lineNo
-  21,                                  // colNo
-  "idxI",                              // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo ir_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  401,                                 // lineNo
-  29,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo jr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  403,                                 // lineNo
-  29,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo kr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  401,                                 // lineNo
-  34,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo lr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  403,                                 // lineNo
-  34,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo mr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  401,                                 // lineNo
-  13,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo nr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  403,                                 // lineNo
-  13,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo or_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  401,                                 // lineNo
-  19,                                  // colNo
-  "A",                                 // aName
-  "srskelf_asym_new/spget",            // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo pr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  403,                                 // lineNo
-  19,                                  // colNo
-  "A",                                 // aName
   "srskelf_asym_new/spget",            // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
   0                                    // checkKind
@@ -2694,9 +2399,9 @@ static emlrtRTEInfo dc_emlrtRTEI{ 14,  // lineNo
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elfun/log.m"// pName
 };
 
-static emlrtBCInfo qr_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo nq_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  444,                                 // lineNo
+  443,                                 // lineNo
   25,                                  // colNo
   "nodes",                             // aName
   "srskelf_asym_new/spget/get_update_list",// fName
@@ -2704,7 +2409,31 @@ static emlrtBCInfo qr_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtBCInfo rr_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo oq_emlrtBCI{ -1,    // iFirst
+  -1,                                  // iLast
+  442,                                 // lineNo
+  19,                                  // colNo
+  "update_list",                       // aName
+  "srskelf_asym_new/spget/get_update_list",// fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  0                                    // checkKind
+};
+
+static emlrtDCInfo hc_emlrtDCI{ 442,   // lineNo
+  19,                                  // colNo
+  "srskelf_asym_new/spget/get_update_list",// fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  1                                    // checkKind
+};
+
+static emlrtDCInfo ic_emlrtDCI{ 443,   // lineNo
+  19,                                  // colNo
+  "srskelf_asym_new/spget/get_update_list",// fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
+  1                                    // checkKind
+};
+
+static emlrtBCInfo pq_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
   443,                                 // lineNo
   19,                                  // colNo
@@ -2714,33 +2443,9 @@ static emlrtBCInfo rr_emlrtBCI{ -1,    // iFirst
   0                                    // checkKind
 };
 
-static emlrtDCInfo hc_emlrtDCI{ 443,   // lineNo
-  19,                                  // colNo
-  "srskelf_asym_new/spget/get_update_list",// fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  1                                    // checkKind
-};
-
-static emlrtDCInfo ic_emlrtDCI{ 444,   // lineNo
-  19,                                  // colNo
-  "srskelf_asym_new/spget/get_update_list",// fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  1                                    // checkKind
-};
-
-static emlrtBCInfo sr_emlrtBCI{ -1,    // iFirst
+static emlrtBCInfo qq_emlrtBCI{ -1,    // iFirst
   -1,                                  // iLast
-  444,                                 // lineNo
-  19,                                  // colNo
-  "update_list",                       // aName
-  "srskelf_asym_new/spget/get_update_list",// fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m",// pName
-  0                                    // checkKind
-};
-
-static emlrtBCInfo tr_emlrtBCI{ -1,    // iFirst
-  -1,                                  // iLast
-  446,                                 // lineNo
+  445,                                 // lineNo
   60,                                  // colNo
   "nodes(node_idx).chld",              // aName
   "srskelf_asym_new/spget/get_update_list",// fName
@@ -2760,79 +2465,79 @@ static emlrtRTEInfo lc_emlrtRTEI{ 63,  // lineNo
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo mc_emlrtRTEI{ 83,  // lineNo
+static emlrtRTEInfo mc_emlrtRTEI{ 82,  // lineNo
   3,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo nc_emlrtRTEI{ 89,  // lineNo
+static emlrtRTEInfo nc_emlrtRTEI{ 88,  // lineNo
   3,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo oc_emlrtRTEI{ 105, // lineNo
+static emlrtRTEInfo oc_emlrtRTEI{ 104, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo pc_emlrtRTEI{ 116, // lineNo
+static emlrtRTEInfo pc_emlrtRTEI{ 115, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo rc_emlrtRTEI{ 132, // lineNo
+static emlrtRTEInfo rc_emlrtRTEI{ 131, // lineNo
   5,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo sc_emlrtRTEI{ 137, // lineNo
+static emlrtRTEInfo sc_emlrtRTEI{ 136, // lineNo
   14,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo tc_emlrtRTEI{ 141, // lineNo
+static emlrtRTEInfo tc_emlrtRTEI{ 140, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo uc_emlrtRTEI{ 145, // lineNo
+static emlrtRTEInfo uc_emlrtRTEI{ 144, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo vc_emlrtRTEI{ 160, // lineNo
+static emlrtRTEInfo vc_emlrtRTEI{ 159, // lineNo
   16,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo wc_emlrtRTEI{ 160, // lineNo
+static emlrtRTEInfo wc_emlrtRTEI{ 159, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo xc_emlrtRTEI{ 155, // lineNo
+static emlrtRTEInfo xc_emlrtRTEI{ 154, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo yc_emlrtRTEI{ 165, // lineNo
+static emlrtRTEInfo yc_emlrtRTEI{ 164, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ad_emlrtRTEI{ 178, // lineNo
+static emlrtRTEInfo ad_emlrtRTEI{ 177, // lineNo
   19,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
@@ -2844,211 +2549,211 @@ static emlrtRTEInfo bd_emlrtRTEI{ 308, // lineNo
   "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/cat.m"// pName
 };
 
-static emlrtRTEInfo cd_emlrtRTEI{ 178, // lineNo
+static emlrtRTEInfo cd_emlrtRTEI{ 177, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo dd_emlrtRTEI{ 183, // lineNo
+static emlrtRTEInfo dd_emlrtRTEI{ 182, // lineNo
   21,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ed_emlrtRTEI{ 183, // lineNo
+static emlrtRTEInfo ed_emlrtRTEI{ 182, // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo fd_emlrtRTEI{ 188, // lineNo
+static emlrtRTEInfo fd_emlrtRTEI{ 187, // lineNo
   10,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo gd_emlrtRTEI{ 186, // lineNo
+static emlrtRTEInfo gd_emlrtRTEI{ 185, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo hd_emlrtRTEI{ 204, // lineNo
+static emlrtRTEInfo hd_emlrtRTEI{ 203, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo id_emlrtRTEI{ 210, // lineNo
+static emlrtRTEInfo id_emlrtRTEI{ 209, // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo jd_emlrtRTEI{ 210, // lineNo
+static emlrtRTEInfo jd_emlrtRTEI{ 209, // lineNo
   39,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo kd_emlrtRTEI{ 210, // lineNo
+static emlrtRTEInfo kd_emlrtRTEI{ 209, // lineNo
   37,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ld_emlrtRTEI{ 210, // lineNo
+static emlrtRTEInfo ld_emlrtRTEI{ 209, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo md_emlrtRTEI{ 210, // lineNo
+static emlrtRTEInfo md_emlrtRTEI{ 209, // lineNo
   18,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo nd_emlrtRTEI{ 211, // lineNo
+static emlrtRTEInfo nd_emlrtRTEI{ 210, // lineNo
   31,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo od_emlrtRTEI{ 211, // lineNo
+static emlrtRTEInfo od_emlrtRTEI{ 210, // lineNo
   27,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo pd_emlrtRTEI{ 211, // lineNo
+static emlrtRTEInfo pd_emlrtRTEI{ 210, // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo qd_emlrtRTEI{ 211, // lineNo
+static emlrtRTEInfo qd_emlrtRTEI{ 210, // lineNo
   17,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo rd_emlrtRTEI{ 212, // lineNo
+static emlrtRTEInfo rd_emlrtRTEI{ 211, // lineNo
   34,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo sd_emlrtRTEI{ 212, // lineNo
+static emlrtRTEInfo sd_emlrtRTEI{ 211, // lineNo
   29,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo td_emlrtRTEI{ 212, // lineNo
+static emlrtRTEInfo td_emlrtRTEI{ 211, // lineNo
   12,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ud_emlrtRTEI{ 212, // lineNo
+static emlrtRTEInfo ud_emlrtRTEI{ 211, // lineNo
   18,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo vd_emlrtRTEI{ 214, // lineNo
+static emlrtRTEInfo vd_emlrtRTEI{ 213, // lineNo
   43,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo wd_emlrtRTEI{ 214, // lineNo
+static emlrtRTEInfo wd_emlrtRTEI{ 213, // lineNo
   40,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo xd_emlrtRTEI{ 214, // lineNo
+static emlrtRTEInfo xd_emlrtRTEI{ 213, // lineNo
   12,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo yd_emlrtRTEI{ 214, // lineNo
+static emlrtRTEInfo yd_emlrtRTEI{ 213, // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ae_emlrtRTEI{ 218, // lineNo
+static emlrtRTEInfo ae_emlrtRTEI{ 217, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo be_emlrtRTEI{ 219, // lineNo
+static emlrtRTEInfo be_emlrtRTEI{ 218, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ce_emlrtRTEI{ 220, // lineNo
+static emlrtRTEInfo ce_emlrtRTEI{ 219, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo de_emlrtRTEI{ 221, // lineNo
+static emlrtRTEInfo de_emlrtRTEI{ 220, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ee_emlrtRTEI{ 222, // lineNo
+static emlrtRTEInfo ee_emlrtRTEI{ 221, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo fe_emlrtRTEI{ 223, // lineNo
+static emlrtRTEInfo fe_emlrtRTEI{ 222, // lineNo
   7,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ge_emlrtRTEI{ 235, // lineNo
+static emlrtRTEInfo ge_emlrtRTEI{ 234, // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo he_emlrtRTEI{ 236, // lineNo
+static emlrtRTEInfo he_emlrtRTEI{ 235, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ie_emlrtRTEI{ 237, // lineNo
+static emlrtRTEInfo ie_emlrtRTEI{ 236, // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo je_emlrtRTEI{ 237, // lineNo
+static emlrtRTEInfo je_emlrtRTEI{ 236, // lineNo
   15,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ke_emlrtRTEI{ 238, // lineNo
+static emlrtRTEInfo ke_emlrtRTEI{ 237, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo le_emlrtRTEI{ 239, // lineNo
+static emlrtRTEInfo le_emlrtRTEI{ 238, // lineNo
   15,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
@@ -3060,445 +2765,434 @@ static emlrtRTEInfo me_emlrtRTEI{ 12,  // lineNo
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/chol.m"// pName
 };
 
-static emlrtRTEInfo ne_emlrtRTEI{ 228, // lineNo
+static emlrtRTEInfo ne_emlrtRTEI{ 227, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo oe_emlrtRTEI{ 229, // lineNo
+static emlrtRTEInfo oe_emlrtRTEI{ 228, // lineNo
   22,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo pe_emlrtRTEI{ 229, // lineNo
+static emlrtRTEInfo pe_emlrtRTEI{ 228, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo qe_emlrtRTEI{ 230, // lineNo
+static emlrtRTEInfo qe_emlrtRTEI{ 229, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo re_emlrtRTEI{ 231, // lineNo
+static emlrtRTEInfo re_emlrtRTEI{ 230, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo se_emlrtRTEI{ 232, // lineNo
+static emlrtRTEInfo se_emlrtRTEI{ 231, // lineNo
   9,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo te_emlrtRTEI{ 249, // lineNo
-  42,                                  // colNo
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
-};
-
-static emlrtRTEInfo ue_emlrtRTEI{ 310, // lineNo
+static emlrtRTEInfo te_emlrtRTEI{ 309, // lineNo
   40,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ve_emlrtRTEI{ 313, // lineNo
+static emlrtRTEInfo ue_emlrtRTEI{ 312, // lineNo
   11,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo we_emlrtRTEI{ 327, // lineNo
+static emlrtRTEInfo ve_emlrtRTEI{ 326, // lineNo
   3,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ug_emlrtRTEI{ 76,  // lineNo
+static emlrtRTEInfo tg_emlrtRTEI{ 76,  // lineNo
   9,                                   // colNo
   "eml_mtimes_helper",                 // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/eml_mtimes_helper.m"// pName
 };
 
-static emlrtRTEInfo vg_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo ug_emlrtRTEI{ 10,  // lineNo
   34,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo wg_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo vg_emlrtRTEI{ 10,  // lineNo
   20,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo xg_emlrtRTEI{ 11,  // lineNo
+static emlrtRTEInfo wg_emlrtRTEI{ 11,  // lineNo
   20,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo yg_emlrtRTEI{ 12,  // lineNo
+static emlrtRTEInfo xg_emlrtRTEI{ 12,  // lineNo
   20,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo ah_emlrtRTEI{ 13,  // lineNo
+static emlrtRTEInfo yg_emlrtRTEI{ 13,  // lineNo
   11,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo bh_emlrtRTEI{ 13,  // lineNo
+static emlrtRTEInfo ah_emlrtRTEI{ 13,  // lineNo
   19,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo ch_emlrtRTEI{ 13,  // lineNo
+static emlrtRTEInfo bh_emlrtRTEI{ 13,  // lineNo
   27,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo dh_emlrtRTEI{ 14,  // lineNo
+static emlrtRTEInfo ch_emlrtRTEI{ 14,  // lineNo
   1,                                   // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo fh_emlrtRTEI{ 15,  // lineNo
+static emlrtRTEInfo eh_emlrtRTEI{ 15,  // lineNo
+  17,                                  // colNo
+  "pxyfun_lap_neumann",                // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
+};
+
+static emlrtRTEInfo fh_emlrtRTEI{ 16,  // lineNo
   17,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
 static emlrtRTEInfo gh_emlrtRTEI{ 16,  // lineNo
-  17,                                  // colNo
-  "pxyfun_lap_neumann",                // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
-};
-
-static emlrtRTEInfo hh_emlrtRTEI{ 16,  // lineNo
   9,                                   // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo ih_emlrtRTEI{ 17,  // lineNo
+static emlrtRTEInfo hh_emlrtRTEI{ 17,  // lineNo
   17,                                  // colNo
+  "pxyfun_lap_neumann",                // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
+};
+
+static emlrtRTEInfo ih_emlrtRTEI{ 18,  // lineNo
+  29,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
 static emlrtRTEInfo jh_emlrtRTEI{ 18,  // lineNo
-  29,                                  // colNo
-  "pxyfun_lap_neumann",                // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
-};
-
-static emlrtRTEInfo kh_emlrtRTEI{ 18,  // lineNo
   23,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo lh_emlrtRTEI{ 19,  // lineNo
+static emlrtRTEInfo kh_emlrtRTEI{ 19,  // lineNo
   29,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo mh_emlrtRTEI{ 20,  // lineNo
+static emlrtRTEInfo lh_emlrtRTEI{ 20,  // lineNo
   29,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo nh_emlrtRTEI{ 21,  // lineNo
+static emlrtRTEInfo mh_emlrtRTEI{ 21,  // lineNo
   29,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo ph_emlrtRTEI{ 23,  // lineNo
+static emlrtRTEInfo oh_emlrtRTEI{ 23,  // lineNo
   1,                                   // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo rh_emlrtRTEI{ 27,  // lineNo
+static emlrtRTEInfo qh_emlrtRTEI{ 27,  // lineNo
   21,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo sh_emlrtRTEI{ 27,  // lineNo
+static emlrtRTEInfo rh_emlrtRTEI{ 27,  // lineNo
   29,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo th_emlrtRTEI{ 27,  // lineNo
+static emlrtRTEInfo sh_emlrtRTEI{ 27,  // lineNo
   1,                                   // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo uh_emlrtRTEI{ 28,  // lineNo
+static emlrtRTEInfo th_emlrtRTEI{ 28,  // lineNo
   11,                                  // colNo
   "pxyfun_lap_neumann",                // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym1/pxyfun_lap_neumann.m"// pName
 };
 
-static emlrtRTEInfo vh_emlrtRTEI{ 44,  // lineNo
+static emlrtRTEInfo uh_emlrtRTEI{ 44,  // lineNo
   20,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo wh_emlrtRTEI{ 41,  // lineNo
+static emlrtRTEInfo vh_emlrtRTEI{ 41,  // lineNo
   35,                                  // colNo
   "ndgrid",                            // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/ndgrid.m"// pName
 };
 
-static emlrtRTEInfo xh_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo wh_emlrtRTEI{ 10,  // lineNo
   44,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo yh_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo xh_emlrtRTEI{ 10,  // lineNo
   40,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ai_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo yh_emlrtRTEI{ 10,  // lineNo
   47,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo bi_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo ai_emlrtRTEI{ 10,  // lineNo
   54,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ci_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo bi_emlrtRTEI{ 10,  // lineNo
   63,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo di_emlrtRTEI{ 11,  // lineNo
+static emlrtRTEInfo ci_emlrtRTEI{ 11,  // lineNo
   19,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ei_emlrtRTEI{ 76,  // lineNo
+static emlrtRTEInfo di_emlrtRTEI{ 76,  // lineNo
   13,                                  // colNo
   "eml_mtimes_helper",                 // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/eml_mtimes_helper.m"// pName
 };
 
-static emlrtRTEInfo fi_emlrtRTEI{ 37,  // lineNo
+static emlrtRTEInfo ei_emlrtRTEI{ 37,  // lineNo
   6,                                   // colNo
   "sort",                              // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sort.m"// pName
 };
 
-static emlrtRTEInfo gi_emlrtRTEI{ 38,  // lineNo
+static emlrtRTEInfo fi_emlrtRTEI{ 38,  // lineNo
   5,                                   // colNo
   "sort",                              // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sort.m"// pName
 };
 
-static emlrtRTEInfo hi_emlrtRTEI{ 12,  // lineNo
+static emlrtRTEInfo gi_emlrtRTEI{ 12,  // lineNo
   7,                                   // colNo
   "spget_quadcorr",                    // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m"// pName
 };
 
-static emlrtRTEInfo ii_emlrtRTEI{ 12,  // lineNo
+static emlrtRTEInfo hi_emlrtRTEI{ 12,  // lineNo
   8,                                   // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ji_emlrtRTEI{ 16,  // lineNo
+static emlrtRTEInfo ii_emlrtRTEI{ 16,  // lineNo
   5,                                   // colNo
   "spget_quadcorr",                    // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m"// pName
 };
 
-static emlrtRTEInfo ki_emlrtRTEI{ 37,  // lineNo
+static emlrtRTEInfo ji_emlrtRTEI{ 37,  // lineNo
   15,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo li_emlrtRTEI{ 24,  // lineNo
+static emlrtRTEInfo ki_emlrtRTEI{ 24,  // lineNo
   14,                                  // colNo
   "spget_quadcorr",                    // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m"// pName
 };
 
-static emlrtRTEInfo ni_emlrtRTEI{ 13,  // lineNo
+static emlrtRTEInfo mi_emlrtRTEI{ 13,  // lineNo
   1,                                   // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo oi_emlrtRTEI{ 14,  // lineNo
+static emlrtRTEInfo ni_emlrtRTEI{ 14,  // lineNo
   10,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo qi_emlrtRTEI{ 15,  // lineNo
+static emlrtRTEInfo pi_emlrtRTEI{ 15,  // lineNo
   13,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ri_emlrtRTEI{ 16,  // lineNo
+static emlrtRTEInfo qi_emlrtRTEI{ 16,  // lineNo
   32,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo si_emlrtRTEI{ 16,  // lineNo
+static emlrtRTEInfo ri_emlrtRTEI{ 16,  // lineNo
   9,                                   // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ti_emlrtRTEI{ 18,  // lineNo
+static emlrtRTEInfo si_emlrtRTEI{ 18,  // lineNo
   19,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo ui_emlrtRTEI{ 18,  // lineNo
+static emlrtRTEInfo ti_emlrtRTEI{ 18,  // lineNo
   35,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo vi_emlrtRTEI{ 19,  // lineNo
+static emlrtRTEInfo ui_emlrtRTEI{ 19,  // lineNo
   26,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo xi_emlrtRTEI{ 19,  // lineNo
+static emlrtRTEInfo wi_emlrtRTEI{ 19,  // lineNo
   19,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo wj_emlrtRTEI{ 10,  // lineNo
+static emlrtRTEInfo vj_emlrtRTEI{ 10,  // lineNo
   51,                                  // colNo
   "Afun_lap_te",                       // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/Afun_lap_te.m"// pName
 };
 
-static emlrtRTEInfo xj_emlrtRTEI{ 32,  // lineNo
+static emlrtRTEInfo wj_emlrtRTEI{ 32,  // lineNo
   5,                                   // colNo
   "find",                              // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m"// pName
 };
 
-static emlrtRTEInfo yj_emlrtRTEI{ 88,  // lineNo
+static emlrtRTEInfo xj_emlrtRTEI{ 88,  // lineNo
   13,                                  // colNo
   "eml_mtimes_helper",                 // fName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/ops/eml_mtimes_helper.m"// pName
 };
 
-static emlrtRTEInfo bk_emlrtRTEI{ 363, // lineNo
+static emlrtRTEInfo ak_emlrtRTEI{ 362, // lineNo
+  5,                                   // colNo
+  "srskelf_asym_new",                  // fName
+  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
+};
+
+static emlrtRTEInfo bk_emlrtRTEI{ 365, // lineNo
   5,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
 static emlrtRTEInfo ck_emlrtRTEI{ 366, // lineNo
-  5,                                   // colNo
-  "srskelf_asym_new",                  // fName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
-};
-
-static emlrtRTEInfo dk_emlrtRTEI{ 367, // lineNo
   31,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo ek_emlrtRTEI{ 367, // lineNo
+static emlrtRTEInfo dk_emlrtRTEI{ 366, // lineNo
   5,                                   // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo fk_emlrtRTEI{ 334, // lineNo
+static emlrtRTEInfo ek_emlrtRTEI{ 333, // lineNo
   16,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo to_emlrtRTEI{ 444, // lineNo
+static emlrtRTEInfo so_emlrtRTEI{ 443, // lineNo
   19,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRTEInfo jp_emlrtRTEI{ 206, // lineNo
+static emlrtRTEInfo ip_emlrtRTEI{ 205, // lineNo
   14,                                  // colNo
   "srskelf_asym_new",                  // fName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pName
 };
 
-static emlrtRSInfo er_emlrtRSI{ 461,   // lineNo
-  "find_locations_t",                  // fcnName
-  "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
-};
-
-static emlrtRSInfo fr_emlrtRSI{ 27,    // lineNo
+static emlrtRSInfo br_emlrtRSI{ 27,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo gr_emlrtRSI{ 31,    // lineNo
+static emlrtRSInfo cr_emlrtRSI{ 31,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo jr_emlrtRSI{ 32,    // lineNo
+static emlrtRSInfo fr_emlrtRSI{ 32,    // lineNo
   "srskelf_asym_new",                  // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new/srskelf_asym_new.m"// pathName
 };
 
-static emlrtRSInfo mr_emlrtRSI{ 69,    // lineNo
+static emlrtRSInfo ir_emlrtRSI{ 69,    // lineNo
   "fprintf",                           // fcnName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/iofun/fprintf.m"// pathName
 };
 
-static emlrtRSInfo nr_emlrtRSI{ 68,    // lineNo
+static emlrtRSInfo jr_emlrtRSI{ 68,    // lineNo
   "fprintf",                           // fcnName
   "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/iofun/fprintf.m"// pathName
 };
 
-static emlrtRSInfo vr_emlrtRSI{ 24,    // lineNo
+static emlrtRSInfo rr_emlrtRSI{ 24,    // lineNo
   "spget_quadcorr",                    // fcnName
   "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/spget_quadcorr.m"// pathName
 };
@@ -3506,6 +3200,14 @@ static emlrtRSInfo vr_emlrtRSI{ 24,    // lineNo
 // Function Declarations
 static const mxArray *b_emlrt_marshallOut(const emlrtStack &sp, const char_T u
   [28]);
+static void b_spget(const emlrtStack &sp, const coder::f_captured_var &slf,
+                    const coder::c_captured_var &nslf, const coder::
+                    f_captured_var &lst, const coder::c_captured_var &nlst,
+                    const coder::c_captured_var &nbox, const coder::
+                    b_captured_var &t, const coder::c_captured_var &i, const
+                    coder::e_captured_var &lookup_list, const coder::
+                    d_captured_var &F, const coder::captured_var &opts, coder::
+                    array<real_T, 2U> &A);
 static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
   [24000], const real_T opts_area[8000], const real_T opts_nu[24000], const
   real_T opts_P[8000], const real_T opts_contrast[8000], real_T opts_wuse, const
@@ -3517,23 +3219,6 @@ static void binary_expand_op(const emlrtStack &sp, coder::array<real_T, 2U> &in1
 static void binary_expand_op_1(const emlrtStack &sp, coder::array<real_T, 2U>
   &in1, const coder::array<real_T, 2U> &in2, const coder::array<real_T, 1U> &in3,
   const coder::array<real_T, 2U> &in4);
-static real_T binary_search_t(const emlrtStack &sp, const real_T arr_[2000],
-  real_T target_);
-static void c_spget(srskelf_asym_newStackData *SD, const emlrtStack &sp, const
-                    coder::f_captured_var &slf, const coder::c_captured_var &
-                    nslf, const coder::c_captured_var &nbox, const coder::
-                    b_captured_var &t, const coder::c_captured_var &i, const
-                    coder::e_captured_var &lookup_list, const coder::
-                    d_captured_var &F, const coder::captured_var &opts, coder::
-                    array<real_T, 2U> &A);
-static void c_spget(srskelf_asym_newStackData *SD, const emlrtStack &sp, const
-                    coder::f_captured_var &slf, const coder::c_captured_var &
-                    nslf, const coder::f_captured_var &lst, const coder::
-                    c_captured_var &nlst, const coder::c_captured_var &nbox,
-                    const coder::b_captured_var &t, const coder::c_captured_var
-                    &i, const coder::e_captured_var &lookup_list, const coder::
-                    d_captured_var &F, const coder::captured_var &opts, coder::
-                    array<real_T, 2U> &A);
 static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
   [24000], const real_T opts_area[8000], const real_T opts_nu[24000], const
   real_T opts_P[8000], const real_T opts_contrast[8000], real_T opts_wuse, const
@@ -3543,28 +3228,18 @@ static real_T cast(const emlrtStack &sp, const coder::array<c_struct_T, 1U>
                    &t0_nodes, const coder::array<real_T, 2U> &t0_lvp, real_T
                    t0_nlvl, real_T t0_lrt, coder::array<struct_T, 1U> &t1_nodes,
                    coder::array<real_T, 2U> &t1_lvp, real_T &t1_lrt);
-static void d_spget(srskelf_asym_newStackData *SD, const emlrtStack &sp, const
-                    coder::f_captured_var &slf, const coder::c_captured_var &
-                    nslf, const coder::f_captured_var &lst, const coder::
-                    c_captured_var &nlst, const coder::c_captured_var &nbox,
-                    const coder::b_captured_var &t, const coder::c_captured_var
-                    &i, const coder::e_captured_var &lookup_list, const coder::
-                    d_captured_var &F, const coder::captured_var &opts, coder::
-                    array<real_T, 2U> &A);
 static void disp(const emlrtStack &sp, const mxArray *m, emlrtMCInfo &location);
+static const mxArray *emlrt_marshallOut(const int32_T u);
 static const mxArray *emlrt_marshallOut(const real_T u);
 static const mxArray *emlrt_marshallOut(const emlrtStack &sp, const char_T u[43]);
-static const mxArray *emlrt_marshallOut(const int32_T u);
 static const mxArray *emlrt_marshallOut(const emlrtStack &sp);
+static const mxArray *feval(const emlrtStack &sp, const mxArray *m1, const
+  mxArray *m2, const mxArray *m3, const mxArray *m4, const mxArray *m5,
+  emlrtMCInfo &location);
 static const mxArray *feval(const emlrtStack &sp, const mxArray *m1, const
   mxArray *m2, const mxArray *m3, const mxArray *m4, const mxArray *m5, const
   mxArray *m6, const mxArray *m7, const mxArray *m8, const mxArray *m9, const
   mxArray *m10, emlrtMCInfo &location);
-static const mxArray *feval(const emlrtStack &sp, const mxArray *m1, const
-  mxArray *m2, const mxArray *m3, const mxArray *m4, const mxArray *m5,
-  emlrtMCInfo &location);
-static void find_locations_t(const emlrtStack &sp, const real_T big_sorted_list
-  [2000], const coder::array<real_T, 2U> &elements_to_find, real_T locs[2000]);
 static const mxArray *g_emlrt_marshallOut(const emlrtStack &sp, const char_T u[7]);
 static void get_update_list(const emlrtStack *sp, real_T node_idx, coder::array<
   boolean_T, 1U> &update_list, const coder::array<struct_T, 1U> &nodes);
@@ -3580,6 +3255,19 @@ static const mxArray *n_emlrt_marshallOut(const emlrtStack &sp, const char_T u
   [18]);
 static const mxArray *p_emlrt_marshallOut(const emlrtStack &sp, const char_T u
   [52]);
+static void spget(const emlrtStack &sp, const coder::f_captured_var &slf, const
+                  coder::c_captured_var &nslf, const coder::f_captured_var &lst,
+                  const coder::c_captured_var &nlst, const coder::c_captured_var
+                  &nbox, const coder::b_captured_var &t, const coder::
+                  c_captured_var &i, const coder::e_captured_var &lookup_list,
+                  const coder::d_captured_var &F, const coder::captured_var &
+                  opts, coder::array<real_T, 2U> &A);
+static void spget(const emlrtStack &sp, const coder::f_captured_var &slf, const
+                  coder::c_captured_var &nslf, const coder::c_captured_var &nbox,
+                  const coder::b_captured_var &t, const coder::c_captured_var &i,
+                  const coder::e_captured_var &lookup_list, const coder::
+                  d_captured_var &F, const coder::captured_var &opts, coder::
+                  array<real_T, 2U> &A);
 static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000],
   const real_T opts_area[8000], const real_T opts_nu[24000], const real_T
   opts_P[8000], const real_T opts_contrast[8000], real_T opts_wuse, const coder::
@@ -3604,6 +3292,238 @@ static const mxArray *b_emlrt_marshallOut(const emlrtStack &sp, const char_T u
   emlrtInitCharArrayR2013a((emlrtConstCTX)&sp, 28, m, &u[0]);
   emlrtAssign(&y, m);
   return y;
+}
+
+static void b_spget(const emlrtStack &sp, const coder::f_captured_var &slf,
+                    const coder::c_captured_var &nslf, const coder::
+                    f_captured_var &lst, const coder::c_captured_var &nlst,
+                    const coder::c_captured_var &nbox, const coder::
+                    b_captured_var &t, const coder::c_captured_var &i, const
+                    coder::e_captured_var &lookup_list, const coder::
+                    d_captured_var &F, const coder::captured_var &opts, coder::
+                    array<real_T, 2U> &A)
+{
+  coder::array<real_T, 2U> r;
+  coder::array<int32_T, 1U> ii;
+  coder::array<int32_T, 1U> r1;
+  coder::array<boolean_T, 1U> update_list;
+  emlrtStack b_st;
+  emlrtStack st;
+  real_T d;
+  real_T d1;
+  real_T m_;
+  real_T n_;
+  int32_T I__size_idx_1;
+  int32_T J__size_idx_0;
+  int32_T J__size_idx_1;
+  int32_T b_i;
+  int32_T b_lookup_list;
+  int32_T c_i;
+  int32_T i1;
+  int32_T loop_ub;
+  int32_T n;
+  st.prev = &sp;
+  st.tls = sp.tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
+
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  //  A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is
+  //  slow for large matrices).  We grab the accumulated Schur complement
+  //  updates to a block of the matrix from previously-skeletonized
+  //  levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
+  //  Translate input strings to index sets (and their lengths)
+  m_ = nslf.contents;
+  J__size_idx_0 = lst.contents.size(0);
+  I__size_idx_1 = slf.contents.size(1);
+  J__size_idx_1 = lst.contents.size(1);
+  n_ = nlst.contents;
+  if (!(m_ >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(m_, &cc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  d = static_cast<int32_T>(muDoubleScalarFloor(m_));
+  if (m_ != d) {
+    emlrtIntegerCheckR2012b(m_, &bc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (!(n_ >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(n_, &ec_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  d1 = static_cast<int32_T>(muDoubleScalarFloor(n_));
+  if (n_ != d1) {
+    emlrtIntegerCheckR2012b(n_, &dc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  A.set_size(&ak_emlrtRTEI, &sp, static_cast<int32_T>(m_), static_cast<int32_T>
+             (n_));
+  if (m_ != d) {
+    emlrtIntegerCheckR2012b(m_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (n_ != d1) {
+    emlrtIntegerCheckR2012b(n_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  loop_ub = static_cast<int32_T>(m_) * static_cast<int32_T>(n_);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    A[b_i] = 0.0;
+  }
+
+  if (!(nbox.contents >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(nbox.contents, &yb_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (nbox.contents != static_cast<int32_T>(muDoubleScalarFloor(nbox.contents)))
+  {
+    emlrtIntegerCheckR2012b(nbox.contents, &ac_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  //  Local copy of t.nodes to avoid outer variable usage in recursive function
+  loop_ub = static_cast<int32_T>(nbox.contents);
+  update_list.set_size(&bk_emlrtRTEI, &sp, loop_ub);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    update_list[b_i] = false;
+  }
+
+  st.site = &nj_emlrtRSI;
+  get_update_list(&st, i.contents, update_list, t.contents.nodes);
+
+  //  Pass nodes to the recursive function
+  st.site = &oj_emlrtRSI;
+  b_st.site = &ue_emlrtRSI;
+  coder::c_eml_find(b_st, update_list, ii);
+  loop_ub = ii.size(0);
+  r.set_size(&ck_emlrtRTEI, &sp, 1, ii.size(0));
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    r[b_i] = ii[b_i];
+  }
+
+  int32_T iv[2];
+  st.site = &oj_emlrtRSI;
+  coder::flip(r);
+  iv[0] = (*(int32_T (*)[2])r.size())[0];
+  iv[1] = (*(int32_T (*)[2])r.size())[1];
+  st.site = &oj_emlrtRSI;
+  coder::internal::indexShapeCheck(st, lookup_list.contents.size(0), iv);
+  b_lookup_list = lookup_list.contents.size(0);
+  loop_ub = r.size(1);
+  ii.set_size(&dk_emlrtRTEI, &sp, r.size(1));
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    c_i = static_cast<int32_T>(r[b_i]);
+    if ((c_i < 1) || (c_i > b_lookup_list)) {
+      emlrtDynamicBoundsCheckR2012b(c_i, 1, b_lookup_list, &dg_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+
+    ii[b_i] = lookup_list.contents[c_i - 1];
+  }
+
+  b_lookup_list = ii.size(0) - 1;
+  loop_ub = 0;
+  for (c_i = 0; c_i <= b_lookup_list; c_i++) {
+    if (ii[c_i] != 0) {
+      loop_ub++;
+    }
+  }
+
+  r1.set_size(&ek_emlrtRTEI, &sp, loop_ub);
+  loop_ub = 0;
+  for (c_i = 0; c_i <= b_lookup_list; c_i++) {
+    if (ii[c_i] != 0) {
+      r1[loop_ub] = c_i;
+      loop_ub++;
+    }
+  }
+
+  loop_ub = r1.size(0);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    if (r1[b_i] > r.size(1) - 1) {
+      emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, r.size(1) - 1, &eg_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+  }
+
+  if (r1.size(0) - 1 >= 0) {
+    i1 = I__size_idx_1;
+    if ((J__size_idx_0 == 0) || (J__size_idx_1 == 0)) {
+      n = 0;
+    } else {
+      n = muIntScalarMax_sint32(J__size_idx_0, J__size_idx_1);
+    }
+  }
+
+  for (b_lookup_list = 0; b_lookup_list < loop_ub; b_lookup_list++) {
+    //  Use an explicit index for the loop
+    if (b_lookup_list + 1 > loop_ub) {
+      emlrtDynamicBoundsCheckR2012b(b_lookup_list + 1, 1, loop_ub, &ag_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+
+    //  Use temporary variables for each field of the struct
+    b_i = F.contents.factors.size(0);
+    c_i = ii[r1[b_lookup_list]];
+    if ((c_i < 1) || (c_i > b_i)) {
+      emlrtDynamicBoundsCheckR2012b(c_i, 1, b_i, &bg_emlrtBCI, (emlrtConstCTX)&
+        sp);
+    }
+
+    //  For off-diagonal block
+    st.site = &pj_emlrtRSI;
+
+    //  Helper function to replace ismembc2
+    //  Initialize an empty array to store the locations
+    //  Iterate over each element to find
+    for (c_i = 0; c_i < i1; c_i++) {
+      if (c_i + 1 > I__size_idx_1) {
+        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, I__size_idx_1, &cg_emlrtBCI,
+          &st);
+      }
+
+      //  Use the local function binary_search to find the location of the element
+      //  If the element is found (location is not -1), add it to the locs array
+      if (*emlrtBreakCheckR2012bFlagVar != 0) {
+        emlrtBreakCheckR2012b(&st);
+      }
+    }
+
+    //  Replace ismembc2 with find_locations_t
+    st.site = &qj_emlrtRSI;
+
+    //  Helper function to replace ismembc2
+    //  Initialize an empty array to store the locations
+    //  Iterate over each element to find
+    for (c_i = 0; c_i < n; c_i++) {
+      b_i = J__size_idx_0 * J__size_idx_1;
+      if (c_i + 1 > b_i) {
+        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, b_i, &cg_emlrtBCI, &st);
+      }
+
+      //  Use the local function binary_search to find the location of the element
+      //  If the element is found (location is not -1), add it to the locs array
+      if (*emlrtBreakCheckR2012bFlagVar != 0) {
+        emlrtBreakCheckR2012b(&st);
+      }
+    }
+
+    //  Replace ismembc2 with find_locations_t
+    //  Convert to double to ensure consistent types
+    //  Ensure tmp2 is consistent in size
+    //  Different factorization depending on symmetry
+    st.site = &rj_emlrtRSI;
+    if (!coder::internal::b_strcmp(st, opts.contents.symm)) {
+      st.site = &sj_emlrtRSI;
+      coder::internal::c_strcmp(st, opts.contents.symm);
+    }
+
+    if (*emlrtBreakCheckR2012bFlagVar != 0) {
+      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
+    }
+  }
+
+  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
 }
 
 static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
@@ -3672,7 +3592,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       k = muIntScalarMax_sint32(b_i, n_tmp);
     }
 
-    varargout_1.set_size(&ki_emlrtRTEI, &st, i.size(1), k);
+    varargout_1.set_size(&ji_emlrtRTEI, &st, i.size(1), k);
     loop_ub = i.size(1) * k;
     for (b_i = 0; b_i < loop_ub; b_i++) {
       varargout_1[b_i] = 0.0;
@@ -3694,7 +3614,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     b_st.site = &qh_emlrtRSI;
     unnamed_idx_1_tmp = j.size(0) * j.size(1);
     b = i.size(1);
-    b_I.set_size(&wh_emlrtRTEI, &b_st, i.size(1), unnamed_idx_1_tmp);
+    b_I.set_size(&vh_emlrtRTEI, &b_st, i.size(1), unnamed_idx_1_tmp);
     c_st.site = &ai_emlrtRSI;
     d_st.site = &bi_emlrtRSI;
     if (unnamed_idx_1_tmp > 2147483646) {
@@ -3715,7 +3635,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    J.set_size(&wh_emlrtRTEI, &b_st, i.size(1), unnamed_idx_1_tmp);
+    J.set_size(&vh_emlrtRTEI, &b_st, i.size(1), unnamed_idx_1_tmp);
     c_st.site = &ai_emlrtRSI;
     d_st.site = &bi_emlrtRSI;
     for (k = 0; k < unnamed_idx_1_tmp; k++) {
@@ -3736,7 +3656,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     b_st.site = &rh_emlrtRSI;
     coder::internal::b_indexShapeCheck(b_st, iv);
     loop_ub = j.size(1);
-    b_j.set_size(&wj_emlrtRTEI, &st, j.size(0), j.size(1));
+    b_j.set_size(&vj_emlrtRTEI, &st, j.size(0), j.size(1));
     for (b_i = 0; b_i < unnamed_idx_1_tmp; b_i++) {
       d = j[b_i];
       if (d != static_cast<int32_T>(muDoubleScalarFloor(d))) {
@@ -3745,13 +3665,13 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
       if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) > 8000)) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, 8000,
-          &kg_emlrtBCI, &st);
+          &xf_emlrtBCI, &st);
       }
 
       b_j[b_i] = static_cast<int32_T>(d);
     }
 
-    b_x.set_size(&yh_emlrtRTEI, &st, 3, i.size(1));
+    b_x.set_size(&xh_emlrtRTEI, &st, 3, i.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       b_k = static_cast<int32_T>(muDoubleScalarFloor(i[b_i]));
       if (i[b_i] != b_k) {
@@ -3760,7 +3680,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
       k = static_cast<int32_T>(i[b_i]);
       if ((k < 1) || (k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &tf_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &hf_emlrtBCI, &st);
       }
 
       k = 3 * (k - 1);
@@ -3777,7 +3697,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       b_x[3 * b_i + 2] = x[k + 2];
     }
 
-    c_x.set_size(&ai_emlrtRTEI, &st, 3, unnamed_idx_1_tmp);
+    c_x.set_size(&yh_emlrtRTEI, &st, 3, unnamed_idx_1_tmp);
     for (b_i = 0; b_i < unnamed_idx_1_tmp; b_i++) {
       k = 3 * (b_j[b_i] - 1);
       c_x[3 * b_i] = x[k];
@@ -3785,7 +3705,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       c_x[3 * b_i + 2] = x[k + 2];
     }
 
-    b_opts_nu.set_size(&bi_emlrtRTEI, &st, 3, i.size(1));
+    b_opts_nu.set_size(&ai_emlrtRTEI, &st, 3, i.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       k = 3 * (static_cast<int32_T>(i[b_i]) - 1);
       b_opts_nu[3 * b_i] = opts_nu[k];
@@ -3795,19 +3715,19 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
     b_st.site = &rh_emlrtRSI;
     lap_neumann_kernel(b_st, b_x, c_x, b_opts_nu, r);
-    b_opts_area.set_size(&ci_emlrtRTEI, &st, j.size(0), j.size(1));
+    b_opts_area.set_size(&bi_emlrtRTEI, &st, j.size(0), j.size(1));
     for (b_i = 0; b_i < unnamed_idx_1_tmp; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
 
     b_st.site = &rh_emlrtRSI;
     coder::c_bsxfun(b_st, r, b_opts_area, M);
-    b_opts_contrast.set_size(&di_emlrtRTEI, &st, i.size(1));
+    b_opts_contrast.set_size(&ci_emlrtRTEI, &st, i.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       b_opts_contrast[b_i] = opts_contrast[static_cast<int32_T>(i[b_i]) - 1];
     }
 
-    r.set_size(&ei_emlrtRTEI, &st, M.size(0), M.size(1));
+    r.set_size(&di_emlrtRTEI, &st, M.size(0), M.size(1));
     b_loop_ub = M.size(0) * M.size(1);
     k = (b_loop_ub / 2) << 1;
     b_k = k - 2;
@@ -3834,7 +3754,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     n_tmp = j.size(1);
     n_tmp = muIntScalarMax_sint32(b_i, n_tmp);
     c_st.site = &ii_emlrtRSI;
-    y.set_size(&fi_emlrtRTEI, &c_st, 1, i.size(1));
+    y.set_size(&ei_emlrtRTEI, &c_st, 1, i.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       y[b_i] = i[b_i];
     }
@@ -3842,13 +3762,13 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     d_st.site = &li_emlrtRSI;
     coder::internal::b_sort(d_st, y, iidx);
     b_loop_ub = iidx.size(1);
-    E.set_size(&gi_emlrtRTEI, &c_st, 1, iidx.size(1));
+    E.set_size(&fi_emlrtRTEI, &c_st, 1, iidx.size(1));
     for (b_i = 0; b_i < b_loop_ub; b_i++) {
       E[b_i] = iidx[b_i];
     }
 
     k = y.size(1);
-    iidx.set_size(&hi_emlrtRTEI, &b_st, 1, y.size(1));
+    iidx.set_size(&gi_emlrtRTEI, &b_st, 1, y.size(1));
     for (b_i = 0; b_i < k; b_i++) {
       if (y[b_i] != static_cast<int32_T>(muDoubleScalarFloor(y[b_i]))) {
         emlrtIntegerCheckR2012b(y[b_i], &ub_emlrtDCI, &b_st);
@@ -3856,7 +3776,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
       b_k = static_cast<int32_T>(y[b_i]);
       if ((b_k < 1) || (b_k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &uf_emlrtBCI, &b_st);
+        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &if_emlrtBCI, &b_st);
       }
 
       iidx[b_i] = b_k;
@@ -3871,7 +3791,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       P[iidx[b_i] - 1] = E[b_i];
     }
 
-    M.set_size(&ii_emlrtRTEI, &b_st, i.size(1), n_tmp);
+    M.set_size(&hi_emlrtRTEI, &b_st, i.size(1), n_tmp);
     loop_ub_tmp = i.size(1) * n_tmp;
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       M[b_i] = 0.0;
@@ -3883,7 +3803,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     d_st.site = &bj_emlrtRSI;
     coder::b_eml_find(d_st, d_x, ii, jj, b_opts_contrast);
     b_loop_ub = ii.size(0);
-    c_I.set_size(&xj_emlrtRTEI, &c_st, ii.size(0));
+    c_I.set_size(&wj_emlrtRTEI, &c_st, ii.size(0));
     for (b_i = 0; b_i < b_loop_ub; b_i++) {
       c_I[b_i] = ii[b_i];
     }
@@ -3901,7 +3821,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    r2.set_size(&ki_emlrtRTEI, &b_st, k);
+    r2.set_size(&ji_emlrtRTEI, &b_st, k);
     k = 0;
     for (b_loop_ub = 0; b_loop_ub <= b_k; b_loop_ub++) {
       if ((idx[b_loop_ub] > 0.0) && (idx[b_loop_ub] <= y.size(1))) {
@@ -3913,14 +3833,14 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     k = r2.size(0);
     for (b_i = 0; b_i < k; b_i++) {
       if (r2[b_i] > c_I.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, c_I.size(0) - 1, &ag_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, c_I.size(0) - 1, &nf_emlrtBCI,
           &b_st);
       }
     }
 
     for (b_i = 0; b_i < k; b_i++) {
       if (r2[b_i] > jj.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, jj.size(0) - 1, &bg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, jj.size(0) - 1, &of_emlrtBCI,
           &b_st);
       }
     }
@@ -3928,25 +3848,25 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     for (b_i = 0; b_i < k; b_i++) {
       if (r2[b_i] > b_opts_contrast.size(0) - 1) {
         emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, b_opts_contrast.size(0) - 1,
-          &cg_emlrtBCI, &b_st);
+          &pf_emlrtBCI, &b_st);
       }
     }
 
     for (b_i = 0; b_i < k; b_i++) {
       b_k = static_cast<int32_T>(c_I[r2[b_i]]);
       if ((b_k < 1) || (b_k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &dg_emlrtBCI, &b_st);
+        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &qf_emlrtBCI, &b_st);
       }
     }
 
-    idx.set_size(&li_emlrtRTEI, &b_st, r2.size(0));
+    idx.set_size(&ki_emlrtRTEI, &b_st, r2.size(0));
     for (b_i = 0; b_i < k; b_i++) {
       idx[b_i] = (static_cast<real_T>(jj[r2[b_i]]) - 1.0) * static_cast<real_T>
         (i.size(1));
     }
 
     if (r2.size(0) == idx.size(0)) {
-      ii.set_size(&mi_emlrtRTEI, &b_st, r2.size(0));
+      ii.set_size(&li_emlrtRTEI, &b_st, r2.size(0));
       for (b_i = 0; b_i < k; b_i++) {
         d = P[static_cast<int32_T>(c_I[r2[b_i]]) - 1] + idx[b_i];
         if (d != static_cast<int32_T>(muDoubleScalarFloor(d))) {
@@ -3956,13 +3876,13 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
         if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) >
              loop_ub_tmp)) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, loop_ub_tmp,
-            &eg_emlrtBCI, &b_st);
+            &rf_emlrtBCI, &b_st);
         }
 
         ii[b_i] = static_cast<int32_T>(d);
       }
     } else {
-      c_st.site = &vr_emlrtRSI;
+      c_st.site = &rr_emlrtRSI;
       binary_expand_op_9(c_st, ii, P, c_I, r2, idx, i, n_tmp);
     }
 
@@ -3989,7 +3909,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
     b_st.site = &uh_emlrtRSI;
     coder::c_abs(b_st, M, r);
-    b_idx.set_size(&ni_emlrtRTEI, &st, r.size(0), r.size(1));
+    b_idx.set_size(&mi_emlrtRTEI, &st, r.size(0), r.size(1));
     loop_ub_tmp = r.size(0) * r.size(1);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       b_idx[b_i] = (r[b_i] != 0.0);
@@ -4015,7 +3935,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    r3.set_size(&ki_emlrtRTEI, &st, k);
+    r3.set_size(&ji_emlrtRTEI, &st, k);
     k = 0;
     for (b_loop_ub = 0; b_loop_ub <= b_k; b_loop_ub++) {
       if (b_idx[b_loop_ub]) {
@@ -4028,32 +3948,32 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     loop_ub_tmp = r3.size(0);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r3[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &fg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &sf_emlrtBCI, &st);
       }
     }
 
     b_k = M.size(0) * M.size(1);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r3[b_i] > b_k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, b_k - 1, &gg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, b_k - 1, &tf_emlrtBCI, &st);
       }
     }
 
-    b_opts_contrast.set_size(&oi_emlrtRTEI, &st, r3.size(0));
+    b_opts_contrast.set_size(&ni_emlrtRTEI, &st, r3.size(0));
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       b_opts_contrast[b_i] = varargout_1[r3[b_i]] + M[r3[b_i]];
     }
 
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r3[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &hg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &uf_emlrtBCI, &st);
       }
 
       varargout_1[r3[b_i]] = b_opts_contrast[b_i];
     }
 
     if ((b_I.size(0) == J.size(0)) && (b_I.size(1) == J.size(1))) {
-      b_idx.set_size(&pi_emlrtRTEI, &st, i.size(1), unnamed_idx_1_tmp);
+      b_idx.set_size(&oi_emlrtRTEI, &st, i.size(1), unnamed_idx_1_tmp);
       b_loop_ub = b_I.size(0) * b_I.size(1);
       for (b_i = 0; b_i < b_loop_ub; b_i++) {
         b_idx[b_i] = (b_I[b_i] == J[b_i]);
@@ -4087,7 +4007,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    r4.set_size(&ki_emlrtRTEI, &st, k);
+    r4.set_size(&ji_emlrtRTEI, &st, k);
     k = 0;
     for (b_loop_ub = 0; b_loop_ub <= b_k; b_loop_ub++) {
       if (b_idx[b_loop_ub]) {
@@ -4100,18 +4020,18 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     loop_ub_tmp = r4.size(0);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r4[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &ig_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &vf_emlrtBCI, &st);
       }
     }
 
-    b_opts_contrast.set_size(&qi_emlrtRTEI, &st, r4.size(0));
+    b_opts_contrast.set_size(&pi_emlrtRTEI, &st, r4.size(0));
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       b_opts_contrast[b_i] = varargout_1[r4[b_i]] + 1.0;
     }
 
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r4[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &jg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &wf_emlrtBCI, &st);
       }
 
       varargout_1[r4[b_i]] = b_opts_contrast[b_i];
@@ -4134,12 +4054,12 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    y.set_size(&yj_emlrtRTEI, &b_st, 1, j.size(1));
+    y.set_size(&xj_emlrtRTEI, &b_st, 1, j.size(1));
     for (b_i = 0; b_i < loop_ub; b_i++) {
       y[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
 
-    r.set_size(&si_emlrtRTEI, &b_st, i.size(1), j.size(1));
+    r.set_size(&ri_emlrtRTEI, &b_st, i.size(1), j.size(1));
     for (b_i = 0; b_i < loop_ub; b_i++) {
       for (b_k = 0; b_k < b; b_k++) {
         r[b_k + r.size(0) * b_i] = opts_wuse * y[b_i];
@@ -4178,7 +4098,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       plus(b_st, varargout_1, r);
     }
 
-    y.set_size(&ti_emlrtRTEI, &st, 1, i.size(1));
+    y.set_size(&si_emlrtRTEI, &st, 1, i.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       y[b_i] = opts_area[static_cast<int32_T>(i[b_i]) - 1];
     }
@@ -4186,12 +4106,12 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     b_st.site = &xh_emlrtRSI;
     coder::b_sqrt(b_st, y);
     b_loop_ub = y.size(1);
-    b_opts_contrast.set_size(&ti_emlrtRTEI, &st, y.size(1));
+    b_opts_contrast.set_size(&si_emlrtRTEI, &st, y.size(1));
     for (b_i = 0; b_i < b_loop_ub; b_i++) {
       b_opts_contrast[b_i] = y[b_i];
     }
 
-    b_opts_area.set_size(&ui_emlrtRTEI, &st, varargout_1.size(0),
+    b_opts_area.set_size(&ti_emlrtRTEI, &st, varargout_1.size(0),
                          varargout_1.size(1));
     b_loop_ub = varargout_1.size(0) * varargout_1.size(1) - 1;
     for (b_i = 0; b_i <= b_loop_ub; b_i++) {
@@ -4204,14 +4124,14 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     iv[1] = (*(int32_T (*)[2])((coder::array<real_T, 2U> *)&j)->size())[1];
     b_st.site = &yh_emlrtRSI;
     coder::internal::b_indexShapeCheck(b_st, iv);
-    M.set_size(&vi_emlrtRTEI, &st, 1, j.size(1));
+    M.set_size(&ui_emlrtRTEI, &st, 1, j.size(1));
     for (b_i = 0; b_i < loop_ub; b_i++) {
       M[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
 
     b_st.site = &yh_emlrtRSI;
     coder::c_sqrt(b_st, M);
-    r.set_size(&wi_emlrtRTEI, &st, M.size(0), M.size(1));
+    r.set_size(&vi_emlrtRTEI, &st, M.size(0), M.size(1));
     loop_ub = M.size(0) * M.size(1);
     k = (loop_ub / 2) << 1;
     b_k = k - 2;
@@ -4224,7 +4144,7 @@ static void b_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       r[b_i] = 1.0 / M[b_i];
     }
 
-    b_opts_area.set_size(&xi_emlrtRTEI, &st, varargout_1.size(0),
+    b_opts_area.set_size(&wi_emlrtRTEI, &st, varargout_1.size(0),
                          varargout_1.size(1));
     loop_ub = varargout_1.size(0) * varargout_1.size(1) - 1;
     for (b_i = 0; b_i <= loop_ub; b_i++) {
@@ -4326,784 +4246,6 @@ static void binary_expand_op_1(const emlrtStack &sp, coder::array<real_T, 2U>
   }
 }
 
-static real_T binary_search_t(const emlrtStack &sp, const real_T arr_[2000],
-  real_T target_)
-{
-  real_T loc;
-  int32_T left;
-  int32_T right;
-
-  //  Local function to perform binary search
-  //  Initialize the bounds for the search
-  left = 1;
-  right = 1000;
-
-  //  Perform the binary search
-  int32_T exitg1;
-  do {
-    exitg1 = 0;
-    if (left <= right) {
-      int32_T mid;
-
-      //  Calculate the midpoint
-      mid = static_cast<int32_T>(muDoubleScalarFloor(static_cast<real_T>(left +
-        right) / 2.0)) - 1;
-
-      //  Check if the target is found
-      if (arr_[mid] == target_) {
-        loc = static_cast<real_T>(mid) + 1.0;
-        exitg1 = 1;
-      } else {
-        if (arr_[mid] < target_) {
-          left = mid + 2;
-        } else {
-          right = mid;
-        }
-
-        if (*emlrtBreakCheckR2012bFlagVar != 0) {
-          emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
-        }
-      }
-    } else {
-      //  If the element is not found, return -1
-      loc = -1.0;
-      exitg1 = 1;
-    }
-  } while (exitg1 == 0);
-
-  return loc;
-}
-
-static void c_spget(srskelf_asym_newStackData *SD, const emlrtStack &sp, const
-                    coder::f_captured_var &slf, const coder::c_captured_var &
-                    nslf, const coder::c_captured_var &nbox, const coder::
-                    b_captured_var &t, const coder::c_captured_var &i, const
-                    coder::e_captured_var &lookup_list, const coder::
-                    d_captured_var &F, const coder::captured_var &opts, coder::
-                    array<real_T, 2U> &A)
-{
-  coder::array<real_T, 2U> r;
-  coder::array<int32_T, 1U> ii;
-  coder::array<int32_T, 1U> r1;
-  coder::array<boolean_T, 1U> update_list;
-  emlrtStack b_st;
-  emlrtStack st;
-  real_T m__tmp;
-  int32_T b_i;
-  int32_T b_lookup_list;
-  int32_T i1;
-  int32_T loop_ub;
-  int32_T loop_ub_tmp;
-  uint32_T idxI[2000];
-  st.prev = &sp;
-  st.tls = sp.tls;
-  b_st.prev = &st;
-  b_st.tls = st.tls;
-  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-
-  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  //  A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is
-  //  slow for large matrices).  We grab the accumulated Schur complement
-  //  updates to a block of the matrix from previously-skeletonized
-  //  levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
-  //  Translate input strings to index sets (and their lengths)
-  m__tmp = nslf.contents;
-  if (!(m__tmp >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(m__tmp, &cc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  b_i = static_cast<int32_T>(muDoubleScalarFloor(m__tmp));
-  if (m__tmp != b_i) {
-    emlrtIntegerCheckR2012b(m__tmp, &bc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  A.set_size(&bk_emlrtRTEI, &sp, static_cast<int32_T>(m__tmp), static_cast<
-             int32_T>(m__tmp));
-  if (m__tmp != b_i) {
-    emlrtIntegerCheckR2012b(m__tmp, &fc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  loop_ub = static_cast<int32_T>(m__tmp) * static_cast<int32_T>(m__tmp);
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    A[b_i] = 0.0;
-  }
-
-  if (!(nbox.contents >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(nbox.contents, &yb_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (nbox.contents != static_cast<int32_T>(muDoubleScalarFloor(nbox.contents)))
-  {
-    emlrtIntegerCheckR2012b(nbox.contents, &ac_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  //  Local copy of t.nodes to avoid outer variable usage in recursive function
-  loop_ub = static_cast<int32_T>(nbox.contents);
-  update_list.set_size(&ck_emlrtRTEI, &sp, loop_ub);
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    update_list[b_i] = false;
-  }
-
-  st.site = &nj_emlrtRSI;
-  get_update_list(&st, i.contents, update_list, t.contents.nodes);
-
-  //  Pass nodes to the recursive function
-  st.site = &oj_emlrtRSI;
-  b_st.site = &ue_emlrtRSI;
-  coder::c_eml_find(b_st, update_list, ii);
-  loop_ub = ii.size(0);
-  r.set_size(&dk_emlrtRTEI, &sp, 1, ii.size(0));
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    r[b_i] = ii[b_i];
-  }
-
-  int32_T iv[2];
-  st.site = &oj_emlrtRSI;
-  coder::flip(r);
-  iv[0] = (*(int32_T (*)[2])r.size())[0];
-  iv[1] = (*(int32_T (*)[2])r.size())[1];
-  st.site = &oj_emlrtRSI;
-  coder::internal::indexShapeCheck(st, lookup_list.contents.size(0), iv);
-  b_lookup_list = lookup_list.contents.size(0);
-  loop_ub = r.size(1);
-  ii.set_size(&ek_emlrtRTEI, &sp, r.size(1));
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    i1 = static_cast<int32_T>(r[b_i]);
-    if ((i1 < 1) || (i1 > b_lookup_list)) {
-      emlrtDynamicBoundsCheckR2012b(i1, 1, b_lookup_list, &pg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-
-    ii[b_i] = lookup_list.contents[i1 - 1];
-  }
-
-  b_lookup_list = ii.size(0) - 1;
-  loop_ub = 0;
-  for (int32_T c_i{0}; c_i <= b_lookup_list; c_i++) {
-    if (ii[c_i] != 0) {
-      loop_ub++;
-    }
-  }
-
-  r1.set_size(&fk_emlrtRTEI, &sp, loop_ub);
-  loop_ub = 0;
-  for (int32_T c_i{0}; c_i <= b_lookup_list; c_i++) {
-    if (ii[c_i] != 0) {
-      r1[loop_ub] = c_i;
-      loop_ub++;
-    }
-  }
-
-  loop_ub_tmp = r1.size(0);
-  for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
-    if (r1[b_i] > r.size(1) - 1) {
-      emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, r.size(1) - 1, &qg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-  }
-
-  for (int32_T idx{0}; idx < loop_ub_tmp; idx++) {
-    real_T tmp1[2000];
-    uint32_T subI[2000];
-
-    //  Use an explicit index for the loop
-    if (idx + 1 > loop_ub_tmp) {
-      emlrtDynamicBoundsCheckR2012b(idx + 1, 1, loop_ub_tmp, &mg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-
-    //  Use temporary variables for each field of the struct
-    b_i = F.contents.factors.size(0);
-    i1 = ii[r1[idx]];
-    if ((i1 < 1) || (i1 > b_i)) {
-      emlrtDynamicBoundsCheckR2012b(i1, 1, b_i, &ng_emlrtBCI, (emlrtConstCTX)&sp);
-    }
-
-    //  For diagonal block
-    st.site = &gq_emlrtRSI;
-    b_i = r1[idx];
-    for (i1 = 0; i1 < 1000; i1++) {
-      tmp1[i1] = F.contents.factors[ii[b_i] - 1].sk[i1];
-      tmp1[i1 + 1000] = F.contents.factors[ii[b_i] - 1].nbr[i1];
-    }
-
-    //  Helper function to replace ismembc2
-    //  Initialize an empty array to store the locations
-    std::memset(&idxI[0], 0, 2000U * sizeof(uint32_T));
-
-    //  Iterate over each element to find
-    b_i = slf.contents.size(1);
-    for (int32_T c_i{0}; c_i < b_i; c_i++) {
-      real_T loc;
-      if (c_i + 1 > b_i) {
-        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, b_i, &og_emlrtBCI, &st);
-      }
-
-      //  Use the local function binary_search to find the location of the element
-      b_st.site = &er_emlrtRSI;
-      loc = binary_search_t(b_st, tmp1, slf.contents[c_i]);
-
-      //  If the element is found (location is not -1), add it to the locs array
-      if (loc != -1.0) {
-        if ((static_cast<int32_T>(loc) < 1) || (static_cast<int32_T>(loc) > 2000))
-        {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(loc), 1, 2000,
-            &rg_emlrtBCI, &st);
-        }
-
-        idxI[static_cast<int32_T>(loc) - 1] = static_cast<uint32_T>(c_i + 1);
-      }
-
-      if (*emlrtBreakCheckR2012bFlagVar != 0) {
-        emlrtBreakCheckR2012b(&st);
-      }
-    }
-
-    //  Replace ismembc2 with find_locations_t
-    for (b_i = 0; b_i < 2000; b_i++) {
-      tmp1[b_i] = (static_cast<int32_T>(idxI[b_i]) != 0);
-    }
-
-    //  Convert to double to ensure consistent types
-    for (b_i = 0; b_i < 2000; b_i++) {
-      if (static_cast<int32_T>(tmp1[b_i]) < 1) {
-        emlrtDynamicBoundsCheckR2012b(0, 1, 2000, &hr_emlrtBCI, (emlrtConstCTX)&
-          sp);
-      }
-
-      subI[b_i] = idxI[0];
-    }
-
-    b_i = r1[idx];
-    loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-    for (b_i = 0; b_i < 1000; b_i++) {
-      for (i1 = 0; i1 < 1000; i1++) {
-        b_lookup_list = i1 + 2000 * b_i;
-        SD->f2.tmp1[b_lookup_list] = F.contents.factors[loop_ub].E
-          [(static_cast<int32_T>(tmp1[i1]) + 1000 * b_i) - 1];
-        SD->f2.tmp1[b_lookup_list + 1000] = F.contents.factors[loop_ub].C[(
-          static_cast<int32_T>(tmp1[i1 + 1000]) + 1000 * b_i) - 1];
-      }
-    }
-
-    //  Ensure tmp2 is consistent in size
-    //  Different factorization depending on symmetry
-    st.site = &hq_emlrtRSI;
-    if (coder::internal::b_strcmp(st, opts.contents.symm)) {
-      int32_T b_subI[2000];
-      int32_T c_subI[2000];
-      int32_T d_subI[2000];
-      int32_T e_subI[2000];
-      uint32_T u;
-      st.site = &iq_emlrtRSI;
-      coder::internal::blas::b_mtimes(SD->f2.tmp1, SD->f2.tmp1, SD->f2.y);
-      loop_ub = A.size(0);
-      for (b_i = 0; b_i < 2000; b_i++) {
-        u = subI[b_i];
-        if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) > loop_ub))
-        {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, loop_ub,
-            &ir_emlrtBCI, (emlrtConstCTX)&sp);
-        }
-
-        b_subI[b_i] = static_cast<int32_T>(u);
-      }
-
-      for (b_i = 0; b_i < 2000; b_i++) {
-        u = subI[b_i];
-        if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) >
-             static_cast<int32_T>(m__tmp))) {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, static_cast<
-            int32_T>(m__tmp), &kr_emlrtBCI, (emlrtConstCTX)&sp);
-        }
-
-        c_subI[b_i] = static_cast<int32_T>(u);
-      }
-
-      for (b_i = 0; b_i < 2000; b_i++) {
-        u = subI[b_i];
-        if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) > loop_ub))
-        {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, loop_ub,
-            &mr_emlrtBCI, (emlrtConstCTX)&sp);
-        }
-
-        d_subI[b_i] = static_cast<int32_T>(u);
-      }
-
-      for (b_i = 0; b_i < 2000; b_i++) {
-        u = subI[b_i];
-        if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) >
-             static_cast<int32_T>(m__tmp))) {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, static_cast<
-            int32_T>(m__tmp), &or_emlrtBCI, (emlrtConstCTX)&sp);
-        }
-
-        e_subI[b_i] = static_cast<int32_T>(u);
-      }
-
-      for (b_i = 0; b_i < 2000; b_i++) {
-        for (i1 = 0; i1 < 2000; i1++) {
-          loop_ub = i1 + 2000 * b_i;
-          SD->f2.A[loop_ub] = A[(b_subI[i1] + A.size(0) * (c_subI[b_i] - 1)) - 1]
-            - SD->f2.y[loop_ub];
-        }
-      }
-
-      for (b_i = 0; b_i < 2000; b_i++) {
-        for (i1 = 0; i1 < 2000; i1++) {
-          A[(d_subI[i1] + A.size(0) * (e_subI[b_i] - 1)) - 1] = SD->f2.A[i1 +
-            2000 * b_i];
-        }
-      }
-    } else {
-      st.site = &jq_emlrtRSI;
-      if (coder::internal::c_strcmp(st, opts.contents.symm)) {
-        int32_T b_subI[2000];
-        int32_T c_subI[2000];
-        int32_T d_subI[2000];
-        int32_T e_subI[2000];
-        uint32_T u;
-        st.site = &kq_emlrtRSI;
-        b_i = r1[idx];
-        for (i1 = 0; i1 < 1000; i1++) {
-          loop_ub = static_cast<int32_T>(tmp1[i1]);
-          b_lookup_list = static_cast<int32_T>(tmp1[i1 + 1000]);
-          for (int32_T c_i{0}; c_i < 1000; c_i++) {
-            SD->f2.F[c_i + 1000 * i1] = F.contents.factors[ii[b_i] - 1].F[c_i +
-              1000 * (loop_ub - 1)];
-            SD->f2.F[c_i + 1000 * (i1 + 1000)] = F.contents.factors[ii[b_i] - 1]
-              .D[c_i + 1000 * (b_lookup_list - 1)];
-          }
-        }
-
-        coder::internal::blas::mtimes(SD->f2.tmp1, SD->f2.F, SD->f2.y);
-        loop_ub = A.size(0);
-        for (b_i = 0; b_i < 2000; b_i++) {
-          u = subI[b_i];
-          if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) >
-               loop_ub)) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, loop_ub,
-              &jr_emlrtBCI, (emlrtConstCTX)&sp);
-          }
-
-          b_subI[b_i] = static_cast<int32_T>(u);
-        }
-
-        for (b_i = 0; b_i < 2000; b_i++) {
-          u = subI[b_i];
-          if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) >
-               static_cast<int32_T>(m__tmp))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-              static_cast<int32_T>(m__tmp), &lr_emlrtBCI, (emlrtConstCTX)&sp);
-          }
-
-          c_subI[b_i] = static_cast<int32_T>(u);
-        }
-
-        for (b_i = 0; b_i < 2000; b_i++) {
-          u = subI[b_i];
-          if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) >
-               loop_ub)) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, loop_ub,
-              &nr_emlrtBCI, (emlrtConstCTX)&sp);
-          }
-
-          d_subI[b_i] = static_cast<int32_T>(u);
-        }
-
-        for (b_i = 0; b_i < 2000; b_i++) {
-          u = subI[b_i];
-          if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) >
-               static_cast<int32_T>(m__tmp))) {
-            emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1,
-              static_cast<int32_T>(m__tmp), &pr_emlrtBCI, (emlrtConstCTX)&sp);
-          }
-
-          e_subI[b_i] = static_cast<int32_T>(u);
-        }
-
-        for (b_i = 0; b_i < 2000; b_i++) {
-          for (i1 = 0; i1 < 2000; i1++) {
-            loop_ub = i1 + 2000 * b_i;
-            SD->f2.A[loop_ub] = A[(b_subI[i1] + A.size(0) * (c_subI[b_i] - 1)) -
-              1] - SD->f2.y[loop_ub];
-          }
-        }
-
-        for (b_i = 0; b_i < 2000; b_i++) {
-          for (i1 = 0; i1 < 2000; i1++) {
-            A[(d_subI[i1] + A.size(0) * (e_subI[b_i] - 1)) - 1] = SD->f2.A[i1 +
-              2000 * b_i];
-          }
-        }
-      }
-    }
-
-    if (*emlrtBreakCheckR2012bFlagVar != 0) {
-      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
-    }
-  }
-
-  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
-}
-
-static void c_spget(srskelf_asym_newStackData *SD, const emlrtStack &sp, const
-                    coder::f_captured_var &slf, const coder::c_captured_var &
-                    nslf, const coder::f_captured_var &lst, const coder::
-                    c_captured_var &nlst, const coder::c_captured_var &nbox,
-                    const coder::b_captured_var &t, const coder::c_captured_var
-                    &i, const coder::e_captured_var &lookup_list, const coder::
-                    d_captured_var &F, const coder::captured_var &opts, coder::
-                    array<real_T, 2U> &A)
-{
-  coder::array<real_T, 2U> r;
-  coder::array<int32_T, 1U> ii;
-  coder::array<int32_T, 1U> r1;
-  coder::array<boolean_T, 1U> update_list;
-  emlrtStack b_st;
-  emlrtStack st;
-  real_T d;
-  real_T d1;
-  real_T m_;
-  real_T n_;
-  int32_T b_i;
-  int32_T b_lookup_list;
-  int32_T i1;
-  int32_T i2;
-  int32_T i3;
-  int32_T loop_ub;
-  uint32_T idxJ[2000];
-  st.prev = &sp;
-  st.tls = sp.tls;
-  b_st.prev = &st;
-  b_st.tls = st.tls;
-  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-
-  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  //  A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is
-  //  slow for large matrices).  We grab the accumulated Schur complement
-  //  updates to a block of the matrix from previously-skeletonized
-  //  levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
-  //  Translate input strings to index sets (and their lengths)
-  m_ = nlst.contents;
-  n_ = nslf.contents;
-  if (!(m_ >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(m_, &cc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  d = static_cast<int32_T>(muDoubleScalarFloor(m_));
-  if (m_ != d) {
-    emlrtIntegerCheckR2012b(m_, &bc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (!(n_ >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(n_, &ec_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  d1 = static_cast<int32_T>(muDoubleScalarFloor(n_));
-  if (n_ != d1) {
-    emlrtIntegerCheckR2012b(n_, &dc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  A.set_size(&bk_emlrtRTEI, &sp, static_cast<int32_T>(m_), static_cast<int32_T>
-             (n_));
-  if (m_ != d) {
-    emlrtIntegerCheckR2012b(m_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (n_ != d1) {
-    emlrtIntegerCheckR2012b(n_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  loop_ub = static_cast<int32_T>(m_) * static_cast<int32_T>(n_);
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    A[b_i] = 0.0;
-  }
-
-  if (!(nbox.contents >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(nbox.contents, &yb_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (nbox.contents != static_cast<int32_T>(muDoubleScalarFloor(nbox.contents)))
-  {
-    emlrtIntegerCheckR2012b(nbox.contents, &ac_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  //  Local copy of t.nodes to avoid outer variable usage in recursive function
-  loop_ub = static_cast<int32_T>(nbox.contents);
-  update_list.set_size(&ck_emlrtRTEI, &sp, loop_ub);
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    update_list[b_i] = false;
-  }
-
-  st.site = &nj_emlrtRSI;
-  get_update_list(&st, i.contents, update_list, t.contents.nodes);
-
-  //  Pass nodes to the recursive function
-  st.site = &oj_emlrtRSI;
-  b_st.site = &ue_emlrtRSI;
-  coder::c_eml_find(b_st, update_list, ii);
-  loop_ub = ii.size(0);
-  r.set_size(&dk_emlrtRTEI, &sp, 1, ii.size(0));
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    r[b_i] = ii[b_i];
-  }
-
-  int32_T iv[2];
-  st.site = &oj_emlrtRSI;
-  coder::flip(r);
-  iv[0] = (*(int32_T (*)[2])r.size())[0];
-  iv[1] = (*(int32_T (*)[2])r.size())[1];
-  st.site = &oj_emlrtRSI;
-  coder::internal::indexShapeCheck(st, lookup_list.contents.size(0), iv);
-  b_lookup_list = lookup_list.contents.size(0);
-  loop_ub = r.size(1);
-  ii.set_size(&ek_emlrtRTEI, &sp, r.size(1));
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    i1 = static_cast<int32_T>(r[b_i]);
-    if ((i1 < 1) || (i1 > b_lookup_list)) {
-      emlrtDynamicBoundsCheckR2012b(i1, 1, b_lookup_list, &pg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-
-    ii[b_i] = lookup_list.contents[i1 - 1];
-  }
-
-  b_lookup_list = ii.size(0) - 1;
-  loop_ub = 0;
-  for (int32_T c_i{0}; c_i <= b_lookup_list; c_i++) {
-    if (ii[c_i] != 0) {
-      loop_ub++;
-    }
-  }
-
-  r1.set_size(&fk_emlrtRTEI, &sp, loop_ub);
-  loop_ub = 0;
-  for (int32_T c_i{0}; c_i <= b_lookup_list; c_i++) {
-    if (ii[c_i] != 0) {
-      r1[loop_ub] = c_i;
-      loop_ub++;
-    }
-  }
-
-  b_lookup_list = r1.size(0);
-  for (b_i = 0; b_i < b_lookup_list; b_i++) {
-    if (r1[b_i] > r.size(1) - 1) {
-      emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, r.size(1) - 1, &qg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-  }
-
-  if (b_lookup_list - 1 >= 0) {
-    i2 = F.contents.factors.size(0);
-    i3 = slf.contents.size(1);
-  }
-
-  for (int32_T idx{0}; idx < b_lookup_list; idx++) {
-    real_T idxI[2000];
-    real_T subI[2000];
-    real_T xj[2000];
-    int32_T b_xj[2000];
-    int32_T c_xj[2000];
-    int8_T tmp1[2000];
-    int8_T tmp2[2000];
-    int8_T i4;
-    int8_T i5;
-
-    //  Use an explicit index for the loop
-    if (idx + 1 > b_lookup_list) {
-      emlrtDynamicBoundsCheckR2012b(idx + 1, 1, b_lookup_list, &mg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-
-    //  Use temporary variables for each field of the struct
-    b_i = ii[r1[idx]];
-    if ((b_i < 1) || (b_i > i2)) {
-      emlrtDynamicBoundsCheckR2012b(b_i, 1, i2, &ng_emlrtBCI, (emlrtConstCTX)&sp);
-    }
-
-    b_i = r1[idx];
-    loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-    for (b_i = 0; b_i < 1000; b_i++) {
-      xj[b_i] = F.contents.factors[loop_ub].sk[b_i];
-      xj[b_i + 1000] = F.contents.factors[loop_ub].nbr[b_i];
-    }
-
-    //  For off-diagonal block
-    st.site = &pj_emlrtRSI;
-    find_locations_t(st, xj, lst.contents, idxI);
-
-    //  Replace ismembc2 with find_locations_t
-    st.site = &qj_emlrtRSI;
-
-    //  Helper function to replace ismembc2
-    //  Initialize an empty array to store the locations
-    std::memset(&idxJ[0], 0, 2000U * sizeof(uint32_T));
-
-    //  Iterate over each element to find
-    for (int32_T c_i{0}; c_i < i3; c_i++) {
-      if (c_i + 1 > i3) {
-        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, i3, &og_emlrtBCI, &st);
-      }
-
-      //  Use the local function binary_search to find the location of the element
-      b_st.site = &er_emlrtRSI;
-      m_ = binary_search_t(b_st, xj, slf.contents[c_i]);
-
-      //  If the element is found (location is not -1), add it to the locs array
-      if (m_ != -1.0) {
-        if ((static_cast<int32_T>(m_) < 1) || (static_cast<int32_T>(m_) > 2000))
-        {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(m_), 1, 2000,
-            &rg_emlrtBCI, &st);
-        }
-
-        idxJ[static_cast<int32_T>(m_) - 1] = static_cast<uint32_T>(c_i + 1);
-      }
-
-      if (*emlrtBreakCheckR2012bFlagVar != 0) {
-        emlrtBreakCheckR2012b(&st);
-      }
-    }
-
-    //  Replace ismembc2 with find_locations_t
-    //  Convert to double to ensure consistent types
-    for (b_i = 0; b_i < 2000; b_i++) {
-      tmp1[b_i] = static_cast<int8_T>(idxI[b_i] != 0.0);
-      tmp2[b_i] = static_cast<int8_T>(static_cast<int32_T>(idxJ[b_i]) != 0);
-    }
-
-    //  Convert to double to ensure consistent types
-    for (b_i = 0; b_i < 2000; b_i++) {
-      if (tmp1[b_i] < 1) {
-        emlrtDynamicBoundsCheckR2012b(0, 1, 2000, &sg_emlrtBCI, (emlrtConstCTX)&
-          sp);
-      }
-
-      subI[b_i] = idxI[0];
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      if (tmp2[b_i] < 1) {
-        emlrtDynamicBoundsCheckR2012b(0, 1, 2000, &tg_emlrtBCI, (emlrtConstCTX)&
-          sp);
-      }
-
-      xj[b_i] = idxJ[0];
-    }
-
-    //  Ensure tmp2 is consistent in size
-    b_i = r1[idx];
-    loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-    for (b_i = 0; b_i < 1000; b_i++) {
-      i4 = tmp2[b_i];
-      i5 = tmp2[b_i + 1000];
-      for (i1 = 0; i1 < 1000; i1++) {
-        SD->f1.tmp2[i1 + 1000 * b_i] = F.contents.factors[loop_ub].F[i1 + 1000 *
-          (i4 - 1)];
-        SD->f1.tmp2[i1 + 1000 * (b_i + 1000)] = F.contents.factors[loop_ub].D[i1
-          + 1000 * (i5 - 1)];
-      }
-    }
-
-    //  Different factorization depending on symmetry
-    st.site = &rj_emlrtRSI;
-    if (coder::internal::b_strcmp(st, opts.contents.symm)) {
-      b_i = r1[idx];
-      loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-      for (b_i = 0; b_i < 1000; b_i++) {
-        i4 = tmp2[b_i];
-        i5 = tmp2[b_i + 1000];
-        for (i1 = 0; i1 < 1000; i1++) {
-          SD->f1.tmp2[i1 + 1000 * b_i] = F.contents.factors[loop_ub].E[(i4 +
-            1000 * i1) - 1];
-          SD->f1.tmp2[i1 + 1000 * (b_i + 1000)] = F.contents.factors[loop_ub].C
-            [(i5 + 1000 * i1) - 1];
-        }
-      }
-    } else {
-      st.site = &sj_emlrtRSI;
-      coder::internal::c_strcmp(st, opts.contents.symm);
-    }
-
-    st.site = &tj_emlrtRSI;
-    b_i = r1[idx];
-    for (i1 = 0; i1 < 1000; i1++) {
-      for (int32_T c_i{0}; c_i < 1000; c_i++) {
-        loop_ub = c_i + 2000 * i1;
-        SD->f1.F[loop_ub] = F.contents.factors[ii[b_i] - 1].E[(tmp1[c_i] + 1000 *
-          i1) - 1];
-        SD->f1.F[loop_ub + 1000] = F.contents.factors[ii[b_i] - 1].C[(tmp1[c_i +
-          1000] + 1000 * i1) - 1];
-      }
-    }
-
-    coder::internal::blas::mtimes(SD->f1.F, SD->f1.tmp2, SD->f1.y);
-    loop_ub = A.size(0);
-    for (b_i = 0; b_i < 2000; b_i++) {
-      i1 = static_cast<int32_T>(subI[b_i]);
-      if ((i1 < 1) || (i1 > loop_ub)) {
-        emlrtDynamicBoundsCheckR2012b(i1, 1, loop_ub, &ug_emlrtBCI,
-          (emlrtConstCTX)&sp);
-      }
-
-      idxI[b_i] = i1;
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      i1 = static_cast<int32_T>(xj[b_i]);
-      if ((i1 < 1) || (i1 > static_cast<int32_T>(n_))) {
-        emlrtDynamicBoundsCheckR2012b(i1, 1, static_cast<int32_T>(n_),
-          &vg_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      b_xj[b_i] = i1;
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      i1 = static_cast<int32_T>(subI[b_i]);
-      if ((i1 < 1) || (i1 > loop_ub)) {
-        emlrtDynamicBoundsCheckR2012b(i1, 1, loop_ub, &wg_emlrtBCI,
-          (emlrtConstCTX)&sp);
-      }
-
-      subI[b_i] = i1;
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      i1 = static_cast<int32_T>(xj[b_i]);
-      if ((i1 < 1) || (i1 > static_cast<int32_T>(n_))) {
-        emlrtDynamicBoundsCheckR2012b(i1, 1, static_cast<int32_T>(n_),
-          &xg_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      c_xj[b_i] = i1;
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      for (i1 = 0; i1 < 2000; i1++) {
-        loop_ub = i1 + 2000 * b_i;
-        SD->f1.A[loop_ub] = A[(static_cast<int32_T>(idxI[i1]) + A.size(0) *
-          (b_xj[b_i] - 1)) - 1] - SD->f1.y[loop_ub];
-      }
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      for (i1 = 0; i1 < 2000; i1++) {
-        A[(static_cast<int32_T>(subI[i1]) + A.size(0) * (c_xj[b_i] - 1)) - 1] =
-          SD->f1.A[i1 + 2000 * b_i];
-      }
-    }
-
-    if (*emlrtBreakCheckR2012bFlagVar != 0) {
-      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
-    }
-  }
-
-  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
-}
-
 static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
   [24000], const real_T opts_area[8000], const real_T opts_nu[24000], const
   real_T opts_P[8000], const real_T opts_contrast[8000], real_T opts_wuse, const
@@ -5158,7 +4300,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
   //  index sets I and J.  This handles the near-field correction.
   if ((i.size(1) == 0) || (j.size(1) == 0)) {
     int32_T loop_ub;
-    varargout_1.set_size(&ki_emlrtRTEI, &st, i.size(1), j.size(1));
+    varargout_1.set_size(&ji_emlrtRTEI, &st, i.size(1), j.size(1));
     loop_ub = i.size(1) * j.size(1);
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       varargout_1[b_i] = 0.0;
@@ -5176,7 +4318,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     b_st.site = &qh_emlrtRSI;
     b = i.size(1);
     b_b = j.size(1);
-    b_I.set_size(&wh_emlrtRTEI, &b_st, i.size(1), j.size(1));
+    b_I.set_size(&vh_emlrtRTEI, &b_st, i.size(1), j.size(1));
     c_st.site = &ai_emlrtRSI;
     d_st.site = &bi_emlrtRSI;
     if (j.size(1) > 2147483646) {
@@ -5197,7 +4339,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    J.set_size(&wh_emlrtRTEI, &b_st, i.size(1), j.size(1));
+    J.set_size(&vh_emlrtRTEI, &b_st, i.size(1), j.size(1));
     c_st.site = &ai_emlrtRSI;
     d_st.site = &bi_emlrtRSI;
     if (j.size(1) > 2147483646) {
@@ -5218,7 +4360,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    b_x.set_size(&yh_emlrtRTEI, &st, 3, i.size(1));
+    b_x.set_size(&xh_emlrtRTEI, &st, 3, i.size(1));
     for (int32_T b_i{0}; b_i < b; b_i++) {
       b_k = static_cast<int32_T>(muDoubleScalarFloor(i[b_i]));
       if (i[b_i] != b_k) {
@@ -5227,7 +4369,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
       k = static_cast<int32_T>(i[b_i]);
       if ((k < 1) || (k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &tf_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &hf_emlrtBCI, &st);
       }
 
       k = 3 * (k - 1);
@@ -5244,7 +4386,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       b_x[3 * b_i + 2] = x[k + 2];
     }
 
-    c_x.set_size(&ai_emlrtRTEI, &st, 3, j.size(1));
+    c_x.set_size(&yh_emlrtRTEI, &st, 3, j.size(1));
     for (int32_T b_i{0}; b_i < b_b; b_i++) {
       b_k = static_cast<int32_T>(muDoubleScalarFloor(j[b_i]));
       if (j[b_i] != b_k) {
@@ -5253,7 +4395,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
       k = static_cast<int32_T>(j[b_i]);
       if ((k < 1) || (k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &kg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &xf_emlrtBCI, &st);
       }
 
       k = 3 * (k - 1);
@@ -5270,7 +4412,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       c_x[3 * b_i + 2] = x[k + 2];
     }
 
-    b_opts_nu.set_size(&bi_emlrtRTEI, &st, 3, i.size(1));
+    b_opts_nu.set_size(&ai_emlrtRTEI, &st, 3, i.size(1));
     for (int32_T b_i{0}; b_i < b; b_i++) {
       k = 3 * (static_cast<int32_T>(i[b_i]) - 1);
       b_opts_nu[3 * b_i] = opts_nu[k];
@@ -5280,19 +4422,19 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
     b_st.site = &rh_emlrtRSI;
     lap_neumann_kernel(b_st, b_x, c_x, b_opts_nu, r);
-    b_opts_area.set_size(&ci_emlrtRTEI, &st, 1, j.size(1));
+    b_opts_area.set_size(&bi_emlrtRTEI, &st, 1, j.size(1));
     for (int32_T b_i{0}; b_i < b_b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
 
     b_st.site = &rh_emlrtRSI;
     coder::b_bsxfun(b_st, r, b_opts_area, M);
-    b_opts_contrast.set_size(&di_emlrtRTEI, &st, i.size(1));
+    b_opts_contrast.set_size(&ci_emlrtRTEI, &st, i.size(1));
     for (int32_T b_i{0}; b_i < b; b_i++) {
       b_opts_contrast[b_i] = opts_contrast[static_cast<int32_T>(i[b_i]) - 1];
     }
 
-    r.set_size(&ei_emlrtRTEI, &st, M.size(0), M.size(1));
+    r.set_size(&di_emlrtRTEI, &st, M.size(0), M.size(1));
     loop_ub = M.size(0) * M.size(1);
     k = (loop_ub / 2) << 1;
     b_k = k - 2;
@@ -5316,7 +4458,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     //  and S stores the sparse matrix corresponding
     //  to the quadrature correction
     c_st.site = &ii_emlrtRSI;
-    b_opts_area.set_size(&fi_emlrtRTEI, &c_st, 1, i.size(1));
+    b_opts_area.set_size(&ei_emlrtRTEI, &c_st, 1, i.size(1));
     for (int32_T b_i{0}; b_i < b; b_i++) {
       b_opts_area[b_i] = i[b_i];
     }
@@ -5324,13 +4466,13 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     d_st.site = &li_emlrtRSI;
     coder::internal::b_sort(d_st, b_opts_area, iidx);
     loop_ub = iidx.size(1);
-    E.set_size(&gi_emlrtRTEI, &c_st, 1, iidx.size(1));
+    E.set_size(&fi_emlrtRTEI, &c_st, 1, iidx.size(1));
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       E[b_i] = iidx[b_i];
     }
 
     k = b_opts_area.size(1);
-    iidx.set_size(&hi_emlrtRTEI, &b_st, 1, b_opts_area.size(1));
+    iidx.set_size(&gi_emlrtRTEI, &b_st, 1, b_opts_area.size(1));
     for (int32_T b_i{0}; b_i < k; b_i++) {
       if (b_opts_area[b_i] != static_cast<int32_T>(muDoubleScalarFloor
            (b_opts_area[b_i]))) {
@@ -5339,7 +4481,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
       b_k = static_cast<int32_T>(b_opts_area[b_i]);
       if ((b_k < 1) || (b_k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &uf_emlrtBCI, &b_st);
+        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &if_emlrtBCI, &b_st);
       }
 
       iidx[b_i] = b_k;
@@ -5353,7 +4495,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       P[iidx[b_i] - 1] = E[b_i];
     }
 
-    M.set_size(&ii_emlrtRTEI, &b_st, i.size(1), j.size(1));
+    M.set_size(&hi_emlrtRTEI, &b_st, i.size(1), j.size(1));
     loop_ub_tmp = i.size(1) * j.size(1);
     for (int32_T b_i{0}; b_i < loop_ub_tmp; b_i++) {
       M[b_i] = 0.0;
@@ -5365,7 +4507,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     d_st.site = &bj_emlrtRSI;
     coder::b_eml_find(d_st, d_x, ii, jj, b_opts_contrast);
     loop_ub = ii.size(0);
-    c_I.set_size(&xj_emlrtRTEI, &c_st, ii.size(0));
+    c_I.set_size(&wj_emlrtRTEI, &c_st, ii.size(0));
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       c_I[b_i] = ii[b_i];
     }
@@ -5383,7 +4525,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    r2.set_size(&ki_emlrtRTEI, &b_st, k);
+    r2.set_size(&ji_emlrtRTEI, &b_st, k);
     k = 0;
     for (loop_ub = 0; loop_ub <= b_k; loop_ub++) {
       if ((idx[loop_ub] > 0.0) && (idx[loop_ub] <= b_opts_area.size(1))) {
@@ -5395,14 +4537,14 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     loop_ub = r2.size(0);
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       if (r2[b_i] > c_I.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, c_I.size(0) - 1, &ag_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, c_I.size(0) - 1, &nf_emlrtBCI,
           &b_st);
       }
     }
 
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       if (r2[b_i] > jj.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, jj.size(0) - 1, &bg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, jj.size(0) - 1, &of_emlrtBCI,
           &b_st);
       }
     }
@@ -5410,25 +4552,25 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       if (r2[b_i] > b_opts_contrast.size(0) - 1) {
         emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, b_opts_contrast.size(0) - 1,
-          &cg_emlrtBCI, &b_st);
+          &pf_emlrtBCI, &b_st);
       }
     }
 
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       b_k = static_cast<int32_T>(c_I[r2[b_i]]);
       if ((b_k < 1) || (b_k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &dg_emlrtBCI, &b_st);
+        emlrtDynamicBoundsCheckR2012b(b_k, 1, 8000, &qf_emlrtBCI, &b_st);
       }
     }
 
-    idx.set_size(&li_emlrtRTEI, &b_st, r2.size(0));
+    idx.set_size(&ki_emlrtRTEI, &b_st, r2.size(0));
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       idx[b_i] = (static_cast<real_T>(jj[r2[b_i]]) - 1.0) * static_cast<real_T>
         (i.size(1));
     }
 
     if (r2.size(0) == idx.size(0)) {
-      ii.set_size(&mi_emlrtRTEI, &b_st, r2.size(0));
+      ii.set_size(&li_emlrtRTEI, &b_st, r2.size(0));
       for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
         real_T d;
         d = P[static_cast<int32_T>(c_I[r2[b_i]]) - 1] + idx[b_i];
@@ -5439,13 +4581,13 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
         if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) >
              loop_ub_tmp)) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, loop_ub_tmp,
-            &eg_emlrtBCI, &b_st);
+            &rf_emlrtBCI, &b_st);
         }
 
         ii[b_i] = static_cast<int32_T>(d);
       }
     } else {
-      c_st.site = &vr_emlrtRSI;
+      c_st.site = &rr_emlrtRSI;
       binary_expand_op_21(c_st, ii, P, c_I, r2, idx, i, j);
     }
 
@@ -5472,7 +4614,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
     b_st.site = &uh_emlrtRSI;
     coder::c_abs(b_st, M, r);
-    b_idx.set_size(&ni_emlrtRTEI, &st, r.size(0), r.size(1));
+    b_idx.set_size(&mi_emlrtRTEI, &st, r.size(0), r.size(1));
     loop_ub = r.size(0) * r.size(1);
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       b_idx[b_i] = (r[b_i] != 0.0);
@@ -5498,7 +4640,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    r3.set_size(&ki_emlrtRTEI, &st, k);
+    r3.set_size(&ji_emlrtRTEI, &st, k);
     k = 0;
     for (loop_ub = 0; loop_ub <= b_k; loop_ub++) {
       if (b_idx[loop_ub]) {
@@ -5511,32 +4653,32 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     loop_ub = r3.size(0);
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       if (r3[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &fg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &sf_emlrtBCI, &st);
       }
     }
 
     b_k = M.size(0) * M.size(1);
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       if (r3[b_i] > b_k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, b_k - 1, &gg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, b_k - 1, &tf_emlrtBCI, &st);
       }
     }
 
-    b_opts_contrast.set_size(&oi_emlrtRTEI, &st, r3.size(0));
+    b_opts_contrast.set_size(&ni_emlrtRTEI, &st, r3.size(0));
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       b_opts_contrast[b_i] = varargout_1[r3[b_i]] + M[r3[b_i]];
     }
 
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       if (r3[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &hg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &uf_emlrtBCI, &st);
       }
 
       varargout_1[r3[b_i]] = b_opts_contrast[b_i];
     }
 
     if ((b_I.size(0) == J.size(0)) && (b_I.size(1) == J.size(1))) {
-      b_idx.set_size(&pi_emlrtRTEI, &st, i.size(1), j.size(1));
+      b_idx.set_size(&oi_emlrtRTEI, &st, i.size(1), j.size(1));
       for (int32_T b_i{0}; b_i < loop_ub_tmp; b_i++) {
         b_idx[b_i] = (b_I[b_i] == J[b_i]);
       }
@@ -5569,7 +4711,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       }
     }
 
-    r4.set_size(&ki_emlrtRTEI, &st, k);
+    r4.set_size(&ji_emlrtRTEI, &st, k);
     k = 0;
     for (loop_ub = 0; loop_ub <= b_k; loop_ub++) {
       if (b_idx[loop_ub]) {
@@ -5582,29 +4724,29 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     loop_ub_tmp = r4.size(0);
     for (int32_T b_i{0}; b_i < loop_ub_tmp; b_i++) {
       if (r4[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &ig_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &vf_emlrtBCI, &st);
       }
     }
 
-    b_opts_contrast.set_size(&qi_emlrtRTEI, &st, r4.size(0));
+    b_opts_contrast.set_size(&pi_emlrtRTEI, &st, r4.size(0));
     for (int32_T b_i{0}; b_i < loop_ub_tmp; b_i++) {
       b_opts_contrast[b_i] = varargout_1[r4[b_i]] + 1.0;
     }
 
     for (int32_T b_i{0}; b_i < loop_ub_tmp; b_i++) {
       if (r4[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &jg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r4[b_i], 0, k - 1, &wf_emlrtBCI, &st);
       }
 
       varargout_1[r4[b_i]] = b_opts_contrast[b_i];
     }
 
-    b_opts_area.set_size(&ri_emlrtRTEI, &st, 1, j.size(1));
+    b_opts_area.set_size(&qi_emlrtRTEI, &st, 1, j.size(1));
     for (int32_T b_i{0}; b_i < b_b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
 
-    r.set_size(&si_emlrtRTEI, &st, i.size(1), j.size(1));
+    r.set_size(&ri_emlrtRTEI, &st, i.size(1), j.size(1));
     for (int32_T b_i{0}; b_i < b_b; b_i++) {
       for (b_k = 0; b_k < b; b_k++) {
         r[b_k + r.size(0) * b_i] = opts_wuse * b_opts_area[b_i];
@@ -5643,7 +4785,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       plus(b_st, varargout_1, r);
     }
 
-    b_opts_area.set_size(&ti_emlrtRTEI, &st, 1, i.size(1));
+    b_opts_area.set_size(&si_emlrtRTEI, &st, 1, i.size(1));
     for (int32_T b_i{0}; b_i < b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(i[b_i]) - 1];
     }
@@ -5651,12 +4793,12 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     b_st.site = &xh_emlrtRSI;
     coder::b_sqrt(b_st, b_opts_area);
     loop_ub = b_opts_area.size(1);
-    b_opts_contrast.set_size(&ti_emlrtRTEI, &st, b_opts_area.size(1));
+    b_opts_contrast.set_size(&si_emlrtRTEI, &st, b_opts_area.size(1));
     for (int32_T b_i{0}; b_i < loop_ub; b_i++) {
       b_opts_contrast[b_i] = b_opts_area[b_i];
     }
 
-    b_I.set_size(&ui_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
+    b_I.set_size(&ti_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
     loop_ub = varargout_1.size(0) * varargout_1.size(1) - 1;
     for (int32_T b_i{0}; b_i <= loop_ub; b_i++) {
       b_I[b_i] = varargout_1[b_i];
@@ -5664,7 +4806,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
 
     b_st.site = &xh_emlrtRSI;
     coder::bsxfun(b_st, b_opts_contrast, b_I, varargout_1);
-    b_opts_area.set_size(&vi_emlrtRTEI, &st, 1, j.size(1));
+    b_opts_area.set_size(&ui_emlrtRTEI, &st, 1, j.size(1));
     for (int32_T b_i{0}; b_i < b_b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
@@ -5672,7 +4814,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
     b_st.site = &yh_emlrtRSI;
     coder::b_sqrt(b_st, b_opts_area);
     loop_ub = b_opts_area.size(1);
-    r6.set_size(&wi_emlrtRTEI, &st, 1, b_opts_area.size(1));
+    r6.set_size(&vi_emlrtRTEI, &st, 1, b_opts_area.size(1));
     k = (b_opts_area.size(1) / 2) << 1;
     b_k = k - 2;
     for (int32_T b_i{0}; b_i <= b_k; b_i += 2) {
@@ -5684,7 +4826,7 @@ static void c_srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x
       r6[b_i] = 1.0 / b_opts_area[b_i];
     }
 
-    b_I.set_size(&xi_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
+    b_I.set_size(&wi_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
     loop_ub = varargout_1.size(0) * varargout_1.size(1) - 1;
     for (int32_T b_i{0}; b_i <= loop_ub; b_i++) {
       b_I[b_i] = varargout_1[b_i];
@@ -5706,38 +4848,38 @@ static real_T cast(const emlrtStack &sp, const coder::array<c_struct_T, 1U>
   int32_T i;
   int32_T loop_ub_tmp;
   i = t0_nodes.size(0);
-  t1_nodes.set_size(&yf_emlrtRTEI, &sp, t0_nodes.size(0));
+  t1_nodes.set_size(&xf_emlrtRTEI, &sp, t0_nodes.size(0));
   for (int32_T i1{0}; i1 < i; i1++) {
     t1_nodes[i1].ctr[0] = t0_nodes[i1].ctr[0];
     t1_nodes[i1].ctr[1] = t0_nodes[i1].ctr[1];
     t1_nodes[i1].ctr[2] = t0_nodes[i1].ctr[2];
     loop_ub_tmp = t0_nodes[i1].xi.size[1];
-    t1_nodes[i1].xi.set_size(&yf_emlrtRTEI, &sp, 1, loop_ub_tmp);
+    t1_nodes[i1].xi.set_size(&xf_emlrtRTEI, &sp, 1, loop_ub_tmp);
     for (int32_T i2{0}; i2 < loop_ub_tmp; i2++) {
       t1_nodes[i1].xi[i2] = t0_nodes[i1].xi.data[i2];
     }
 
     t1_nodes[i1].prnt = t0_nodes[i1].prnt;
     loop_ub_tmp = t0_nodes[i1].chld.size(1);
-    t1_nodes[i1].chld.set_size(&yf_emlrtRTEI, &sp, 1, loop_ub_tmp);
+    t1_nodes[i1].chld.set_size(&xf_emlrtRTEI, &sp, 1, loop_ub_tmp);
     for (int32_T i2{0}; i2 < loop_ub_tmp; i2++) {
       t1_nodes[i1].chld[i2] = t0_nodes[i1].chld[i2];
     }
 
     loop_ub_tmp = t0_nodes[i1].nbor.size(1);
-    t1_nodes[i1].nbor.set_size(&yf_emlrtRTEI, &sp, 1, loop_ub_tmp);
+    t1_nodes[i1].nbor.set_size(&xf_emlrtRTEI, &sp, 1, loop_ub_tmp);
     for (int32_T i2{0}; i2 < loop_ub_tmp; i2++) {
       t1_nodes[i1].nbor[i2] = t0_nodes[i1].nbor[i2];
     }
 
     loop_ub_tmp = t0_nodes[i1].ilist.size(1);
-    t1_nodes[i1].ilist.set_size(&yf_emlrtRTEI, &sp, 1, loop_ub_tmp);
+    t1_nodes[i1].ilist.set_size(&xf_emlrtRTEI, &sp, 1, loop_ub_tmp);
     for (int32_T i2{0}; i2 < loop_ub_tmp; i2++) {
       t1_nodes[i1].ilist[i2] = t0_nodes[i1].ilist[i2];
     }
 
     loop_ub_tmp = t0_nodes[i1].snbor.size(1);
-    t1_nodes[i1].snbor.set_size(&yf_emlrtRTEI, &sp, 1, loop_ub_tmp);
+    t1_nodes[i1].snbor.set_size(&xf_emlrtRTEI, &sp, 1, loop_ub_tmp);
     for (int32_T i2{0}; i2 < loop_ub_tmp; i2++) {
       t1_nodes[i1].snbor[i2] = t0_nodes[i1].snbor[i2];
     }
@@ -5748,7 +4890,7 @@ static real_T cast(const emlrtStack &sp, const coder::array<c_struct_T, 1U>
   }
 
   loop_ub_tmp = t0_lvp.size(1);
-  t1_lvp.set_size(&yf_emlrtRTEI, &sp, 1, t0_lvp.size(1));
+  t1_lvp.set_size(&xf_emlrtRTEI, &sp, 1, t0_lvp.size(1));
   for (i = 0; i < loop_ub_tmp; i++) {
     t1_lvp[i] = t0_lvp[i];
   }
@@ -5756,365 +4898,6 @@ static real_T cast(const emlrtStack &sp, const coder::array<c_struct_T, 1U>
   t1_nlvl = t0_nlvl;
   t1_lrt = t0_lrt;
   return t1_nlvl;
-}
-
-static void d_spget(srskelf_asym_newStackData *SD, const emlrtStack &sp, const
-                    coder::f_captured_var &slf, const coder::c_captured_var &
-                    nslf, const coder::f_captured_var &lst, const coder::
-                    c_captured_var &nlst, const coder::c_captured_var &nbox,
-                    const coder::b_captured_var &t, const coder::c_captured_var
-                    &i, const coder::e_captured_var &lookup_list, const coder::
-                    d_captured_var &F, const coder::captured_var &opts, coder::
-                    array<real_T, 2U> &A)
-{
-  coder::array<real_T, 2U> r;
-  coder::array<int32_T, 1U> ii;
-  coder::array<int32_T, 1U> r1;
-  coder::array<boolean_T, 1U> update_list;
-  emlrtStack b_st;
-  emlrtStack st;
-  real_T d;
-  real_T d1;
-  real_T m_;
-  real_T n_;
-  int32_T b_i;
-  int32_T b_lookup_list;
-  int32_T i1;
-  int32_T i2;
-  int32_T i3;
-  int32_T loop_ub;
-  uint32_T idxI[2000];
-  st.prev = &sp;
-  st.tls = sp.tls;
-  b_st.prev = &st;
-  b_st.tls = st.tls;
-  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-
-  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  //  A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is
-  //  slow for large matrices).  We grab the accumulated Schur complement
-  //  updates to a block of the matrix from previously-skeletonized
-  //  levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
-  //  Translate input strings to index sets (and their lengths)
-  m_ = nslf.contents;
-  n_ = nlst.contents;
-  if (!(m_ >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(m_, &cc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  d = static_cast<int32_T>(muDoubleScalarFloor(m_));
-  if (m_ != d) {
-    emlrtIntegerCheckR2012b(m_, &bc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (!(n_ >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(n_, &ec_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  d1 = static_cast<int32_T>(muDoubleScalarFloor(n_));
-  if (n_ != d1) {
-    emlrtIntegerCheckR2012b(n_, &dc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  A.set_size(&bk_emlrtRTEI, &sp, static_cast<int32_T>(m_), static_cast<int32_T>
-             (n_));
-  if (m_ != d) {
-    emlrtIntegerCheckR2012b(m_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (n_ != d1) {
-    emlrtIntegerCheckR2012b(n_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  loop_ub = static_cast<int32_T>(m_) * static_cast<int32_T>(n_);
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    A[b_i] = 0.0;
-  }
-
-  if (!(nbox.contents >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(nbox.contents, &yb_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  if (nbox.contents != static_cast<int32_T>(muDoubleScalarFloor(nbox.contents)))
-  {
-    emlrtIntegerCheckR2012b(nbox.contents, &ac_emlrtDCI, (emlrtConstCTX)&sp);
-  }
-
-  //  Local copy of t.nodes to avoid outer variable usage in recursive function
-  loop_ub = static_cast<int32_T>(nbox.contents);
-  update_list.set_size(&ck_emlrtRTEI, &sp, loop_ub);
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    update_list[b_i] = false;
-  }
-
-  st.site = &nj_emlrtRSI;
-  get_update_list(&st, i.contents, update_list, t.contents.nodes);
-
-  //  Pass nodes to the recursive function
-  st.site = &oj_emlrtRSI;
-  b_st.site = &ue_emlrtRSI;
-  coder::c_eml_find(b_st, update_list, ii);
-  loop_ub = ii.size(0);
-  r.set_size(&dk_emlrtRTEI, &sp, 1, ii.size(0));
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    r[b_i] = ii[b_i];
-  }
-
-  int32_T iv[2];
-  st.site = &oj_emlrtRSI;
-  coder::flip(r);
-  iv[0] = (*(int32_T (*)[2])r.size())[0];
-  iv[1] = (*(int32_T (*)[2])r.size())[1];
-  st.site = &oj_emlrtRSI;
-  coder::internal::indexShapeCheck(st, lookup_list.contents.size(0), iv);
-  b_lookup_list = lookup_list.contents.size(0);
-  loop_ub = r.size(1);
-  ii.set_size(&ek_emlrtRTEI, &sp, r.size(1));
-  for (b_i = 0; b_i < loop_ub; b_i++) {
-    i1 = static_cast<int32_T>(r[b_i]);
-    if ((i1 < 1) || (i1 > b_lookup_list)) {
-      emlrtDynamicBoundsCheckR2012b(i1, 1, b_lookup_list, &pg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-
-    ii[b_i] = lookup_list.contents[i1 - 1];
-  }
-
-  b_lookup_list = ii.size(0) - 1;
-  loop_ub = 0;
-  for (int32_T c_i{0}; c_i <= b_lookup_list; c_i++) {
-    if (ii[c_i] != 0) {
-      loop_ub++;
-    }
-  }
-
-  r1.set_size(&fk_emlrtRTEI, &sp, loop_ub);
-  loop_ub = 0;
-  for (int32_T c_i{0}; c_i <= b_lookup_list; c_i++) {
-    if (ii[c_i] != 0) {
-      r1[loop_ub] = c_i;
-      loop_ub++;
-    }
-  }
-
-  b_lookup_list = r1.size(0);
-  for (b_i = 0; b_i < b_lookup_list; b_i++) {
-    if (r1[b_i] > r.size(1) - 1) {
-      emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, r.size(1) - 1, &qg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-  }
-
-  if (b_lookup_list - 1 >= 0) {
-    i2 = F.contents.factors.size(0);
-    i3 = slf.contents.size(1);
-  }
-
-  for (int32_T idx{0}; idx < b_lookup_list; idx++) {
-    real_T idxJ[2000];
-    real_T xj[2000];
-    int32_T b_subI[2000];
-    int32_T c_subI[2000];
-    uint32_T subI[2000];
-    uint32_T u;
-    int8_T tmp1[2000];
-    int8_T tmp2[2000];
-    int8_T i4;
-    int8_T i5;
-
-    //  Use an explicit index for the loop
-    if (idx + 1 > b_lookup_list) {
-      emlrtDynamicBoundsCheckR2012b(idx + 1, 1, b_lookup_list, &mg_emlrtBCI,
-        (emlrtConstCTX)&sp);
-    }
-
-    //  Use temporary variables for each field of the struct
-    b_i = ii[r1[idx]];
-    if ((b_i < 1) || (b_i > i2)) {
-      emlrtDynamicBoundsCheckR2012b(b_i, 1, i2, &ng_emlrtBCI, (emlrtConstCTX)&sp);
-    }
-
-    b_i = r1[idx];
-    loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-    for (b_i = 0; b_i < 1000; b_i++) {
-      xj[b_i] = F.contents.factors[loop_ub].sk[b_i];
-      xj[b_i + 1000] = F.contents.factors[loop_ub].nbr[b_i];
-    }
-
-    //  For off-diagonal block
-    st.site = &pj_emlrtRSI;
-
-    //  Helper function to replace ismembc2
-    //  Initialize an empty array to store the locations
-    std::memset(&idxI[0], 0, 2000U * sizeof(uint32_T));
-
-    //  Iterate over each element to find
-    for (int32_T c_i{0}; c_i < i3; c_i++) {
-      if (c_i + 1 > i3) {
-        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, i3, &og_emlrtBCI, &st);
-      }
-
-      //  Use the local function binary_search to find the location of the element
-      b_st.site = &er_emlrtRSI;
-      m_ = binary_search_t(b_st, xj, slf.contents[c_i]);
-
-      //  If the element is found (location is not -1), add it to the locs array
-      if (m_ != -1.0) {
-        if ((static_cast<int32_T>(m_) < 1) || (static_cast<int32_T>(m_) > 2000))
-        {
-          emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(m_), 1, 2000,
-            &rg_emlrtBCI, &st);
-        }
-
-        idxI[static_cast<int32_T>(m_) - 1] = static_cast<uint32_T>(c_i + 1);
-      }
-
-      if (*emlrtBreakCheckR2012bFlagVar != 0) {
-        emlrtBreakCheckR2012b(&st);
-      }
-    }
-
-    //  Replace ismembc2 with find_locations_t
-    st.site = &qj_emlrtRSI;
-    find_locations_t(st, xj, lst.contents, idxJ);
-
-    //  Replace ismembc2 with find_locations_t
-    //  Convert to double to ensure consistent types
-    for (b_i = 0; b_i < 2000; b_i++) {
-      tmp1[b_i] = static_cast<int8_T>(static_cast<int32_T>(idxI[b_i]) != 0);
-      tmp2[b_i] = static_cast<int8_T>(idxJ[b_i] != 0.0);
-    }
-
-    //  Convert to double to ensure consistent types
-    for (b_i = 0; b_i < 2000; b_i++) {
-      if (tmp1[b_i] < 1) {
-        emlrtDynamicBoundsCheckR2012b(0, 1, 2000, &sg_emlrtBCI, (emlrtConstCTX)&
-          sp);
-      }
-
-      subI[b_i] = idxI[0];
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      if (tmp2[b_i] < 1) {
-        emlrtDynamicBoundsCheckR2012b(0, 1, 2000, &tg_emlrtBCI, (emlrtConstCTX)&
-          sp);
-      }
-
-      xj[b_i] = idxJ[0];
-    }
-
-    //  Ensure tmp2 is consistent in size
-    b_i = r1[idx];
-    loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-    for (b_i = 0; b_i < 1000; b_i++) {
-      i4 = tmp2[b_i];
-      i5 = tmp2[b_i + 1000];
-      for (i1 = 0; i1 < 1000; i1++) {
-        SD->f0.tmp2[i1 + 1000 * b_i] = F.contents.factors[loop_ub].F[i1 + 1000 *
-          (i4 - 1)];
-        SD->f0.tmp2[i1 + 1000 * (b_i + 1000)] = F.contents.factors[loop_ub].D[i1
-          + 1000 * (i5 - 1)];
-      }
-    }
-
-    //  Different factorization depending on symmetry
-    st.site = &rj_emlrtRSI;
-    if (coder::internal::b_strcmp(st, opts.contents.symm)) {
-      b_i = r1[idx];
-      loop_ub = lookup_list.contents[static_cast<int32_T>(r[b_i]) - 1] - 1;
-      for (b_i = 0; b_i < 1000; b_i++) {
-        i4 = tmp2[b_i];
-        i5 = tmp2[b_i + 1000];
-        for (i1 = 0; i1 < 1000; i1++) {
-          SD->f0.tmp2[i1 + 1000 * b_i] = F.contents.factors[loop_ub].E[(i4 +
-            1000 * i1) - 1];
-          SD->f0.tmp2[i1 + 1000 * (b_i + 1000)] = F.contents.factors[loop_ub].C
-            [(i5 + 1000 * i1) - 1];
-        }
-      }
-    } else {
-      st.site = &sj_emlrtRSI;
-      coder::internal::c_strcmp(st, opts.contents.symm);
-    }
-
-    st.site = &tj_emlrtRSI;
-    b_i = r1[idx];
-    for (i1 = 0; i1 < 1000; i1++) {
-      for (int32_T c_i{0}; c_i < 1000; c_i++) {
-        loop_ub = c_i + 2000 * i1;
-        SD->f0.F[loop_ub] = F.contents.factors[ii[b_i] - 1].E[(tmp1[c_i] + 1000 *
-          i1) - 1];
-        SD->f0.F[loop_ub + 1000] = F.contents.factors[ii[b_i] - 1].C[(tmp1[c_i +
-          1000] + 1000 * i1) - 1];
-      }
-    }
-
-    coder::internal::blas::mtimes(SD->f0.F, SD->f0.tmp2, SD->f0.y);
-    loop_ub = A.size(0);
-    for (b_i = 0; b_i < 2000; b_i++) {
-      u = subI[b_i];
-      if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) > loop_ub))
-      {
-        emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, loop_ub,
-          &ug_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      b_subI[b_i] = static_cast<int32_T>(u);
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      i1 = static_cast<int32_T>(xj[b_i]);
-      if ((i1 < 1) || (i1 > static_cast<int32_T>(n_))) {
-        emlrtDynamicBoundsCheckR2012b(i1, 1, static_cast<int32_T>(n_),
-          &vg_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      idxJ[b_i] = i1;
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      u = subI[b_i];
-      if ((static_cast<int32_T>(u) < 1) || (static_cast<int32_T>(u) > loop_ub))
-      {
-        emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(u), 1, loop_ub,
-          &wg_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      c_subI[b_i] = static_cast<int32_T>(u);
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      i1 = static_cast<int32_T>(xj[b_i]);
-      if ((i1 < 1) || (i1 > static_cast<int32_T>(n_))) {
-        emlrtDynamicBoundsCheckR2012b(i1, 1, static_cast<int32_T>(n_),
-          &xg_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      xj[b_i] = i1;
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      for (i1 = 0; i1 < 2000; i1++) {
-        loop_ub = i1 + 2000 * b_i;
-        SD->f0.A[loop_ub] = A[(b_subI[i1] + A.size(0) * (static_cast<int32_T>
-          (idxJ[b_i]) - 1)) - 1] - SD->f0.y[loop_ub];
-      }
-    }
-
-    for (b_i = 0; b_i < 2000; b_i++) {
-      for (i1 = 0; i1 < 2000; i1++) {
-        A[(c_subI[i1] + A.size(0) * (static_cast<int32_T>(xj[b_i]) - 1)) - 1] =
-          SD->f0.A[i1 + 2000 * b_i];
-      }
-    }
-
-    if (*emlrtBreakCheckR2012bFlagVar != 0) {
-      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
-    }
-  }
-
-  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
 }
 
 static void disp(const emlrtStack &sp, const mxArray *m, emlrtMCInfo &location)
@@ -6125,25 +4908,23 @@ static void disp(const emlrtStack &sp, const mxArray *m, emlrtMCInfo &location)
                         &location);
 }
 
-static const mxArray *emlrt_marshallOut(const emlrtStack &sp, const char_T u[43])
-{
-  static const int32_T iv[2]{ 1, 43 };
-
-  const mxArray *m;
-  const mxArray *y;
-  y = nullptr;
-  m = emlrtCreateCharArray(2, &iv[0]);
-  emlrtInitCharArrayR2013a((emlrtConstCTX)&sp, 43, m, &u[0]);
-  emlrtAssign(&y, m);
-  return y;
-}
-
 static const mxArray *emlrt_marshallOut(const emlrtStack &sp)
 {
   const mxArray *m;
   const mxArray *y;
   y = nullptr;
   m = emlrtCreateString1R2022a((emlrtCTX)&sp, '-');
+  emlrtAssign(&y, m);
+  return y;
+}
+
+static const mxArray *emlrt_marshallOut(const int32_T u)
+{
+  const mxArray *m;
+  const mxArray *y;
+  y = nullptr;
+  m = emlrtCreateNumericMatrix(1, 1, mxINT32_CLASS, mxREAL);
+  *static_cast<int32_T *>(emlrtMxGetData(m)) = u;
   emlrtAssign(&y, m);
   return y;
 }
@@ -6158,13 +4939,15 @@ static const mxArray *emlrt_marshallOut(const real_T u)
   return y;
 }
 
-static const mxArray *emlrt_marshallOut(const int32_T u)
+static const mxArray *emlrt_marshallOut(const emlrtStack &sp, const char_T u[43])
 {
+  static const int32_T iv[2]{ 1, 43 };
+
   const mxArray *m;
   const mxArray *y;
   y = nullptr;
-  m = emlrtCreateNumericMatrix(1, 1, mxINT32_CLASS, mxREAL);
-  *static_cast<int32_T *>(emlrtMxGetData(m)) = u;
+  m = emlrtCreateCharArray(2, &iv[0]);
+  emlrtInitCharArrayR2013a((emlrtConstCTX)&sp, 43, m, &u[0]);
   emlrtAssign(&y, m);
   return y;
 }
@@ -6203,57 +4986,6 @@ static const mxArray *feval(const emlrtStack &sp, const mxArray *m1, const
   pArrays[9] = m10;
   return emlrtCallMATLABR2012b((emlrtConstCTX)&sp, 1, &m, 10, &pArrays[0],
     "feval", true, &location);
-}
-
-static void find_locations_t(const emlrtStack &sp, const real_T big_sorted_list
-  [2000], const coder::array<real_T, 2U> &elements_to_find, real_T locs[2000])
-{
-  emlrtStack st;
-  int32_T i;
-  int32_T n;
-  st.prev = &sp;
-  st.tls = sp.tls;
-
-  //  Helper function to replace ismembc2
-  //  Initialize an empty array to store the locations
-  std::memset(&locs[0], 0, 2000U * sizeof(real_T));
-
-  //  Iterate over each element to find
-  if ((elements_to_find.size(0) == 0) || (elements_to_find.size(1) == 0)) {
-    n = 0;
-  } else {
-    i = elements_to_find.size(0);
-    n = elements_to_find.size(1);
-    n = muIntScalarMax_sint32(i, n);
-  }
-
-  for (int32_T b_i{0}; b_i < n; b_i++) {
-    real_T loc;
-    i = elements_to_find.size(0) * elements_to_find.size(1);
-    if (b_i + 1 > i) {
-      emlrtDynamicBoundsCheckR2012b(b_i + 1, 1, i, &og_emlrtBCI, (emlrtConstCTX)
-        &sp);
-    }
-
-    //  Use the local function binary_search to find the location of the element
-    st.site = &er_emlrtRSI;
-    loc = binary_search_t(st, big_sorted_list, elements_to_find[b_i]);
-
-    //  If the element is found (location is not -1), add it to the locs array
-    if (loc != -1.0) {
-      if ((static_cast<int32_T>(loc) < 1) || (static_cast<int32_T>(loc) > 2000))
-      {
-        emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(loc), 1, 2000,
-          &rg_emlrtBCI, (emlrtConstCTX)&sp);
-      }
-
-      locs[static_cast<int32_T>(loc) - 1] = static_cast<real_T>(b_i) + 1.0;
-    }
-
-    if (*emlrtBreakCheckR2012bFlagVar != 0) {
-      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
-    }
-  }
 }
 
 static const mxArray *g_emlrt_marshallOut(const emlrtStack &sp, const char_T u[7])
@@ -6296,7 +5028,7 @@ static void get_update_list(const emlrtStack *sp, real_T node_idx, coder::array<
   if ((static_cast<int32_T>(node_idx) < 1) || (static_cast<int32_T>(node_idx) >
        i)) {
     emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(node_idx), 1, i,
-      &rr_emlrtBCI, (emlrtConstCTX)sp);
+      &oq_emlrtBCI, (emlrtConstCTX)sp);
   }
 
   update_list[static_cast<int32_T>(node_idx) - 1] = true;
@@ -6304,15 +5036,15 @@ static void get_update_list(const emlrtStack *sp, real_T node_idx, coder::array<
         nodes.size(0)));
   if (b) {
     emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(node_idx), 1, nodes.size
-      (0), &qr_emlrtBCI, (emlrtConstCTX)sp);
+      (0), &nq_emlrtBCI, (emlrtConstCTX)sp);
   }
 
   loop_ub = nodes[static_cast<int32_T>(node_idx) - 1].snbor.size(1);
-  r.set_size(&to_emlrtRTEI, sp, 1, loop_ub);
+  r.set_size(&so_emlrtRTEI, sp, 1, loop_ub);
   if ((static_cast<int32_T>(node_idx) < 1) || (static_cast<int32_T>(node_idx) >
        nodes.size(0))) {
     emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(node_idx), 1, nodes.size
-      (0), &qr_emlrtBCI, (emlrtConstCTX)sp);
+      (0), &nq_emlrtBCI, (emlrtConstCTX)sp);
   }
 
   b_update_list = update_list.size(0);
@@ -6326,7 +5058,7 @@ static void get_update_list(const emlrtStack *sp, real_T node_idx, coder::array<
     if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) >
          b_update_list)) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, b_update_list,
-        &sr_emlrtBCI, (emlrtConstCTX)sp);
+        &pq_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     r[i] = static_cast<int32_T>(d);
@@ -6340,11 +5072,11 @@ static void get_update_list(const emlrtStack *sp, real_T node_idx, coder::array<
   i = nodes[static_cast<int32_T>(node_idx) - 1].chld.size(1);
   for (loop_ub = 0; loop_ub < i; loop_ub++) {
     if (loop_ub + 1 > i) {
-      emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1, i, &tr_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1, i, &qq_emlrtBCI,
         (emlrtConstCTX)sp);
     }
 
-    st.site = &uj_emlrtRSI;
+    st.site = &tj_emlrtRSI;
     get_update_list(&st, nodes[static_cast<int32_T>(node_idx) - 1].chld[loop_ub],
                     update_list, nodes);
 
@@ -6465,6 +5197,417 @@ static const mxArray *p_emlrt_marshallOut(const emlrtStack &sp, const char_T u
   return y;
 }
 
+static void spget(const emlrtStack &sp, const coder::f_captured_var &slf, const
+                  coder::c_captured_var &nslf, const coder::c_captured_var &nbox,
+                  const coder::b_captured_var &t, const coder::c_captured_var &i,
+                  const coder::e_captured_var &lookup_list, const coder::
+                  d_captured_var &F, const coder::captured_var &opts, coder::
+                  array<real_T, 2U> &A)
+{
+  coder::array<real_T, 2U> r;
+  coder::array<int32_T, 1U> ii;
+  coder::array<int32_T, 1U> r1;
+  coder::array<boolean_T, 1U> update_list;
+  emlrtStack b_st;
+  emlrtStack st;
+  real_T m__tmp;
+  int32_T I__size_idx_1;
+  int32_T b_i;
+  int32_T b_lookup_list;
+  int32_T c_i;
+  int32_T loop_ub;
+  st.prev = &sp;
+  st.tls = sp.tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
+
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  //  A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is
+  //  slow for large matrices).  We grab the accumulated Schur complement
+  //  updates to a block of the matrix from previously-skeletonized
+  //  levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
+  //  Translate input strings to index sets (and their lengths)
+  I__size_idx_1 = slf.contents.size(1);
+  m__tmp = nslf.contents;
+  if (!(m__tmp >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(m__tmp, &cc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  b_i = static_cast<int32_T>(muDoubleScalarFloor(m__tmp));
+  if (m__tmp != b_i) {
+    emlrtIntegerCheckR2012b(m__tmp, &bc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  A.set_size(&ak_emlrtRTEI, &sp, static_cast<int32_T>(m__tmp), static_cast<
+             int32_T>(m__tmp));
+  if (m__tmp != b_i) {
+    emlrtIntegerCheckR2012b(m__tmp, &fc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  loop_ub = static_cast<int32_T>(m__tmp) * static_cast<int32_T>(m__tmp);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    A[b_i] = 0.0;
+  }
+
+  if (!(nbox.contents >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(nbox.contents, &yb_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (nbox.contents != static_cast<int32_T>(muDoubleScalarFloor(nbox.contents)))
+  {
+    emlrtIntegerCheckR2012b(nbox.contents, &ac_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  //  Local copy of t.nodes to avoid outer variable usage in recursive function
+  loop_ub = static_cast<int32_T>(nbox.contents);
+  update_list.set_size(&bk_emlrtRTEI, &sp, loop_ub);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    update_list[b_i] = false;
+  }
+
+  st.site = &nj_emlrtRSI;
+  get_update_list(&st, i.contents, update_list, t.contents.nodes);
+
+  //  Pass nodes to the recursive function
+  st.site = &oj_emlrtRSI;
+  b_st.site = &ue_emlrtRSI;
+  coder::c_eml_find(b_st, update_list, ii);
+  loop_ub = ii.size(0);
+  r.set_size(&ck_emlrtRTEI, &sp, 1, ii.size(0));
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    r[b_i] = ii[b_i];
+  }
+
+  int32_T iv[2];
+  st.site = &oj_emlrtRSI;
+  coder::flip(r);
+  iv[0] = (*(int32_T (*)[2])r.size())[0];
+  iv[1] = (*(int32_T (*)[2])r.size())[1];
+  st.site = &oj_emlrtRSI;
+  coder::internal::indexShapeCheck(st, lookup_list.contents.size(0), iv);
+  b_lookup_list = lookup_list.contents.size(0);
+  loop_ub = r.size(1);
+  ii.set_size(&dk_emlrtRTEI, &sp, r.size(1));
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    c_i = static_cast<int32_T>(r[b_i]);
+    if ((c_i < 1) || (c_i > b_lookup_list)) {
+      emlrtDynamicBoundsCheckR2012b(c_i, 1, b_lookup_list, &dg_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+
+    ii[b_i] = lookup_list.contents[c_i - 1];
+  }
+
+  b_lookup_list = ii.size(0) - 1;
+  loop_ub = 0;
+  for (c_i = 0; c_i <= b_lookup_list; c_i++) {
+    if (ii[c_i] != 0) {
+      loop_ub++;
+    }
+  }
+
+  r1.set_size(&ek_emlrtRTEI, &sp, loop_ub);
+  loop_ub = 0;
+  for (c_i = 0; c_i <= b_lookup_list; c_i++) {
+    if (ii[c_i] != 0) {
+      r1[loop_ub] = c_i;
+      loop_ub++;
+    }
+  }
+
+  loop_ub = r1.size(0);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    if (r1[b_i] > r.size(1) - 1) {
+      emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, r.size(1) - 1, &eg_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+  }
+
+  for (b_lookup_list = 0; b_lookup_list < loop_ub; b_lookup_list++) {
+    //  Use an explicit index for the loop
+    if (b_lookup_list + 1 > loop_ub) {
+      emlrtDynamicBoundsCheckR2012b(b_lookup_list + 1, 1, loop_ub, &ag_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+
+    //  Use temporary variables for each field of the struct
+    b_i = F.contents.factors.size(0);
+    c_i = ii[r1[b_lookup_list]];
+    if ((c_i < 1) || (c_i > b_i)) {
+      emlrtDynamicBoundsCheckR2012b(c_i, 1, b_i, &bg_emlrtBCI, (emlrtConstCTX)&
+        sp);
+    }
+
+    //  For diagonal block
+    st.site = &fq_emlrtRSI;
+
+    //  Helper function to replace ismembc2
+    //  Initialize an empty array to store the locations
+    //  Iterate over each element to find
+    for (c_i = 0; c_i < I__size_idx_1; c_i++) {
+      if (c_i + 1 > I__size_idx_1) {
+        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, I__size_idx_1, &cg_emlrtBCI,
+          &st);
+      }
+
+      //  Use the local function binary_search to find the location of the element
+      //  If the element is found (location is not -1), add it to the locs array
+      if (*emlrtBreakCheckR2012bFlagVar != 0) {
+        emlrtBreakCheckR2012b(&st);
+      }
+    }
+
+    //  Replace ismembc2 with find_locations_t
+    //  Convert to double to ensure consistent types
+    //  Ensure tmp2 is consistent in size
+    //  Different factorization depending on symmetry
+    st.site = &gq_emlrtRSI;
+    if (!coder::internal::b_strcmp(st, opts.contents.symm)) {
+      st.site = &hq_emlrtRSI;
+      coder::internal::c_strcmp(st, opts.contents.symm);
+    }
+
+    if (*emlrtBreakCheckR2012bFlagVar != 0) {
+      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
+    }
+  }
+
+  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
+}
+
+static void spget(const emlrtStack &sp, const coder::f_captured_var &slf, const
+                  coder::c_captured_var &nslf, const coder::f_captured_var &lst,
+                  const coder::c_captured_var &nlst, const coder::c_captured_var
+                  &nbox, const coder::b_captured_var &t, const coder::
+                  c_captured_var &i, const coder::e_captured_var &lookup_list,
+                  const coder::d_captured_var &F, const coder::captured_var &
+                  opts, coder::array<real_T, 2U> &A)
+{
+  coder::array<real_T, 2U> r;
+  coder::array<int32_T, 1U> ii;
+  coder::array<int32_T, 1U> r1;
+  coder::array<boolean_T, 1U> update_list;
+  emlrtStack b_st;
+  emlrtStack st;
+  real_T d;
+  real_T d1;
+  real_T m_;
+  real_T n_;
+  int32_T I__size_idx_0;
+  int32_T I__size_idx_1;
+  int32_T J__size_idx_1;
+  int32_T b_i;
+  int32_T b_lookup_list;
+  int32_T c_i;
+  int32_T i1;
+  int32_T loop_ub;
+  int32_T n;
+  st.prev = &sp;
+  st.tls = sp.tls;
+  b_st.prev = &st;
+  b_st.tls = st.tls;
+  emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
+
+  // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  //  A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is
+  //  slow for large matrices).  We grab the accumulated Schur complement
+  //  updates to a block of the matrix from previously-skeletonized
+  //  levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
+  //  Translate input strings to index sets (and their lengths)
+  m_ = nlst.contents;
+  I__size_idx_0 = lst.contents.size(0);
+  I__size_idx_1 = lst.contents.size(1);
+  J__size_idx_1 = slf.contents.size(1);
+  n_ = nslf.contents;
+  if (!(m_ >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(m_, &cc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  d = static_cast<int32_T>(muDoubleScalarFloor(m_));
+  if (m_ != d) {
+    emlrtIntegerCheckR2012b(m_, &bc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (!(n_ >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(n_, &ec_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  d1 = static_cast<int32_T>(muDoubleScalarFloor(n_));
+  if (n_ != d1) {
+    emlrtIntegerCheckR2012b(n_, &dc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  A.set_size(&ak_emlrtRTEI, &sp, static_cast<int32_T>(m_), static_cast<int32_T>
+             (n_));
+  if (m_ != d) {
+    emlrtIntegerCheckR2012b(m_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (n_ != d1) {
+    emlrtIntegerCheckR2012b(n_, &fc_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  loop_ub = static_cast<int32_T>(m_) * static_cast<int32_T>(n_);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    A[b_i] = 0.0;
+  }
+
+  if (!(nbox.contents >= 0.0)) {
+    emlrtNonNegativeCheckR2012b(nbox.contents, &yb_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  if (nbox.contents != static_cast<int32_T>(muDoubleScalarFloor(nbox.contents)))
+  {
+    emlrtIntegerCheckR2012b(nbox.contents, &ac_emlrtDCI, (emlrtConstCTX)&sp);
+  }
+
+  //  Local copy of t.nodes to avoid outer variable usage in recursive function
+  loop_ub = static_cast<int32_T>(nbox.contents);
+  update_list.set_size(&bk_emlrtRTEI, &sp, loop_ub);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    update_list[b_i] = false;
+  }
+
+  st.site = &nj_emlrtRSI;
+  get_update_list(&st, i.contents, update_list, t.contents.nodes);
+
+  //  Pass nodes to the recursive function
+  st.site = &oj_emlrtRSI;
+  b_st.site = &ue_emlrtRSI;
+  coder::c_eml_find(b_st, update_list, ii);
+  loop_ub = ii.size(0);
+  r.set_size(&ck_emlrtRTEI, &sp, 1, ii.size(0));
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    r[b_i] = ii[b_i];
+  }
+
+  int32_T iv[2];
+  st.site = &oj_emlrtRSI;
+  coder::flip(r);
+  iv[0] = (*(int32_T (*)[2])r.size())[0];
+  iv[1] = (*(int32_T (*)[2])r.size())[1];
+  st.site = &oj_emlrtRSI;
+  coder::internal::indexShapeCheck(st, lookup_list.contents.size(0), iv);
+  b_lookup_list = lookup_list.contents.size(0);
+  loop_ub = r.size(1);
+  ii.set_size(&dk_emlrtRTEI, &sp, r.size(1));
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    c_i = static_cast<int32_T>(r[b_i]);
+    if ((c_i < 1) || (c_i > b_lookup_list)) {
+      emlrtDynamicBoundsCheckR2012b(c_i, 1, b_lookup_list, &dg_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+
+    ii[b_i] = lookup_list.contents[c_i - 1];
+  }
+
+  b_lookup_list = ii.size(0) - 1;
+  loop_ub = 0;
+  for (c_i = 0; c_i <= b_lookup_list; c_i++) {
+    if (ii[c_i] != 0) {
+      loop_ub++;
+    }
+  }
+
+  r1.set_size(&ek_emlrtRTEI, &sp, loop_ub);
+  loop_ub = 0;
+  for (c_i = 0; c_i <= b_lookup_list; c_i++) {
+    if (ii[c_i] != 0) {
+      r1[loop_ub] = c_i;
+      loop_ub++;
+    }
+  }
+
+  loop_ub = r1.size(0);
+  for (b_i = 0; b_i < loop_ub; b_i++) {
+    if (r1[b_i] > r.size(1) - 1) {
+      emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, r.size(1) - 1, &eg_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+  }
+
+  if (r1.size(0) - 1 >= 0) {
+    if ((I__size_idx_0 == 0) || (I__size_idx_1 == 0)) {
+      n = 0;
+    } else {
+      n = muIntScalarMax_sint32(I__size_idx_0, I__size_idx_1);
+    }
+
+    i1 = J__size_idx_1;
+  }
+
+  for (b_lookup_list = 0; b_lookup_list < loop_ub; b_lookup_list++) {
+    //  Use an explicit index for the loop
+    if (b_lookup_list + 1 > loop_ub) {
+      emlrtDynamicBoundsCheckR2012b(b_lookup_list + 1, 1, loop_ub, &ag_emlrtBCI,
+        (emlrtConstCTX)&sp);
+    }
+
+    //  Use temporary variables for each field of the struct
+    b_i = F.contents.factors.size(0);
+    c_i = ii[r1[b_lookup_list]];
+    if ((c_i < 1) || (c_i > b_i)) {
+      emlrtDynamicBoundsCheckR2012b(c_i, 1, b_i, &bg_emlrtBCI, (emlrtConstCTX)&
+        sp);
+    }
+
+    //  For off-diagonal block
+    st.site = &pj_emlrtRSI;
+
+    //  Helper function to replace ismembc2
+    //  Initialize an empty array to store the locations
+    //  Iterate over each element to find
+    for (c_i = 0; c_i < n; c_i++) {
+      b_i = I__size_idx_0 * I__size_idx_1;
+      if (c_i + 1 > b_i) {
+        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, b_i, &cg_emlrtBCI, &st);
+      }
+
+      //  Use the local function binary_search to find the location of the element
+      //  If the element is found (location is not -1), add it to the locs array
+      if (*emlrtBreakCheckR2012bFlagVar != 0) {
+        emlrtBreakCheckR2012b(&st);
+      }
+    }
+
+    //  Replace ismembc2 with find_locations_t
+    st.site = &qj_emlrtRSI;
+
+    //  Helper function to replace ismembc2
+    //  Initialize an empty array to store the locations
+    //  Iterate over each element to find
+    for (c_i = 0; c_i < i1; c_i++) {
+      if (c_i + 1 > J__size_idx_1) {
+        emlrtDynamicBoundsCheckR2012b(c_i + 1, 1, J__size_idx_1, &cg_emlrtBCI,
+          &st);
+      }
+
+      //  Use the local function binary_search to find the location of the element
+      //  If the element is found (location is not -1), add it to the locs array
+      if (*emlrtBreakCheckR2012bFlagVar != 0) {
+        emlrtBreakCheckR2012b(&st);
+      }
+    }
+
+    //  Replace ismembc2 with find_locations_t
+    //  Convert to double to ensure consistent types
+    //  Ensure tmp2 is consistent in size
+    //  Different factorization depending on symmetry
+    st.site = &rj_emlrtRSI;
+    if (!coder::internal::b_strcmp(st, opts.contents.symm)) {
+      st.site = &sj_emlrtRSI;
+      coder::internal::c_strcmp(st, opts.contents.symm);
+    }
+
+    if (*emlrtBreakCheckR2012bFlagVar != 0) {
+      emlrtBreakCheckR2012b((emlrtConstCTX)&sp);
+    }
+  }
+
+  emlrtHeapReferenceStackLeaveFcnR2012b((emlrtConstCTX)&sp);
+}
+
 static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000],
   const real_T opts_area[8000], const real_T opts_nu[24000], const real_T
   opts_P[8000], const real_T opts_contrast[8000], real_T opts_wuse, const coder::
@@ -6529,7 +5672,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       n = muIntScalarMax_sint32(b_i, mid);
     }
 
-    varargout_1.set_size(&ki_emlrtRTEI, &st, n, j.size(1));
+    varargout_1.set_size(&ji_emlrtRTEI, &st, n, j.size(1));
     loop_ub = n * j.size(1);
     for (b_i = 0; b_i < loop_ub; b_i++) {
       varargout_1[b_i] = 0.0;
@@ -6552,7 +5695,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     b_st.site = &qh_emlrtRSI;
     unnamed_idx_0_tmp = i.size(0) * i.size(1);
     b = j.size(1);
-    b_I.set_size(&wh_emlrtRTEI, &b_st, unnamed_idx_0_tmp, j.size(1));
+    b_I.set_size(&vh_emlrtRTEI, &b_st, unnamed_idx_0_tmp, j.size(1));
     c_st.site = &ai_emlrtRSI;
     d_st.site = &bi_emlrtRSI;
     if (j.size(1) > 2147483646) {
@@ -6573,7 +5716,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       }
     }
 
-    J.set_size(&wh_emlrtRTEI, &b_st, unnamed_idx_0_tmp, j.size(1));
+    J.set_size(&vh_emlrtRTEI, &b_st, unnamed_idx_0_tmp, j.size(1));
     c_st.site = &ai_emlrtRSI;
     d_st.site = &bi_emlrtRSI;
     for (k = 0; k < b; k++) {
@@ -6589,7 +5732,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       }
     }
 
-    c_i.set_size(&xh_emlrtRTEI, &st, i.size(0), i.size(1));
+    c_i.set_size(&wh_emlrtRTEI, &st, i.size(0), i.size(1));
     for (b_i = 0; b_i < unnamed_idx_0_tmp; b_i++) {
       d = i[b_i];
       if (d != static_cast<int32_T>(muDoubleScalarFloor(d))) {
@@ -6598,13 +5741,13 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
       if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) > 8000)) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, 8000,
-          &tf_emlrtBCI, &st);
+          &hf_emlrtBCI, &st);
       }
 
       c_i[b_i] = static_cast<int32_T>(d);
     }
 
-    b_x.set_size(&yh_emlrtRTEI, &st, 3, unnamed_idx_0_tmp);
+    b_x.set_size(&xh_emlrtRTEI, &st, 3, unnamed_idx_0_tmp);
     for (b_i = 0; b_i < unnamed_idx_0_tmp; b_i++) {
       k = 3 * (c_i[b_i] - 1);
       b_x[3 * b_i] = x[k];
@@ -6612,7 +5755,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       b_x[3 * b_i + 2] = x[k + 2];
     }
 
-    c_x.set_size(&ai_emlrtRTEI, &st, 3, j.size(1));
+    c_x.set_size(&yh_emlrtRTEI, &st, 3, j.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       right = static_cast<int32_T>(muDoubleScalarFloor(j[b_i]));
       if (j[b_i] != right) {
@@ -6621,7 +5764,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
       k = static_cast<int32_T>(j[b_i]);
       if ((k < 1) || (k > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &kg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(k, 1, 8000, &xf_emlrtBCI, &st);
       }
 
       k = 3 * (k - 1);
@@ -6638,7 +5781,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       c_x[3 * b_i + 2] = x[k + 2];
     }
 
-    b_opts_nu.set_size(&bi_emlrtRTEI, &st, 3, unnamed_idx_0_tmp);
+    b_opts_nu.set_size(&ai_emlrtRTEI, &st, 3, unnamed_idx_0_tmp);
     for (b_i = 0; b_i < unnamed_idx_0_tmp; b_i++) {
       k = 3 * (static_cast<int32_T>(i[b_i]) - 1);
       b_opts_nu[3 * b_i] = opts_nu[k];
@@ -6648,7 +5791,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
     b_st.site = &rh_emlrtRSI;
     lap_neumann_kernel(b_st, b_x, c_x, b_opts_nu, y);
-    b_opts_area.set_size(&ci_emlrtRTEI, &st, 1, j.size(1));
+    b_opts_area.set_size(&bi_emlrtRTEI, &st, 1, j.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
@@ -6659,12 +5802,12 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     iv[1] = (*(int32_T (*)[2])((coder::array<real_T, 2U> *)&i)->size())[1];
     b_st.site = &sh_emlrtRSI;
     coder::internal::indexShapeCheck(b_st, iv);
-    b_opts_contrast.set_size(&di_emlrtRTEI, &st, i.size(0), i.size(1));
+    b_opts_contrast.set_size(&ci_emlrtRTEI, &st, i.size(0), i.size(1));
     for (b_i = 0; b_i < unnamed_idx_0_tmp; b_i++) {
       b_opts_contrast[b_i] = opts_contrast[static_cast<int32_T>(i[b_i]) - 1];
     }
 
-    y.set_size(&ei_emlrtRTEI, &st, M.size(0), M.size(1));
+    y.set_size(&di_emlrtRTEI, &st, M.size(0), M.size(1));
     loop_ub = M.size(0) * M.size(1);
     k = (loop_ub / 2) << 1;
     right = k - 2;
@@ -6691,20 +5834,20 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     mid = i.size(1);
     n_tmp = muIntScalarMax_sint32(b_i, mid);
     c_st.site = &ii_emlrtRSI;
-    y.set_size(&fi_emlrtRTEI, &c_st, i.size(0), i.size(1));
+    y.set_size(&ei_emlrtRTEI, &c_st, i.size(0), i.size(1));
     for (b_i = 0; b_i < unnamed_idx_0_tmp; b_i++) {
       y[b_i] = i[b_i];
     }
 
     d_st.site = &li_emlrtRSI;
     coder::internal::sort(d_st, y, c_i);
-    M.set_size(&gi_emlrtRTEI, &c_st, c_i.size(0), c_i.size(1));
+    M.set_size(&fi_emlrtRTEI, &c_st, c_i.size(0), c_i.size(1));
     loop_ub_tmp = c_i.size(0) * c_i.size(1);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       M[b_i] = c_i[b_i];
     }
 
-    c_i.set_size(&hi_emlrtRTEI, &b_st, y.size(0), y.size(1));
+    c_i.set_size(&gi_emlrtRTEI, &b_st, y.size(0), y.size(1));
     b_loop_ub_tmp = y.size(0) * y.size(1);
     for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
       d = y[b_i];
@@ -6714,7 +5857,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
       if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) > 8000)) {
         emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, 8000,
-          &uf_emlrtBCI, &b_st);
+          &if_emlrtBCI, &b_st);
       }
 
       c_i[b_i] = static_cast<int32_T>(d);
@@ -6729,7 +5872,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       P[c_i[b_i] - 1] = M[b_i];
     }
 
-    M.set_size(&ii_emlrtRTEI, &b_st, n_tmp, j.size(1));
+    M.set_size(&hi_emlrtRTEI, &b_st, n_tmp, j.size(1));
     loop_ub_tmp = n_tmp * j.size(1);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       M[b_i] = 0.0;
@@ -6745,7 +5888,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     //  Initialize an empty array to store the locations
     loop_ub = c_I.size(0);
-    idx.set_size(&ji_emlrtRTEI, &c_st, c_I.size(0));
+    idx.set_size(&ii_emlrtRTEI, &c_st, c_I.size(0));
     for (b_i = 0; b_i < loop_ub; b_i++) {
       idx[b_i] = 0.0;
     }
@@ -6764,7 +5907,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     for (int32_T d_i{0}; d_i < loop_ub; d_i++) {
       uint32_T left;
       if (d_i + 1 > loop_ub) {
-        emlrtDynamicBoundsCheckR2012b(d_i + 1, 1, loop_ub, &vf_emlrtBCI, &c_st);
+        emlrtDynamicBoundsCheckR2012b(d_i + 1, 1, loop_ub, &jf_emlrtBCI, &c_st);
       }
 
       k = c_I[d_i];
@@ -6788,7 +5931,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
           //  Check if the target is found
           if ((mid < 1) || (mid > b_loop_ub_tmp)) {
-            emlrtDynamicBoundsCheckR2012b(mid, 1, b_loop_ub_tmp, &xf_emlrtBCI,
+            emlrtDynamicBoundsCheckR2012b(mid, 1, b_loop_ub_tmp, &lf_emlrtBCI,
               &d_st);
           }
 
@@ -6796,14 +5939,14 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
           if (b_i == k) {
             if (d_i + 1 > idx.size(0)) {
               emlrtDynamicBoundsCheckR2012b(d_i + 1, 1, idx.size(0),
-                &wf_emlrtBCI, &d_st);
+                &kf_emlrtBCI, &d_st);
             }
 
             idx[d_i] = mid;
             exitg1 = 1;
           } else {
             if (mid > b_loop_ub_tmp) {
-              emlrtDynamicBoundsCheckR2012b(mid, 1, b_loop_ub_tmp, &yf_emlrtBCI,
+              emlrtDynamicBoundsCheckR2012b(mid, 1, b_loop_ub_tmp, &mf_emlrtBCI,
                 &d_st);
             }
 
@@ -6820,7 +5963,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
         } else {
           //  If the element is not found, return -1
           if (d_i + 1 > idx.size(0)) {
-            emlrtDynamicBoundsCheckR2012b(d_i + 1, 1, idx.size(0), &wf_emlrtBCI,
+            emlrtDynamicBoundsCheckR2012b(d_i + 1, 1, idx.size(0), &kf_emlrtBCI,
               &d_st);
           }
 
@@ -6853,7 +5996,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       }
     }
 
-    r1.set_size(&ki_emlrtRTEI, &b_st, k);
+    r1.set_size(&ji_emlrtRTEI, &b_st, k);
     k = 0;
     for (int32_T d_i{0}; d_i <= right; d_i++) {
       if ((idx[d_i] > 0.0) && (static_cast<int32_T>(idx[d_i]) <= n)) {
@@ -6865,21 +6008,21 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     b_loop_ub_tmp = r1.size(0);
     for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
       if (r1[b_i] > c_I.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, c_I.size(0) - 1, &ag_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, c_I.size(0) - 1, &nf_emlrtBCI,
           &b_st);
       }
     }
 
     for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
       if (r1[b_i] > jj.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, jj.size(0) - 1, &bg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, jj.size(0) - 1, &of_emlrtBCI,
           &b_st);
       }
     }
 
     for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
       if (r1[b_i] > v.size(0) - 1) {
-        emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, v.size(0) - 1, &cg_emlrtBCI,
+        emlrtDynamicBoundsCheckR2012b(r1[b_i], 0, v.size(0) - 1, &pf_emlrtBCI,
           &b_st);
       }
     }
@@ -6887,18 +6030,18 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
       right = c_I[r1[b_i]];
       if ((right < 1) || (right > 8000)) {
-        emlrtDynamicBoundsCheckR2012b(right, 1, 8000, &dg_emlrtBCI, &b_st);
+        emlrtDynamicBoundsCheckR2012b(right, 1, 8000, &qf_emlrtBCI, &b_st);
       }
     }
 
-    idx.set_size(&li_emlrtRTEI, &b_st, r1.size(0));
+    idx.set_size(&ki_emlrtRTEI, &b_st, r1.size(0));
     for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
       idx[b_i] = (static_cast<real_T>(jj[r1[b_i]]) - 1.0) * static_cast<real_T>
         (n_tmp);
     }
 
     if (r1.size(0) == idx.size(0)) {
-      jj.set_size(&mi_emlrtRTEI, &b_st, r1.size(0));
+      jj.set_size(&li_emlrtRTEI, &b_st, r1.size(0));
       for (b_i = 0; b_i < b_loop_ub_tmp; b_i++) {
         d = P[c_I[r1[b_i]] - 1] + idx[b_i];
         if (d != static_cast<int32_T>(muDoubleScalarFloor(d))) {
@@ -6908,19 +6051,19 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
         if ((static_cast<int32_T>(d) < 1) || (static_cast<int32_T>(d) >
              loop_ub_tmp)) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, loop_ub_tmp,
-            &eg_emlrtBCI, &b_st);
+            &rf_emlrtBCI, &b_st);
         }
 
         jj[b_i] = static_cast<int32_T>(d);
       }
 
       loop_ub = jj.size(0);
-      c_I.set_size(&mi_emlrtRTEI, &b_st, jj.size(0));
+      c_I.set_size(&li_emlrtRTEI, &b_st, jj.size(0));
       for (b_i = 0; b_i < loop_ub; b_i++) {
         c_I[b_i] = jj[b_i];
       }
     } else {
-      c_st.site = &vr_emlrtRSI;
+      c_st.site = &rr_emlrtRSI;
       binary_expand_op_7(c_st, c_I, P, r1, idx, n_tmp, j);
     }
 
@@ -6947,7 +6090,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
     b_st.site = &uh_emlrtRSI;
     coder::c_abs(b_st, M, y);
-    b_idx.set_size(&ni_emlrtRTEI, &st, y.size(0), y.size(1));
+    b_idx.set_size(&mi_emlrtRTEI, &st, y.size(0), y.size(1));
     loop_ub_tmp = y.size(0) * y.size(1);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       b_idx[b_i] = (y[b_i] != 0.0);
@@ -6973,7 +6116,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       }
     }
 
-    r2.set_size(&ki_emlrtRTEI, &st, k);
+    r2.set_size(&ji_emlrtRTEI, &st, k);
     k = 0;
     for (int32_T d_i{0}; d_i <= right; d_i++) {
       if (b_idx[d_i]) {
@@ -6986,32 +6129,32 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     loop_ub_tmp = r2.size(0);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r2[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, k - 1, &fg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, k - 1, &sf_emlrtBCI, &st);
       }
     }
 
     right = M.size(0) * M.size(1);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r2[b_i] > right - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, right - 1, &gg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, right - 1, &tf_emlrtBCI, &st);
       }
     }
 
-    v.set_size(&oi_emlrtRTEI, &st, r2.size(0));
+    v.set_size(&ni_emlrtRTEI, &st, r2.size(0));
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       v[b_i] = varargout_1[r2[b_i]] + M[r2[b_i]];
     }
 
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r2[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, k - 1, &hg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r2[b_i], 0, k - 1, &uf_emlrtBCI, &st);
       }
 
       varargout_1[r2[b_i]] = v[b_i];
     }
 
     if ((b_I.size(0) == J.size(0)) && (b_I.size(1) == J.size(1))) {
-      b_idx.set_size(&pi_emlrtRTEI, &st, unnamed_idx_0_tmp, j.size(1));
+      b_idx.set_size(&oi_emlrtRTEI, &st, unnamed_idx_0_tmp, j.size(1));
       loop_ub = b_I.size(0) * b_I.size(1);
       for (b_i = 0; b_i < loop_ub; b_i++) {
         b_idx[b_i] = (b_I[b_i] == J[b_i]);
@@ -7045,7 +6188,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       }
     }
 
-    r3.set_size(&ki_emlrtRTEI, &st, k);
+    r3.set_size(&ji_emlrtRTEI, &st, k);
     k = 0;
     for (int32_T d_i{0}; d_i <= right; d_i++) {
       if (b_idx[d_i]) {
@@ -7058,29 +6201,29 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     loop_ub_tmp = r3.size(0);
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r3[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &ig_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &vf_emlrtBCI, &st);
       }
     }
 
-    v.set_size(&qi_emlrtRTEI, &st, r3.size(0));
+    v.set_size(&pi_emlrtRTEI, &st, r3.size(0));
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       v[b_i] = varargout_1[r3[b_i]] + 1.0;
     }
 
     for (b_i = 0; b_i < loop_ub_tmp; b_i++) {
       if (r3[b_i] > k - 1) {
-        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &jg_emlrtBCI, &st);
+        emlrtDynamicBoundsCheckR2012b(r3[b_i], 0, k - 1, &wf_emlrtBCI, &st);
       }
 
       varargout_1[r3[b_i]] = v[b_i];
     }
 
-    b_opts_area.set_size(&ri_emlrtRTEI, &st, 1, j.size(1));
+    b_opts_area.set_size(&qi_emlrtRTEI, &st, 1, j.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
 
-    y.set_size(&si_emlrtRTEI, &st, n_tmp, j.size(1));
+    y.set_size(&ri_emlrtRTEI, &st, n_tmp, j.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       for (right = 0; right < n_tmp; right++) {
         y[right + y.size(0) * b_i] = opts_wuse * b_opts_area[b_i];
@@ -7122,7 +6265,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     iv[1] = (*(int32_T (*)[2])((coder::array<real_T, 2U> *)&i)->size())[1];
     b_st.site = &xh_emlrtRSI;
     coder::internal::b_indexShapeCheck(b_st, iv);
-    y.set_size(&ti_emlrtRTEI, &st, i.size(0), i.size(1));
+    y.set_size(&si_emlrtRTEI, &st, i.size(0), i.size(1));
     for (b_i = 0; b_i < unnamed_idx_0_tmp; b_i++) {
       y[b_i] = opts_area[static_cast<int32_T>(i[b_i]) - 1];
     }
@@ -7131,7 +6274,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     coder::c_sqrt(b_st, y);
     loop_ub = y.size(1);
     k = y.size(0);
-    b_opts_contrast.set_size(&ti_emlrtRTEI, &st, y.size(1), y.size(0));
+    b_opts_contrast.set_size(&si_emlrtRTEI, &st, y.size(1), y.size(0));
     for (b_i = 0; b_i < k; b_i++) {
       for (right = 0; right < loop_ub; right++) {
         b_opts_contrast[right + b_opts_contrast.size(0) * b_i] = y[b_i + y.size
@@ -7139,7 +6282,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       }
     }
 
-    b_I.set_size(&ui_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
+    b_I.set_size(&ti_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
     loop_ub = varargout_1.size(0) * varargout_1.size(1) - 1;
     for (b_i = 0; b_i <= loop_ub; b_i++) {
       b_I[b_i] = varargout_1[b_i];
@@ -7147,7 +6290,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
 
     b_st.site = &xh_emlrtRSI;
     coder::c_bsxfun(b_st, b_opts_contrast, b_I, varargout_1);
-    b_opts_area.set_size(&vi_emlrtRTEI, &st, 1, j.size(1));
+    b_opts_area.set_size(&ui_emlrtRTEI, &st, 1, j.size(1));
     for (b_i = 0; b_i < b; b_i++) {
       b_opts_area[b_i] = opts_area[static_cast<int32_T>(j[b_i]) - 1];
     }
@@ -7155,7 +6298,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
     b_st.site = &yh_emlrtRSI;
     coder::b_sqrt(b_st, b_opts_area);
     loop_ub = b_opts_area.size(1);
-    r5.set_size(&wi_emlrtRTEI, &st, 1, b_opts_area.size(1));
+    r5.set_size(&vi_emlrtRTEI, &st, 1, b_opts_area.size(1));
     k = (b_opts_area.size(1) / 2) << 1;
     right = k - 2;
     for (b_i = 0; b_i <= right; b_i += 2) {
@@ -7167,7 +6310,7 @@ static void srskelf_asym_new_anonFcn1(const emlrtStack &sp, const real_T x[24000
       r5[b_i] = 1.0 / b_opts_area[b_i];
     }
 
-    b_I.set_size(&xi_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
+    b_I.set_size(&wi_emlrtRTEI, &st, varargout_1.size(0), varargout_1.size(1));
     loop_ub = varargout_1.size(0) * varargout_1.size(1) - 1;
     for (b_i = 0; b_i <= loop_ub; b_i++) {
       b_I[b_i] = varargout_1[b_i];
@@ -7234,7 +6377,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   //  PXYFUN(X,SLF,NBR,L,CTR) computes interactions between the points
   //  X(:,SLF) and the set of proxy points by scaling the proxy sphere to
   //  appropriately contain a box at level L centered at CTR and then
-  y.set_size(&ug_emlrtRTEI, &st, 3, proxy.size(1));
+  y.set_size(&tg_emlrtRTEI, &st, 3, proxy.size(1));
   input_sizes_idx_0 = 3 * proxy.size(1);
   bcoef = (input_sizes_idx_0 / 2) << 1;
   acoef = bcoef - 2;
@@ -7246,7 +6389,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     y[i] = proxy[i] * l;
   }
 
-  pxy.set_size(&mg_emlrtRTEI, &st, 3, y.size(1));
+  pxy.set_size(&lg_emlrtRTEI, &st, 3, y.size(1));
   i = y.size(1) - 1;
   for (k = 0; k <= i; k++) {
     r = _mm_loadu_pd(&y[3 * k]);
@@ -7255,13 +6398,13 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   }
 
   input_sizes_idx_0 = slf.size(1);
-  dx_tmp.set_size(&vg_emlrtRTEI, &st, slf.size(1));
+  dx_tmp.set_size(&ug_emlrtRTEI, &st, slf.size(1));
   for (i = 0; i < input_sizes_idx_0; i++) {
     dx_tmp[i] = slf[i];
   }
 
   csz_idx_0 = pxy.size(1);
-  a.set_size(&wg_emlrtRTEI, &st, pxy.size(1));
+  a.set_size(&vg_emlrtRTEI, &st, pxy.size(1));
   for (i = 0; i < csz_idx_0; i++) {
     a[i] = pxy[3 * i];
   }
@@ -7273,11 +6416,11 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
     i1 = static_cast<int32_T>(dx_tmp[i]);
     if ((i1 < 1) || (i1 > 8000)) {
-      emlrtDynamicBoundsCheckR2012b(i1, 1, 8000, &qf_emlrtBCI, &st);
+      emlrtDynamicBoundsCheckR2012b(i1, 1, 8000, &ef_emlrtBCI, &st);
     }
   }
 
-  dx.set_size(&mg_emlrtRTEI, &st, pxy.size(1), slf.size(1));
+  dx.set_size(&lg_emlrtRTEI, &st, pxy.size(1), slf.size(1));
   b = ((a.size(0) != 0) && (dx_tmp.size(0) != 0));
   if (b) {
     bcoef = (dx_tmp.size(0) != 1);
@@ -7293,12 +6436,12 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     }
   }
 
-  a.set_size(&xg_emlrtRTEI, &st, pxy.size(1));
+  a.set_size(&wg_emlrtRTEI, &st, pxy.size(1));
   for (i = 0; i < csz_idx_0; i++) {
     a[i] = pxy[3 * i + 1];
   }
 
-  dy.set_size(&mg_emlrtRTEI, &st, pxy.size(1), slf.size(1));
+  dy.set_size(&lg_emlrtRTEI, &st, pxy.size(1), slf.size(1));
   if (b) {
     bcoef = (dx_tmp.size(0) != 1);
     i = dx_tmp.size(0) - 1;
@@ -7313,12 +6456,12 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     }
   }
 
-  a.set_size(&yg_emlrtRTEI, &st, pxy.size(1));
+  a.set_size(&xg_emlrtRTEI, &st, pxy.size(1));
   for (i = 0; i < csz_idx_0; i++) {
     a[i] = pxy[3 * i + 2];
   }
 
-  dz.set_size(&mg_emlrtRTEI, &st, pxy.size(1), slf.size(1));
+  dz.set_size(&lg_emlrtRTEI, &st, pxy.size(1), slf.size(1));
   if (b) {
     bcoef = (slf.size(1) != 1);
     i = slf.size(1) - 1;
@@ -7335,7 +6478,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &yg_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  dr.set_size(&ah_emlrtRTEI, &c_st, pxy.size(1), slf.size(1));
+  dr.set_size(&yg_emlrtRTEI, &c_st, pxy.size(1), slf.size(1));
   b_input_sizes_idx_0 = dx.size(0) * dx.size(1);
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = dx[i];
@@ -7344,7 +6487,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &yg_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  Kpxy4.set_size(&bh_emlrtRTEI, &c_st, pxy.size(1), slf.size(1));
+  Kpxy4.set_size(&ah_emlrtRTEI, &c_st, pxy.size(1), slf.size(1));
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = dy[i];
     Kpxy4[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7369,7 +6512,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &yg_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  Kpxy4.set_size(&ch_emlrtRTEI, &c_st, pxy.size(1), slf.size(1));
+  Kpxy4.set_size(&bh_emlrtRTEI, &c_st, pxy.size(1), slf.size(1));
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = dz[i];
     Kpxy4[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7404,7 +6547,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &yg_emlrtRSI;
   coder::c_sqrt(b_st, dr);
-  Kpxy1.set_size(&dh_emlrtRTEI, &st, dr.size(0), dr.size(1));
+  Kpxy1.set_size(&ch_emlrtRTEI, &st, dr.size(0), dr.size(1));
   b_input_sizes_idx_0 = dr.size(0) * dr.size(1);
   bcoef = (b_input_sizes_idx_0 / 2) << 1;
   acoef = bcoef - 2;
@@ -7419,7 +6562,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   }
 
   b_st.site = &ah_emlrtRSI;
-  x_tmp.set_size(&eh_emlrtRTEI, &b_st, Kpxy1.size(0), Kpxy1.size(1));
+  x_tmp.set_size(&dh_emlrtRTEI, &b_st, Kpxy1.size(0), Kpxy1.size(1));
   csz_idx_0 = Kpxy1.size(0) * Kpxy1.size(1);
   bcoef = (csz_idx_0 / 2) << 1;
   acoef = bcoef - 2;
@@ -7434,7 +6577,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   c_st.site = &ah_emlrtRSI;
   d_st.site = &oe_emlrtRSI;
-  Kpxy2.set_size(&fh_emlrtRTEI, &d_st, dr.size(0), dr.size(1));
+  Kpxy2.set_size(&eh_emlrtRTEI, &d_st, dr.size(0), dr.size(1));
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = dr[i];
     Kpxy2[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7445,7 +6588,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   coder::internal::assertCompatibleDims(d_st, x_tmp, Kpxy2);
   if ((x_tmp.size(0) == Kpxy2.size(0)) && (x_tmp.size(1) == Kpxy2.size(1))) {
     csz_idx_0 = x_tmp.size(0) * x_tmp.size(1);
-    Kpxy2.set_size(&eh_emlrtRTEI, &c_st, x_tmp.size(0), x_tmp.size(1));
+    Kpxy2.set_size(&dh_emlrtRTEI, &c_st, x_tmp.size(0), x_tmp.size(1));
     bcoef = (csz_idx_0 / 2) << 1;
     acoef = bcoef - 2;
     for (i = 0; i <= acoef; i += 2) {
@@ -7458,7 +6601,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
       Kpxy2[i] = x_tmp[i] / Kpxy2[i];
     }
   } else {
-    d_st.site = &ur_emlrtRSI;
+    d_st.site = &qr_emlrtRSI;
     b_rdivide(d_st, Kpxy2, x_tmp);
   }
 
@@ -7475,7 +6618,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   b_st.site = &bh_emlrtRSI;
   c_st.site = &bh_emlrtRSI;
   d_st.site = &oe_emlrtRSI;
-  b_y.set_size(&gh_emlrtRTEI, &d_st, dr.size(0), dr.size(1));
+  b_y.set_size(&fh_emlrtRTEI, &d_st, dr.size(0), dr.size(1));
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = dr[i];
     b_y[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7486,7 +6629,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   coder::internal::assertCompatibleDims(d_st, x_tmp, b_y);
   if ((x_tmp.size(0) == b_y.size(0)) && (x_tmp.size(1) == b_y.size(1))) {
     csz_idx_0 = x_tmp.size(0) * x_tmp.size(1);
-    b_y.set_size(&hh_emlrtRTEI, &c_st, x_tmp.size(0), x_tmp.size(1));
+    b_y.set_size(&gh_emlrtRTEI, &c_st, x_tmp.size(0), x_tmp.size(1));
     bcoef = (csz_idx_0 / 2) << 1;
     acoef = bcoef - 2;
     for (i = 0; i <= acoef; i += 2) {
@@ -7499,7 +6642,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
       b_y[i] = x_tmp[i] / b_y[i];
     }
   } else {
-    d_st.site = &ur_emlrtRSI;
+    d_st.site = &qr_emlrtRSI;
     b_rdivide(d_st, b_y, x_tmp);
   }
 
@@ -7516,7 +6659,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   b_st.site = &ch_emlrtRSI;
   c_st.site = &ch_emlrtRSI;
   d_st.site = &oe_emlrtRSI;
-  Kpxy4.set_size(&ih_emlrtRTEI, &d_st, dr.size(0), dr.size(1));
+  Kpxy4.set_size(&hh_emlrtRTEI, &d_st, dr.size(0), dr.size(1));
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = dr[i];
     Kpxy4[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7539,7 +6682,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
       x_tmp[i] = x_tmp[i] / Kpxy4[i];
     }
   } else {
-    d_st.site = &ur_emlrtRSI;
+    d_st.site = &qr_emlrtRSI;
     rdivide(d_st, x_tmp, Kpxy4);
   }
 
@@ -7553,14 +6696,14 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     emlrtDimSizeImpxCheckR2021b(x_tmp.size(1), slf.size(1), &ob_emlrtECI, &st);
   }
 
-  r2.set_size(&jh_emlrtRTEI, &st, 1, slf.size(1));
+  r2.set_size(&ih_emlrtRTEI, &st, 1, slf.size(1));
   for (i = 0; i < input_sizes_idx_0; i++) {
     r2[i] = opts_area[static_cast<int32_T>(slf[i]) - 1];
   }
 
   b_st.site = &dh_emlrtRSI;
   coder::b_sqrt(b_st, r2);
-  dr.set_size(&kh_emlrtRTEI, &st, Kpxy1.size(0), Kpxy1.size(1));
+  dr.set_size(&jh_emlrtRTEI, &st, Kpxy1.size(0), Kpxy1.size(1));
   csz_idx_0 = Kpxy1.size(0) * Kpxy1.size(1) - 1;
   for (i = 0; i <= csz_idx_0; i++) {
     dr[i] = Kpxy1[i];
@@ -7568,7 +6711,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &dh_emlrtRSI;
   coder::b_bsxfun(b_st, dr, r2, Kpxy1);
-  r2.set_size(&lh_emlrtRTEI, &st, 1, slf.size(1));
+  r2.set_size(&kh_emlrtRTEI, &st, 1, slf.size(1));
   for (i = 0; i < input_sizes_idx_0; i++) {
     r2[i] = opts_area[static_cast<int32_T>(slf[i]) - 1];
   }
@@ -7576,7 +6719,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   b_st.site = &eh_emlrtRSI;
   coder::b_sqrt(b_st, r2);
   if ((Kpxy2.size(0) == dx.size(0)) && (Kpxy2.size(1) == dx.size(1))) {
-    dr.set_size(&eh_emlrtRTEI, &st, Kpxy2.size(0), Kpxy2.size(1));
+    dr.set_size(&dh_emlrtRTEI, &st, Kpxy2.size(0), Kpxy2.size(1));
     csz_idx_0 = Kpxy2.size(0) * Kpxy2.size(1);
     bcoef = (csz_idx_0 / 2) << 1;
     acoef = bcoef - 2;
@@ -7597,7 +6740,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     binary_expand_op_6(b_st, Kpxy2, eh_emlrtRSI, dx, r2);
   }
 
-  r2.set_size(&mh_emlrtRTEI, &st, 1, slf.size(1));
+  r2.set_size(&lh_emlrtRTEI, &st, 1, slf.size(1));
   for (i = 0; i < input_sizes_idx_0; i++) {
     r2[i] = opts_area[static_cast<int32_T>(slf[i]) - 1];
   }
@@ -7605,7 +6748,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   b_st.site = &fh_emlrtRSI;
   coder::b_sqrt(b_st, r2);
   if ((b_y.size(0) == dy.size(0)) && (b_y.size(1) == dy.size(1))) {
-    dx.set_size(&hh_emlrtRTEI, &st, b_y.size(0), b_y.size(1));
+    dx.set_size(&gh_emlrtRTEI, &st, b_y.size(0), b_y.size(1));
     csz_idx_0 = b_y.size(0) * b_y.size(1);
     bcoef = (csz_idx_0 / 2) << 1;
     acoef = bcoef - 2;
@@ -7626,7 +6769,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     binary_expand_op_4(b_st, dr, fh_emlrtRSI, b_y, dy, r2);
   }
 
-  r2.set_size(&nh_emlrtRTEI, &st, 1, slf.size(1));
+  r2.set_size(&mh_emlrtRTEI, &st, 1, slf.size(1));
   for (i = 0; i < input_sizes_idx_0; i++) {
     r2[i] = opts_area[static_cast<int32_T>(slf[i]) - 1];
   }
@@ -7634,7 +6777,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   b_st.site = &gh_emlrtRSI;
   coder::b_sqrt(b_st, r2);
   if ((x_tmp.size(0) == dz.size(0)) && (x_tmp.size(1) == dz.size(1))) {
-    dx.set_size(&oh_emlrtRTEI, &st, x_tmp.size(0), x_tmp.size(1));
+    dx.set_size(&nh_emlrtRTEI, &st, x_tmp.size(0), x_tmp.size(1));
     input_sizes_idx_0 = x_tmp.size(0) * x_tmp.size(1);
     bcoef = (input_sizes_idx_0 / 2) << 1;
     acoef = bcoef - 2;
@@ -7736,7 +6879,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   k = acoef;
   acoef = b_input_sizes_idx_0;
-  varargout_1.set_size(&ph_emlrtRTEI, &c_st, ((k + acoef) + input_sizes_idx_0) +
+  varargout_1.set_size(&oh_emlrtRTEI, &c_st, ((k + acoef) + input_sizes_idx_0) +
                        csz_idx_0, bcoef);
   for (i = 0; i < bcoef; i++) {
     for (i1 = 0; i1 < k; i1++) {
@@ -7768,13 +6911,13 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     if ((static_cast<int32_T>(varargin_1) < 1) || (static_cast<int32_T>
          (varargin_1) > 8000)) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(varargin_1), 1, 8000,
-        &rf_emlrtBCI, &st);
+        &ff_emlrtBCI, &st);
     }
   }
 
   b_st.site = &ih_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  dist.set_size(&qh_emlrtRTEI, &c_st, 1, b_input_sizes_idx_0);
+  dist.set_size(&ph_emlrtRTEI, &c_st, 1, b_input_sizes_idx_0);
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = x[3 * (static_cast<int32_T>(nbr[i]) - 1)] - ctr[0];
     dist[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7782,7 +6925,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &ih_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  r2.set_size(&rh_emlrtRTEI, &c_st, 1, b_input_sizes_idx_0);
+  r2.set_size(&qh_emlrtRTEI, &c_st, 1, b_input_sizes_idx_0);
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = x[3 * (static_cast<int32_T>(nbr[i]) - 1) + 1] - ctr[1];
     r2[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7790,7 +6933,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   if (dist.size(1) == r2.size(1)) {
     input_sizes_idx_0 = dist.size(1) - 1;
-    dist.set_size(&qh_emlrtRTEI, &st, 1, dist.size(1));
+    dist.set_size(&ph_emlrtRTEI, &st, 1, dist.size(1));
     bcoef = (dist.size(1) / 2) << 1;
     acoef = bcoef - 2;
     for (i = 0; i <= acoef; i += 2) {
@@ -7809,7 +6952,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   b_st.site = &ih_emlrtRSI;
   c_st.site = &oe_emlrtRSI;
-  r2.set_size(&sh_emlrtRTEI, &c_st, 1, b_input_sizes_idx_0);
+  r2.set_size(&rh_emlrtRTEI, &c_st, 1, b_input_sizes_idx_0);
   for (i = 0; i < b_input_sizes_idx_0; i++) {
     varargin_1 = x[3 * (static_cast<int32_T>(nbr[i]) - 1) + 2] - ctr[2];
     r2[i] = muDoubleScalarPower(varargin_1, 2.0);
@@ -7823,7 +6966,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
 
   if (dist.size(1) == r2.size(1)) {
     input_sizes_idx_0 = dist.size(1) - 1;
-    dist.set_size(&th_emlrtRTEI, &st, 1, dist.size(1));
+    dist.set_size(&sh_emlrtRTEI, &st, 1, dist.size(1));
     bcoef = (dist.size(1) / 2) << 1;
     acoef = bcoef - 2;
     for (i = 0; i <= acoef; i += 2) {
@@ -7842,7 +6985,7 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
   b_st.site = &ih_emlrtRSI;
   coder::b_sqrt(b_st, dist);
   input_sizes_idx_0 = dist.size(1);
-  r3.set_size(&uh_emlrtRTEI, &st, 1, dist.size(1));
+  r3.set_size(&th_emlrtRTEI, &st, 1, dist.size(1));
   for (i = 0; i < input_sizes_idx_0; i++) {
     r3[i] = (dist[i] / l < 1.5);
   }
@@ -7863,13 +7006,13 @@ static void srskelf_asym_new_anonFcn2(const emlrtStack &sp, const real_T
     }
   }
 
-  varargout_2.set_size(&vh_emlrtRTEI, &st, 1, bcoef);
+  varargout_2.set_size(&uh_emlrtRTEI, &st, 1, bcoef);
   bcoef = 0;
   for (input_sizes_idx_0 = 0; input_sizes_idx_0 <= acoef; input_sizes_idx_0++) {
     if (r3[input_sizes_idx_0]) {
       if (input_sizes_idx_0 > b_input_sizes_idx_0 - 1) {
         emlrtDynamicBoundsCheckR2012b(input_sizes_idx_0, 0, b_input_sizes_idx_0
-          - 1, &sf_emlrtBCI, &st);
+          - 1, &gf_emlrtBCI, &st);
       }
 
       varargout_2[bcoef] = static_cast<int16_T>(nbr[input_sizes_idx_0]);
@@ -7905,7 +7048,7 @@ void plus(const emlrtStack &sp, coder::array<real_T, 2U> &in1, const coder::
     b_loop_ub = in2.size(1);
   }
 
-  b_in1.set_size(&jp_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  b_in1.set_size(&ip_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   stride_0_0 = (in1.size(0) != 1);
   stride_0_1 = (in1.size(1) != 1);
   stride_1_0 = (in2.size(0) != 1);
@@ -7922,7 +7065,7 @@ void plus(const emlrtStack &sp, coder::array<real_T, 2U> &in1, const coder::
     aux_0_1 += stride_0_1;
   }
 
-  in1.set_size(&jp_emlrtRTEI, &sp, loop_ub, b_loop_ub);
+  in1.set_size(&ip_emlrtRTEI, &sp, loop_ub, b_loop_ub);
   for (int32_T i{0}; i < b_loop_ub; i++) {
     for (int32_T i1{0}; i1 < loop_ub; i1++) {
       in1[i1 + in1.size(0) * i] = b_in1[i1 + b_in1.size(0) * i];
@@ -8059,7 +7202,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)sp);
   st.site = &emlrtRSI;
   b_st.site = &oc_emlrtRSI;
-  SD->f4.opts.contents = *opts;
+  SD->f1.opts.contents = *opts;
   st.site = &emlrtRSI;
   b_st.site = &oc_emlrtRSI;
   st.site = &emlrtRSI;
@@ -8093,7 +7236,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   }
 
   if (opts->verb != 0.0) {
-    st.site = &fr_emlrtRSI;
+    st.site = &br_emlrtRSI;
     disp(st, emlrt_marshallOut(st, b_cv), emlrtMCI);
   }
 
@@ -8101,8 +7244,8 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   if ((!coder::internal::b_strcmp(st, opts->symm)) && (!coder::internal::
        c_strcmp(st, opts->symm))) {
     st.site = &d_emlrtRSI;
-    c_st.site = &gr_emlrtRSI;
-    d_st.site = &jr_emlrtRSI;
+    c_st.site = &cr_emlrtRSI;
+    d_st.site = &fr_emlrtRSI;
     b_error(st, b_emlrt_marshallOut(c_st, b_cv1), c_emlrt_marshallOut(d_st,
              b_cv2), b_emlrtMCI);
   }
@@ -8123,7 +7266,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   }
 
   if (static_cast<int32_T>(pxyfun_func_id) == 1) {
-    SD->f4.pxyfun.workspace.opts = *opts;
+    SD->f1.pxyfun.workspace.opts = *opts;
   } else {
     st.site = &f_emlrtRSI;
     coder::d_error(st);
@@ -8141,17 +7284,17 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   if (opts->verb != 0.0) {
     st.site = &j_emlrtRSI;
     b_st.site = &gf_emlrtRSI;
-    e_st.site = &lr_emlrtRSI;
-    f_st.site = &nr_emlrtRSI;
+    e_st.site = &hr_emlrtRSI;
+    f_st.site = &jr_emlrtRSI;
     l = emlrt_marshallIn(e_st, feval(e_st, g_emlrt_marshallOut(e_st, cv3),
       emlrt_marshallOut(static_cast<real_T>(1.0)), h_emlrt_marshallOut(f_st, cv4),
       f_emlrtMCI), "<output of feval>");
     emlrtDisplayR2012b(emlrt_marshallOut(l), "ans", &emlrtRTEI, (emlrtCTX)sp);
     st.site = &k_emlrtRSI;
     b_st.site = &hf_emlrtRSI;
-    e_st.site = &lr_emlrtRSI;
-    f_st.site = &nr_emlrtRSI;
-    g_st.site = &mr_emlrtRSI;
+    e_st.site = &hr_emlrtRSI;
+    f_st.site = &jr_emlrtRSI;
+    g_st.site = &ir_emlrtRSI;
     l = emlrt_marshallIn(e_st, feval(e_st, g_emlrt_marshallOut(e_st, cv3),
       emlrt_marshallOut(static_cast<real_T>(1.0)), i_emlrt_marshallOut(f_st, cv5),
       j_emlrt_marshallOut(g_st, varargin_1), k_emlrt_marshallOut(g_st,
@@ -8164,8 +7307,8 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
     //  Print summary information about tree construction
     st.site = &l_emlrtRSI;
     b_st.site = &gf_emlrtRSI;
-    e_st.site = &lr_emlrtRSI;
-    f_st.site = &nr_emlrtRSI;
+    e_st.site = &hr_emlrtRSI;
+    f_st.site = &jr_emlrtRSI;
     l = emlrt_marshallIn(e_st, feval(e_st, g_emlrt_marshallOut(e_st, cv3),
       emlrt_marshallOut(static_cast<real_T>(1.0)), h_emlrt_marshallOut(f_st, cv4),
       f_emlrtMCI), "<output of feval>");
@@ -8174,9 +7317,9 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
     b_st.site = &m_emlrtRSI;
     l = coder::toc(b_st, savedTime);
     b_st.site = &hf_emlrtRSI;
-    e_st.site = &lr_emlrtRSI;
-    f_st.site = &nr_emlrtRSI;
-    g_st.site = &mr_emlrtRSI;
+    e_st.site = &hr_emlrtRSI;
+    f_st.site = &jr_emlrtRSI;
+    g_st.site = &ir_emlrtRSI;
     l = emlrt_marshallIn(e_st, feval(e_st, g_emlrt_marshallOut(e_st, cv3),
       emlrt_marshallOut(static_cast<real_T>(1.0)), n_emlrt_marshallOut(f_st, cv6),
       emlrt_marshallOut(g_st), emlrt_marshallOut(l), f_emlrtMCI),
@@ -8185,20 +7328,20 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
     //  Count the nonempty boxes at each level
     if (!(t.contents.nlvl + 1.0 >= 0.0)) {
-      emlrtNonNegativeCheckR2012b(t.contents.nlvl + 1.0, &ab_emlrtDCI,
+      emlrtNonNegativeCheckR2012b(t.contents.nlvl + 1.0, &db_emlrtDCI,
         (emlrtConstCTX)sp);
     }
 
     d = static_cast<int32_T>(muDoubleScalarFloor(t.contents.nlvl + 1.0));
     if (t.contents.nlvl + 1.0 != d) {
-      emlrtIntegerCheckR2012b(t.contents.nlvl + 1.0, &y_emlrtDCI, (emlrtConstCTX)
-        sp);
+      emlrtIntegerCheckR2012b(t.contents.nlvl + 1.0, &cb_emlrtDCI,
+        (emlrtConstCTX)sp);
     }
 
     pblk.set_size(&lc_emlrtRTEI, sp, static_cast<int32_T>(t.contents.nlvl + 1.0));
     if (t.contents.nlvl + 1.0 != d) {
-      emlrtIntegerCheckR2012b(t.contents.nlvl + 1.0, &y_emlrtDCI, (emlrtConstCTX)
-        sp);
+      emlrtIntegerCheckR2012b(t.contents.nlvl + 1.0, &cb_emlrtDCI,
+        (emlrtConstCTX)sp);
     }
 
     loop_ub = static_cast<int32_T>(t.contents.nlvl + 1.0);
@@ -8252,7 +7395,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
         i3 = static_cast<int32_T>(d);
         if ((d < 1.0) || (i3 > t.contents.nodes.size(0))) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1,
-            t.contents.nodes.size(0), &sd_emlrtBCI, (emlrtConstCTX)sp);
+            t.contents.nodes.size(0), &gd_emlrtBCI, (emlrtConstCTX)sp);
         }
 
         if (i3 != i2) {
@@ -8261,7 +7404,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((d < 1.0) || (i3 > t.contents.nodes.size(0))) {
           emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1,
-            t.contents.nodes.size(0), &sd_emlrtBCI, (emlrtConstCTX)sp);
+            t.contents.nodes.size(0), &gd_emlrtBCI, (emlrtConstCTX)sp);
         }
 
         if (t.contents.nodes[static_cast<int32_T>(d) - 1].xi.size(1) != 0) {
@@ -8269,7 +7412,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
                static_cast<int32_T>(static_cast<uint32_T>(lvl) + 2U) > pblk.size
                (0))) {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>
-              (static_cast<uint32_T>(lvl) + 2U), 1, pblk.size(0), &rb_emlrtBCI,
+              (static_cast<uint32_T>(lvl) + 2U), 1, pblk.size(0), &sb_emlrtBCI,
               (emlrtConstCTX)sp);
           }
 
@@ -8327,20 +7470,8 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
   l = t.contents.lvp[t.contents.lvp.size(1) - 1];
   nbox.contents = l;
-
-  //  Set a sufficiently large maximum size
-  std::memset(&SD->f4.expl_temp.D[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.C[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.U[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.L[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.F[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.E[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.T[0], 0, 1000000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.nbr[0], 0, 1000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.rd[0], 0, 1000U * sizeof(real_T));
-  std::memset(&SD->f4.expl_temp.sk[0], 0, 1000U * sizeof(real_T));
   st.site = &n_emlrtRSI;
-  coder::repmat(st, SD->f4.expl_temp, l, b_F.contents.factors);
+  coder::repmat(st, l, b_F.contents.factors);
   b_F.contents.N = 8000.0;
   b_F.contents.nlvl = t.contents.nlvl;
   if (!(t.contents.nlvl + 1.0 >= 0.0)) {
@@ -8357,7 +7488,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   loop_ub = static_cast<int32_T>(t.contents.nlvl + 1.0);
   b_F.contents.lvp.set_size(&mc_emlrtRTEI, sp, 1, loop_ub);
   if (t.contents.nlvl + 1.0 != d) {
-    emlrtIntegerCheckR2012b(t.contents.nlvl + 1.0, &bb_emlrtDCI, (emlrtConstCTX)
+    emlrtIntegerCheckR2012b(t.contents.nlvl + 1.0, &y_emlrtDCI, (emlrtConstCTX)
       sp);
   }
 
@@ -8374,17 +7505,17 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   }
 
   if (!(l >= 0.0)) {
-    emlrtNonNegativeCheckR2012b(l, &db_emlrtDCI, (emlrtConstCTX)sp);
+    emlrtNonNegativeCheckR2012b(l, &bb_emlrtDCI, (emlrtConstCTX)sp);
   }
 
   d = static_cast<int32_T>(muDoubleScalarFloor(l));
   if (l != d) {
-    emlrtIntegerCheckR2012b(l, &cb_emlrtDCI, (emlrtConstCTX)sp);
+    emlrtIntegerCheckR2012b(l, &ab_emlrtDCI, (emlrtConstCTX)sp);
   }
 
   lookup_list.contents.set_size(&nc_emlrtRTEI, sp, static_cast<int32_T>(l));
   if (l != d) {
-    emlrtIntegerCheckR2012b(l, &cb_emlrtDCI, (emlrtConstCTX)sp);
+    emlrtIntegerCheckR2012b(l, &ab_emlrtDCI, (emlrtConstCTX)sp);
   }
 
   b_loop_ub = static_cast<int32_T>(l);
@@ -8428,7 +7559,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
     if ((static_cast<int32_T>(b_lvl) < 1) || (static_cast<int32_T>(b_lvl) > i))
     {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(b_lvl), 1, i,
-        &sb_emlrtBCI, (emlrtConstCTX)sp);
+        &rb_emlrtBCI, (emlrtConstCTX)sp);
     }
 
     d = t.contents.lvp[static_cast<int32_T>(b_lvl) - 1] + 1.0;
@@ -8932,7 +8063,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
         dv[1] = t.contents.nodes[static_cast<int32_T>(c_i.contents) - 1].ctr[1];
         dv[2] = t.contents.nodes[static_cast<int32_T>(c_i.contents) - 1].ctr[2];
         b_st.site = &pe_emlrtRSI;
-        srskelf_asym_new_anonFcn2(b_st, SD->f4.pxyfun.workspace.opts.area, x,
+        srskelf_asym_new_anonFcn2(b_st, SD->f1.pxyfun.workspace.opts.area, x,
           slf.contents, lst.contents, proxy, l, dv, Kpxy, xi_combined);
       }
 
@@ -9033,14 +8164,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
       }
 
       st.site = &hb_emlrtRSI;
-      c_spget(SD, st, slf, nslf, lst, nlst, nbox, t, c_i, lookup_list, b_F,
-              SD->f4.opts, K2);
+      spget(st, slf, nslf, lst, nlst, nbox, t, c_i, lookup_list, b_F,
+            SD->f1.opts, K2);
       st.site = &ib_emlrtRSI;
       if (coder::internal::c_strcmp(st, opts->symm)) {
         st.site = &jb_emlrtRSI;
         b_st.site = &jb_emlrtRSI;
-        d_spget(SD, b_st, slf, nslf, lst, nlst, nbox, t, c_i, lookup_list, b_F,
-                SD->f4.opts, G);
+        b_spget(b_st, slf, nslf, lst, nlst, nbox, t, c_i, lookup_list, b_F,
+                SD->f1.opts, G);
         b_loop_ub = G.size(1);
         c_loop_ub = G.size(0);
         L.set_size(&dd_emlrtRTEI, &st, G.size(1), G.size(0));
@@ -9303,8 +8434,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
         c_srskelf_asym_new_anonFcn1(b_st, x, opts->area, opts->nu, opts->P,
           opts->contrast, opts->wuse, opts->qcorr, slf.contents, slf.contents, K);
         st.site = &nb_emlrtRSI;
-        c_spget(SD, st, slf, nslf, nbox, t, c_i, lookup_list, b_F, SD->f4.opts,
-                G);
+        spget(st, slf, nslf, nbox, t, c_i, lookup_list, b_F, SD->f1.opts, G);
         if ((K.size(0) != G.size(0)) && ((K.size(0) != 1) && (G.size(0) != 1)))
         {
           emlrtDimSizeImpxCheckR2021b(K.size(0), G.size(0), &g_emlrtECI,
@@ -9341,8 +8471,8 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
           opts->contrast, opts->wuse, opts->qcorr, nbr.contents, slf.contents,
           K2);
         st.site = &ob_emlrtRSI;
-        c_spget(SD, st, slf, nslf, nbr, nnbr, nbox, t, c_i, lookup_list, b_F,
-                SD->f4.opts, G);
+        spget(st, slf, nslf, nbr, nnbr, nbox, t, c_i, lookup_list, b_F,
+              SD->f1.opts, G);
         if ((K2.size(0) != G.size(0)) && ((K2.size(0) != 1) && (G.size(0) != 1)))
         {
           emlrtDimSizeImpxCheckR2021b(K2.size(0), G.size(0), &i_emlrtECI,
@@ -9390,8 +8520,8 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
             opts->contrast, opts->wuse, opts->qcorr, slf.contents, nbr.contents,
             K3);
           st.site = &qb_emlrtRSI;
-          d_spget(SD, st, slf, nslf, nbr, nnbr, nbox, t, c_i, lookup_list, b_F,
-                  SD->f4.opts, G);
+          b_spget(st, slf, nslf, nbr, nnbr, nbox, t, c_i, lookup_list, b_F,
+                  SD->f1.opts, G);
           if ((K3.size(0) != G.size(0)) && ((K3.size(0) != 1) && (G.size(0) != 1)))
           {
             emlrtDimSizeImpxCheckR2021b(K3.size(0), G.size(0), &k_emlrtECI,
@@ -9466,7 +8596,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         b_st.site = &mj_emlrtRSI;
         coder::dynamic_size_checks(b_st, T, D, T.size(0), b_loop_ub_tmp);
-        b_st.site = &xj_emlrtRSI;
+        b_st.site = &vp_emlrtRSI;
         coder::internal::blas::mtimes(b_st, T, D, G);
         if ((G.size(0) != xi_combined.size(1)) && ((xi_combined.size(1) != 1) &&
              (G.size(0) != 1))) {
@@ -9548,7 +8678,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         b_st.site = &mj_emlrtRSI;
         coder::dynamic_size_checks(b_st, D, T, b_loop_ub_tmp, T.size(0));
-        b_st.site = &xj_emlrtRSI;
+        b_st.site = &vp_emlrtRSI;
         coder::internal::blas::b_mtimes(b_st, D, T, G);
         if ((K.size(0) != G.size(0)) && ((K.size(0) != 1) && (G.size(0) != 1)))
         {
@@ -9639,7 +8769,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         b_st.site = &mj_emlrtRSI;
         coder::dynamic_size_checks(b_st, D, T, b_loop_ub_tmp, T.size(0));
-        b_st.site = &xj_emlrtRSI;
+        b_st.site = &vp_emlrtRSI;
         coder::internal::blas::b_mtimes(b_st, D, T, G);
         if ((K2.size(0) != G.size(0)) && ((K2.size(0) != 1) && (G.size(0) != 1)))
         {
@@ -9732,7 +8862,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
           b_st.site = &mj_emlrtRSI;
           coder::dynamic_size_checks(b_st, T, D, T.size(0), b_loop_ub_tmp);
-          b_st.site = &xj_emlrtRSI;
+          b_st.site = &vp_emlrtRSI;
           coder::internal::blas::mtimes(b_st, T, D, G);
           if ((r2.size(0) != G.size(0)) && ((r2.size(0) != 1) && (G.size(0) != 1)))
           {
@@ -9818,21 +8948,21 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
             }
           }
 
-          b_st.site = &lq_emlrtRSI;
+          b_st.site = &iq_emlrtRSI;
           coder::internal::chol(b_st, L);
           Kpxy.set_size(&ne_emlrtRTEI, sp, 0, 0);
           st.site = &yb_emlrtRSI;
           for (i4 = 0; i4 < b_loop_ub_tmp; i4++) {
             i5 = static_cast<int32_T>(sk[i4]);
             if ((i5 < 1) || (i5 > sizes_tmp)) {
-              emlrtDynamicBoundsCheckR2012b(i5, 1, sizes_tmp, &yc_emlrtBCI, &st);
+              emlrtDynamicBoundsCheckR2012b(i5, 1, sizes_tmp, &vc_emlrtBCI, &st);
             }
           }
 
           for (i4 = 0; i4 < loop_ub_tmp; i4++) {
             i5 = static_cast<int32_T>(r2[i4]);
             if ((i5 < 1) || (i5 > K.size(1))) {
-              emlrtDynamicBoundsCheckR2012b(i5, 1, K.size(1), &ad_emlrtBCI, &st);
+              emlrtDynamicBoundsCheckR2012b(i5, 1, K.size(1), &wc_emlrtBCI, &st);
             }
           }
 
@@ -9858,14 +8988,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
             }
           }
 
-          b_st.site = &rq_emlrtRSI;
+          b_st.site = &oq_emlrtRSI;
           coder::internal::mrdiv(b_st, K1, D);
           G.set_size(&qe_emlrtRTEI, sp, 0, 0);
           st.site = &ac_emlrtRSI;
           for (i4 = 0; i4 < loop_ub_tmp; i4++) {
             i5 = static_cast<int32_T>(r2[i4]);
             if ((i5 < 1) || (i5 > K2.size(1))) {
-              emlrtDynamicBoundsCheckR2012b(i5, 1, K2.size(1), &ld_emlrtBCI, &st);
+              emlrtDynamicBoundsCheckR2012b(i5, 1, K2.size(1), &bd_emlrtBCI, &st);
             }
           }
 
@@ -9882,7 +9012,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
             }
           }
 
-          b_st.site = &rq_emlrtRSI;
+          b_st.site = &oq_emlrtRSI;
           coder::internal::mrdiv(b_st, C, D);
           D.set_size(&se_emlrtRTEI, sp, 0, 0);
         } else {
@@ -9943,13 +9073,13 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
               }
             }
 
-            b_st.site = &rq_emlrtRSI;
+            b_st.site = &oq_emlrtRSI;
             coder::internal::mrdiv(b_st, K1, Kpxy);
             b_sk.set_size(&ie_emlrtRTEI, sp, sk.size(0), sk.size(1));
             for (i4 = 0; i4 < b_loop_ub_tmp; i4++) {
               i5 = static_cast<int32_T>(sk[i4]);
               if ((i5 < 1) || (i5 > K.size(1))) {
-                emlrtDynamicBoundsCheckR2012b(i5, 1, K.size(1), &ed_emlrtBCI,
+                emlrtDynamicBoundsCheckR2012b(i5, 1, K.size(1), &xc_emlrtBCI,
                   (emlrtConstCTX)sp);
               }
 
@@ -9961,7 +9091,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
               for (i5 = 0; i5 < b_loop_ub; i5++) {
                 i6 = static_cast<int32_T>(xi_combined[i5]);
                 if ((i6 < 1) || (i6 > sizes_tmp)) {
-                  emlrtDynamicBoundsCheckR2012b(i6, 1, sizes_tmp, &gd_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(i6, 1, sizes_tmp, &yc_emlrtBCI,
                     (emlrtConstCTX)sp);
                 }
 
@@ -9976,7 +9106,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
             for (i4 = 0; i4 < loop_ub_tmp; i4++) {
               i5 = static_cast<int32_T>(r2[i4]);
               if ((i5 < 1) || (i5 > K2.size(1))) {
-                emlrtDynamicBoundsCheckR2012b(i5, 1, K2.size(1), &id_emlrtBCI,
+                emlrtDynamicBoundsCheckR2012b(i5, 1, K2.size(1), &ad_emlrtBCI,
                   &st);
               }
             }
@@ -9994,7 +9124,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
               }
             }
 
-            b_st.site = &rq_emlrtRSI;
+            b_st.site = &oq_emlrtRSI;
             coder::internal::mrdiv(b_st, C, Kpxy);
             d_loop_ub = K3.size(1);
             b_K1.set_size(&le_emlrtRTEI, sp, xi_combined.size(1), K3.size(1));
@@ -10002,7 +9132,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
               for (i5 = 0; i5 < b_loop_ub; i5++) {
                 i6 = static_cast<int32_T>(xi_combined[i5]);
                 if ((i6 < 1) || (i6 > K3.size(0))) {
-                  emlrtDynamicBoundsCheckR2012b(i6, 1, K3.size(0), &md_emlrtBCI,
+                  emlrtDynamicBoundsCheckR2012b(i6, 1, K3.size(0), &cd_emlrtBCI,
                     (emlrtConstCTX)sp);
                 }
 
@@ -10021,92 +9151,27 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
         //  Ensure slf and sk are not empty and have consistent dimensions
         if ((slf.contents.size(1) != 0) && ((sk.size(0) != 0) && (sk.size(1) !=
               0))) {
-          if (sk.size(1) > 1000) {
-            emlrtDynamicBoundsCheckR2012b(sk.size(1), 1, 1000, &w_emlrtBCI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < c_loop_ub; i4++) {
-            i5 = static_cast<int32_T>(sk[i4]);
-            if ((i5 < 1) || (i5 > slf.contents.size(1))) {
-              emlrtDynamicBoundsCheckR2012b(i5, 1, slf.contents.size(1),
-                &vc_emlrtBCI, (emlrtConstCTX)sp);
-            }
-          }
-
-          b_sk.set_size(&te_emlrtRTEI, sp, 1, sk.size(1));
-          for (i4 = 0; i4 < c_loop_ub; i4++) {
-            b_sk[i4] = slf.contents[static_cast<int32_T>(sk[i4]) - 1];
-          }
-
-          for (i4 = 0; i4 < c_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &cd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].sk[i4] = b_sk[i4];
-          }
+          emlrtDynamicBoundsCheckR2012b(1, 1, 0, &w_emlrtBCI, (emlrtConstCTX)sp);
         } else {
           //  Use an empty column vector for consistency
         }
 
         if (slf.contents.size(1) != 0) {
-          if (xi_combined.size(1) > 1000) {
-            emlrtDynamicBoundsCheckR2012b(xi_combined.size(1), 1, 1000,
-              &x_emlrtBCI, (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < b_loop_ub; i4++) {
-            i5 = static_cast<int32_T>(xi_combined[i4]);
-            if ((i5 < 1) || (i5 > slf.contents.size(1))) {
-              emlrtDynamicBoundsCheckR2012b(i5, 1, slf.contents.size(1),
-                &wc_emlrtBCI, (emlrtConstCTX)sp);
-            }
-          }
-
-          for (i4 = 0; i4 < b_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &xc_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].rd[i4] =
-              slf.contents[static_cast<int32_T>(xi_combined[i4]) - 1];
-          }
+          emlrtDynamicBoundsCheckR2012b(1, 1, 0, &x_emlrtBCI, (emlrtConstCTX)sp);
         } else {
           //  Use an empty column vector for consistency
         }
 
         if ((nbr.contents.size(0) != 0) && (nbr.contents.size(1) != 0)) {
           i4 = nbr.contents.size(0) * nbr.contents.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000, &y_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &y_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &y_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &bd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].nbr[i4] =
-              nbr.contents[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &y_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10114,30 +9179,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((T.size(0) != 0) && (T.size(1) != 0)) {
           i4 = T.size(0) * T.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &ab_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &ab_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &ab_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &dd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].T[i4] = T[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &ab_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10145,30 +9194,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((K1.size(0) != 0) && (K1.size(1) != 0)) {
           i4 = K1.size(0) * K1.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &bb_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &bb_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &bb_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &fd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].E[i4] = K1[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &bb_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10176,30 +9209,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((G.size(0) != 0) && (G.size(1) != 0)) {
           i4 = G.size(0) * G.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &cb_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &cb_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &cb_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &hd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].F[i4] = G[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &cb_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10207,30 +9224,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((L.size(0) != 0) && (L.size(1) != 0)) {
           i4 = L.size(0) * L.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &db_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &db_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &db_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &jd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].L[i4] = L[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &db_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10238,30 +9239,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((Kpxy.size(0) != 0) && (Kpxy.size(1) != 0)) {
           i4 = Kpxy.size(0) * Kpxy.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &eb_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &eb_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &eb_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &kd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].U[i4] = Kpxy[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &eb_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10269,30 +9254,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((C.size(0) != 0) && (C.size(1) != 0)) {
           i4 = C.size(0) * C.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &fb_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &fb_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &fb_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &nd_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].C[i4] = C[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &fb_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10300,30 +9269,14 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
 
         if ((D.size(0) != 0) && (D.size(1) != 0)) {
           i4 = D.size(0) * D.size(1);
-          if (i4 < 1) {
-            d_loop_ub = 0;
-          } else {
-            if (i4 > 1000000) {
-              emlrtDynamicBoundsCheckR2012b(i4, 1, 1000000, &gb_emlrtBCI,
-                (emlrtConstCTX)sp);
-            }
-
-            d_loop_ub = i4;
+          if (i4 >= 1) {
+            emlrtDynamicBoundsCheckR2012b(1, 1, 0, &gb_emlrtBCI, (emlrtConstCTX)
+              sp);
           }
 
-          if (d_loop_ub != i4) {
-            emlrtSubAssignSizeCheck1dR2017a(d_loop_ub, i4, &gb_emlrtECI,
-              (emlrtConstCTX)sp);
-          }
-
-          for (i4 = 0; i4 < d_loop_ub; i4++) {
-            if ((static_cast<int32_T>(n) < 1) || (static_cast<int32_T>(n) >
-                 b_F.contents.factors.size(0))) {
-              emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(n), 1,
-                b_F.contents.factors.size(0), &od_emlrtBCI, (emlrtConstCTX)sp);
-            }
-
-            b_F.contents.factors[static_cast<int32_T>(n) - 1].D[i4] = D[i4];
+          if (i4 != 0) {
+            emlrtSubAssignSizeCheck1dR2017a(0, i4, &gb_emlrtECI, (emlrtConstCTX)
+              sp);
           }
         } else {
           //  Use an empty column vector for consistency
@@ -10368,11 +9321,11 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
             i4 = static_cast<int32_T>(sk[i3]);
             if ((i4 < 1) || (i4 > slf.contents.size(1))) {
               emlrtDynamicBoundsCheckR2012b(i4, 1, slf.contents.size(1),
-                &pd_emlrtBCI, (emlrtConstCTX)sp);
+                &dd_emlrtBCI, (emlrtConstCTX)sp);
             }
           }
 
-          b_sk.set_size(&ue_emlrtRTEI, sp, 1, sk.size(1));
+          b_sk.set_size(&te_emlrtRTEI, sp, 1, sk.size(1));
           for (i3 = 0; i3 < c_loop_ub; i3++) {
             b_sk[i3] = slf.contents[static_cast<int32_T>(sk[i3]) - 1];
           }
@@ -10383,12 +9336,12 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
           }
         }
 
-        r4.set_size(&ve_emlrtRTEI, sp, 1, xi_combined.size(1));
+        r4.set_size(&ue_emlrtRTEI, sp, 1, xi_combined.size(1));
         for (i3 = 0; i3 < b_loop_ub; i3++) {
           i4 = static_cast<int32_T>(xi_combined[i3]);
           if ((i4 < 1) || (i4 > slf.contents.size(1))) {
             emlrtDynamicBoundsCheckR2012b(i4, 1, slf.contents.size(1),
-              &qd_emlrtBCI, (emlrtConstCTX)sp);
+              &ed_emlrtBCI, (emlrtConstCTX)sp);
           }
 
           d = slf.contents[i4 - 1];
@@ -10399,7 +9352,7 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
           if ((static_cast<int16_T>(d) < 1) || (static_cast<int16_T>(d) > 8000))
           {
             emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>
-              (static_cast<int16_T>(d)), 1, 8000, &rd_emlrtBCI, (emlrtConstCTX)
+              (static_cast<int16_T>(d)), 1, 8000, &fd_emlrtBCI, (emlrtConstCTX)
               sp);
           }
 
@@ -10491,8 +9444,8 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
       b_st.site = &ic_emlrtRSI;
       l = coder::toc(b_st, savedTime.tv_sec, savedTime.tv_nsec);
       b_st.site = &hf_emlrtRSI;
-      e_st.site = &lr_emlrtRSI;
-      f_st.site = &nr_emlrtRSI;
+      e_st.site = &hr_emlrtRSI;
+      f_st.site = &jr_emlrtRSI;
       l = emlrt_marshallIn(e_st, feval(e_st, g_emlrt_marshallOut(e_st, cv3),
         emlrt_marshallOut(static_cast<real_T>(1.0)), p_emlrt_marshallOut(f_st,
         cv7), emlrt_marshallOut(static_cast<int32_T>(b_lvl)), emlrt_marshallOut
@@ -10530,13 +9483,13 @@ void srskelf_asym_new(srskelf_asym_newStackData *SD, const emlrtStack *sp,
   sizes[1] = i;
   st.site = &kc_emlrtRSI;
   coder::internal::indexShapeCheck(st, b_F.contents.factors.size(0), sizes);
-  b_F.contents.factors.set_size(&we_emlrtRTEI, sp, i);
+  b_F.contents.factors.set_size(&ve_emlrtRTEI, sp, i);
   st.site = &lc_emlrtRSI;
   if (opts->verb != 0.0) {
     st.site = &mc_emlrtRSI;
     b_st.site = &gf_emlrtRSI;
-    e_st.site = &lr_emlrtRSI;
-    f_st.site = &nr_emlrtRSI;
+    e_st.site = &hr_emlrtRSI;
+    f_st.site = &jr_emlrtRSI;
     l = emlrt_marshallIn(e_st, feval(e_st, g_emlrt_marshallOut(e_st, cv3),
       emlrt_marshallOut(static_cast<real_T>(1.0)), h_emlrt_marshallOut(f_st, cv4),
       f_emlrtMCI), "<output of feval>");

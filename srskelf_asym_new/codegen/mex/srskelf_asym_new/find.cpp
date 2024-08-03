@@ -62,7 +62,7 @@ static emlrtRSInfo hj_emlrtRSI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo vj_emlrtRSI{
+static emlrtRSInfo uj_emlrtRSI{
     402,                                                           // lineNo
     "find_first_indices",                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
@@ -90,105 +90,105 @@ static emlrtDCInfo xb_emlrtDCI{
     4                                                               // checkKind
 };
 
-static emlrtRTEInfo ng_emlrtRTEI{
+static emlrtRTEInfo mg_emlrtRTEI{
     364,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo og_emlrtRTEI{
+static emlrtRTEInfo ng_emlrtRTEI{
     144,                                                           // lineNo
     9,                                                             // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo kj_emlrtRTEI{
+static emlrtRTEInfo jj_emlrtRTEI{
     195,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo lj_emlrtRTEI{
+static emlrtRTEInfo kj_emlrtRTEI{
     197,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo mj_emlrtRTEI{
+static emlrtRTEInfo lj_emlrtRTEI{
     199,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo nj_emlrtRTEI{
+static emlrtRTEInfo mj_emlrtRTEI{
     253,                                                           // lineNo
     5,                                                             // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo oj_emlrtRTEI{
+static emlrtRTEInfo nj_emlrtRTEI{
     254,                                                           // lineNo
     5,                                                             // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo pj_emlrtRTEI{
+static emlrtRTEInfo oj_emlrtRTEI{
     255,                                                           // lineNo
     5,                                                             // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo qj_emlrtRTEI{
+static emlrtRTEInfo pj_emlrtRTEI{
     247,                                                           // lineNo
     17,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo rj_emlrtRTEI{
+static emlrtRTEInfo qj_emlrtRTEI{
     248,                                                           // lineNo
     13,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo sj_emlrtRTEI{
+static emlrtRTEInfo rj_emlrtRTEI{
     249,                                                           // lineNo
     13,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo tj_emlrtRTEI{
+static emlrtRTEInfo sj_emlrtRTEI{
     133,                                                           // lineNo
     17,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo uj_emlrtRTEI{
+static emlrtRTEInfo tj_emlrtRTEI{
     134,                                                           // lineNo
     13,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo vj_emlrtRTEI{
+static emlrtRTEInfo uj_emlrtRTEI{
     135,                                                           // lineNo
     13,                                                            // colNo
     "find",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo gk_emlrtRTEI{
+static emlrtRTEInfo fk_emlrtRTEI{
     369,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
@@ -214,9 +214,9 @@ void b_eml_find(const emlrtStack &sp, const b_sparse &x, array<int32_T, 1U> &i,
   nx_tmp = x.colidx[x.colidx.size(0) - 1];
   nx = nx_tmp - 2;
   if (nx_tmp - 1 == 0) {
-    i.set_size(&tj_emlrtRTEI, &sp, 0);
-    j.set_size(&uj_emlrtRTEI, &sp, 0);
-    v.set_size(&vj_emlrtRTEI, &sp, 0);
+    i.set_size(&sj_emlrtRTEI, &sp, 0);
+    j.set_size(&tj_emlrtRTEI, &sp, 0);
+    v.set_size(&uj_emlrtRTEI, &sp, 0);
   } else {
     int32_T idx;
     st.site = &cj_emlrtRSI;
@@ -224,9 +224,9 @@ void b_eml_find(const emlrtStack &sp, const b_sparse &x, array<int32_T, 1U> &i,
       emlrtNonNegativeCheckR2012b(static_cast<real_T>(nx_tmp - 1), &xb_emlrtDCI,
                                   &st);
     }
-    i.set_size(&kj_emlrtRTEI, &st, nx_tmp - 1);
-    j.set_size(&lj_emlrtRTEI, &st, nx_tmp - 1);
-    v.set_size(&mj_emlrtRTEI, &st, nx_tmp - 1);
+    i.set_size(&jj_emlrtRTEI, &st, nx_tmp - 1);
+    j.set_size(&kj_emlrtRTEI, &st, nx_tmp - 1);
+    v.set_size(&lj_emlrtRTEI, &st, nx_tmp - 1);
     b_st.site = &dj_emlrtRSI;
     if (nx_tmp - 1 > 2147483646) {
       c_st.site = &fe_emlrtRSI;
@@ -260,9 +260,9 @@ void b_eml_find(const emlrtStack &sp, const b_sparse &x, array<int32_T, 1U> &i,
     }
     if (nx_tmp - 1 == 1) {
       if (idx == 0) {
-        i.set_size(&qj_emlrtRTEI, &st, 0);
-        j.set_size(&rj_emlrtRTEI, &st, 0);
-        v.set_size(&sj_emlrtRTEI, &st, 0);
+        i.set_size(&pj_emlrtRTEI, &st, 0);
+        j.set_size(&qj_emlrtRTEI, &st, 0);
+        v.set_size(&rj_emlrtRTEI, &st, 0);
       }
     } else {
       int32_T iv[2];
@@ -270,17 +270,17 @@ void b_eml_find(const emlrtStack &sp, const b_sparse &x, array<int32_T, 1U> &i,
       iv[1] = idx;
       b_st.site = &fj_emlrtRSI;
       internal::indexShapeCheck(b_st, i.size(0), iv);
-      i.set_size(&nj_emlrtRTEI, &st, idx);
+      i.set_size(&mj_emlrtRTEI, &st, idx);
       iv[0] = 1;
       iv[1] = idx;
       b_st.site = &gj_emlrtRSI;
       internal::indexShapeCheck(b_st, j.size(0), iv);
-      j.set_size(&oj_emlrtRTEI, &st, idx);
+      j.set_size(&nj_emlrtRTEI, &st, idx);
       iv[0] = 1;
       iv[1] = idx;
       b_st.site = &hj_emlrtRSI;
       internal::indexShapeCheck(b_st, v.size(0), iv);
-      v.set_size(&pj_emlrtRTEI, &st, idx);
+      v.set_size(&oj_emlrtRTEI, &st, idx);
     }
   }
 }
@@ -304,7 +304,7 @@ void c_eml_find(const emlrtStack &sp, const array<boolean_T, 1U> &x,
   nx_tmp = x.size(0);
   st.site = &ve_emlrtRSI;
   idx = 0;
-  i.set_size(&gk_emlrtRTEI, &st, x.size(0));
+  i.set_size(&fk_emlrtRTEI, &st, x.size(0));
   b_st.site = &we_emlrtRSI;
   if (x.size(0) > 2147483646) {
     c_st.site = &fe_emlrtRSI;
@@ -332,7 +332,7 @@ void c_eml_find(const emlrtStack &sp, const array<boolean_T, 1U> &x,
   }
   if (x.size(0) == 1) {
     if (idx == 0) {
-      i.set_size(&og_emlrtRTEI, &st, 0);
+      i.set_size(&ng_emlrtRTEI, &st, 0);
     }
   } else {
     int32_T iv[2];
@@ -343,9 +343,9 @@ void c_eml_find(const emlrtStack &sp, const array<boolean_T, 1U> &x,
     }
     iv[0] = 1;
     iv[1] = nx_tmp;
-    b_st.site = &vj_emlrtRSI;
+    b_st.site = &uj_emlrtRSI;
     internal::indexShapeCheck(b_st, i.size(0), iv);
-    i.set_size(&og_emlrtRTEI, &st, nx_tmp);
+    i.set_size(&ng_emlrtRTEI, &st, nx_tmp);
   }
 }
 
@@ -368,7 +368,7 @@ void eml_find(const emlrtStack &sp, const array<boolean_T, 2U> &x,
   nx_tmp = x.size(1);
   st.site = &ve_emlrtRSI;
   idx = 0;
-  i.set_size(&ng_emlrtRTEI, &st, 1, x.size(1));
+  i.set_size(&mg_emlrtRTEI, &st, 1, x.size(1));
   b_st.site = &we_emlrtRSI;
   if (x.size(1) > 2147483646) {
     c_st.site = &fe_emlrtRSI;
@@ -396,13 +396,13 @@ void eml_find(const emlrtStack &sp, const array<boolean_T, 2U> &x,
   }
   if (x.size(1) == 1) {
     if (idx == 0) {
-      i.set_size(&og_emlrtRTEI, &st, 1, 0);
+      i.set_size(&ng_emlrtRTEI, &st, 1, 0);
     }
   } else {
     if (idx < 1) {
       idx = 0;
     }
-    i.set_size(&og_emlrtRTEI, &st, i.size(0), idx);
+    i.set_size(&ng_emlrtRTEI, &st, i.size(0), idx);
   }
 }
 

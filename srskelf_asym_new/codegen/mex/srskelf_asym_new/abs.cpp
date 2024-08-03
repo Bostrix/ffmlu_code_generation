@@ -26,7 +26,7 @@ static emlrtRSInfo df_emlrtRSI{
     "applyScalarFunction.m" // pathName
 };
 
-static emlrtRTEInfo qg_emlrtRTEI{
+static emlrtRTEInfo pg_emlrtRTEI{
     30,                    // lineNo
     21,                    // colNo
     "applyScalarFunction", // fName
@@ -51,7 +51,7 @@ void b_abs(const emlrtStack &sp, const array<real_T, 1U> &x,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx_tmp = x.size(0);
-  y.set_size(&qg_emlrtRTEI, &st, x.size(0));
+  y.set_size(&pg_emlrtRTEI, &st, x.size(0));
   b_st.site = &df_emlrtRSI;
   if (x.size(0) > 2147483646) {
     c_st.site = &fe_emlrtRSI;
@@ -77,7 +77,7 @@ void b_abs(const emlrtStack &sp, const array<real_T, 2U> &x,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx = x.size(0) * 3;
-  y.set_size(&qg_emlrtRTEI, &st, x.size(0), 3);
+  y.set_size(&pg_emlrtRTEI, &st, x.size(0), 3);
   b_st.site = &df_emlrtRSI;
   if (nx > 2147483646) {
     c_st.site = &fe_emlrtRSI;
@@ -103,7 +103,7 @@ void c_abs(const emlrtStack &sp, const array<real_T, 2U> &x,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx = x.size(0) * x.size(1);
-  y.set_size(&qg_emlrtRTEI, &st, x.size(0), x.size(1));
+  y.set_size(&pg_emlrtRTEI, &st, x.size(0), x.size(1));
   b_st.site = &df_emlrtRSI;
   if (nx > 2147483646) {
     c_st.site = &fe_emlrtRSI;
@@ -129,7 +129,7 @@ void d_abs(const emlrtStack &sp, const array<real_T, 2U> &x,
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
   nx_tmp = x.size(1);
-  y.set_size(&qg_emlrtRTEI, &st, 1, x.size(1));
+  y.set_size(&pg_emlrtRTEI, &st, 1, x.size(1));
   b_st.site = &df_emlrtRSI;
   if (x.size(1) > 2147483646) {
     c_st.site = &fe_emlrtRSI;

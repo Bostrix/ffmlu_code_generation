@@ -16,7 +16,7 @@ static emlrtMCInfo c_emlrtMCI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/lang/error.m" // pName
 };
 
-static emlrtRSInfo pr_emlrtRSI{
+static emlrtRSInfo lr_emlrtRSI{
     27,                                                            // lineNo
     "error",                                                       // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/lang/error.m" // pathName
@@ -53,7 +53,7 @@ void c_error(const emlrtStack &sp)
   m = emlrtCreateCharArray(2, &iv[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)&sp, 34, m, &varargin_1[0]);
   emlrtAssign(&y, m);
-  st.site = &pr_emlrtRSI;
+  st.site = &lr_emlrtRSI;
   b_error(st, y, c_emlrtMCI);
 }
 
@@ -73,7 +73,7 @@ void d_error(const emlrtStack &sp)
   m = emlrtCreateCharArray(2, &iv[0]);
   emlrtInitCharArrayR2013a((emlrtConstCTX)&sp, 39, m, &varargin_1[0]);
   emlrtAssign(&y, m);
-  st.site = &pr_emlrtRSI;
+  st.site = &lr_emlrtRSI;
   b_error(st, y, c_emlrtMCI);
 }
 

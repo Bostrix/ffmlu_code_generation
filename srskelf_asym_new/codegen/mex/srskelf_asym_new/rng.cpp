@@ -17,7 +17,7 @@ static emlrtMCInfo g_emlrtMCI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/randfun/rng.m" // pName
 };
 
-static emlrtRSInfo rr_emlrtRSI{
+static emlrtRSInfo nr_emlrtRSI{
     51,                                                             // lineNo
     "rng",                                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/randfun/rng.m" // pathName
@@ -42,7 +42,7 @@ void rng(const emlrtStack &sp)
   b_y = nullptr;
   m = emlrtCreateDoubleScalar(1.0);
   emlrtAssign(&b_y, m);
-  st.site = &rr_emlrtRSI;
+  st.site = &nr_emlrtRSI;
   feval(st, y, b_y, g_emlrtMCI);
 }
 

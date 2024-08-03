@@ -81,7 +81,7 @@ mxArray *emlrtMexFcnProperties()
                     "/home/user/ffmlu_code_generation/ffmlu_code_generation/"
                     "srskelf_asym_new/srskelf_asym_new.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739467.588738426));
+                emlrtMxCreateDoubleScalar(739467.63209490746));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));

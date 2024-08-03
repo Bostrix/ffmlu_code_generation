@@ -17,19 +17,6 @@
 #include <cstring>
 
 // Type Definitions
-struct struct2_T {
-  real_T sk[1000];
-  real_T rd[1000];
-  real_T nbr[1000];
-  real_T T[1000000];
-  real_T E[1000000];
-  real_T F[1000000];
-  real_T L[1000000];
-  real_T U[1000000];
-  real_T C[1000000];
-  real_T D[1000000];
-};
-
 struct struct_T {
   real_T ctr[3];
   coder::array<real_T, 2U> xi;
@@ -39,5 +26,7 @@ struct struct_T {
   coder::array<real_T, 2U> ilist;
   coder::array<real_T, 2U> snbor;
 };
+
+class empty {};
 
 // End of code generation (srskelf_asym_new_types2.h)

@@ -19,8 +19,7 @@
 
 // Function Declarations
 namespace coder {
-void repmat(const emlrtStack &sp, const struct2_T &a, real_T varargin_1,
-            array<struct2_T, 1U> &b);
+void repmat(const emlrtStack &sp, real_T varargin_1, array<empty, 1U> &b);
 
 }
 
