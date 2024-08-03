@@ -69,6 +69,8 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         end
       end
     end
+  else
+    pblk = zeros(t.nlvl+1,1,'int32'); % Initialize pblk to avoid undefined variable error
   end
 
   % Initialize the data structure holding the factorization
@@ -212,13 +214,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         K3(rd,:) = K3(rd,:) - conj(T)'*K3(sk,:); 
       end
       
-      % Initialize E, G, C, D to avoid undefined variable error
+      % Initialize L and U to avoid undefined variable error
+      L = [];
+      U = [];
       E = [];
       G = [];
       C = [];
       D = [];
-      L=[];
-      U=[];
       
       if strcmpi(opts.symm,'p')
         % Cholesky for positive definite input

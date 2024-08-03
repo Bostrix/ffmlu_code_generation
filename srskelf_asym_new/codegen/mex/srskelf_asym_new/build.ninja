@@ -1,0 +1,107 @@
+# CompilerName=gcc
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/glnxa64
+matlabdir = /usr/local/MATLAB/R2024a
+startdir = /home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new
+
+# Toolchain information
+cc = gcc
+cxx = /usr/bin/g++
+linker = gcc
+linkerxx = /usr/bin/g++
+
+cflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_asym_new_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c 
+
+cxxflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -fvisibility=hidden -fno-gnu-unique -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DHAVE_LAPACK_CONFIG_H -DLAPACK_COMPLEX_STRUCTURE -DMW_HAVE_LAPACK_DECLS -DMODEL=srskelf_asym_new_mex -DMW_NEEDS_VERSION_H -msse2 -fno-predictive-commoning -c 
+
+ldflags =  -pthread -Wl,--no-undefined  -shared -lstdc++ -Wl,--as-needed -Wl,-rpath-link,$matlabdir/bin/glnxa64 -L"$matlabdir/bin/glnxa64" -Wl,-rpath-link,$matlabdir/extern/bin/glnxa64 -L"$matlabdir/extern/bin/glnxa64" -lMatlabDataArray -lmx -lmex -lm -lmat  -Wl,-Bsymbolic -o srskelf_asym_new_mex.mexa64 -Wl,--exclude-libs,ALL -L"$matlabdir/bin/glnxa64" -lmwblas -lmwlapack -lemlrt -lcovrt -lut -lmwmathutil 
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker $in $linkobjs $ldflags
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir/srskelf_asym_new_data.o : cxx $root/srskelf_asym_new_data.cpp
+build $builddir/rt_nonfinite.o : cxx $root/rt_nonfinite.cpp
+build $builddir/srskelf_asym_new_initialize.o : cxx $root/srskelf_asym_new_initialize.cpp
+build $builddir/srskelf_asym_new_terminate.o : cxx $root/srskelf_asym_new_terminate.cpp
+build $builddir/srskelf_asym_new.o : cxx $root/srskelf_asym_new.cpp
+build $builddir/tic.o : cxx $root/tic.cpp
+build $builddir/error.o : cxx $root/error.cpp
+build $builddir/timeKeeper.o : cxx $root/timeKeeper.cpp
+build $builddir/shypoct.o : cxx $root/shypoct.cpp
+build $builddir/unique.o : cxx $root/unique.cpp
+build $builddir/bitget.o : cxx $root/bitget.cpp
+build $builddir/indexShapeCheck.o : cxx $root/indexShapeCheck.cpp
+build $builddir/find.o : cxx $root/find.cpp
+build $builddir/all.o : cxx $root/all.cpp
+build $builddir/horzcatStructList.o : cxx $root/horzcatStructList.cpp
+build $builddir/bsxfun.o : cxx $root/bsxfun.cpp
+build $builddir/abs.o : cxx $root/abs.cpp
+build $builddir/toc.o : cxx $root/toc.cpp
+build $builddir/repmat.o : cxx $root/repmat.cpp
+build $builddir/randn.o : cxx $root/randn.cpp
+build $builddir/sum.o : cxx $root/sum.cpp
+build $builddir/sumMatrixIncludeNaN.o : cxx $root/sumMatrixIncludeNaN.cpp
+build $builddir/assertCompatibleDims.o : cxx $root/assertCompatibleDims.cpp
+build $builddir/lap_neumann_kernel.o : cxx $root/lap_neumann_kernel.cpp
+build $builddir/spget_quadcorr.o : cxx $root/spget_quadcorr.cpp
+build $builddir/mtimes.o : cxx $root/mtimes.cpp
+build $builddir/id.o : cxx $root/id.cpp
+build $builddir/qr.o : cxx $root/qr.cpp
+build $builddir/eml_qr.o : cxx $root/eml_qr.cpp
+build $builddir/any1.o : cxx $root/any1.cpp
+build $builddir/diag.o : cxx $root/diag.cpp
+build $builddir/mldivide.o : cxx $root/mldivide.cpp
+build $builddir/warning.o : cxx $root/warning.cpp
+build $builddir/qrsolve.o : cxx $root/qrsolve.cpp
+build $builddir/infocheck.o : cxx $root/infocheck.cpp
+build $builddir/inv.o : cxx $root/inv.cpp
+build $builddir/eml_ipiv2perm.o : cxx $root/eml_ipiv2perm.cpp
+build $builddir/norm.o : cxx $root/norm.cpp
+build $builddir/ind2sub.o : cxx $root/ind2sub.cpp
+build $builddir/eye.o : cxx $root/eye.cpp
+build $builddir/eml_mtimes_helper.o : cxx $root/eml_mtimes_helper.cpp
+build $builddir/qrupdate.o : cxx $root/qrupdate.cpp
+build $builddir/lu.o : cxx $root/lu.cpp
+build $builddir/_coder_srskelf_asym_new_api.o : cxx $root/interface/_coder_srskelf_asym_new_api.cpp
+build $builddir/_coder_srskelf_asym_new_mex.o : cxx $root/interface/_coder_srskelf_asym_new_mex.cpp
+build $builddir/strcmp.o : cxx $root/strcmp.cpp
+build $builddir/rng.o : cxx $root/rng.cpp
+build $builddir/eml_int_forloop_overflow_check.o : cxx $root/eml_int_forloop_overflow_check.cpp
+build $builddir/round.o : cxx $root/round.cpp
+build $builddir/sqrt.o : cxx $root/sqrt.cpp
+build $builddir/sort.o : cxx $root/sort.cpp
+build $builddir/sortIdx.o : cxx $root/sortIdx.cpp
+build $builddir/flip.o : cxx $root/flip.cpp
+build $builddir/xorgqr.o : cxx $root/xorgqr.cpp
+build $builddir/xgeqp3.o : cxx $root/xgeqp3.cpp
+build $builddir/xgetrf.o : cxx $root/xgetrf.cpp
+build $builddir/exp.o : cxx $root/exp.cpp
+build $builddir/chol.o : cxx $root/chol.cpp
+build $builddir/mrdivide_helper.o : cxx $root/mrdivide_helper.cpp
+build $builddir/pxyfun_lap_neumann.o : cxx $root/pxyfun_lap_neumann.cpp
+build $builddir/div.o : cxx $root/div.cpp
+build $builddir/Afun_lap_te.o : cxx $root/Afun_lap_te.cpp
+build $builddir/sparse.o : cxx $root/sparse.cpp
+build $builddir/srskelf_asym_new_mexutil.o : cxx $root/srskelf_asym_new_mexutil.cpp
+build $builddir/_coder_srskelf_asym_new_info.o : cxx $root/interface/_coder_srskelf_asym_new_info.cpp
+build $builddir/cpp_mexapi_version.o : cxx $matlabdir/extern/version/cpp_mexapi_version.cpp
+
+# Link
+build $root/srskelf_asym_new_mex.mexa64 : linkxx $builddir/srskelf_asym_new_data.o $builddir/rt_nonfinite.o $builddir/srskelf_asym_new_initialize.o $builddir/srskelf_asym_new_terminate.o $builddir/srskelf_asym_new.o $builddir/tic.o $builddir/error.o $builddir/timeKeeper.o $builddir/shypoct.o $builddir/unique.o $builddir/bitget.o $builddir/indexShapeCheck.o $builddir/find.o $builddir/all.o $builddir/horzcatStructList.o $builddir/bsxfun.o $builddir/abs.o $builddir/toc.o $builddir/repmat.o $builddir/randn.o $builddir/sum.o $builddir/sumMatrixIncludeNaN.o $builddir/assertCompatibleDims.o $builddir/lap_neumann_kernel.o $builddir/spget_quadcorr.o $builddir/mtimes.o $builddir/id.o $builddir/qr.o $builddir/eml_qr.o $builddir/any1.o $builddir/diag.o $builddir/mldivide.o $builddir/warning.o $builddir/qrsolve.o $builddir/infocheck.o $builddir/inv.o $builddir/eml_ipiv2perm.o $builddir/norm.o $builddir/ind2sub.o $builddir/eye.o $builddir/eml_mtimes_helper.o $builddir/qrupdate.o $builddir/lu.o $builddir/_coder_srskelf_asym_new_api.o $builddir/_coder_srskelf_asym_new_mex.o $builddir/strcmp.o $builddir/rng.o $builddir/eml_int_forloop_overflow_check.o $builddir/round.o $builddir/sqrt.o $builddir/sort.o $builddir/sortIdx.o $builddir/flip.o $builddir/xorgqr.o $builddir/xgeqp3.o $builddir/xgetrf.o $builddir/exp.o $builddir/chol.o $builddir/mrdivide_helper.o $builddir/pxyfun_lap_neumann.o $builddir/div.o $builddir/Afun_lap_te.o $builddir/sparse.o $builddir/srskelf_asym_new_mexutil.o $builddir/_coder_srskelf_asym_new_info.o $builddir/cpp_mexapi_version.o 
