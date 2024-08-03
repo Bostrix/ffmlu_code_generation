@@ -1,4 +1,4 @@
-function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts)
+function F = srskelf_asym_new(A, x, occ, rank_or_tol, pxyfun, opts)
   start = tic;
 
   if nargin < 5
@@ -31,20 +31,20 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
          'RSS:srskelf_asym:invalidSymm', ...
          'Symmetry parameter must be ''p'' or ''n''.');
 
-  % Dispatch function handles based on identifiers
-  switch A_func_id
-      case 1
-          A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
-      otherwise
-          error('Invalid function identifier for A.');
-  end
-
-  switch pxyfun_func_id
-      case 1
-          pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
-      otherwise
-          error('Invalid function identifier for pxyfun.');
-  end
+  % % Dispatch function handles based on identifiers
+  % switch A_func_id
+  %     case 1
+  %         A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
+  %     otherwise
+  %         error('Invalid function identifier for A.');
+  % end
+  % 
+  % switch pxyfun_func_id
+  %     case 1
+  %         pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
+  %     otherwise
+  %         error('Invalid function identifier for pxyfun.');
+  % end
 
   % Build tree to hold the discretization points
   N = size(x,2);
@@ -74,7 +74,8 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
   % Initialize the data structure holding the factorization
   nbox = t.lvp(end);
   
-  emptyStruct = struct('sk',zeros(0, 1), 'rd',zeros(0, 1), 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
+  max_sk_size = 1000; % Set a sufficiently large maximum size
+  emptyStruct = struct('sk',zeros(max_sk_size, 1), 'rd',zeros(max_sk_size, 1), 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
   e = repmat(emptyStruct, nbox, 1);
   
   F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1),'factors',e,'symm',opts.symm);
@@ -232,17 +233,15 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       
       % Ensure slf and sk are not empty and have consistent dimensions
       if isempty(slf) || isempty(sk)
-          F.factors(n).sk = zeros(0, 1); % Use an empty column vector for consistency
+          F.factors(n).sk(1:0) = zeros(0, 1); % Use an empty column vector for consistency
       else
-          F.factors(n).sk = zeros(numel(sk), 1); % Preallocate with the correct size
-          F.factors(n).sk = slf(sk);
+          F.factors(n).sk(1:numel(sk)) = slf(sk);
       end
 
       if isempty(slf) || isempty(rd)
-          F.factors(n).rd = zeros(0, 1); % Use an empty column vector for consistency
+          F.factors(n).rd(1:0) = zeros(0, 1); % Use an empty column vector for consistency
       else
-          F.factors(n).rd = zeros(numel(rd), 1); % Preallocate with the correct size
-          F.factors(n).rd = slf(rd);
+          F.factors(n).rd(1:numel(rd)) = slf(rd);
       end
 
       F.factors(n).nbr = nbr;
