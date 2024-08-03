@@ -60,7 +60,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     fprintf('%3s | %63.2e (s)\n','-',toc)
 
     % Count the nonempty boxes at each level
-    pblk = zeros(t.nlvl+1,1);
+    pblk = zeros(t.nlvl+1,1,'int32');
     for lvl = 1:t.nlvl
       pblk(lvl+1) = pblk(lvl);
       for i = t.lvp(lvl)+1:t.lvp(lvl+1)
@@ -75,16 +75,16 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
   nbox = t.lvp(end);
   
   max_sk_size = 1000; % Set a sufficiently large maximum size
-  emptyStruct = struct('sk',zeros(max_sk_size, 1), 'rd',zeros(max_sk_size, 1), 'nbr',zeros(max_sk_size, 1), 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
+  emptyStruct = struct('sk',zeros(max_sk_size, 1), 'rd',zeros(max_sk_size, 1), 'nbr',zeros(max_sk_size, 1), 'T',zeros(max_sk_size, max_sk_size), 'E',zeros(max_sk_size, max_sk_size), 'F',zeros(max_sk_size, max_sk_size), 'L',zeros(max_sk_size, max_sk_size), 'U',zeros(max_sk_size, max_sk_size), 'C',zeros(max_sk_size, max_sk_size), 'D',zeros(max_sk_size, max_sk_size));
   e = repmat(emptyStruct, nbox, 1);
   
-  F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1),'factors',e,'symm',opts.symm);
+  F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1,'int32'),'factors',e,'symm',opts.symm);
 
   nlvl = 0;
   n = 0;
   % Mark every DOF as "remaining", i.e., not yet eliminated
   rem = true(N,1);
-  lookup_list = zeros(nbox,1);
+  lookup_list = zeros(nbox,1,'int32');
   rng(1);
 
   % Loop over the levels of the tree from bottom to top
@@ -249,19 +249,56 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       else
           F.factors(n).nbr(1:numel(nbr)) = nbr;
       end
+      
+      if isempty(T)
+          F.factors(n).T(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).T(1:numel(T)) = T;
+      end
 
-      F.factors(n).T = T;
-      F.factors(n).E = E;
-      F.factors(n).F = G;
-      F.factors(n).L = L;
-      F.factors(n).U = U;
-      F.factors(n).C = C;
-      F.factors(n).D = D;
+      if isempty(E)
+          F.factors(n).E(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).E(1:numel(E)) = E;
+      end
+      
+      if isempty(G)
+          F.factors(n).F(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).F(1:numel(G)) = G;
+      end
+      
+      if isempty(L)
+          F.factors(n).L(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).L(1:numel(L)) = L;
+      end
+      
+      if isempty(U)
+          F.factors(n).U(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).U(1:numel(U)) = U;
+      end
+      
+      if isempty(C)
+          F.factors(n).C(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).C(1:numel(C)) = C;
+      end
+      
+      if isempty(D)
+          F.factors(n).D(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).D(1:numel(D)) = D;
+      end
 
-      % Box number i is at index n (more sensible for non-uniform case)
-      lookup_list(i) = n;
+      % Ensure t.nodes(i).xi is not empty and has consistent dimensions
+      if isempty(slf) || isempty(sk)
+          t.nodes(i).xi(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          t.nodes(i).xi(1:numel(sk)) = slf(sk);
+      end
 
-      t.nodes(i).xi = slf(sk);
       rem(slf(rd)) = 0;
     end
     F.lvp(nlvl+1) = n;
@@ -271,7 +308,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       nrem2 = sum(rem);
       nblk = pblk(lvl) + t.lvp(lvl+1) - t.lvp(lvl);
       fprintf('%3d | %6d | %8d | %8d | %8.2f | %8.2f | %10.2e (s)\n', ...
-              lvl,nblk,nrem1,nrem2,nrem1/nblk,nrem2/nblk,toc(time))
+              int32(lvl),int32(nblk),int32(nrem1),int32(nrem2),nrem1/double(nblk),nrem2/double(nblk),toc(time))
     end
   end
 
