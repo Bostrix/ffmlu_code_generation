@@ -212,6 +212,14 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         K3(rd,:) = K3(rd,:) - conj(T)'*K3(sk,:); 
       end
       
+      % Initialize E, G, C, D to avoid undefined variable error
+      E = [];
+      G = [];
+      C = [];
+      D = [];
+      L=[];
+      U=[];
+      
       if strcmpi(opts.symm,'p')
         % Cholesky for positive definite input
         L = chol(K(rd,rd),'lower');
