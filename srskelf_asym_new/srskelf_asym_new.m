@@ -199,6 +199,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       % box
       K  = full(A(slf,slf)) + spget('slf','slf');
       K2 = full(A(nbr,slf)) + spget('nbr','slf');
+      K3 = zeros(size(K2, 2), size(K, 1)); % Initialize K3 with the appropriate size
       if strcmpi(opts.symm,'n')
         K3 = full(A(slf,nbr)) + spget('slf','nbr');
       end
