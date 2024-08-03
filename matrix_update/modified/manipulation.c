@@ -1,9 +1,7 @@
 #include "mex.h"
-#include <omp.h>
 
-// Function to perform matrix multiplication with OpenMP
-void matrix_multiply_openmp(double* result, double* mat1, int mat1_rows, int mat1_cols, double* mat2, int mat2_cols) {
-    #pragma omp parallel for collapse(2)
+// Function to perform matrix multiplication
+void matrix_multiply(double* result, double* mat1, int mat1_rows, int mat1_cols, double* mat2, int mat2_cols) {
     for (int i = 0; i < mat1_rows; ++i) {
         for (int j = 0; j < mat2_cols; ++j) {
             result[i * mat2_cols + j] = 0;
@@ -44,7 +42,7 @@ void mexFunction(int nlhs, mxArray *plhs[], int nrhs, const mxArray *prhs[]) {
     double* result = mxGetPr(plhs[0]);
 
     // Perform matrix multiplication
-    matrix_multiply_openmp(result, tmp1, tmp1_rows, tmp1_cols, tmp2, tmp2_cols);
+    matrix_multiply(result, tmp1, tmp1_rows, tmp1_cols, tmp2, tmp2_cols);
 
     // Update A matrix
     for (int i = 0; i < subI_size; ++i) {
