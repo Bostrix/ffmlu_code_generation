@@ -338,14 +338,14 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
 
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
-          % A(subI, subI) = A(subI,subI) - tmp1*tmp1';
-          A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp1');
+          A(subI, subI) = A(subI,subI) - tmp1*tmp1';
+          % A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp1');
         elseif strcmpi(opts.symm,'n')
           tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
-          % A(subI, subI) = A(subI,subI) - tmp1*tmp2;
-          A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp2);
-    % subI = subI(:);
-    % A = matrix_multiply_mex(A, subI, tmp1, tmp2, size(A, 2));
+          A(subI, subI) = A(subI,subI) - tmp1*tmp2;
+          % A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp2);
+          % A(subI, subI) = A(subI,subI) - matrix_multiply_mex(subI,subI,tmp1,tmp2);
+   
         end % if
       else
         % For off-diagonal block
@@ -370,8 +370,8 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
           tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end % if
         % A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
-
-                A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
+manipulation(A, size(A, 1), size(A, 2), tmp1, tmp2, int32(subI), int32(subJ), numel(subI), numel(subJ));
+                % A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
       end % if
     end % for
 

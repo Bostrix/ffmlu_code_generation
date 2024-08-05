@@ -1,0 +1,139 @@
+addpath('/home/user/Documents/ffmlu_code_generation/matrix_update/modified');
+
+% Measure time for the original function
+tic;
+F_original = srskelf_asym_new(A, x, occ, rank_or_tol, pxyfun, opts);
+time_original = toc;
+
+% Measure time for the modified function
+tic;
+F_modified = srskelf_asym_new_modified(A, x, occ, rank_or_tol, pxyfun, opts);
+time_modified = toc;
+
+% Display the results
+fprintf('Time for original function: %.6f seconds\n', time_original);
+fprintf('Time for modified function: %.6f seconds\n', time_modified);
+
+% Compare the results
+if isequal(F_original, F_modified)
+    fprintf('The results of both functions are equal.\n');
+else
+    fprintf('The results of both functions are not equal.\n');
+    % Find and display non-equal fields
+    compare_fields(F_original, F_modified);
+end
+
+function compare_fields(struct1, struct2, parent)
+    if nargin < 3
+        parent = '';
+    end
+    
+    fields1 = fieldnames(struct1);
+    fields2 = fieldnames(struct2);
+    
+    all_fields = unique([fields1; fields2]);
+    
+    for i = 1:length(all_fields)
+        field = all_fields{i};
+        
+        if isfield(struct1, field) && isfield(struct2, field)
+            val1 = struct1.(field);
+            val2 = struct2.(field);
+            
+            if isstruct(val1) && isstruct(val2)
+                compare_fields(val1, val2, fullfieldname(parent, field));
+            else
+                if ~isequaln(val1, val2)
+                    field_name = fullfieldname(parent, field);
+                    fprintf('Field %s is not equal:\n', field_name);
+                    fprintf('  Original: %s\n', display_value(val1));
+                    fprintf('  Modified: %s\n', display_value(val2));
+                    
+                    if isnumeric(val1) && isnumeric(val2)
+                        compare_numeric_arrays(val1, val2, field_name);
+                    elseif iscell(val1) && iscell(val2)
+                        compare_cell_arrays(val1, val2, field_name);
+                    elseif ischar(val1) && ischar(val2)
+                        compare_char(val1, val2, field_name);
+                    end
+                end
+            end
+        else
+            if isfield(struct1, field)
+                field_name = fullfieldname(parent, field);
+                fprintf('Field %s is missing in the modified struct.\n', field_name);
+                disp(struct1.(field));
+            else
+                field_name = fullfieldname(parent, field);
+                fprintf('Field %s is missing in the original struct.\n', field_name);
+                disp(struct2.(field));
+            end
+        end
+    end
+end
+
+function field_name = fullfieldname(parent, field)
+    if isempty(parent)
+        field_name = field;
+    else
+        field_name = [parent '.' field];
+    end
+end
+
+function val_str = display_value(val)
+    if isnumeric(val)
+        val_str = num2str(val, '%.15e ');
+    elseif ischar(val)
+        val_str = val;
+    elseif iscell(val)
+        val_str = 'cell array';
+    elseif isstruct(val)
+        val_str = 'struct';
+    else
+        val_str = 'unknown type';
+    end
+end
+
+function compare_numeric_arrays(array1, array2, field_name)
+    [rows, cols] = size(array1);
+    for r = 1:rows
+        for c = 1:cols
+            if array1(r, c) ~= array2(r, c)
+                fprintf('Difference at %s(%d, %d): original = %.15e, modified = %.15e\n', field_name, r, c, array1(r, c), array2(r, c));
+            end
+        end
+    end
+end
+
+function compare_cell_arrays(cell1, cell2, field_name)
+    if length(cell1) ~= length(cell2)
+        fprintf('Field %s has different lengths:\n', field_name);
+        fprintf('  Original length: %d\n', length(cell1));
+        fprintf('  Modified length: %d\n', length(cell2));
+        return;
+    end
+    for i = 1:length(cell1)
+        fprintf('Comparing cell %s{%d}\n', field_name, i);
+        val1 = cell1{i};
+        val2 = cell2{i};
+        if isnumeric(val1) && isnumeric(val2)
+            compare_numeric_arrays(val1, val2, sprintf('%s{%d}', field_name, i));
+        elseif ischar(val1) && ischar(val2)
+            compare_char(val1, val2, sprintf('%s{%d}', field_name, i));
+        elseif isstruct(val1) && isstruct(val2)
+            compare_fields(val1, val2, sprintf('%s{%d}', field_name, i)); % Recursively compare nested structs
+        elseif iscell(val1) && iscell(val2)
+            compare_cell_arrays(val1, val2, sprintf('%s{%d}', field_name, i));
+        else
+            fprintf('Cell %s{%d} has different types or unsupported types.\n', field_name, i);
+        end
+    end
+end
+
+function compare_char(val1, val2, field_name)
+    if ~isequal(val1, val2)
+        fprintf('Field %s is not equal:\n', field_name);
+        fprintf('  Original: %s\n', val1);
+        fprintf('  Modified: %s\n', val2);
+    end
+end
