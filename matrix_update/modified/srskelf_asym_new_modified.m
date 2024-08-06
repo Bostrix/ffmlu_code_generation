@@ -370,8 +370,11 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
           tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end % if
         % A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
-manipulation(A, size(A, 1), size(A, 2), tmp1, tmp2, int32(subI), int32(subJ), numel(subI), numel(subJ));
-                % A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
+                A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
+% manipulation(A, size(A, 1), size(A, 2), subI, subJ, tmp1, tmp2, size(tmp2, 2));
+        % manipulation(A, tmp1, tmp2, subI, subJ);
+
+
       end % if
     end % for
 
