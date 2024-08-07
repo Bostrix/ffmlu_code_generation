@@ -1,4 +1,4 @@
-function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts)
+function F = srskelf_asym_new(A, x, occ, rank_or_tol, pxyfun, opts)
   start = tic;
 
   if nargin < 5
@@ -31,20 +31,20 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
          'RSS:srskelf_asym:invalidSymm', ...
          'Symmetry parameter must be ''p'' or ''n''.');
 
-  % Dispatch function handles based on identifiers
-  switch A_func_id
-      case 1
-          A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
-      otherwise
-          error('Invalid function identifier for A.');
-  end
-
-  switch pxyfun_func_id
-      case 1
-          pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
-      otherwise
-          error('Invalid function identifier for pxyfun.');
-  end
+  % % Dispatch function handles based on identifiers
+  % switch A_func_id
+  %     case 1
+  %         A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
+  %     otherwise
+  %         error('Invalid function identifier for A.');
+  % end
+  % 
+  % switch pxyfun_func_id
+  %     case 1
+  %         pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
+  %     otherwise
+  %         error('Invalid function identifier for pxyfun.');
+  % end
 
   % Build tree to hold the discretization points
   N = size(x,2);
@@ -75,7 +75,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
   % Initialize the data structure holding the factorization
   nbox = t.lvp(end);
-
+  
   emptyStruct = struct('sk',zeros(0, 1), 'rd',zeros(0, 1), 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
   e = repmat(emptyStruct, nbox, 1);
   
@@ -240,74 +240,80 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
  
       % Store matrix factors for this box
       n = n + 1;
-      
-      % Ensure slf and sk are not empty and have consistent dimensions
-      if isempty(slf) || isempty(sk)
-          F.factors(n).sk(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).sk(1:numel(sk)) = slf(sk);
-      end
+if isempty(slf) || isempty(rd)
+    F.factors(n).rd = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).rd = zeros(numel(rd), 1); % Preallocate with the correct size
+    F.factors(n).rd = slf(rd);
+end
 
-      if isempty(slf) || isempty(rd)
-          F.factors(n).rd(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).rd(1:numel(rd)) = slf(rd);
-      end
-      
-      if isempty(nbr)
-          F.factors(n).nbr(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).nbr(1:numel(nbr)) = nbr;
-      end
-      
-      if isempty(T)
-          F.factors(n).T(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).T(1:numel(T)) = T;
-      end
+if isempty(nbr)
+    F.factors(n).nbr = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).nbr = zeros(numel(nbr), 1); % Preallocate with the correct size
+    F.factors(n).nbr = nbr;
+end
 
-      if isempty(E)
-          F.factors(n).E(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).E(1:numel(E)) = E;
-      end
-      
-      if isempty(G)
-          F.factors(n).F(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).F(1:numel(G)) = G;
-      end
-      
-      if isempty(L)
-          F.factors(n).L(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).L(1:numel(L)) = L;
-      end
-      
-      if isempty(U)
-          F.factors(n).U(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).U(1:numel(U)) = U;
-      end
-      
-      if isempty(C)
-          F.factors(n).C(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).C(1:numel(C)) = C;
-      end
-      
-      if isempty(D)
-          F.factors(n).D(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          F.factors(n).D(1:numel(D)) = D;
-      end
+if isempty(T)
+    F.factors(n).T = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).T = zeros(numel(T), 1); % Preallocate with the correct size
+    F.factors(n).T = T;
+end
 
-      % Ensure t.nodes(i).xi is not empty and has consistent dimensions
-      if isempty(slf) || isempty(sk)
-          t.nodes(i).xi(1:0) = zeros(0, 1); % Use an empty column vector for consistency
-      else
-          t.nodes(i).xi(1:numel(sk)) = slf(sk);
-      end
+if isempty(E)
+    F.factors(n).E = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).E = zeros(numel(E), 1); % Preallocate with the correct size
+    F.factors(n).E = E;
+end
+
+if isempty(G)
+    F.factors(n).F = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).F = zeros(numel(G), 1); % Preallocate with the correct size
+    F.factors(n).F = G;
+end
+
+if isempty(L)
+    F.factors(n).L = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).L = zeros(numel(L), 1); % Preallocate with the correct size
+    F.factors(n).L = L;
+end
+
+if isempty(U)
+    F.factors(n).U = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).U = zeros(numel(U), 1); % Preallocate with the correct size
+    F.factors(n).U = U;
+end
+
+if isempty(C)
+    F.factors(n).C = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).C = zeros(numel(C), 1); % Preallocate with the correct size
+    F.factors(n).C = C;
+end
+
+if isempty(D)
+    F.factors(n).D = zeros(0, 1); % Use an empty column vector for consistency
+else
+    F.factors(n).D = zeros(numel(D), 1); % Preallocate with the correct size
+    F.factors(n).D = D;
+end
+
+% % Box number i is at index n (more sensible for non-uniform case)
+% lookup_list(i) = n;
+
+% Ensure t.nodes(i).xi is not empty and has consistent dimensions
+if isempty(slf) || isempty(sk)
+    t.nodes(i).xi = zeros(0, 1); % Use an empty column vector for consistency
+else
+    t.nodes(i).xi = zeros(numel(sk), 1); % Preallocate with the correct size
+    t.nodes(i).xi = slf(sk);
+end
+
 
       rem(slf(rd)) = 0;
     end
@@ -330,116 +336,131 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
   end
   
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  function A = spget(Ityp,Jtyp)
-    % A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is 
+function A = spget(Ityp, Jtyp)
+    % A = SPGET(ITYP, JTYP) Sparse matrix access function (native MATLAB is 
     % slow for large matrices).  We grab the accumulated Schur complement
     % updates to a block of the matrix from previously-skeletonized 
     % levels.  Index sets ITYP and JTYP can be 'slf', 'nbr', or 'lst'.
     
     % Translate input strings to index sets (and their lengths)
-    if strcmpi(Ityp,'slf')
-      I_ = slf;
-      m_ = nslf;
-    elseif strcmpi(Ityp,'nbr')
-      I_ = nbr;
-      m_ = nnbr;
-    elseif strcmpi(Ityp,'lst')
-      I_ = lst;
-      m_ = nlst;
+    if strcmpi(Ityp, 'slf')
+        I_ = slf;
+        m_ = nslf;
+    elseif strcmpi(Ityp, 'nbr')
+        I_ = nbr;
+        m_ = nnbr;
+    elseif strcmpi(Ityp, 'lst')
+        I_ = lst;
+        m_ = nlst;
     end
     
-    if strcmpi(Jtyp,'slf')
-      J_ = slf;
-      n_ = nslf;
-    elseif strcmpi(Jtyp,'nbr')
-      J_ = nbr;
-      n_ = nnbr;
-    elseif strcmpi(Jtyp,'lst')
-      J_ = lst;
-      n_ = nlst;
+    if strcmpi(Jtyp, 'slf')
+        J_ = slf;
+        n_ = nslf;
+    elseif strcmpi(Jtyp, 'nbr')
+        J_ = nbr;
+        n_ = nnbr;
+    elseif strcmpi(Jtyp, 'lst')
+        J_ = lst;
+        n_ = nlst;
     end
     
-    A = zeros(m_,n_);
-    update_list = false(nbox,1);
+    A = zeros(m_, n_);
+    update_list = false(nbox, 1);
     nodes = t.nodes; % Local copy of t.nodes to avoid outer variable usage in recursive function
     update_list = get_update_list(i, update_list, nodes); % Pass nodes to the recursive function
     update_list = lookup_list(flip(find(update_list)'));
-    update_list = update_list(update_list~=0)';
+    update_list = update_list(update_list ~= 0)';
     for idx = 1:length(update_list) % Use an explicit index for the loop
-      jj = update_list(idx);
+        jj = update_list(idx);
 
-      g = F.factors(jj); % Use a temporary variable for the entire struct
+        g = F.factors(jj); % Use a temporary variable for the entire struct
 
-      xj = [g.sk, g.nbr];
-      f = length(g.sk);
+        % Ensure g.sk and g.nbr are column vectors for consistent concatenation
+        g_sk = g.sk(:);
+        g_nbr = g.nbr(:);
+
+        xj = [g_sk; g_nbr];
+        f = length(g_sk);
+
+        if strcmpi(Ityp, Jtyp)
+            % For diagonal block
+            idxI = find_locations_t(xj, I_); % Replace ismembc2 with find_locations_t
+            tmp1 = double(idxI ~= 0); % Convert to double to ensure consistent types
+            subI = idxI(tmp1);
+            idxI1 = tmp1(1:f);
+            idxI2 = tmp1(f+1:end);
+
+            % Check bounds before accessing g.E and g.C
+            if all(idxI1 > 0 & idxI1 <= size(g.E, 1)) && all(idxI2 > 0 & idxI2 <= size(g.C, 1))
+                tmp1 = [g.E(idxI1, :); g.C(idxI2, :)];
+            else
+                tmp1 = zeros(0, size(g.E, 2)); % Return empty array if indices are out of bounds
+            end
             
-      if strcmpi(Ityp,Jtyp)
-        % For diagonal block
-        idxI = find_locations_t(xj,I_); % Replace ismembc2 with find_locations_t
-        tmp1 = double(idxI~=0); % Convert to double to ensure consistent types
-        subI = idxI(tmp1);
-        idxI1 = tmp1(1:f);
-        idxI2 = tmp1(f+1:end);
-        tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
-        
-        % Ensure tmp2 is consistent in size
-        if isempty(idxI1) && isempty(idxI2)
-            tmp2 = zeros(size(tmp1, 2), 0);
+            % Ensure tmp2 is consistent in size
+            if isempty(idxI1) && isempty(idxI2)
+                tmp2 = zeros(size(tmp1, 2), 0);
+            else
+                tmp2 = [g.F(:, idxI1), g.D(:, idxI2)];
+            end
+
+            % Different factorization depending on symmetry
+            if strcmpi(opts.symm, 'p')
+                A(subI, subI) = A(subI, subI) - tmp1 * tmp1';
+            elseif strcmpi(opts.symm, 'n')
+                A(subI, subI) = A(subI, subI) - tmp1 * tmp2;
+            end
         else
-            tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
+            % For off-diagonal block
+            idxI = find_locations_t(xj, I_); % Replace ismembc2 with find_locations_t
+            idxJ = find_locations_t(xj, J_); % Replace ismembc2 with find_locations_t
+
+            tmp1 = idxI ~= 0; % Convert to double to ensure consistent types
+            tmp2 = idxJ ~= 0; % Convert to double to ensure consistent types
+
+            subI = idxI(tmp1);
+            subJ = idxJ(tmp2);
+            idxI1 = tmp1(1:f);
+            idxI2 = tmp1(f+1:end);
+            idxJ1 = tmp2(1:f);
+            idxJ2 = tmp2(f+1:end);
+
+            % Check bounds before accessing g.E and g.C
+            if all(idxI1 > 0 & idxI1 <= size(g.E, 1)) && all(idxI2 > 0 & idxI2 <= size(g.C, 1))
+                tmp1 = [g.E(idxI1, :); g.C(idxI2, :)];
+            else
+                tmp1 = zeros(0, size(g.E, 2)); % Return empty array if indices are out of bounds
+            end
+            
+            % Ensure tmp2 is consistent in size
+            if isempty(idxJ1) && isempty(idxJ2)
+                tmp2 = zeros(size(tmp1, 2), 0);
+            else
+                tmp2 = [g.F(:, idxJ1), g.D(:, idxJ2)];
+            end
+
+            % Different factorization depending on symmetry
+            if strcmpi(opts.symm, 'p')
+                tmp2 = [g.E(idxJ1, :); g.C(idxJ2, :)]';
+            elseif strcmpi(opts.symm, 'n')
+                tmp2 = [g.F(:, idxJ1), g.D(:, idxJ2)];
+            end
+            A(subI, subJ) = A(subI, subJ) - tmp1 * tmp2;
         end
-
-        % Different factorization depending on symmetry
-        if strcmpi(opts.symm,'p')
-          A(subI, subI) = A(subI,subI) - tmp1*tmp1';
-        elseif strcmpi(opts.symm,'n')
-          A(subI, subI) = A(subI,subI) - tmp1*tmp2;
-        end
-      else
-        % For off-diagonal block
-        idxI = find_locations_t(xj,I_); % Replace ismembc2 with find_locations_t
-        idxJ = find_locations_t(xj,J_); % Replace ismembc2 with find_locations_t
-
-        tmp1 = double(idxI~=0); % Convert to double to ensure consistent types
-        tmp2 = double(idxJ~=0); % Convert to double to ensure consistent types
-
-        subI = idxI(tmp1);
-        subJ = idxJ(tmp2);
-        idxI1 = tmp1(1:f);
-        idxI2 = tmp1(f+1:end);
-        idxJ1 = tmp2(1:f);
-        idxJ2 = tmp2(f+1:end);
-
-        tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
-        
-        % Ensure tmp2 is consistent in size
-        if isempty(idxJ1) && isempty(idxJ2)
-            tmp2 = zeros(size(tmp1, 2), 0);
-        else
-            tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
-        end
-
-        % Different factorization depending on symmetry
-        if strcmpi(opts.symm,'p')
-          tmp2 = [g.E(idxJ1,:); g.C(idxJ2,:)]';
-        elseif strcmpi(opts.symm,'n')
-          tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
-        end
-        A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
-      end
     end
 
     function update_list = get_update_list(node_idx, update_list, nodes)
-      % GET_UPDATE_LIST(NODE_IDX) Recursively get the list of all nodes in
-      % the tree that could have generated Schur complement updates to
-      % points in node NODE_IDX
-      update_list(node_idx) = 1;
-      update_list(nodes(node_idx).snbor) = 1;
-      for chld_idx = 1:numel(nodes(node_idx).chld)
-        update_list = get_update_list(nodes(node_idx).chld(chld_idx), update_list, nodes); % Pass nodes to the recursive function
-      end
+        % GET_UPDATE_LIST(NODE_IDX) Recursively get the list of all nodes in
+        % the tree that could have generated Schur complement updates to
+        % points in node NODE_IDX
+        update_list(node_idx) = 1;
+        update_list(nodes(node_idx).snbor) = 1;
+        for chld_idx = 1:numel(nodes(node_idx).chld)
+            update_list = get_update_list(nodes(node_idx).chld(chld_idx), update_list, nodes); % Pass nodes to the recursive function
+        end
     end
-  end
+end
 end
 
 % Helper function to replace ismembc2
