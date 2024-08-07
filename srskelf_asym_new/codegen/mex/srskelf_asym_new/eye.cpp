@@ -32,7 +32,7 @@ static emlrtRSInfo mp_emlrtRSI{
     "checkAndSaturateExpandSize.m" // pathName
 };
 
-static emlrtRTEInfo go_emlrtRTEI{
+static emlrtRTEInfo eo_emlrtRTEI{
     94,                                                           // lineNo
     5,                                                            // colNo
     "eye",                                                        // fName
@@ -61,7 +61,7 @@ void eye(const emlrtStack &sp, real_T varargin_1, array<real_T, 2U> &b_I)
         "Coder:MATLAB:NonIntegerInput", 4, 12, MIN_int32_T, 12, MAX_int32_T);
   }
   m_tmp_tmp_tmp = static_cast<int32_T>(varargin_1);
-  b_I.set_size(&go_emlrtRTEI, &sp, m_tmp_tmp_tmp, m_tmp_tmp_tmp);
+  b_I.set_size(&eo_emlrtRTEI, &sp, m_tmp_tmp_tmp, m_tmp_tmp_tmp);
   loop_ub = static_cast<int32_T>(varargin_1) * static_cast<int32_T>(varargin_1);
   for (int32_T i{0}; i < loop_ub; i++) {
     b_I[i] = 0.0;

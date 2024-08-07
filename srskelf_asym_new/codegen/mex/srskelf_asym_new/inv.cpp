@@ -87,14 +87,14 @@ static emlrtRTEInfo wb_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/inv.m" // pName
 };
 
-static emlrtRTEInfo bo_emlrtRTEI{
+static emlrtRTEInfo yn_emlrtRTEI{
     21,                                                            // lineNo
     5,                                                             // colNo
     "inv",                                                         // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/inv.m" // pName
 };
 
-static emlrtRTEInfo co_emlrtRTEI{
+static emlrtRTEInfo ao_emlrtRTEI{
     173,                                                           // lineNo
     2,                                                             // colNo
     "inv",                                                         // fName
@@ -143,12 +143,12 @@ void inv(const emlrtStack &sp, const array<real_T, 2U> &x, array<real_T, 2U> &y)
   }
   st.site = &ho_emlrtRSI;
   n_tmp = x.size(0);
-  y.set_size(&bo_emlrtRTEI, &st, x.size(0), x.size(1));
+  y.set_size(&yn_emlrtRTEI, &st, x.size(0), x.size(1));
   loop_ub_tmp = x.size(0) * x.size(1);
   for (i = 0; i < loop_ub_tmp; i++) {
     y[i] = 0.0;
   }
-  b_x.set_size(&co_emlrtRTEI, &st, x.size(0), x.size(1));
+  b_x.set_size(&ao_emlrtRTEI, &st, x.size(0), x.size(1));
   for (i = 0; i < loop_ub_tmp; i++) {
     b_x[i] = x[i];
   }

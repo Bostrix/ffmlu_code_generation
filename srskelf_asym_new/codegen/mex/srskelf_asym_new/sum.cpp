@@ -173,14 +173,14 @@ static emlrtRTEInfo sg_emlrtRTEI{
     "sumMatrixIncludeNaN.m" // pName
 };
 
-static emlrtRTEInfo ao_emlrtRTEI{
+static emlrtRTEInfo xn_emlrtRTEI{
     20,                                                             // lineNo
     1,                                                              // colNo
     "sum",                                                          // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/datafun/sum.m" // pName
 };
 
-static emlrtRTEInfo eo_emlrtRTEI{
+static emlrtRTEInfo co_emlrtRTEI{
     146,                // lineNo
     24,                 // colNo
     "blockedSummation", // fName
@@ -188,7 +188,7 @@ static emlrtRTEInfo eo_emlrtRTEI{
     "blockedSummation.m" // pName
 };
 
-static emlrtRTEInfo fo_emlrtRTEI{
+static emlrtRTEInfo do_emlrtRTEI{
     153,                // lineNo
     23,                 // colNo
     "blockedSummation", // fName
@@ -237,7 +237,7 @@ void b_sum(const emlrtStack &sp, const array<real_T, 2U> &x,
   c_st.site = &qf_emlrtRSI;
   if ((x.size(0) == 0) || (x.size(1) == 0)) {
     int32_T ncols;
-    y.set_size(&ao_emlrtRTEI, &c_st, 1, x.size(1));
+    y.set_size(&xn_emlrtRTEI, &c_st, 1, x.size(1));
     ncols = x.size(1);
     for (int32_T nfb{0}; nfb < ncols; nfb++) {
       y[nfb] = 0.0;
@@ -365,8 +365,8 @@ void sum(const emlrtStack &sp, const array<real_T, 2U> &x, array<real_T, 1U> &y)
   d_st.site = &ro_emlrtRSI;
   vstride_tmp = x.size(0);
   bvstride = x.size(0) << 10;
-  y.set_size(&eo_emlrtRTEI, &d_st, x.size(0));
-  bsum.set_size(&fo_emlrtRTEI, &d_st, x.size(0));
+  y.set_size(&co_emlrtRTEI, &d_st, x.size(0));
+  bsum.set_size(&do_emlrtRTEI, &d_st, x.size(0));
   if (x.size(1) <= 1024) {
     firstBlockLength = x.size(1);
     lastBlockLength = 0;

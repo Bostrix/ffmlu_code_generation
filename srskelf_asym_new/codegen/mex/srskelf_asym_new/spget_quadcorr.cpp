@@ -16,8 +16,8 @@ static emlrtRTEInfo yj_emlrtRTEI{
     29,               // lineNo
     5,                // colNo
     "spget_quadcorr", // fName
-    "/home/user/ffmlu_code_generation/ffmlu_code_generation/Afun_lap_te/"
-    "spget_quadcorr.m" // pName
+    "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/"
+    "Afun_lap_te/spget_quadcorr.m" // pName
 };
 
 // Function Definitions

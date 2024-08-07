@@ -103,14 +103,14 @@ static emlrtRTEInfo hc_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pName
 };
 
-static emlrtRTEInfo bp_emlrtRTEI{
+static emlrtRTEInfo yo_emlrtRTEI{
     54,         // lineNo
     1,          // colNo
     "qrupdate", // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/qrupdate.m" // pName
 };
 
-static emlrtRTEInfo cp_emlrtRTEI{
+static emlrtRTEInfo ap_emlrtRTEI{
     57,         // lineNo
     5,          // colNo
     "qrupdate", // fName
@@ -265,7 +265,7 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
   b_st.site = &vp_emlrtRSI;
   if (u.size(0) == 0) {
     b_m = q.size(1);
-    w.set_size(&bp_emlrtRTEI, &b_st, b_m);
+    w.set_size(&yo_emlrtRTEI, &b_st, b_m);
     for (mj = 0; mj < b_m; mj++) {
       w[mj] = 0.0;
     }
@@ -282,7 +282,7 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     lda_t = (ptrdiff_t)q.size(0);
     ldb_t = (ptrdiff_t)u.size(0);
     ldc_t = (ptrdiff_t)q.size(1);
-    w.set_size(&ho_emlrtRTEI, &d_st, q.size(1));
+    w.set_size(&fo_emlrtRTEI, &d_st, q.size(1));
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1, &(q.data())[0], &lda_t,
           &(((array<real_T, 1U> *)&u)->data())[0], &ldb_t, &beta1,
           &(w.data())[0], &ldc_t);
@@ -306,8 +306,8 @@ void qrupdate(const emlrtStack &sp, array<real_T, 2U> &q, array<real_T, 2U> &r,
     }
   }
   b_m = q.size(0) - 1;
-  c.set_size(&cp_emlrtRTEI, &sp, b_m);
-  s.set_size(&cp_emlrtRTEI, &sp, b_m);
+  c.set_size(&ap_emlrtRTEI, &sp, b_m);
+  s.set_size(&ap_emlrtRTEI, &sp, b_m);
   for (int32_T j{b_m}; j >= 1; j--) {
     c[j - 1] = rotg(w[j - 1], w[j], &s[j - 1], &w[j - 1]);
   }

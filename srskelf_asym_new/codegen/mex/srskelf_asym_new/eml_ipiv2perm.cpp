@@ -43,7 +43,7 @@ static emlrtRSInfo oo_emlrtRSI{
     "eml_ipiv2perm.m" // pathName
 };
 
-static emlrtRTEInfo do_emlrtRTEI{
+static emlrtRTEInfo bo_emlrtRTEI{
     172,                                                          // lineNo
     20,                                                           // colNo
     "colon",                                                      // fName
@@ -84,7 +84,7 @@ void eml_ipiv2perm(const emlrtStack &sp, const array<int32_T, 2U> &ipiv,
   } else {
     n = m;
   }
-  perm.set_size(&do_emlrtRTEI, &d_st, 1, n);
+  perm.set_size(&bo_emlrtRTEI, &d_st, 1, n);
   if (n > 0) {
     perm[0] = 1;
     yk = 1;

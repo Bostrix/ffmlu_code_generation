@@ -6,7 +6,7 @@ ninja_required_version = 1.3
 root = .
 builddir = $root/build/glnxa64
 matlabdir = /usr/local/MATLAB/R2024a
-startdir = /home/user/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new
+startdir = /home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/srskelf_asym_new
 
 # Toolchain information
 cc = gcc

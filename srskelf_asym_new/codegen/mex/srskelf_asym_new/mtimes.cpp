@@ -14,7 +14,7 @@
 
 // Variable Definitions
 static emlrtRTEInfo
-    io_emlrtRTEI{
+    go_emlrtRTEI{
         140,      // lineNo
         5,        // colNo
         "mtimes", // fName
@@ -48,7 +48,7 @@ void b_mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
   if ((A.size(0) == 0) || (A.size(1) == 0) || (B.size(0) == 0) ||
       (B.size(1) == 0)) {
     int32_T loop_ub;
-    C.set_size(&io_emlrtRTEI, &sp, A.size(0), B.size(1));
+    C.set_size(&go_emlrtRTEI, &sp, A.size(0), B.size(1));
     loop_ub = A.size(0) * B.size(1);
     for (int32_T i{0}; i < loop_ub; i++) {
       C[i] = 0.0;
@@ -66,7 +66,7 @@ void b_mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
     lda_t = (ptrdiff_t)A.size(0);
     ldb_t = (ptrdiff_t)B.size(0);
     ldc_t = (ptrdiff_t)A.size(0);
-    C.set_size(&ho_emlrtRTEI, &b_st, A.size(0), B.size(1));
+    C.set_size(&fo_emlrtRTEI, &b_st, A.size(0), B.size(1));
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1,
           &(((array<real_T, 2U> *)&A)->data())[0], &lda_t,
           &(((array<real_T, 2U> *)&B)->data())[0], &ldb_t, &beta1,
@@ -94,7 +94,7 @@ void mtimes(const emlrtStack &sp, const real_T A[4], const array<real_T, 2U> &B,
   b_st.prev = &st;
   b_st.tls = st.tls;
   if (B.size(1) == 0) {
-    C.set_size(&io_emlrtRTEI, &sp, 2, 0);
+    C.set_size(&go_emlrtRTEI, &sp, 2, 0);
   } else {
     st.site = &wp_emlrtRSI;
     b_st.site = &xp_emlrtRSI;
@@ -108,7 +108,7 @@ void mtimes(const emlrtStack &sp, const real_T A[4], const array<real_T, 2U> &B,
     lda_t = (ptrdiff_t)2;
     ldb_t = (ptrdiff_t)2;
     ldc_t = (ptrdiff_t)2;
-    C.set_size(&ho_emlrtRTEI, &b_st, 2, B.size(1));
+    C.set_size(&fo_emlrtRTEI, &b_st, 2, B.size(1));
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1, (real_T *)&A[0],
           &lda_t, &(((array<real_T, 2U> *)&B)->data())[0], &ldb_t, &beta1,
           &(C.data())[0], &ldc_t);
@@ -146,7 +146,7 @@ void mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
   lda_t = (ptrdiff_t)A.size(0);
   ldb_t = (ptrdiff_t)B.size(0);
   ldc_t = (ptrdiff_t)A.size(0);
-  C.set_size(&ho_emlrtRTEI, &b_st, A.size(0));
+  C.set_size(&fo_emlrtRTEI, &b_st, A.size(0));
   dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1,
         &(((array<real_T, 2U> *)&A)->data())[0], &lda_t,
         &(((array<real_T, 1U> *)&B)->data())[0], &ldb_t, &beta1, &(C.data())[0],
@@ -175,7 +175,7 @@ void mtimes(const emlrtStack &sp, const array<real_T, 1U> &A,
   if ((A.size(0) == 0) || (B.size(0) == 0) || (B.size(1) == 0)) {
     int32_T loop_ub;
     loop_ub = B.size(1);
-    C.set_size(&io_emlrtRTEI, &sp, 1, B.size(1));
+    C.set_size(&go_emlrtRTEI, &sp, 1, B.size(1));
     for (int32_T i{0}; i < loop_ub; i++) {
       C[i] = 0.0;
     }
@@ -192,7 +192,7 @@ void mtimes(const emlrtStack &sp, const array<real_T, 1U> &A,
     lda_t = (ptrdiff_t)A.size(0);
     ldb_t = (ptrdiff_t)B.size(0);
     ldc_t = (ptrdiff_t)1;
-    C.set_size(&ho_emlrtRTEI, &b_st, 1, B.size(1));
+    C.set_size(&fo_emlrtRTEI, &b_st, 1, B.size(1));
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1,
           &(((array<real_T, 1U> *)&A)->data())[0], &lda_t,
           &(((array<real_T, 2U> *)&B)->data())[0], &ldb_t, &beta1, &C[0],
@@ -222,7 +222,7 @@ void mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
   if ((A.size(0) == 0) || (A.size(1) == 0) || (B.size(0) == 0) ||
       (B.size(1) == 0)) {
     int32_T loop_ub;
-    C.set_size(&io_emlrtRTEI, &sp, A.size(1), B.size(1));
+    C.set_size(&go_emlrtRTEI, &sp, A.size(1), B.size(1));
     loop_ub = A.size(1) * B.size(1);
     for (int32_T i{0}; i < loop_ub; i++) {
       C[i] = 0.0;
@@ -240,7 +240,7 @@ void mtimes(const emlrtStack &sp, const array<real_T, 2U> &A,
     lda_t = (ptrdiff_t)A.size(0);
     ldb_t = (ptrdiff_t)B.size(0);
     ldc_t = (ptrdiff_t)A.size(1);
-    C.set_size(&ho_emlrtRTEI, &b_st, A.size(1), B.size(1));
+    C.set_size(&fo_emlrtRTEI, &b_st, A.size(1), B.size(1));
     dgemm(&TRANSA1, &TRANSB1, &m_t, &n_t, &k_t, &alpha1,
           &(((array<real_T, 2U> *)&A)->data())[0], &lda_t,
           &(((array<real_T, 2U> *)&B)->data())[0], &ldb_t, &beta1,

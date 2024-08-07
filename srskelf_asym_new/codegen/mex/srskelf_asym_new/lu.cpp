@@ -45,21 +45,21 @@ static emlrtRTEInfo ac_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pName
 };
 
-static emlrtRTEInfo jo_emlrtRTEI{
+static emlrtRTEInfo ho_emlrtRTEI{
     49,                                                           // lineNo
     6,                                                            // colNo
     "lu",                                                         // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pName
 };
 
-static emlrtRTEInfo ko_emlrtRTEI{
+static emlrtRTEInfo io_emlrtRTEI{
     81,                                                           // lineNo
     1,                                                            // colNo
     "lu",                                                         // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/matfun/lu.m" // pName
 };
 
-static emlrtRTEInfo lo_emlrtRTEI{
+static emlrtRTEInfo jo_emlrtRTEI{
     82,                                                           // lineNo
     1,                                                            // colNo
     "lu",                                                         // fName
@@ -90,7 +90,7 @@ void lu(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &L,
   c_st.tls = b_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   st.site = &wq_emlrtRSI;
-  b_A.set_size(&jo_emlrtRTEI, &st, A.size(0), A.size(1));
+  b_A.set_size(&ho_emlrtRTEI, &st, A.size(0), A.size(1));
   loop_ub = A.size(0) * A.size(1);
   for (i = 0; i < loop_ub; i++) {
     b_A[i] = A[i];
@@ -103,12 +103,12 @@ void lu(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &L,
   m_tmp = b_A.size(0);
   mn = static_cast<int32_T>(muDoubleScalarMin(
       static_cast<real_T>(b_A.size(0)), static_cast<real_T>(b_A.size(1))));
-  L.set_size(&ko_emlrtRTEI, &b_st, b_A.size(0), mn);
+  L.set_size(&io_emlrtRTEI, &b_st, b_A.size(0), mn);
   loop_ub = b_A.size(0) * mn;
   for (i = 0; i < loop_ub; i++) {
     L[i] = 0.0;
   }
-  U.set_size(&lo_emlrtRTEI, &b_st, mn, b_A.size(1));
+  U.set_size(&jo_emlrtRTEI, &b_st, mn, b_A.size(1));
   loop_ub = mn * b_A.size(1);
   for (i = 0; i < loop_ub; i++) {
     U[i] = 0.0;

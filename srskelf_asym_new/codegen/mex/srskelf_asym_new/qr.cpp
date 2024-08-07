@@ -87,7 +87,7 @@ static emlrtRSInfo
     };
 
 static emlrtRTEInfo
-    jn_emlrtRTEI{
+    hn_emlrtRTEI{
         35,       // lineNo
         25,       // colNo
         "eml_qr", // fName
@@ -96,7 +96,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    kn_emlrtRTEI{
+    in_emlrtRTEI{
         73,       // lineNo
         22,       // colNo
         "xgeqrf", // fName
@@ -105,7 +105,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    ln_emlrtRTEI{
+    jn_emlrtRTEI{
         75,       // lineNo
         5,        // colNo
         "xgeqrf", // fName
@@ -149,7 +149,7 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
   b_st.site = &fl_emlrtRSI;
   m = A.size(0);
   minsz = A.size(1);
-  b_A.set_size(&jn_emlrtRTEI, &b_st, A.size(0), A.size(1));
+  b_A.set_size(&hn_emlrtRTEI, &b_st, A.size(0), A.size(1));
   loop_ub = A.size(0) * A.size(1);
   for (a = 0; a < loop_ub; a++) {
     b_A[a] = A[a];
@@ -157,9 +157,9 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
   c_st.site = &gl_emlrtRSI;
   d_st.site = &pl_emlrtRSI;
   loop_ub = muIntScalarMin_sint32(m, minsz);
-  tau.set_size(&kn_emlrtRTEI, &d_st, loop_ub);
+  tau.set_size(&in_emlrtRTEI, &d_st, loop_ub);
   if ((b_A.size(0) == 0) || (b_A.size(1) == 0)) {
-    tau.set_size(&ln_emlrtRTEI, &d_st, loop_ub);
+    tau.set_size(&jn_emlrtRTEI, &d_st, loop_ub);
     for (a = 0; a < loop_ub; a++) {
       tau[a] = 0.0;
     }
@@ -220,7 +220,7 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
   m = b_A.size(0);
   loop_ub = b_A.size(1);
   minsz = muIntScalarMin_sint32(m, loop_ub);
-  R.set_size(&mn_emlrtRTEI, &b_st, minsz, b_A.size(1));
+  R.set_size(&kn_emlrtRTEI, &b_st, minsz, b_A.size(1));
   c_st.site = &hl_emlrtRSI;
   if (minsz > 2147483646) {
     d_st.site = &fe_emlrtRSI;
@@ -253,7 +253,7 @@ void qr(const emlrtStack &sp, const array<real_T, 2U> &A, array<real_T, 2U> &Q,
   d_st.site = &wl_emlrtRSI;
   internal::lapack::xorgqr(d_st, b_A.size(0), minsz, minsz, b_A, b_A.size(0),
                            tau);
-  Q.set_size(&nn_emlrtRTEI, &b_st, m, minsz);
+  Q.set_size(&ln_emlrtRTEI, &b_st, m, minsz);
   c_st.site = &nl_emlrtRSI;
   for (int32_T j{0}; j < minsz; j++) {
     c_st.site = &ol_emlrtRSI;

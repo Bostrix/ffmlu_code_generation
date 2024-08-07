@@ -80,7 +80,7 @@ static emlrtRSInfo wn_emlrtRSI{
     "xzunormqr.m" // pathName
 };
 
-static emlrtRTEInfo xn_emlrtRTEI{
+static emlrtRTEInfo vn_emlrtRTEI{
     85,        // lineNo
     1,         // colNo
     "qrsolve", // fName
@@ -123,7 +123,7 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
   g_st.prev = &f_st;
   g_st.tls = f_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
-  b_A.set_size(&vn_emlrtRTEI, &sp, A.size(0), A.size(1));
+  b_A.set_size(&tn_emlrtRTEI, &sp, A.size(0), A.size(1));
   mn = A.size(0) * A.size(1);
   for (i = 0; i < mn; i++) {
     b_A[i] = A[i];
@@ -134,12 +134,12 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
   rankA = rankFromQR(st, b_A);
   st.site = &in_emlrtRSI;
   i = B.size(1);
-  b_B.set_size(&wn_emlrtRTEI, &st, B.size(0), B.size(1));
+  b_B.set_size(&un_emlrtRTEI, &st, B.size(0), B.size(1));
   mn = B.size(0) * B.size(1);
   for (i1 = 0; i1 < mn; i1++) {
     b_B[i1] = B[i1];
   }
-  Y.set_size(&xn_emlrtRTEI, &st, b_A.size(1), B.size(1));
+  Y.set_size(&vn_emlrtRTEI, &st, b_A.size(1), B.size(1));
   mn = b_A.size(1) * b_B.size(1);
   for (i1 = 0; i1 < mn; i1++) {
     Y[i1] = 0.0;
@@ -224,7 +224,7 @@ void qrsolve(const emlrtStack &sp, const array<real_T, 2U> &A,
         int32_T m;
         mn = b_B.size(0);
         m = b_B.size(1);
-        b_B.set_size(&yn_emlrtRTEI, &c_st, mn, m);
+        b_B.set_size(&wn_emlrtRTEI, &c_st, mn, m);
         mn *= m;
         for (i1 = 0; i1 < mn; i1++) {
           b_B[i1] = rtNaN;

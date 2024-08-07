@@ -55,14 +55,14 @@ static emlrtRSInfo vg_emlrtRSI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pathName
 };
 
-static emlrtRTEInfo po_emlrtRTEI{
+static emlrtRTEInfo no_emlrtRTEI{
     56,                                                                // lineNo
     24,                                                                // colNo
     "sort",                                                            // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/sort.m" // pName
 };
 
-static emlrtRTEInfo ro_emlrtRTEI{
+static emlrtRTEInfo po_emlrtRTEI{
     75,                                                                // lineNo
     26,                                                                // colNo
     "sort",                                                            // fName
@@ -94,7 +94,7 @@ void b_sort(const emlrtStack &sp, array<real_T, 2U> &x)
   }
   i = x.size(dim);
   vlen = i - 1;
-  vwork.set_size(&po_emlrtRTEI, &sp, i);
+  vwork.set_size(&no_emlrtRTEI, &sp, i);
   st.site = &vg_emlrtRSI;
   vstride = 1;
   for (int32_T k{0}; k < dim; k++) {
@@ -184,8 +184,8 @@ void sort(const emlrtStack &sp, array<real_T, 2U> &x, array<int32_T, 2U> &idx)
   }
   i = x.size(dim);
   vlen = i - 1;
-  vwork.set_size(&po_emlrtRTEI, &sp, i);
-  idx.set_size(&ro_emlrtRTEI, &sp, x.size(0), x.size(1));
+  vwork.set_size(&no_emlrtRTEI, &sp, i);
+  idx.set_size(&po_emlrtRTEI, &sp, x.size(0), x.size(1));
   st.site = &vg_emlrtRSI;
   vstride = 1;
   for (int32_T k{0}; k < dim; k++) {

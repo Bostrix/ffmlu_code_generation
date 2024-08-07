@@ -1,4 +1,4 @@
-function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, opts)
+function F = srskelf_asym_new(A, x, occ, rank_or_tol, pxyfun, opts)
   start = tic;
 
   if nargin < 5
@@ -31,20 +31,20 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
          'RSS:srskelf_asym:invalidSymm', ...
          'Symmetry parameter must be ''p'' or ''n''.');
 
-  % Dispatch function handles based on identifiers
-  switch A_func_id
-      case 1
-          A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
-      otherwise
-          error('Invalid function identifier for A.');
-  end
-
-  switch pxyfun_func_id
-      case 1
-          pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
-      otherwise
-          error('Invalid function identifier for pxyfun.');
-  end
+  % % Dispatch function handles based on identifiers
+  % switch A_func_id
+  %     case 1
+  %         A = @(i, j) Afun_lap_te(i, j, x, opts.nu, opts.area, opts.P, opts.qcorr, opts.contrast, opts.wuse);
+  %     otherwise
+  %         error('Invalid function identifier for A.');
+  % end
+  % 
+  % switch pxyfun_func_id
+  %     case 1
+  %         pxyfun = @(x, slf, nbr, proxy, l, ctr) pxyfun_lap_neumann(x, slf, nbr, proxy, l, ctr, opts.area);
+  %     otherwise
+  %         error('Invalid function identifier for pxyfun.');
+  % end
 
   % Build tree to hold the discretization points
   N = size(x,2);
@@ -60,7 +60,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     fprintf('%3s | %63.2e (s)\n','-',toc)
 
     % Count the nonempty boxes at each level
-    pblk = zeros(t.nlvl+1,1);
+    pblk = zeros(t.nlvl+1,1,'int32');
     for lvl = 1:t.nlvl
       pblk(lvl+1) = pblk(lvl);
       for i = t.lvp(lvl)+1:t.lvp(lvl+1)
@@ -69,21 +69,24 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         end
       end
     end
+  else
+    pblk = zeros(t.nlvl+1,1,'int32'); % Initialize pblk to avoid undefined variable error
   end
 
-  % Initialize the data structure holding the factorization
-  nbox = t.lvp(end);
+  % % Initialize the data structure holding the factorization
+  % nbox = t.lvp(end);
   
-  emptyStruct = struct('sk',zeros(0, 1), 'rd',zeros(0, 1), 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
+  max_sk_size = 1000; % Set a sufficiently large maximum size
+  emptyStruct = struct('sk',zeros(max_sk_size, 1), 'rd',zeros(max_sk_size, 1), 'nbr',zeros(max_sk_size, 1), 'T',zeros(max_sk_size, max_sk_size), 'E',zeros(max_sk_size, max_sk_size), 'F',zeros(max_sk_size, max_sk_size), 'L',zeros(max_sk_size, max_sk_size), 'U',zeros(max_sk_size, max_sk_size), 'C',zeros(max_sk_size, max_sk_size), 'D',zeros(max_sk_size, max_sk_size));
   e = repmat(emptyStruct, nbox, 1);
   
-  F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1),'factors',e,'symm',opts.symm);
+  F = struct('N',N,'nlvl',t.nlvl,'lvp',zeros(1,t.nlvl+1,'int32'),'factors',e,'symm',opts.symm);
 
   nlvl = 0;
   n = 0;
   % Mark every DOF as "remaining", i.e., not yet eliminated
   rem = true(N,1);
-  lookup_list = zeros(nbox,1);
+  lookup_list = zeros(nbox,1,'int32');
   rng(1);
 
   % Loop over the levels of the tree from bottom to top
@@ -198,6 +201,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       % box
       K  = full(A(slf,slf)) + spget('slf','slf');
       K2 = full(A(nbr,slf)) + spget('nbr','slf');
+      K3 = zeros(size(K2, 2), size(K, 1)); % Initialize K3 with the appropriate size
       if strcmpi(opts.symm,'n')
         K3 = full(A(slf,nbr)) + spget('slf','nbr');
       end
@@ -209,6 +213,14 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       if strcmpi(opts.symm,'n')
         K3(rd,:) = K3(rd,:) - conj(T)'*K3(sk,:); 
       end
+      
+      % Initialize L and U to avoid undefined variable error
+      L = [];
+      U = [];
+      E = [];
+      G = [];
+      C = [];
+      D = [];
       
       if strcmpi(opts.symm,'p')
         % Cholesky for positive definite input
@@ -229,23 +241,75 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
  
       % Store matrix factors for this box
       n = n + 1;
-      F.factors(n).sk = zeros(length(sk), 1); % Preallocate with the correct size
-      F.factors(n).rd = zeros(length(rd), 1); % Preallocate with the correct size
-      F.factors(n).sk  = slf(sk);
-      F.factors(n).rd  = slf(rd);
-      F.factors(n).nbr = nbr;
-      F.factors(n).T = T;
-      F.factors(n).E = E;
-      F.factors(n).F = G;
-      F.factors(n).L = L;
-      F.factors(n).U = U;
-      F.factors(n).C = C;
-      F.factors(n).D = D;
+      
+      % Ensure slf and sk are not empty and have consistent dimensions
+      if isempty(slf) || isempty(sk)
+          F.factors(n).sk(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).sk(1:numel(sk)) = slf(sk);
+      end
 
-      % Box number i is at index n (more sensible for non-uniform case)
-      lookup_list(i) = n;
+      if isempty(slf) || isempty(rd)
+          F.factors(n).rd(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).rd(1:numel(rd)) = slf(rd);
+      end
+      
+      if isempty(nbr)
+          F.factors(n).nbr(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).nbr(1:numel(nbr)) = nbr;
+      end
+      
+      if isempty(T)
+          F.factors(n).T(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).T(1:numel(T)) = T;
+      end
 
-      t.nodes(i).xi = slf(sk);
+      if isempty(E)
+          F.factors(n).E(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).E(1:numel(E)) = E;
+      end
+      
+      if isempty(G)
+          F.factors(n).F(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).F(1:numel(G)) = G;
+      end
+      
+      if isempty(L)
+          F.factors(n).L(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).L(1:numel(L)) = L;
+      end
+      
+      if isempty(U)
+          F.factors(n).U(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).U(1:numel(U)) = U;
+      end
+      
+      if isempty(C)
+          F.factors(n).C(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).C(1:numel(C)) = C;
+      end
+      
+      if isempty(D)
+          F.factors(n).D(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          F.factors(n).D(1:numel(D)) = D;
+      end
+
+      % Ensure t.nodes(i).xi is not empty and has consistent dimensions
+      if isempty(slf) || isempty(sk)
+          t.nodes(i).xi(1:0) = zeros(0, 1); % Use an empty column vector for consistency
+      else
+          t.nodes(i).xi(1:numel(sk)) = slf(sk);
+      end
+
       rem(slf(rd)) = 0;
     end
     F.lvp(nlvl+1) = n;
@@ -255,7 +319,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
       nrem2 = sum(rem);
       nblk = pblk(lvl) + t.lvp(lvl+1) - t.lvp(lvl);
       fprintf('%3d | %6d | %8d | %8d | %8.2f | %8.2f | %10.2e (s)\n', ...
-              lvl,nblk,nrem1,nrem2,nrem1/nblk,nrem2/nblk,toc(time))
+              int32(lvl),int32(nblk),int32(nrem1),int32(nrem2),nrem1/double(nblk),nrem2/double(nblk),toc(time))
     end
   end
 
@@ -305,16 +369,10 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     for idx = 1:length(update_list) % Use an explicit index for the loop
       jj = update_list(idx);
 
-      % Use temporary variables for each field of the struct
-      g_sk = F.factors(jj).sk;
-      g_nbr = F.factors(jj).nbr;
-      g_E = F.factors(jj).E;
-      g_C = F.factors(jj).C;
-      g_F = F.factors(jj).F;
-      g_D = F.factors(jj).D;
+      g = F.factors(jj); % Use a temporary variable for the entire struct
 
-      xj = [g_sk, g_nbr];
-      f = length(g_sk);
+      xj = [g.sk, g.nbr];
+      f = length(g.sk);
             
       if strcmpi(Ityp,Jtyp)
         % For diagonal block
@@ -323,13 +381,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         subI = idxI(tmp1);
         idxI1 = tmp1(1:f);
         idxI2 = tmp1(f+1:end);
-        tmp1 = [g_E(idxI1,:); g_C(idxI2,:)];
+        tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
         
         % Ensure tmp2 is consistent in size
         if isempty(idxI1) && isempty(idxI2)
             tmp2 = zeros(size(tmp1, 2), 0);
         else
-            tmp2 = [g_F(:,idxI1), g_D(:,idxI2)];
+            tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
         end
 
         % Different factorization depending on symmetry
@@ -353,20 +411,20 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         idxJ1 = tmp2(1:f);
         idxJ2 = tmp2(f+1:end);
 
-        tmp1 = [g_E(idxI1,:); g_C(idxI2,:)];
+        tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
         
         % Ensure tmp2 is consistent in size
         if isempty(idxJ1) && isempty(idxJ2)
             tmp2 = zeros(size(tmp1, 2), 0);
         else
-            tmp2 = [g_F(:,idxJ1), g_D(:,idxJ2)];
+            tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end
 
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
-          tmp2 = [g_E(idxJ1,:); g_C(idxJ2,:)]';
+          tmp2 = [g.E(idxJ1,:); g.C(idxJ2,:)]';
         elseif strcmpi(opts.symm,'n')
-          tmp2 = [g_F(:,idxJ1), g_D(:,idxJ2)];
+          tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end
         A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
       end

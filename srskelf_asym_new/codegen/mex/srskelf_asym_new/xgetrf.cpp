@@ -15,7 +15,7 @@
 
 // Variable Definitions
 static emlrtRTEInfo
-    ap_emlrtRTEI{
+    xo_emlrtRTEI{
         54,       // lineNo
         5,        // colNo
         "xgetrf", // fName
@@ -41,7 +41,7 @@ void xgetrf(const emlrtStack &sp, int32_T m, int32_T n, array<real_T, 2U> &A,
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   st.site = &vm_emlrtRSI;
   if ((A.size(0) == 0) || (A.size(1) == 0)) {
-    ipiv.set_size(&ap_emlrtRTEI, &st, 1, 0);
+    ipiv.set_size(&xo_emlrtRTEI, &st, 1, 0);
   } else {
     ptrdiff_t info_t;
     int32_T i;
@@ -54,11 +54,11 @@ void xgetrf(const emlrtStack &sp, int32_T m, int32_T n, array<real_T, 2U> &A,
     for (i = 0; i < varargin_1; i++) {
       r[i] = info_t;
     }
-    ipiv_t.set_size(&xo_emlrtRTEI, &st, r.size(0));
+    ipiv_t.set_size(&vo_emlrtRTEI, &st, r.size(0));
     info_t =
         LAPACKE_dgetrf_work(102, (ptrdiff_t)m, (ptrdiff_t)n, &(A.data())[0],
                             (ptrdiff_t)lda, &(ipiv_t.data())[0]);
-    ipiv.set_size(&yo_emlrtRTEI, &st, 1, ipiv_t.size(0));
+    ipiv.set_size(&wo_emlrtRTEI, &st, 1, ipiv_t.size(0));
     b_st.site = &wm_emlrtRSI;
     if ((int32_T)info_t < 0) {
       if ((int32_T)info_t == -1010) {

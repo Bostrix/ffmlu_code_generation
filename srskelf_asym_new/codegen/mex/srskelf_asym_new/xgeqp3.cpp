@@ -89,7 +89,7 @@ static emlrtRSInfo
     };
 
 static emlrtRTEInfo
-    to_emlrtRTEI{
+    ro_emlrtRTEI{
         61,       // lineNo
         9,        // colNo
         "xgeqp3", // fName
@@ -98,7 +98,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    uo_emlrtRTEI{
+    so_emlrtRTEI{
         92,       // lineNo
         22,       // colNo
         "xgeqp3", // fName
@@ -107,7 +107,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    vo_emlrtRTEI{
+    to_emlrtRTEI{
         105,      // lineNo
         1,        // colNo
         "xgeqp3", // fName
@@ -116,7 +116,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    wo_emlrtRTEI{
+    uo_emlrtRTEI{
         97,       // lineNo
         5,        // colNo
         "xgeqp3", // fName
@@ -153,16 +153,16 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
   minmn = A.size(0);
   na = A.size(1) - 1;
   loop_ub = A.size(1);
-  jpvt.set_size(&to_emlrtRTEI, &sp, 1, loop_ub);
+  jpvt.set_size(&ro_emlrtRTEI, &sp, 1, loop_ub);
   for (int32_T k{0}; k < loop_ub; k++) {
     jpvt[k] = 0;
   }
   st.site = &cm_emlrtRSI;
   minmana = muIntScalarMin_sint32(minmn, loop_ub);
-  tau.set_size(&uo_emlrtRTEI, &st, minmana);
+  tau.set_size(&so_emlrtRTEI, &st, minmana);
   if ((A.size(0) == 0) || (A.size(1) == 0) || (A.size(0) < 1) ||
       (A.size(1) < 1)) {
-    tau.set_size(&wo_emlrtRTEI, &st, minmana);
+    tau.set_size(&uo_emlrtRTEI, &st, minmana);
     for (int32_T k{0}; k < minmana; k++) {
       tau[k] = 0.0;
     }
@@ -187,7 +187,7 @@ void xgeqp3(const emlrtStack &sp, array<real_T, 2U> &A, array<real_T, 1U> &tau,
   } else {
     ptrdiff_t info_t;
     boolean_T p;
-    jpvt_t.set_size(&vo_emlrtRTEI, &st, loop_ub);
+    jpvt_t.set_size(&to_emlrtRTEI, &st, loop_ub);
     for (int32_T k{0}; k < loop_ub; k++) {
       jpvt_t[k] = (ptrdiff_t)0;
     }

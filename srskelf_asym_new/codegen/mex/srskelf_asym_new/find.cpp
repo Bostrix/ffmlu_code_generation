@@ -188,7 +188,7 @@ static emlrtRTEInfo uj_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pName
 };
 
-static emlrtRTEInfo fk_emlrtRTEI{
+static emlrtRTEInfo dk_emlrtRTEI{
     369,                                                           // lineNo
     24,                                                            // colNo
     "find",                                                        // fName
@@ -304,7 +304,7 @@ void c_eml_find(const emlrtStack &sp, const array<boolean_T, 1U> &x,
   nx_tmp = x.size(0);
   st.site = &ve_emlrtRSI;
   idx = 0;
-  i.set_size(&fk_emlrtRTEI, &st, x.size(0));
+  i.set_size(&dk_emlrtRTEI, &st, x.size(0));
   b_st.site = &we_emlrtRSI;
   if (x.size(0) > 2147483646) {
     c_st.site = &fe_emlrtRSI;

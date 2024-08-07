@@ -75,7 +75,7 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
 
   % Initialize the data structure holding the factorization
   nbox = t.lvp(end);
-  
+
   emptyStruct = struct('sk',zeros(0, 1), 'rd',zeros(0, 1), 'nbr',[], 'T',[], 'E',[], 'F',[], 'L',[], 'U',[], 'C',[], 'D',[]);
   e = repmat(emptyStruct, nbox, 1);
   
@@ -368,16 +368,10 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
     for idx = 1:length(update_list) % Use an explicit index for the loop
       jj = update_list(idx);
 
-      % Use temporary variables for each field of the struct
-      g_sk = F.factors(jj).sk;
-      g_nbr = F.factors(jj).nbr;
-      g_E = F.factors(jj).E;
-      g_C = F.factors(jj).C;
-      g_F = F.factors(jj).F;
-      g_D = F.factors(jj).D;
+      g = F.factors(jj); % Use a temporary variable for the entire struct
 
-      xj = [g_sk, g_nbr];
-      f = length(g_sk);
+      xj = [g.sk, g.nbr];
+      f = length(g.sk);
             
       if strcmpi(Ityp,Jtyp)
         % For diagonal block
@@ -386,13 +380,13 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         subI = idxI(tmp1);
         idxI1 = tmp1(1:f);
         idxI2 = tmp1(f+1:end);
-        tmp1 = [g_E(idxI1,:); g_C(idxI2,:)];
+        tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
         
         % Ensure tmp2 is consistent in size
         if isempty(idxI1) && isempty(idxI2)
             tmp2 = zeros(size(tmp1, 2), 0);
         else
-            tmp2 = [g_F(:,idxI1), g_D(:,idxI2)];
+            tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
         end
 
         % Different factorization depending on symmetry
@@ -416,20 +410,20 @@ function F = srskelf_asym_new(A_func_id, x, occ, rank_or_tol, pxyfun_func_id, op
         idxJ1 = tmp2(1:f);
         idxJ2 = tmp2(f+1:end);
 
-        tmp1 = [g_E(idxI1,:); g_C(idxI2,:)];
+        tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
         
         % Ensure tmp2 is consistent in size
         if isempty(idxJ1) && isempty(idxJ2)
             tmp2 = zeros(size(tmp1, 2), 0);
         else
-            tmp2 = [g_F(:,idxJ1), g_D(:,idxJ2)];
+            tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end
 
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
-          tmp2 = [g_E(idxJ1,:); g_C(idxJ2,:)]';
+          tmp2 = [g.E(idxJ1,:); g.C(idxJ2,:)]';
         elseif strcmpi(opts.symm,'n')
-          tmp2 = [g_F(:,idxJ1), g_D(:,idxJ2)];
+          tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end
         A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
       end

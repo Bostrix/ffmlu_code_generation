@@ -18,14 +18,14 @@ static emlrtRTEInfo sb_emlrtRTEI{
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/diag.m" // pName
 };
 
-static emlrtRTEInfo qn_emlrtRTEI{
+static emlrtRTEInfo on_emlrtRTEI{
     109,                                                           // lineNo
     24,                                                            // colNo
     "diag",                                                        // fName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/diag.m" // pName
 };
 
-static emlrtRTEInfo rn_emlrtRTEI{
+static emlrtRTEInfo pn_emlrtRTEI{
     100,                                                           // lineNo
     5,                                                             // colNo
     "diag",                                                        // fName
@@ -38,7 +38,7 @@ void diag(const emlrtStack &sp, const array<real_T, 2U> &v,
           array<real_T, 1U> &d)
 {
   if ((v.size(0) == 1) && (v.size(1) == 1)) {
-    d.set_size(&rn_emlrtRTEI, &sp, 1);
+    d.set_size(&pn_emlrtRTEI, &sp, 1);
     d[0] = v[0];
   } else {
     int32_T m;
@@ -55,7 +55,7 @@ void diag(const emlrtStack &sp, const array<real_T, 2U> &v,
     } else {
       m = 0;
     }
-    d.set_size(&qn_emlrtRTEI, &sp, m);
+    d.set_size(&on_emlrtRTEI, &sp, m);
     m--;
     for (n = 0; n <= m; n++) {
       d[n] = v[n + v.size(0) * n];

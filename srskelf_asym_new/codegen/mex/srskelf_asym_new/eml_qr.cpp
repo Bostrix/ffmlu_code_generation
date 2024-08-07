@@ -32,7 +32,7 @@ static emlrtRSInfo
     };
 
 static emlrtRTEInfo
-    on_emlrtRTEI{
+    mn_emlrtRTEI{
         164,      // lineNo
         6,        // colNo
         "eml_qr", // fName
@@ -41,7 +41,7 @@ static emlrtRTEInfo
     };
 
 static emlrtRTEInfo
-    pn_emlrtRTEI{
+    nn_emlrtRTEI{
         187,      // lineNo
         1,        // colNo
         "eml_qr", // fName
@@ -72,7 +72,7 @@ void eml_qr(const emlrtStack &sp, const array<real_T, 2U> &A,
   c_st.tls = b_st.tls;
   emlrtHeapReferenceStackEnterFcnR2012b((emlrtConstCTX)&sp);
   st.site = &am_emlrtRSI;
-  b_A.set_size(&on_emlrtRTEI, &st, A.size(0), A.size(1));
+  b_A.set_size(&mn_emlrtRTEI, &st, A.size(0), A.size(1));
   loop_ub = A.size(0) * A.size(1);
   for (a = 0; a < loop_ub; a++) {
     b_A[a] = A[a];
@@ -82,7 +82,7 @@ void eml_qr(const emlrtStack &sp, const array<real_T, 2U> &A,
   m_tmp = b_A.size(0);
   loop_ub = b_A.size(1);
   minsz = muIntScalarMin_sint32(m_tmp, loop_ub);
-  R.set_size(&mn_emlrtRTEI, &st, minsz, b_A.size(1));
+  R.set_size(&kn_emlrtRTEI, &st, minsz, b_A.size(1));
   b_st.site = &hl_emlrtRSI;
   if (minsz > 2147483646) {
     c_st.site = &fe_emlrtRSI;
@@ -112,7 +112,7 @@ void eml_qr(const emlrtStack &sp, const array<real_T, 2U> &A,
     }
   }
   b_st.site = &ml_emlrtRSI;
-  c_A.set_size(&pn_emlrtRTEI, &b_st, b_A.size(0), b_A.size(1));
+  c_A.set_size(&nn_emlrtRTEI, &b_st, b_A.size(0), b_A.size(1));
   loop_ub = b_A.size(0) * b_A.size(1);
   for (a = 0; a < loop_ub; a++) {
     c_A[a] = b_A[a];
@@ -120,7 +120,7 @@ void eml_qr(const emlrtStack &sp, const array<real_T, 2U> &A,
   c_st.site = &wl_emlrtRSI;
   internal::lapack::xorgqr(c_st, b_A.size(0), minsz, minsz, c_A, b_A.size(0),
                            tau);
-  Q.set_size(&nn_emlrtRTEI, &st, b_A.size(0), minsz);
+  Q.set_size(&ln_emlrtRTEI, &st, b_A.size(0), minsz);
   b_st.site = &nl_emlrtRSI;
   for (int32_T j{0}; j < minsz; j++) {
     b_st.site = &ol_emlrtRSI;
