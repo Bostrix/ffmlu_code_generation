@@ -194,6 +194,7 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
       
       % Compute interaction matrix between box and far-field (except level
       % 2, where near-field is included).
+
       K1 = full(A(lst,slf));
       if strcmpi(opts.symm,'n')
         K1 = [K1; conj(full(A(slf,lst)))'];
@@ -338,8 +339,8 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
 
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
-          A(subI, subI) = A(subI,subI) - tmp1*tmp1';
-          % A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp1');
+          % A(subI, subI) = A(subI,subI) - tmp1*tmp1';
+          A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp1');
         elseif strcmpi(opts.symm,'n')
           tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
           A(subI, subI) = A(subI,subI) - tmp1*tmp2;
@@ -373,7 +374,7 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
                 A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
 % manipulation(A, size(A, 1), size(A, 2), subI, subJ, tmp1, tmp2, size(tmp2, 2));
         % manipulation(A, tmp1, tmp2, subI, subJ);
-
+% A = updateMatrix_mex(A, subI, subJ, tmp1, tmp2);
 
       end % if
     end % for
