@@ -55,7 +55,7 @@ mxArray *emlrtMexFcnProperties()
       emlrtMxCreateString("/home/user/Documents/ffmlu_code_generation/"
                           "matrix_update/modified/updateMatrix.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp",
-                emlrtMxCreateDoubleScalar(739471.51976851851));
+                emlrtMxCreateDoubleScalar(739471.54429398151));
   emlrtSetField(xEntryPoints, 0, "Constructor",
                 emlrtMxCreateLogicalScalar(false));
   emlrtSetField(xEntryPoints, 0, "Visible", emlrtMxCreateLogicalScalar(true));

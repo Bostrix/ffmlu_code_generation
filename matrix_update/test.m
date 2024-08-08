@@ -24,7 +24,7 @@ end
 function all_equal = compare_specific_fields(factors_original, factors_modified)
     fields_to_compare = {'sk', 'rd', 'nbr', 'T', 'E', 'F', 'L', 'U', 'C', 'D'};
     all_equal = true;
-    
+
     for k = 1:length(factors_original)
         for i = 1:numel(fields_to_compare)
             field = fields_to_compare{i};

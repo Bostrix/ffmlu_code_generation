@@ -1,0 +1,52 @@
+# CompilerName=gcc
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/glnxa64
+matlabdir = /usr/local/MATLAB/R2024a
+startdir = /home/user/Documents/ffmlu_code_generation/matrix_update
+
+# Toolchain information
+cc = /usr/bin/gcc
+cxx = g++
+linker = /usr/bin/gcc
+linkerxx = g++
+
+cflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c 
+
+cxxflags =  -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c 
+
+ldflags =  -pthread -Wl,--no-undefined -Wl,-rpath-link,$matlabdir/bin/glnxa64 -shared  -L"$matlabdir/bin/glnxa64" -lmx -lmex -lmat -lm -lstdc++  -Wl,-Bsymbolic -o computeKernel_mex.mexa64 -lemlrt -lcovrt -lut -lmwmathutil  -Wl,--version-script,computeKernel_mex.map
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker $in $linkobjs $ldflags
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir/computeKernel_data.o : cc $root/computeKernel_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/computeKernel_initialize.o : cc $root/computeKernel_initialize.c
+build $builddir/computeKernel_terminate.o : cc $root/computeKernel_terminate.c
+build $builddir/computeKernel.o : cc $root/computeKernel.c
+build $builddir/_coder_computeKernel_api.o : cc $root/interface/_coder_computeKernel_api.c
+build $builddir/_coder_computeKernel_mex.o : cc $root/interface/_coder_computeKernel_mex.c
+build $builddir/div.o : cc $root/div.c
+build $builddir/computeKernel_emxutil.o : cc $root/computeKernel_emxutil.c
+build $builddir/_coder_computeKernel_info.o : cc $root/interface/_coder_computeKernel_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+
+# Link
+build $root/computeKernel_mex.mexa64 : link $builddir/computeKernel_data.o $builddir/rt_nonfinite.o $builddir/computeKernel_initialize.o $builddir/computeKernel_terminate.o $builddir/computeKernel.o $builddir/_coder_computeKernel_api.o $builddir/_coder_computeKernel_mex.o $builddir/div.o $builddir/computeKernel_emxutil.o $builddir/_coder_computeKernel_info.o $builddir/c_mexapi_version.o 

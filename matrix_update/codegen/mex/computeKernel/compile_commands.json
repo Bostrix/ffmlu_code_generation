@@ -1,0 +1,68 @@
+[
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  computeKernel_data.c -o build/glnxa64/computeKernel_data.o",
+    "file": "computeKernel_data.c",
+    "output": "build/glnxa64/computeKernel_data.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  rt_nonfinite.c -o build/glnxa64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/glnxa64/rt_nonfinite.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  computeKernel_initialize.c -o build/glnxa64/computeKernel_initialize.o",
+    "file": "computeKernel_initialize.c",
+    "output": "build/glnxa64/computeKernel_initialize.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  computeKernel_terminate.c -o build/glnxa64/computeKernel_terminate.o",
+    "file": "computeKernel_terminate.c",
+    "output": "build/glnxa64/computeKernel_terminate.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  computeKernel.c -o build/glnxa64/computeKernel.o",
+    "file": "computeKernel.c",
+    "output": "build/glnxa64/computeKernel.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  interface/_coder_computeKernel_api.c -o build/glnxa64/_coder_computeKernel_api.o",
+    "file": "interface/_coder_computeKernel_api.c",
+    "output": "build/glnxa64/_coder_computeKernel_api.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  interface/_coder_computeKernel_mex.c -o build/glnxa64/_coder_computeKernel_mex.o",
+    "file": "interface/_coder_computeKernel_mex.c",
+    "output": "build/glnxa64/_coder_computeKernel_mex.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  div.c -o build/glnxa64/div.o",
+    "file": "div.c",
+    "output": "build/glnxa64/div.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  computeKernel_emxutil.c -o build/glnxa64/computeKernel_emxutil.o",
+    "file": "computeKernel_emxutil.c",
+    "output": "build/glnxa64/computeKernel_emxutil.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  interface/_coder_computeKernel_info.c -o build/glnxa64/_coder_computeKernel_info.o",
+    "file": "interface/_coder_computeKernel_info.c",
+    "output": "build/glnxa64/_coder_computeKernel_info.o"
+  },
+  {
+    "directory": "/home/user/Documents/ffmlu_code_generation/matrix_update/codegen/mex/computeKernel",
+    "command": "/usr/bin/gcc -fexceptions -fPIC -fno-omit-frame-pointer -pthread -fwrapv -D_GNU_SOURCE -DMATLAB_MEX_FILE  -O2 -DNDEBUG -std=c99 -I \".\" -I \"/home/user/Documents/ffmlu_code_generation/matrix_update\" -I \"./interface\" -I \"/usr/local/MATLAB/R2024a/extern/include\" -I \".\" -DMODEL=computeKernel_mex -msse2 -fno-predictive-commoning -c  /usr/local/MATLAB/R2024a/extern/version/c_mexapi_version.c -o build/glnxa64/c_mexapi_version.o",
+    "file": "/usr/local/MATLAB/R2024a/extern/version/c_mexapi_version.c",
+    "output": "build/glnxa64/c_mexapi_version.o"
+  }
+]

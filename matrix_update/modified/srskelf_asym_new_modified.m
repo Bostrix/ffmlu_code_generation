@@ -209,7 +209,26 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
       else
          K = [K1+K2;Kpxy];
       end
-      
+ %        % Debugging information
+ %      disp(['Size of K1: ', mat2str(size(K1))]);
+ %      disp(['Size of K2: ', mat2str(size(K2))]);
+ %      disp(['Size of Kpxy: ', mat2str(size(Kpxy))]);
+ % 
+ % if lvl > 2
+ %        if isempty(Kpxy)
+ %          K = K1 + K2;
+ %        else
+ %          % Ensure K1, K2, and Kpxy have the same number of columns
+ %          if size(Kpxy, 2) == size(K1, 2)
+ %              K = [K1 + K2; Kpxy];
+ %          else
+ %              error('Incompatible sizes of Kpxy with K1 and K2');
+ %          end
+ %        end
+ %      else
+ %        K = K1 + K2;
+ %      end
+
      % Compute the skeleton/redundant points and interpolation matrix
       [sk,rd,T] = id(K,rank_or_tol);
       
@@ -340,13 +359,16 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
           % A(subI, subI) = A(subI,subI) - tmp1*tmp1';
-          A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp1');
+A(subI, subI) = matrix_update_symmetric(A(subI, subI), tmp1, tmp1');
+
+          % A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp1');
         elseif strcmpi(opts.symm,'n')
           tmp2 = [g.F(:,idxI1), g.D(:,idxI2)];
-          A(subI, subI) = A(subI,subI) - tmp1*tmp2;
+          % A(subI, subI) = A(subI,subI) - tmp1*tmp2;
           % A(subI, subI) = A(subI,subI) - manipulation(subI,subI,tmp1,tmp2);
           % A(subI, subI) = A(subI,subI) - matrix_multiply_mex(subI,subI,tmp1,tmp2);
-   
+   % A(subI, subI) = matrix_update_diagonal(A(subI, subI), tmp1, tmp2);
+          A(subI, subI) = matrix_update(A(subI, subI), tmp1, tmp2); % Replace diagonal update line
         end % if
       else
         % For off-diagonal block
@@ -364,6 +386,8 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
         idxJ2 = tmp2(f+1:end);
 
         tmp1 = [g.E(idxI1,:); g.C(idxI2,:)];
+% tmp1 = matrix_concatenate(g.E, g.C, idxI1, idxI2);
+
         % Different factorization depending on symmetry
         if strcmpi(opts.symm,'p')
           tmp2 = [g.E(idxJ1,:); g.C(idxJ2,:)]';
@@ -371,10 +395,11 @@ function F = srskelf_asym_new_modified(A,x,occ,rank_or_tol,pxyfun,opts)
           tmp2 = [g.F(:,idxJ1), g.D(:,idxJ2)];
         end % if
         % A(subI, subJ) = A(subI,subJ) - tmp1*tmp2;
-                A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
+                % A(subI, subJ) = A(subI,subJ) - manipulation(subI,subJ,tmp1,tmp2);
 % manipulation(A, size(A, 1), size(A, 2), subI, subJ, tmp1, tmp2, size(tmp2, 2));
         % manipulation(A, tmp1, tmp2, subI, subJ);
 % A = updateMatrix_mex(A, subI, subJ, tmp1, tmp2);
+        A(subI, subJ) = matrix_update(A(subI, subJ), tmp1, tmp2); % Replace bottleneck line
 
       end % if
     end % for

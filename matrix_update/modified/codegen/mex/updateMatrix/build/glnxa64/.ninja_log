@@ -1,11 +1,11 @@
 # ninja log v5
-1	94	1723014751049641141	build/glnxa64/rt_nonfinite.o	d11c2ec9ebbae20d
-5	107	1723014751061640970	build/glnxa64/cpp_mexapi_version.o	a71f2c023f123f3a
-0	151	1723014751105640344	build/glnxa64/_coder_updateMatrix_info.o	8e70868cb89d1e8a
-0	239	1723014751193639092	build/glnxa64/updateMatrix_data.o	56b22479bc487747
-3	246	1723014751201638978	build/glnxa64/updateMatrix.o	756bd8c30f06946
-1	251	1723014751205638920	build/glnxa64/updateMatrix_terminate.o	5eac0e09fdb57da7
-1	252	1723014751205638920	build/glnxa64/updateMatrix_initialize.o	36eb66490099647e
-2	267	1723014751221638692	build/glnxa64/_coder_updateMatrix_api.o	a811dc82454612fa
-2	381	1723014751337637043	build/glnxa64/_coder_updateMatrix_mex.o	708548470750885d
-381	511	1723014751465635222	updateMatrix_mex.mexa64	496dfb45a219295a
+2	582	1723093159590124162	build/glnxa64/rt_nonfinite.o	d11c2ec9ebbae20d
+9	586	1723093159590124162	build/glnxa64/cpp_mexapi_version.o	a71f2c023f123f3a
+1	630	1723093159638123151	build/glnxa64/_coder_updateMatrix_info.o	8e70868cb89d1e8a
+0	786	1723093159794119861	build/glnxa64/updateMatrix_data.o	56b22479bc487747
+4	842	1723093159850118679	build/glnxa64/updateMatrix_initialize.o	36eb66490099647e
+5	843	1723093159850118679	build/glnxa64/updateMatrix_terminate.o	5eac0e09fdb57da7
+6	890	1723093159898117667	build/glnxa64/_coder_updateMatrix_api.o	a811dc82454612fa
+8	957	1723093159966116234	build/glnxa64/updateMatrix.o	756bd8c30f06946
+7	1409	1723093160418106703	build/glnxa64/_coder_updateMatrix_mex.o	708548470750885d
+1409	1917	1723093160918096159	updateMatrix_mex.mexa64	496dfb45a219295a
