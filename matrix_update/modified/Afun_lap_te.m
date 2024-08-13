@@ -7,7 +7,7 @@ if isempty(i) || isempty(j)
   return
 end
 [I,J] = ndgrid(i,j);
-A = 2*bsxfun(@times,lap_neumann_kernel(x(:,i),x(:,j),nu(:,i)),area(j));
+A = 2*bsxfun(@times,lap_neumann_kernel_modified(x(:,i),x(:,j),nu(:,i)),area(j));
 A = bsxfun(@times,contrast(i),A);
 M = -2*spget_quadcorr(i,j,P,S);
 idx = abs(M) ~= 0;

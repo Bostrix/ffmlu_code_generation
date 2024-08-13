@@ -10,9 +10,9 @@ dz = bsxfun(@minus,x(3,:)',y(3,:));
 dr = sqrt(dx.^2 + dy.^2 + dz.^2);
 rdotn = bsxfun(@times,nuuse(1,:).',dx) + bsxfun(@times,nuuse(2,:).',dy) + ...
           bsxfun(@times,nuuse(3,:).',dz);
-K = -1/(4*pi).*rdotn./dr.^3;
-% K = computeKernel(rdotn(:), dr(:));
-% K = reshape(K, size(rdotn)); % Reshape to match the original dimensions
+% K = -1/(4*pi).*rdotn./dr.^3;
+K = computeKernel(rdotn(:), dr(:));
+K = reshape(K, size(rdotn)); % Reshape to match the original dimensions
 
 
 K(dr == 0) = 0;

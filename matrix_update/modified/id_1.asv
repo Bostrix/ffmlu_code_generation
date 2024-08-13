@@ -1,0 +1,90 @@
+function [sk, rd, T, niter] = id(A, rank_or_tol, Tmax, rrqr_iter, fixed)
+
+    % Set default parameters
+    if nargin < 3 || isempty(Tmax), Tmax = 2; end
+    if nargin < 4 || isempty(rrqr_iter), rrqr_iter = Inf; end
+    if nargin < 5, fixed = []; end
+
+    % Check inputs
+    assert(rank_or_tol >= 0,'FLAM:id:invalidRankOrTol', ...
+        'Rank or tolerance must be nonnegative.')
+    assert(Tmax >= 1, 'FLAM:id:invalidTmax', ...
+        'Interpolation matrix entry bound must be >= 1.')
+    assert(rrqr_iter >= 0,'FLAM:id:invalidRRQRIter', ...
+        'Maximum number of RRQR iterations must be nonnegative.')
+
+    % Initialize
+    [m, n] = size(A);
+    niter = 0;
+
+    % Return if matrix is empty
+    if isempty(A)
+        sk = []; rd = 1:n;
+        T = zeros(0,n);
+        return
+    end
+
+    % Unpack approximation parameters
+    tol = rem(rank_or_tol, 1);               % Relative tolerance
+    kmax = floor(rank_or_tol);               % Maximum rank
+    if kmax == 0 || kmax > n, kmax = n; end  % Special rank cases
+
+    % Preprocess fixed columns
+    nfix = length(fixed);
+    if nfix > 0
+        fixed = fixed(:)';                                         % Fixed indices
+        free = true(1, n); free(fixed) = false; free = find(free); % Free indices
+
+        % Nothing left -- quick return
+        if isempty(free)
+            sk = fixed; rd = [];
+            T = zeros(nfix, 0);
+            return;
+        end
+
+        % Gram-Schmidt reduction to free columns
+        Afix = A(:, fixed);
+        cmax = sqrt(max(sum(abs(Afix).^2)));  % Maximum column norm among fixed
+        [Q, R1] = qr(Afix, 0);
+        A = A(:, free);
+        R2 = Q' * A; A = A - Q * R2;
+        n = size(A, 2);
+        kmax = max(kmax - nfix, 0);
+    else
+        free = 1:n;
+        cmax = 0;
+    end
+
+    % Reintroduce random downsampling for better timing
+    if m > 8 * n
+        A = randn(n + 16, m) * A;
+    end
+
+    % Compute QR factorization for ID
+    [~, R, p] = qr(A, 0);
+    cmax = max(cmax, abs(R(1)));              % Maximum column norm
+    tol = cmax * tol;                         % Absolute tolerance
+    if any(size(R) == 1), diagR = R(1);       % In case R is a vector ...
+    else, diagR = diag(R);                    % ... instead of a matrix
+    end
+    k = nnz(abs(diagR) > tol);                % Rank by precision
+    R = R(1:k, :);
+    k = min(k, kmax);                         % Truncate rank by input
+    R(1:k, k+1:end) = R(1:k, 1:k) \ R(1:k, k+1:end);  % Store T
+
+    % RRQR refinement (if applicable)
+    if ~isinf(Tmax) && rrqr_iter > 0 && k > 0 && k < n
+        % [Existing RRQR refinement code here]
+    end
+
+    % Set ID outputs
+    sk = p(1:k); rd = p(k+1:end);
+    T = R(1:k, k+1:end);
+
+    % Postprocess for fixed columns
+    if nfix > 0
+        T = [R1 \ (R2(:, rd) - R2(:, sk) * T); T];
+        sk = [fixed free(sk)];
+        rd = [free(rd)];
+    end
+end
