@@ -358,6 +358,4 @@ function A = spget(Ityp, Jtyp)
         end
     end
 end
-
-
 end % srskelf_asym
