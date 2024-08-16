@@ -55,23 +55,24 @@ function [sk, rd, T, niter] = id_1(A, rank_or_tol, Tmax, rrqr_iter, fixed)
     cmax = 0;
   end
 
-  % % optimize the condition for QR decomposition
-  % if numel(A(:,1)) > 8 * numel(A(1,:)) 
-  %     [~,A] = qr(A,0); 
-  % end
-  % 
-  % % compute ID using optimized QR
-  % [~,R,p] = qr(A,0);
-% Check if matrix is significantly rectangular and only perform QR if necessary
-if m > 8 * n
-    % If the matrix A is significantly rectangular (tall), perform a QR decomposition.
-    % This reduces the number of rows while retaining the essential information.
-    [~, A] = qr(A, 0);
-    m = size(A, 1);  % Update 'm' to the reduced row size after QR
-end
+  % optimize the condition for QR decomposition
+  if numel(A(:,1)) > 8 * numel(A(1,:)) 
+      [~,A] = qr(A,0); 
+  end
 
-% Compute the interpolative decomposition (ID)
-[~, R, p] = qr(A, 0);
+  % compute ID using optimized QR
+  [~,R,p] = qr(A,0);
+
+% % Check if matrix is significantly rectangular and only perform QR if necessary
+% if m > 8 * n
+%     % If the matrix A is significantly rectangular (tall), perform a QR decomposition.
+%     % This reduces the number of rows while retaining the essential information.
+%     [~, A] = qr(A, 0);
+%     m = size(A, 1);  % Update 'm' to the reduced row size after QR
+% end
+% 
+% % Compute the interpolative decomposition (ID)
+% [~, R, p] = qr(A, 0);
 
 
   cmax = max(cmax, abs(R(1)));  % maximum column norm
