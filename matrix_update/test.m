@@ -1,9 +1,11 @@
-addpath('/home/user/Documents/ffmlu_code_generation/matrix_update/modified');
 
 % Measure time for the original function
 tic;
 F_original = srskelf_asym_new(A, x, occ, rank_or_tol, pxyfun, opts);
 time_original = toc;
+
+addpath('/home/user/Documents/ffmlu_code_generation/matrix_update/modified');
+
 
 % Measure time for the modified function
 tic;

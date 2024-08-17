@@ -177,7 +177,7 @@ function F = srskelf_asym_new_modified(A, x, occ, rank_or_tol, pxyfun, opts)
       end
       
       % Compute the skeleton/redundant points and interpolation matrix
-      [sk, rd, T] = id(K, rank_or_tol);
+      [sk, rd, T] = id_1(K, rank_or_tol);
 
       % Move on to next box if no compression for this box
       if isempty(rd)
