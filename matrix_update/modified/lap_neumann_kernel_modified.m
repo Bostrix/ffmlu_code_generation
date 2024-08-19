@@ -15,5 +15,10 @@ K = computeKernel(rdotn(:), dr(:));
 K = reshape(K, size(rdotn)); % Reshape to match the original dimensions
 
 
+
+% K = computeKernel_mex(rdotn, dr);
+
 K(dr == 0) = 0;
 end
+
+
