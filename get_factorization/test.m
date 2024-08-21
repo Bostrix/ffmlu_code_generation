@@ -11,7 +11,7 @@ result_modified = [];
 cd(original_folder);
 disp('Running original get_factorization...');
 original_start_time = tic;
-result_original = get_factorization(Center, Area,normals, EC, contrast, weight)  % Run with appropriate inputs
+result_original = get_factorization(dummy_center, dummy_Area,dummy_normals, dummy_EC, dummy_contrast, weight)  % Run with appropriate inputs
 original_time = toc(original_start_time);
 
 % Display original run time
@@ -24,7 +24,7 @@ modified_folder = '/home/user/Documents/ffmlu_code_generation/get_factorization/
 cd(modified_folder);
 disp('Running modified get_factorization...');
 modified_start_time = tic;
-result_modified = get_factorization_modified(Center, Area,normals, EC, contrast, weight);  % Run with appropriate inputs
+result_modified = get_factorization_modified(dummy_center, dummy_Area,dummy_normals, dummy_EC, dummy_contrast, weight);  % Run with appropriate inputs
 modified_time = toc(modified_start_time);
 
 % Display modified run time
