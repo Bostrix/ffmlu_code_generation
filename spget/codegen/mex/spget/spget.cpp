@@ -95,99 +95,78 @@ static emlrtRSInfo k_emlrtRSI{
 };
 
 static emlrtRSInfo l_emlrtRSI{
-    56,      // lineNo
-    "spget", // fcnName
-    "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
-    "spget.m" // pathName
-};
-
-static emlrtRSInfo m_emlrtRSI{
     63,      // lineNo
     "spget", // fcnName
     "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
     "spget.m" // pathName
 };
 
-static emlrtRSInfo n_emlrtRSI{
+static emlrtRSInfo m_emlrtRSI{
     65,      // lineNo
     "spget", // fcnName
     "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
     "spget.m" // pathName
 };
 
-static emlrtRSInfo o_emlrtRSI{
-    71,      // lineNo
-    "spget", // fcnName
-    "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
-    "spget.m" // pathName
-};
-
-static emlrtRSInfo p_emlrtRSI{
-    72,      // lineNo
-    "spget", // fcnName
-    "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
-    "spget.m" // pathName
-};
-
-static emlrtRSInfo q_emlrtRSI{
+static emlrtRSInfo n_emlrtRSI{
     86,      // lineNo
     "spget", // fcnName
     "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
     "spget.m" // pathName
 };
 
-static emlrtRSInfo r_emlrtRSI{
+static emlrtRSInfo o_emlrtRSI{
     88,      // lineNo
     "spget", // fcnName
     "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
     "spget.m" // pathName
 };
 
-static emlrtRSInfo v_emlrtRSI{
+static emlrtRSInfo s_emlrtRSI{
     241,       // lineNo
     "charcmp", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/eml/+coder/+internal/strcmp.m" // pathName
 };
 
-static emlrtRSInfo ab_emlrtRSI{
+static emlrtRSInfo w_emlrtRSI{
     103,                     // lineNo
     "spget/get_update_list", // fcnName
     "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
     "spget.m" // pathName
 };
 
-static emlrtRSInfo bb_emlrtRSI{
+static emlrtRSInfo x_emlrtRSI{
     39,                                                            // lineNo
     "find",                                                        // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo cb_emlrtRSI{
+static emlrtRSInfo y_emlrtRSI{
     144,                                                           // lineNo
     "eml_find",                                                    // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo db_emlrtRSI{
+static emlrtRSInfo ab_emlrtRSI{
     382,                                                           // lineNo
     "find_first_indices",                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo eb_emlrtRSI{
+static emlrtRSInfo bb_emlrtRSI{
     402,                                                           // lineNo
     "find_first_indices",                                          // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/find.m" // pathName
 };
 
-static emlrtRSInfo fb_emlrtRSI{
+static emlrtRSInfo cb_emlrtRSI{
     20,                               // lineNo
     "eml_int_forloop_overflow_check", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/eml/"
     "eml_int_forloop_overflow_check.m" // pathName
 };
 
-static emlrtRSInfo hb_emlrtRSI{
+static emlrtRSInfo eb_emlrtRSI{
     37,                                                            // lineNo
     "flip",                                                        // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/elmat/flip.m" // pathName
@@ -208,18 +187,6 @@ static emlrtRTEInfo b_emlrtRTEI{
 };
 
 static emlrtBCInfo emlrtBCI{
-    -1,                 // iFirst
-    -1,                 // iLast
-    115,                // lineNo
-    36,                 // colNo
-    "elements_to_find", // aName
-    "find_locations_t", // fName
-    "/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/"
-    "spget.m", // pName
-    0          // checkKind
-};
-
-static emlrtBCInfo b_emlrtBCI{
     -1,            // iFirst
     -1,            // iLast
     49,            // lineNo
@@ -294,7 +261,7 @@ static emlrtDCInfo g_emlrtDCI{
     1          // checkKind
 };
 
-static emlrtBCInfo c_emlrtBCI{
+static emlrtBCInfo b_emlrtBCI{
     1,             // iFirst
     1032,          // iLast
     40,            // lineNo
@@ -306,7 +273,7 @@ static emlrtBCInfo c_emlrtBCI{
     0          // checkKind
 };
 
-static emlrtBCInfo d_emlrtBCI{
+static emlrtBCInfo c_emlrtBCI{
     -1,            // iFirst
     -1,            // iLast
     41,            // lineNo
@@ -318,7 +285,7 @@ static emlrtBCInfo d_emlrtBCI{
     0          // checkKind
 };
 
-static emlrtBCInfo e_emlrtBCI{
+static emlrtBCInfo d_emlrtBCI{
     -1,                      // iFirst
     -1,                      // iLast
     102,                     // lineNo
@@ -330,7 +297,7 @@ static emlrtBCInfo e_emlrtBCI{
     0          // checkKind
 };
 
-static emlrtBCInfo f_emlrtBCI{
+static emlrtBCInfo e_emlrtBCI{
     1,                       // iFirst
     1032,                    // iLast
     97,                      // lineNo
@@ -342,7 +309,7 @@ static emlrtBCInfo f_emlrtBCI{
     0          // checkKind
 };
 
-static emlrtBCInfo g_emlrtBCI{
+static emlrtBCInfo f_emlrtBCI{
     -1,                      // iFirst
     -1,                      // iLast
     96,                      // lineNo
@@ -372,7 +339,7 @@ static emlrtDCInfo i_emlrtDCI{
     1          // checkKind
 };
 
-static emlrtBCInfo h_emlrtBCI{
+static emlrtBCInfo g_emlrtBCI{
     -1,                      // iFirst
     -1,                      // iLast
     97,                      // lineNo
@@ -430,7 +397,7 @@ static emlrtRTEInfo j_emlrtRTEI{
     "spget.m" // pName
 };
 
-static emlrtRSInfo ib_emlrtRSI{
+static emlrtRSInfo fb_emlrtRSI{
     27,                                                            // lineNo
     "error",                                                       // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/lang/error.m" // pathName
@@ -477,14 +444,14 @@ static void get_update_list(const emlrtStack *sp,
   if ((static_cast<int32_T>(node_idx) < 1) ||
       (static_cast<int32_T>(node_idx) > i)) {
     emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(node_idx), 1, i,
-                                  &g_emlrtBCI, (emlrtConstCTX)sp);
+                                  &f_emlrtBCI, (emlrtConstCTX)sp);
   }
   update_list[static_cast<int32_T>(node_idx) - 1] = true;
   //  Mark the current node in the list
   if ((static_cast<int32_T>(node_idx) < 1) ||
       (static_cast<int32_T>(node_idx) > 1032)) {
     emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(node_idx), 1, 1032,
-                                  &f_emlrtBCI, (emlrtConstCTX)sp);
+                                  &e_emlrtBCI, (emlrtConstCTX)sp);
   }
   tmp_size_idx_0 = t_nodes[static_cast<int32_T>(node_idx) - 1].snbor.size[0];
   tmp_size_idx_1 = t_nodes[static_cast<int32_T>(node_idx) - 1].snbor.size[1];
@@ -499,7 +466,7 @@ static void get_update_list(const emlrtStack *sp,
     if ((static_cast<int32_T>(d) < 1) ||
         (static_cast<int32_T>(d) > b_update_list)) {
       emlrtDynamicBoundsCheckR2012b(static_cast<int32_T>(d), 1, b_update_list,
-                                    &h_emlrtBCI, (emlrtConstCTX)sp);
+                                    &g_emlrtBCI, (emlrtConstCTX)sp);
     }
     tmp_data[i] = static_cast<int32_T>(d);
   }
@@ -516,11 +483,11 @@ static void get_update_list(const emlrtStack *sp,
   for (b_update_list = 0; b_update_list < i; b_update_list++) {
     //  Renamed from idx to avoid conflict
     if (b_update_list + 1 > i) {
-      emlrtDynamicBoundsCheckR2012b(b_update_list + 1, 1, i, &e_emlrtBCI,
+      emlrtDynamicBoundsCheckR2012b(b_update_list + 1, 1, i, &d_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
     //  Access each child node
-    st.site = &ab_emlrtRSI;
+    st.site = &w_emlrtRSI;
     get_update_list(
         &st, update_list,
         t_nodes[static_cast<int32_T>(node_idx) - 1].chld.data[b_update_list],
@@ -568,8 +535,6 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
   int32_T n;
   int32_T tmp;
   int32_T x_tmp;
-  int16_T I__size_idx_1;
-  int16_T J__size_idx_1;
   boolean_T exitg1;
   st.prev = sp;
   st.tls = sp->tls;
@@ -589,17 +554,14 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
   //  'nbr', or 'lst'. Translate input strings to index sets (and their lengths)
   st.site = &emlrtRSI;
   if (coder::internal::b_strcmp(st, Ityp)) {
-    I__size_idx_1 = 110;
     m_ = nslf;
   } else {
     st.site = &b_emlrtRSI;
     if (coder::internal::c_strcmp(st, Ityp)) {
-      I__size_idx_1 = 980;
       m_ = nnbr;
     } else {
       st.site = &c_emlrtRSI;
       if (coder::internal::d_strcmp(st, Ityp)) {
-        I__size_idx_1 = 2072;
         m_ = nlst;
       } else {
         st.site = &d_emlrtRSI;
@@ -607,24 +569,21 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
         m = emlrtCreateCharArray(2, &iv[0]);
         emlrtInitCharArrayR2013a(&st, 18, m, &varargin_1[0]);
         emlrtAssign(&y, m);
-        b_st.site = &ib_emlrtRSI;
+        b_st.site = &fb_emlrtRSI;
         b_error(b_st, y, emlrtMCI);
       }
     }
   }
   st.site = &e_emlrtRSI;
   if (coder::internal::b_strcmp(st, Jtyp)) {
-    J__size_idx_1 = 110;
     n_ = nslf;
   } else {
     st.site = &f_emlrtRSI;
     if (coder::internal::c_strcmp(st, Jtyp)) {
-      J__size_idx_1 = 980;
       n_ = nnbr;
     } else {
       st.site = &g_emlrtRSI;
       if (coder::internal::d_strcmp(st, Jtyp)) {
-        J__size_idx_1 = 2072;
         n_ = nlst;
       } else {
         st.site = &h_emlrtRSI;
@@ -632,7 +591,7 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
         m = emlrtCreateCharArray(2, &iv1[0]);
         emlrtInitCharArrayR2013a(&st, 18, m, &b_varargin_1[0]);
         emlrtAssign(&b_y, m);
-        b_st.site = &ib_emlrtRSI;
+        b_st.site = &fb_emlrtRSI;
         b_error(b_st, b_y, emlrtMCI);
       }
     }
@@ -670,9 +629,9 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
   if (nbox != static_cast<int32_T>(muDoubleScalarFloor(nbox))) {
     emlrtIntegerCheckR2012b(nbox, &emlrtDCI, (emlrtConstCTX)sp);
   }
-  tmp = static_cast<int32_T>(nbox);
-  update_list.set_size(&f_emlrtRTEI, sp, tmp);
-  for (k = 0; k < tmp; k++) {
+  idx = static_cast<int32_T>(nbox);
+  update_list.set_size(&f_emlrtRTEI, sp, idx);
+  for (k = 0; k < idx; k++) {
     update_list[k] = false;
   }
   st.site = &i_emlrtRSI;
@@ -680,14 +639,14 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
   //  Pass update_list and t
   //  Use lookup_list to get the list of updates
   st.site = &j_emlrtRSI;
-  b_st.site = &bb_emlrtRSI;
+  b_st.site = &x_emlrtRSI;
   n = update_list.size(0);
-  c_st.site = &cb_emlrtRSI;
+  c_st.site = &y_emlrtRSI;
   idx = 0;
   ii.set_size(&g_emlrtRTEI, &c_st, update_list.size(0));
-  d_st.site = &db_emlrtRSI;
+  d_st.site = &ab_emlrtRSI;
   if (update_list.size(0) > 2147483646) {
-    e_st.site = &fb_emlrtRSI;
+    e_st.site = &cb_emlrtRSI;
     coder::check_forloop_overflow_error(e_st);
   }
   tmp = 0;
@@ -723,7 +682,7 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
     }
     update_list_size[0] = 1;
     update_list_size[1] = k;
-    d_st.site = &eb_emlrtRSI;
+    d_st.site = &bb_emlrtRSI;
     coder::internal::indexShapeCheck(d_st, ii.size(0), update_list_size);
     ii.set_size(&h_emlrtRTEI, &c_st, k);
   }
@@ -736,7 +695,7 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
   if (ii.size(0) > 1) {
     n = ii.size(0) - 1;
     idx = ii.size(0) >> 1;
-    b_st.site = &hb_emlrtRSI;
+    b_st.site = &eb_emlrtRSI;
     for (k = 0; k < idx; k++) {
       tmp = static_cast<int32_T>(x[k]);
       x_tmp = n - k;
@@ -745,69 +704,69 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
     }
   }
   for (k = 0; k < loop_ub; k++) {
-    idx = static_cast<int32_T>(x[k]);
-    if (idx > 1032) {
-      emlrtDynamicBoundsCheckR2012b(idx, 1, 1032, &c_emlrtBCI,
+    tmp = static_cast<int32_T>(x[k]);
+    if (tmp > 1032) {
+      emlrtDynamicBoundsCheckR2012b(tmp, 1, 1032, &b_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
   }
-  idx = x.size(1) - 1;
+  tmp = x.size(1) - 1;
   n = 0;
-  for (loop_ub = 0; loop_ub <= idx; loop_ub++) {
-    if (lookup_list[static_cast<int32_T>(x[loop_ub]) - 1] != 0.0) {
+  for (idx = 0; idx <= tmp; idx++) {
+    if (lookup_list[static_cast<int32_T>(x[idx]) - 1] != 0.0) {
       n++;
     }
   }
   r.set_size(&j_emlrtRTEI, sp, n);
   n = 0;
-  for (loop_ub = 0; loop_ub <= idx; loop_ub++) {
-    if (lookup_list[static_cast<int32_T>(x[loop_ub]) - 1] != 0.0) {
-      r[n] = loop_ub;
+  for (idx = 0; idx <= tmp; idx++) {
+    if (lookup_list[static_cast<int32_T>(x[idx]) - 1] != 0.0) {
+      r[n] = idx;
       n++;
     }
   }
-  tmp = r.size(0);
-  for (k = 0; k < tmp; k++) {
-    if (r[k] > idx) {
-      emlrtDynamicBoundsCheckR2012b(r[k], 0, idx, &d_emlrtBCI,
+  idx = r.size(0);
+  for (k = 0; k < idx; k++) {
+    if (r[k] > tmp) {
+      emlrtDynamicBoundsCheckR2012b(r[k], 0, tmp, &c_emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
   }
   //  Ensure update_list is a row vector
   //  Get the number of updates
-  for (x_tmp = 0; x_tmp < tmp; x_tmp++) {
+  for (x_tmp = 0; x_tmp < idx; x_tmp++) {
     boolean_T b_bool;
-    if (x_tmp + 1 > tmp) {
-      emlrtDynamicBoundsCheckR2012b(x_tmp + 1, 1, tmp, &b_emlrtBCI,
+    if (x_tmp + 1 > idx) {
+      emlrtDynamicBoundsCheckR2012b(x_tmp + 1, 1, idx, &emlrtBCI,
                                     (emlrtConstCTX)sp);
     }
     //  Access elements using the index
     st.site = &k_emlrtRSI;
-    b_st.site = &s_emlrtRSI;
-    c_st.site = &t_emlrtRSI;
+    b_st.site = &p_emlrtRSI;
+    c_st.site = &q_emlrtRSI;
     b_bool = false;
     n = 0;
     int32_T exitg2;
     do {
       exitg2 = 0;
       if (n < 3) {
-        d_st.site = &u_emlrtRSI;
+        d_st.site = &r_emlrtRSI;
         k = static_cast<uint8_T>(Ityp[n]);
         if (k > 127) {
           emlrtErrorWithMessageIdR2018a(
               &d_st, &emlrtRTEI, "Coder:toolbox:unsupportedString",
               "Coder:toolbox:unsupportedString", 2, 12, 127);
         }
-        d_st.site = &v_emlrtRSI;
-        idx = static_cast<uint8_T>(Jtyp[n]);
-        if (idx > 127) {
+        d_st.site = &s_emlrtRSI;
+        tmp = static_cast<uint8_T>(Jtyp[n]);
+        if (tmp > 127) {
           emlrtErrorWithMessageIdR2018a(
               &d_st, &emlrtRTEI, "Coder:toolbox:unsupportedString",
               "Coder:toolbox:unsupportedString", 2, 12, 127);
         }
-        d_st.site = &w_emlrtRSI;
-        d_st.site = &w_emlrtRSI;
-        if (cv[k] != cv[idx]) {
+        d_st.site = &t_emlrtRSI;
+        d_st.site = &t_emlrtRSI;
+        if (cv[k] != cv[tmp]) {
           exitg2 = 1;
         } else {
           n++;
@@ -819,77 +778,22 @@ void spget(const emlrtStack *sp, const char_T Ityp[3], const char_T Jtyp[3],
     } while (exitg2 == 0);
     if (b_bool) {
       //  For diagonal block
-      st.site = &l_emlrtRSI;
-      //  Define the find_locations_t function as a subfunction
-      //  Initialize an empty array to store the locations
-      //  Iterate over each element to find
-      k = I__size_idx_1;
-      for (loop_ub = 0; loop_ub < k; loop_ub++) {
-        if (loop_ub + 1 > I__size_idx_1) {
-          emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1,
-                                        static_cast<int32_T>(I__size_idx_1),
-                                        &emlrtBCI, &st);
-        }
-        //  Use the local function binary_search to find the location of the
-        //  element If the element is found (location is not -1), add it to the
-        //  locs array
-        if (*emlrtBreakCheckR2012bFlagVar != 0) {
-          emlrtBreakCheckR2012b(&st);
-        }
-      }
       //  Replace ismembc2
       //  Convert to double to ensure consistent types
       //  Different factorization depending on symmetry
-      st.site = &m_emlrtRSI;
+      st.site = &l_emlrtRSI;
       if (!coder::internal::b_strcmp(st, opts->symm)) {
-        st.site = &n_emlrtRSI;
+        st.site = &m_emlrtRSI;
         coder::internal::c_strcmp(st, opts->symm);
       }
     } else {
       //  For off-diagonal block
-      st.site = &o_emlrtRSI;
-      //  Define the find_locations_t function as a subfunction
-      //  Initialize an empty array to store the locations
-      //  Iterate over each element to find
-      k = I__size_idx_1;
-      for (loop_ub = 0; loop_ub < k; loop_ub++) {
-        if (loop_ub + 1 > I__size_idx_1) {
-          emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1,
-                                        static_cast<int32_T>(I__size_idx_1),
-                                        &emlrtBCI, &st);
-        }
-        //  Use the local function binary_search to find the location of the
-        //  element If the element is found (location is not -1), add it to the
-        //  locs array
-        if (*emlrtBreakCheckR2012bFlagVar != 0) {
-          emlrtBreakCheckR2012b(&st);
-        }
-      }
-      //  Replace ismembc2
-      st.site = &p_emlrtRSI;
-      //  Define the find_locations_t function as a subfunction
-      //  Initialize an empty array to store the locations
-      //  Iterate over each element to find
-      k = J__size_idx_1;
-      for (loop_ub = 0; loop_ub < k; loop_ub++) {
-        if (loop_ub + 1 > J__size_idx_1) {
-          emlrtDynamicBoundsCheckR2012b(loop_ub + 1, 1,
-                                        static_cast<int32_T>(J__size_idx_1),
-                                        &emlrtBCI, &st);
-        }
-        //  Use the local function binary_search to find the location of the
-        //  element If the element is found (location is not -1), add it to the
-        //  locs array
-        if (*emlrtBreakCheckR2012bFlagVar != 0) {
-          emlrtBreakCheckR2012b(&st);
-        }
-      }
       //  Replace ismembc2
       //  Convert to double to ensure consistent types
       //  Different factorization depending on symmetry
-      st.site = &q_emlrtRSI;
+      st.site = &n_emlrtRSI;
       if (!coder::internal::b_strcmp(st, opts->symm)) {
-        st.site = &r_emlrtRSI;
+        st.site = &o_emlrtRSI;
         coder::internal::c_strcmp(st, opts->symm);
       }
     }
