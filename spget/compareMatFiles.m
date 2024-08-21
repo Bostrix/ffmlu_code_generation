@@ -1,6 +1,6 @@
 % Load the .mat files
-file1 = load('/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/idxj_spget.mat');
-file2 = load('/home/user/Downloads/ffmlu_code_generation/ffmlu_code_generation/spget/idxj_spget_og.mat');
+file1 = load('spget_og.mat');
+file2 = load('spget_output.mat');
 
 % Assuming the variable names are the same in both files
 varName1 = fieldnames(file1);

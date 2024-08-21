@@ -1,4 +1,4 @@
-function A = spget(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, nbox, t, i, opts)
+function A = spget_new(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, nbox, t, i, opts)
     % A = SPGET(ITYP, JTYP, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, nbox, t, i, opts) 
     % Sparse matrix access function that grabs the accumulated Schur complement
     % updates to a block of the matrix from previously-skeletonized 
@@ -32,8 +32,8 @@ function A = spget(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, 
     end
 
     % Initialize matrix A based on the fully defined m_ and n_
-    A = zeros(m_, n_);  % Ensure A is initialized as double
-    update_list = false(nbox, 1);  % Ensure update_list is initialized as logical
+    A = zeros(m_, n_);
+    update_list = false(nbox, 1);
     update_list = get_update_list(update_list, i, t);  % Pass update_list and t
 
     % Use lookup_list to get the list of updates
@@ -54,8 +54,8 @@ function A = spget(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, 
         if strcmpi(Ityp, Jtyp)
             % For diagonal block
             idxI = find_locations_t(xj, I_);  % Replace ismembc2
-            tmp1 = idxI ~= 0;  % Convert to double to ensure consistent types
-            subI = idxI(tmp1 == 1);  % Ensure indexing is logical after conversion
+            tmp1 = double(idxI ~= 0);  % Convert to double to ensure consistent types
+            subI = idxI(tmp1);
             idxI1 = tmp1(1:f);
             idxI2 = tmp1(f+1:end);
             tmp1 = [g.E(idxI1, :); g.C(idxI2, :)];
@@ -74,31 +74,32 @@ function A = spget(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, 
             tmp1 = double(idxI ~= 0);  % Convert to double to ensure consistent types
             tmp2 = double(idxJ ~= 0);  % Convert to double to ensure consistent types
 
-            subI = idxI(tmp1 == 1);  % Ensure indexing is logical after conversion
-            subJ = idxJ(tmp2 == 1);  % Ensure indexing is logical after conversion
+            subI = idxI(tmp1);
+            subJ = idxJ(tmp2);
             idxI1 = tmp1(1:f);
             idxI2 = tmp1(f+1:end);
             idxJ1 = tmp2(1:f);
             idxJ2 = tmp2(f+1:end);
-            tmp1 = [g.E(idxI1 == 1, :); g.C(idxI2 == 1, :)];  % Ensure consistent types in concatenation
+
+            tmp1 = [g.E(idxI1, :); g.C(idxI2, :)];
             % Different factorization depending on symmetry
             if strcmpi(opts.symm, 'p')
-                tmp2 = [g.E(idxJ1 == 1, :); g.C(idxJ2 == 1, :)]';  % No need for double conversion
+                tmp2 = [g.E(idxJ1, :); g.C(idxJ2, :)]';
             elseif strcmpi(opts.symm, 'n')
-                tmp2 = [g.F(:, idxJ1 == 1), g.D(:, idxJ2 == 1)];  % No need for double conversion
+                tmp2 = [g.F(:, idxJ1), g.D(:, idxJ2)];
             end
-            A(subI, subJ) = A(subI, subJ) - tmp1 * tmp2;  % No change needed
+            A(subI, subJ) = A(subI, subJ) - tmp1 * tmp2;
         end
     end
 
     function update_list = get_update_list(update_list, node_idx, t)
-        update_list(node_idx) = 1;  % Ensure this remains logical
-        update_list(t.nodes(node_idx).snbor) = 1;
+        update_list(node_idx) = 1;  % Mark the current node in the list
+        update_list(t.nodes(node_idx).snbor) = 1;  % Mark sibling neighbors
 
         chld_nodes = t.nodes(node_idx).chld;  % Get the child nodes array
         num_chld_nodes = numel(chld_nodes);   % Determine the number of child nodes
-        for inner_idx = 1:num_chld_nodes
-            k = chld_nodes(inner_idx);
+        for inner_idx = 1:num_chld_nodes  % Renamed from idx to avoid conflict
+            k = chld_nodes(inner_idx);  % Access each child node
             update_list = get_update_list(update_list, k, t);  % Recursively update the list
         end
     end
@@ -136,6 +137,7 @@ function locs = find_locations_t(big_sorted_list, elements_to_find)
             if arr_(mid) == target_
                 loc = mid;
                 return;
+                % Found, return
             elseif arr_(mid) < target_
                 left = mid + 1;
             else

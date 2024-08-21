@@ -1,4 +1,4 @@
-  function A = spget_og(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, nbox, t, i, opts)
+function A = spget_og(Ityp, Jtyp, F, lookup_list, slf, nbr, lst, nslf, nnbr, nlst, nbox, t, i, opts)
     % A = SPGET(ITYP,JTYP) Sparse matrix access function (native MATLAB is 
     % slow for large matrices).  We grab the accumulated Schur complement
     % updates to a block of the matrix from previously-skeletonized 

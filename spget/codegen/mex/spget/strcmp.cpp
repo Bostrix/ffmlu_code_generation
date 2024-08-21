@@ -10,13 +10,13 @@
 #include "spget_data.h"
 
 // Variable Definitions
-static emlrtRSInfo u_emlrtRSI{
+static emlrtRSInfo x_emlrtRSI{
     16,                                                              // lineNo
     "lower",                                                         // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/strfun/lower.m" // pathName
 };
 
-static emlrtRSInfo v_emlrtRSI{
+static emlrtRSInfo y_emlrtRSI{
     10,                     // lineNo
     "eml_string_transform", // fcnName
     "/usr/local/MATLAB/R2024a/toolbox/eml/lib/matlab/strfun/"
@@ -36,12 +36,12 @@ boolean_T b_strcmp(const emlrtStack &sp, const char_T a[3])
   boolean_T b_bool;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &p_emlrtRSI;
+  st.site = &s_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  b_st.site = &q_emlrtRSI;
+  b_st.site = &t_emlrtRSI;
   b_bool = false;
   kstr = 0;
   int32_T exitg1;
@@ -49,7 +49,7 @@ boolean_T b_strcmp(const emlrtStack &sp, const char_T a[3])
     exitg1 = 0;
     if (kstr < 3) {
       int32_T i;
-      c_st.site = &r_emlrtRSI;
+      c_st.site = &u_emlrtRSI;
       i = static_cast<uint8_T>(a[kstr]);
       if (i > 127) {
         emlrtErrorWithMessageIdR2018a(
@@ -78,7 +78,7 @@ boolean_T b_strcmp(const emlrtStack &sp, char_T a)
   emlrtStack st;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &p_emlrtRSI;
+  st.site = &s_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
@@ -87,16 +87,16 @@ boolean_T b_strcmp(const emlrtStack &sp, char_T a)
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  b_st.site = &q_emlrtRSI;
-  c_st.site = &r_emlrtRSI;
+  b_st.site = &t_emlrtRSI;
+  c_st.site = &u_emlrtRSI;
   if (static_cast<uint8_T>(a) > 127) {
     emlrtErrorWithMessageIdR2018a(
         &c_st, &emlrtRTEI, "Coder:toolbox:unsupportedString",
         "Coder:toolbox:unsupportedString", 2, 12, 127);
   }
-  c_st.site = &t_emlrtRSI;
-  d_st.site = &u_emlrtRSI;
-  e_st.site = &v_emlrtRSI;
+  c_st.site = &w_emlrtRSI;
+  d_st.site = &x_emlrtRSI;
+  e_st.site = &y_emlrtRSI;
   if (static_cast<uint8_T>(a) > 127) {
     emlrtErrorWithMessageIdR2018a(
         &e_st, &emlrtRTEI, "Coder:toolbox:unsupportedString",
@@ -115,12 +115,12 @@ boolean_T c_strcmp(const emlrtStack &sp, const char_T a[3])
   boolean_T b_bool;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &p_emlrtRSI;
+  st.site = &s_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  b_st.site = &q_emlrtRSI;
+  b_st.site = &t_emlrtRSI;
   b_bool = false;
   kstr = 0;
   int32_T exitg1;
@@ -128,7 +128,7 @@ boolean_T c_strcmp(const emlrtStack &sp, const char_T a[3])
     exitg1 = 0;
     if (kstr < 3) {
       int32_T i;
-      c_st.site = &r_emlrtRSI;
+      c_st.site = &u_emlrtRSI;
       i = static_cast<uint8_T>(a[kstr]);
       if (i > 127) {
         emlrtErrorWithMessageIdR2018a(
@@ -157,7 +157,7 @@ boolean_T c_strcmp(const emlrtStack &sp, char_T a)
   emlrtStack st;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &p_emlrtRSI;
+  st.site = &s_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
@@ -166,16 +166,16 @@ boolean_T c_strcmp(const emlrtStack &sp, char_T a)
   d_st.tls = c_st.tls;
   e_st.prev = &d_st;
   e_st.tls = d_st.tls;
-  b_st.site = &q_emlrtRSI;
-  c_st.site = &r_emlrtRSI;
+  b_st.site = &t_emlrtRSI;
+  c_st.site = &u_emlrtRSI;
   if (static_cast<uint8_T>(a) > 127) {
     emlrtErrorWithMessageIdR2018a(
         &c_st, &emlrtRTEI, "Coder:toolbox:unsupportedString",
         "Coder:toolbox:unsupportedString", 2, 12, 127);
   }
-  c_st.site = &t_emlrtRSI;
-  d_st.site = &u_emlrtRSI;
-  e_st.site = &v_emlrtRSI;
+  c_st.site = &w_emlrtRSI;
+  d_st.site = &x_emlrtRSI;
+  e_st.site = &y_emlrtRSI;
   if (static_cast<uint8_T>(a) > 127) {
     emlrtErrorWithMessageIdR2018a(
         &e_st, &emlrtRTEI, "Coder:toolbox:unsupportedString",
@@ -194,12 +194,12 @@ boolean_T d_strcmp(const emlrtStack &sp, const char_T a[3])
   boolean_T b_bool;
   st.prev = &sp;
   st.tls = sp.tls;
-  st.site = &p_emlrtRSI;
+  st.site = &s_emlrtRSI;
   b_st.prev = &st;
   b_st.tls = st.tls;
   c_st.prev = &b_st;
   c_st.tls = b_st.tls;
-  b_st.site = &q_emlrtRSI;
+  b_st.site = &t_emlrtRSI;
   b_bool = false;
   kstr = 0;
   int32_T exitg1;
@@ -207,7 +207,7 @@ boolean_T d_strcmp(const emlrtStack &sp, const char_T a[3])
     exitg1 = 0;
     if (kstr < 3) {
       int32_T i;
-      c_st.site = &r_emlrtRSI;
+      c_st.site = &u_emlrtRSI;
       i = static_cast<uint8_T>(a[kstr]);
       if (i > 127) {
         emlrtErrorWithMessageIdR2018a(
